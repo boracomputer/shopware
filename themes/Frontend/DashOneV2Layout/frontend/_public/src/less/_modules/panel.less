@@ -1,0 +1,51 @@
+.content-main {
+    .content--wrapper {
+        .content {
+            .panel {
+                .panel--title {
+
+                }
+                .panel--body {
+                    input {
+
+                    }
+                    textarea {
+
+                    }
+                    .js--fancy-select {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @phoneLandscapeViewportWidth) {
+    // 480px
+}
+
+@media screen and (min-width: @tabletViewportWidth) {
+    // 768px
+    .content-main {
+        .content--wrapper {
+            .content {
+                .panel {
+                    .panel--title {
+                        font-family: @font-headings;
+                        font-weight: normal !important;
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @tabletLandscapeViewportWidth) {
+    // 1024px
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+    // 1260px changed to 998px
+}

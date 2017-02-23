@@ -1,0 +1,337 @@
+.header-main {
+
+    .top-bar {
+        .container {
+            .top-bar--navigation {
+                .navigation--entry {
+                    &.entry--account {
+                    }
+                    &.entry--note {
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &.header--navigation {
+            .logo-main {
+                .logo--shop {
+                }
+            }
+            .shop--navigation {
+                .navigation--list {
+                    .navigation--entry {
+                        .btn,
+                        .entry--link {
+
+                            &:hover {
+
+                                .badge {
+
+                                }
+                            }
+                            .badge {
+
+                            }
+                        }
+                        &.entry--menu-left {
+
+                            .btn {
+
+                                &:hover {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @phoneLandscapeViewportWidth) {
+    // 480px
+    .header-main {
+        .entry--cart {
+            .cart--link {
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @tabletViewportWidth) {
+    // 768px
+    .header-main {
+
+        .top-bar {
+
+            .container {
+                .top-bar--navigation {
+
+                    .top-bar--login {
+
+                        .register--login-description {
+
+                        }
+                        .register--login-field {
+
+                        }
+                        .register--login-lostpassword {
+
+                        }
+                        .register--login-action {
+
+                            .register--login-btn {
+
+                                span {
+
+                                }
+                            }
+                        }
+                        &.is--loggedin {
+
+                        }
+                        .account--menu {
+
+                            .navigation--headline {
+
+                            }
+                            .account--menu-container {
+                                .navigation--list {
+                                    .navigation--entry {
+                                        .navigation--link {
+                                            &.is--active,
+                                            &:hover {
+                                            }
+                                            &.link--logout {
+                                                i {
+                                                }
+                                            }
+                                            &:last-child {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .top-bar--language {
+                        .field--select {
+
+                        }
+                    }
+                    .top-bar--currency {
+                        .field--select {
+
+                        }
+                    }
+                    .navigation--entry {
+
+                        .entry--link {
+
+                            i {
+
+                            }
+                            &:hover {
+
+                            }
+                        }
+                        &.entry--account {
+
+                        }
+                        &.entry--note {
+
+                            .notes--quantity {
+
+                            }
+                        }
+                        &.entry--compare {
+
+                            .compare--quantity {
+
+                            }
+                            .compare--list {
+                                &::after {
+
+                                }
+                            }
+                        }
+                        &.entry--service {
+
+                            .service--list {
+
+                                .service--entry {
+
+                                    .service--link {
+
+                                        &:hover {
+
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+
+                            }
+                            &::after {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            &.header--navigation {
+                .logo-main {
+
+                    .logo--link {
+                        .unitize(margin-top, -30);
+                        .unitize-height(100);
+                    }
+                }
+                .shop--navigation {
+
+                    .navigation--list {
+                        .navigation--entry {
+                            .btn {
+
+                            }
+                            .entry--link {
+                            }
+                            &.entry--notepad {
+
+                            }
+                            &.entry--account {
+
+                            }
+                            &.entry--search {
+
+                                .main-search--form {
+                                    .main-search--field {
+
+                                        &:focus {
+
+                                        }
+                                    }
+                                    .main-search--button {
+
+                                        .icon--search {
+
+                                        }
+                                    }
+                                    .form--ajax-loader {
+
+                                    }
+                                }
+                                .main-search--results {
+                                    .results--list {
+
+                                        .list--entry {
+
+                                            .search-result--link {
+
+                                                .entry--media {
+                                                    .media--image {
+                                                    }
+                                                }
+                                                .entry--name {
+
+                                                }
+                                                .entry--price {
+
+                                                    .product--price {
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+
+                                                .entry--name,
+                                                .entry--price {
+
+                                                }
+                                            }
+                                            &:first-child {
+
+                                            }
+                                        }
+                                        .entry--all-results {
+
+                                            .entry--all-results-link {
+
+                                                .icon--arrow-right {
+                                                    &::before {
+                                                    }
+                                                }
+                                            }
+                                            .entry--all-results-number {
+
+                                            }
+                                            &:hover {
+
+                                            }
+                                        }
+                                        &::after {
+
+                                        }
+                                    }
+                                }
+                            }
+                            &.entry--cart {
+                                .cart--link {
+                                    // .btn
+
+                                    .cart--background {
+
+                                    }
+                                    .cart--display {
+
+                                    }
+                                    .badge {
+                                        // .cart--quantity
+
+                                    }
+                                    .icon--basket {
+
+                                    }
+                                    .cart--amount {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @tabletLandscapeViewportWidth) {
+    // 1024px
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+    // 1260px changed to 998px
+}
+.is--act-shippingPayment{
+    .header-main {
+
+    }
+    .logo-main{
+
+      .logo--shop {
+
+      }
+      .logo--supportinfo{
+
+      }
+    }
+}
+.header-main .top-bar .container .top-bar--navigation .navigation--entry.entry--compare:hover {
+
+}
+.header-main .top-bar .container .top-bar--navigation .top-bar--login{
+
+}
