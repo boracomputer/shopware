@@ -1,4 +1,4 @@
-TEST
+FOOBAR
 
 {extends file='parent:frontend/index/topbar-navigation.tpl'}
 
