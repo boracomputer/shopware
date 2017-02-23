@@ -1,3 +1,5 @@
+TEST
+
 {extends file='parent:frontend/index/topbar-navigation.tpl'}
 
 
