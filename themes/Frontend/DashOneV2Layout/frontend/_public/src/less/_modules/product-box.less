@@ -83,34 +83,7 @@
 			&.is--discount {
 				color: @badge-discount-bg;
 			}
-            svg{
-                width: 100%;
-                text{
-                    .unitize(font-size, 30);
-                    font-family: @font-headings;
-                    font-weight: 700;
-                    &.shadow{
-                        fill: @border-color;
-                        stroke: @border-color;
-                        stroke-width: 0.1em;
-                    }
-                    &.outline{
-                        filter: drop-shadow(0.03em 0.03em 1px rgb(208, 208, 208));
-                        fill: @border-color;
-                        stroke: #fff;
-                        stroke-width: 0.1em;
-                        text-shadow: .03em .03em 1px @border-color;
-                    }
-                    &.baseline{
-                        fill: @brand-primary;
-                        stroke: @brand-primary;
-                        stroke-width: 0px;
-                    }
-                    .sup{
-                        .unitize(font-size, 18);
-                    }
-                }
-            }
+            .nice-price;
 		}
     }
 }
