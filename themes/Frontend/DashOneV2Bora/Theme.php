@@ -6,8 +6,7 @@ use Shopware\Components\Form as Form;
 
 class Theme extends \Shopware\Components\Theme
 {
-    //protected $extend = 'DashOneV2Layout';
-    protected $extend = 'Responsive';
+    protected $extend = 'DashOneV2Layout';
 
     protected $name = <<<'SHOPWARE_EOD'
 D1V2 Bora
