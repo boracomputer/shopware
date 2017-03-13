@@ -52,3 +52,12 @@
     </div>
 
 {/block}
+
+{block name='frontend_detail_index_data' prepend}
+<div class="panel has--border">
+    <div class="panel--body is--wide">
+{/block}
+{block name="frontend_detail_index_actions" append}
+    </div>
+</div>
+{/block}
