@@ -50,18 +50,21 @@
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
     .product--details {
-            .product--buybox {
-                .buybox--inner {
-                    .product--price {
-                        margin-bottom: 0 !important;
-                    }
-                    .product--tax {
-                        margin-bottom: 0 !important;
-                    }
-                    .product--delivery {
-                        .unitize(margin-bottom, 30);
-                    }
+        .product--actions{
+            border: none;
+        }
+        .product--buybox {
+            .buybox--inner {
+                .product--price {
+                    margin-bottom: 0 !important;
+                }
+                .product--tax {
+                    margin-bottom: 0 !important;
+                }
+                .product--delivery {
+                    .unitize(margin-bottom, 30);
                 }
             }
         }
+    }
 }
