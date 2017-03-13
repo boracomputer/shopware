@@ -11,11 +11,11 @@
             {$alt = $sArticle.image.description|escape}
         {/if}
 
-        <a href="http://images.skillbooks.de/image800/{$sArticle.image.attribute.attribute1}"
+        <a href="//images.skillbooks.de/image800/{$sArticle.image.attribute.attribute1}"
            title="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt}"
            class="thumbnail--link is--active">
             {block name='frontend_detail_image_thumbs_main_img'}
-                <img srcset="http://images.skillbooks.de/image45/{$sArticle.image.attribute.attribute1}"
+                <img srcset="//images.skillbooks.de/image45/{$sArticle.image.attribute.attribute1}"
                      alt="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt}"
                      title="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt|truncate:25:""}"
                      class="thumbnail--image" />
@@ -33,11 +33,11 @@
                     {$alt = $image.description|escape}
                 {/if}
 
-                <a href="http://images.skillbooks.de/image800/{$image.attribute.attribute1}"
+                <a href="//images.skillbooks.de/image800/{$image.attribute.attribute1}"
                    title="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt}"
                    class="thumbnail--link">
                     {block name='frontend_detail_image_thumbs_images_img'}
-                        <img srcset="http://images.skillbooks.de/image45/{$image.attribute.attribute1}"
+                        <img srcset="//images.skillbooks.de/image45/{$image.attribute.attribute1}"
                              alt="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt}"
                              title="{s name="DetailThumbnailText" namespace="frontend/detail/index"}{/s}: {$alt|truncate:25:""}"
                              class="thumbnail--image" />
