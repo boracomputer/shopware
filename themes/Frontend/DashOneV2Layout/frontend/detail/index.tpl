@@ -42,6 +42,13 @@
                 {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
             </strong>
             <span class="entry--content">{$sArticle.ean}</span>
+            <hr />
+            {block name="frontend_detail_data_delivery"}
+                {* Delivery informations *}
+                {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
+                    {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle}
+                {/if}
+            {/block}
         </div>
     </div>
 
