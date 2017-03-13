@@ -19,7 +19,7 @@
             {if $image.description}
                 {$desc = $image.description|escape}
             {/if}
-            <img srcset="//images.skillbooks.de/image105/{image.attribute.attribute1}" alt="{$desc}" title="{$desc|truncate:160}" />
+            <img srcset="//images.skillbooks.de/image105/{$image.attribute.attribute1}" alt="{$desc}" title="{$desc|truncate:160}" />
         </a>
     {else}
         <img src="{link file='frontend/_public/src/img/no-picture.jpg'}" alt="{$desc}" title="{$desc|truncate:160}" />
