@@ -1,5 +1,3 @@
-{extends file='parent:frontend/detail/data.tpl'}
-
 {block name="frontend_detail_data"}
 
     {if !$sArticle.liveshoppingData.valid_to_ts}
