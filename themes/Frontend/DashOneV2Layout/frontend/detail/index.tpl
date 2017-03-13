@@ -52,6 +52,7 @@
 <div class="panel has--border">
     <div class="panel--body is--wide">
 {/block}
+
 {block name="frontend_detail_index_buy_container" append}
     </div>
 </div>
