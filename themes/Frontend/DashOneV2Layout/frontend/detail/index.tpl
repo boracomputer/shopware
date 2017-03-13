@@ -18,7 +18,7 @@
 {block name='frontend_detail_data_attributes_attr2'}
 {/block}
 
-{block name='frontend_detail_index_data' prepend}
+{block name='frontend_detail_index_buy_container_inner' prepend}
 
     <div class="base-info--entry entry--sku panel has--border">
         <div class="panel--body is--wide">
@@ -51,31 +51,4 @@
         </div>
     </div>
 
-    {* Unit price *}
-    {if $sArticle.purchaseunit}
-        <div class='product--price price--unit panel has--border'>
-            <div class="panel--body is--wide">
-            {* Unit price label *}
-            {block name='frontend_detail_data_price_unit_label'}
-                <span class="price--label label--purchase-unit">
-					{s name="DetailDataInfoContent" namespace='frontend/detail/data'}{/s}
-				</span>
-            {/block}
-
-            {* Unit price content *}
-            {block name='frontend_detail_data_price_unit_content'}
-                {$sArticle.purchaseunit} {$sArticle.sUnit.description}
-            {/block}
-
-            {* Unit price is based on a reference unit *}
-            {if $sArticle.purchaseunit && $sArticle.purchaseunit != $sArticle.referenceunit}
-                {* Reference unit price content *}
-                {block name='frontend_detail_data_price_unit_reference_content'}
-                    ({$sArticle.referenceprice|currency} {s name="Star" namespace="frontend/listing/box_article"}{/s}
-                    / {$sArticle.referenceunit} {$sArticle.sUnit.description})
-                {/block}
-            {/if}
-            </div>
-        </div>
-    {/if}
 {/block}
