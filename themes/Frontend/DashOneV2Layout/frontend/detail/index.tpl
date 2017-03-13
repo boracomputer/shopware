@@ -51,7 +51,7 @@
 {block name='frontend_detail_index_buy_container'}
 
 <div class="product--buybox block{if $sArticle.sConfigurator && $sArticle.sConfiguratorSettings.type==2} is--wide{/if}">
-    <div class="panel">
+    <div class="panel has--border">
         <div class="panel--body is--wide">
             {block name="frontend_detail_rich_snippets_brand"}
                 <meta itemprop="brand" content="{$sArticle.supplierName|escape}"/>
