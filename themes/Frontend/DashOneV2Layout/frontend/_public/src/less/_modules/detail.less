@@ -4,6 +4,27 @@
     }
     .product--detail-upper {
         .product--buybox {
+            > .panel{
+                border-bottom: none;
+                &.same-day-delivery{
+                    .panel--body{
+                        img{
+                            float: left;
+                            .unitize(width, 36);
+                            .unitize(height, 36);
+                            .unitize-padding(4);
+                            .unitize-margin(0,10,0,0);
+                            color: #fff;
+                            background: #fff;
+                            border-radius: 50%;
+                        }
+                        h2{
+                            margin: 0;
+                            .unitize(line-height, 36);
+                        }
+                    }
+                }
+            }
             .buybox--inner {
                 .product--price {
                     .price--content {
@@ -14,7 +35,7 @@
                     .unitize(font-size, 12);
                     .unitize(line-height, 14);
                     .unitize-padding(10, 0);
-                    
+
                     .entry--label{
                         width: 110px;
                         display: inline-block;
@@ -25,4 +46,7 @@
             }
         }
     }
+}
+.base-info--entry{
+    margin: 0;
 }
