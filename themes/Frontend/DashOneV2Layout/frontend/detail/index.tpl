@@ -19,38 +19,33 @@
 {/block}
 
 {block name='frontend_detail_index_buy_container_inner' prepend}
-
-    <div class="base-info--entry entry--sku panel has--border">
-        <div class="panel--body is--wide">
-            <strong class="entry--label">
-                {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
-            </strong>
-            <span class="entry--content">{$sArticle.ordernumber}</span>
-            <br>
-            <strong class="entry--label">
-                {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
-            </strong>
-            <span class="entry--content">{$sArticle.supplierName}</span>
-            <br>
-            <strong class="entry--label">
-                {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
-            </strong>
-            <span class="entry--content">{$sArticle.suppliernumber}</span>
-            <br>
-            <strong class="entry--label">
-                {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
-            </strong>
-            <span class="entry--content">{$sArticle.ean}</span>
-            <hr />
-            {block name="frontend_detail_data_delivery"}
-                {* Delivery informations *}
-                {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
-                    {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
-                {/if}
-            {/block}
-        </div>
-    </div>
-
+    <strong class="entry--label">
+        {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
+    </strong>
+    <span class="entry--content">{$sArticle.ordernumber}</span>
+    <br>
+    <strong class="entry--label">
+        {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
+    </strong>
+    <span class="entry--content">{$sArticle.supplierName}</span>
+    <br>
+    <strong class="entry--label">
+        {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
+    </strong>
+    <span class="entry--content">{$sArticle.suppliernumber}</span>
+    <br>
+    <strong class="entry--label">
+        {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
+    </strong>
+    <span class="entry--content">{$sArticle.ean}</span>
+    <hr />
+    {block name="frontend_detail_data_delivery"}
+        {* Delivery informations *}
+        {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
+            {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
+        {/if}
+    {/block}
+    <hr />
 {/block}
 
 {block name='frontend_detail_index_buy_container' prepend}
