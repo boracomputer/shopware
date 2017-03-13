@@ -53,8 +53,8 @@
 
     {* Unit price *}
     {if $sArticle.purchaseunit}
-        <div class='product--price price--unit'>
-
+        <div class='product--price price--unit panel has--border'>
+            <div class="panel--body is--wide">
             {* Unit price label *}
             {block name='frontend_detail_data_price_unit_label'}
                 <span class="price--label label--purchase-unit">
@@ -75,6 +75,7 @@
                     / {$sArticle.referenceunit} {$sArticle.sUnit.description})
                 {/block}
             {/if}
+            </div>
         </div>
     {/if}
 {/block}
