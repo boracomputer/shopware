@@ -19,33 +19,7 @@
 {/block}
 
 {block name='frontend_detail_index_buy_container_inner' prepend}
-    <strong class="entry--label">
-        {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
-    </strong>
-    <span class="entry--content">{$sArticle.ordernumber}</span>
-    <br>
-    <strong class="entry--label">
-        {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
-    </strong>
-    <span class="entry--content">{$sArticle.supplierName}</span>
-    <br>
-    <strong class="entry--label">
-        {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
-    </strong>
-    <span class="entry--content">{$sArticle.suppliernumber}</span>
-    <br>
-    <strong class="entry--label">
-        {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
-    </strong>
-    <span class="entry--content">{$sArticle.ean}</span>
-    <hr />
-    {block name="frontend_detail_data_delivery"}
-        {* Delivery informations *}
-        {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
-            {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
-        {/if}
-    {/block}
-    <hr />
+
 {/block}
 
 {block name='frontend_detail_index_buy_container'}
@@ -100,61 +74,95 @@
                 {/if}
             {/block}
 
+            <div itemprop="offers" itemscope itemtype="{if $sArticle.sBlockPrices}http://schema.org/AggregateOffer{else}http://schema.org/Offer{/if}" class="buybox--inner">
+
+                {block name='frontend_detail_index_data'}
+                    {if $sArticle.sBlockPrices}
+                        {$lowestPrice=false}
+                        {$highestPrice=false}
+                        {foreach $sArticle.sBlockPrices as $blockPrice}
+                            {if $lowestPrice === false || $blockPrice.price < $lowestPrice}
+                                {$lowestPrice=$blockPrice.price}
+                            {/if}
+                            {if $highestPrice === false || $blockPrice.price > $highestPrice}
+                                {$highestPrice=$blockPrice.price}
+                            {/if}
+                        {/foreach}
+
+                        <meta itemprop="lowPrice" content="{$lowestPrice}" />
+                        <meta itemprop="highPrice" content="{$highestPrice}" />
+                        <meta itemprop="offerCount" content="{$sArticle.sBlockPrices|count}" />
+                    {else}
+                        <meta itemprop="priceCurrency" content="{$Shop->getCurrency()->getCurrency()}"/>
+                    {/if}
+                    {include file="frontend/detail/data.tpl" sArticle=$sArticle sView=1}
+                {/block}
+
+                {block name='frontend_detail_index_after_data'}{/block}
+
+                {* Configurator drop down menu's *}
+                {block name="frontend_detail_index_configurator"}
+                    <div class="product--configurator">
+                        {if $sArticle.sConfigurator}
+                            {if $sArticle.sConfiguratorSettings.type == 1}
+                                {include file="frontend/detail/config_step.tpl"}
+                            {elseif $sArticle.sConfiguratorSettings.type == 2}
+                                {include file="frontend/detail/config_variant.tpl"}
+                            {else}
+                                {include file="frontend/detail/config_upprice.tpl"}
+                            {/if}
+                        {/if}
+                    </div>
+                {/block}
+
+                <hr />
+
+                {block name="frontend_detail_data_delivery"}
+                    {* Delivery informations *}
+                    {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
+                        {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
+                    {/if}
+                {/block}
+                <hr />
+
+                {* Include buy button and quantity box *}
+                {block name="frontend_detail_index_buybox"}
+                    {include file="frontend/detail/buy.tpl"}
+                {/block}
+
+            </div>
+
             {* Product data *}
             {block name='frontend_detail_index_buy_container_inner'}
-                <div itemprop="offers" itemscope itemtype="{if $sArticle.sBlockPrices}http://schema.org/AggregateOffer{else}http://schema.org/Offer{/if}" class="buybox--inner">
 
-                    {block name='frontend_detail_index_data'}
-                        {if $sArticle.sBlockPrices}
-                            {$lowestPrice=false}
-                            {$highestPrice=false}
-                            {foreach $sArticle.sBlockPrices as $blockPrice}
-                                {if $lowestPrice === false || $blockPrice.price < $lowestPrice}
-                                    {$lowestPrice=$blockPrice.price}
-                                {/if}
-                                {if $highestPrice === false || $blockPrice.price > $highestPrice}
-                                    {$highestPrice=$blockPrice.price}
-                                {/if}
-                            {/foreach}
+                <strong class="entry--label">
+                    {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
+                </strong>
+                <span class="entry--content">{$sArticle.ordernumber}</span>
+                <br>
+                <strong class="entry--label">
+                    {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
+                </strong>
+                <span class="entry--content">{$sArticle.supplierName}</span>
+                <br>
+                <strong class="entry--label">
+                    {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
+                </strong>
+                <span class="entry--content">{$sArticle.suppliernumber}</span>
+                <br>
+                <strong class="entry--label">
+                    {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
+                </strong>
+                <span class="entry--content">{$sArticle.ean}</span>
+                <hr />
 
-                            <meta itemprop="lowPrice" content="{$lowestPrice}" />
-                            <meta itemprop="highPrice" content="{$highestPrice}" />
-                            <meta itemprop="offerCount" content="{$sArticle.sBlockPrices|count}" />
-                        {else}
-                            <meta itemprop="priceCurrency" content="{$Shop->getCurrency()->getCurrency()}"/>
-                        {/if}
-                        {include file="frontend/detail/data.tpl" sArticle=$sArticle sView=1}
-                    {/block}
+                {* Product actions *}
+                {block name="frontend_detail_index_actions"}
+                    <nav class="product--actions">
+                        {include file="frontend/detail/actions.tpl"}
+                    </nav>
+                {/block}
 
-                    {block name='frontend_detail_index_after_data'}{/block}
-
-                    {* Configurator drop down menu's *}
-                    {block name="frontend_detail_index_configurator"}
-                        <div class="product--configurator">
-                            {if $sArticle.sConfigurator}
-                                {if $sArticle.sConfiguratorSettings.type == 1}
-                                    {include file="frontend/detail/config_step.tpl"}
-                                {elseif $sArticle.sConfiguratorSettings.type == 2}
-                                    {include file="frontend/detail/config_variant.tpl"}
-                                {else}
-                                    {include file="frontend/detail/config_upprice.tpl"}
-                                {/if}
-                            {/if}
-                        </div>
-                    {/block}
-
-                    {* Include buy button and quantity box *}
-                    {block name="frontend_detail_index_buybox"}
-                        {include file="frontend/detail/buy.tpl"}
-                    {/block}
-
-                    {* Product actions *}
-                    {block name="frontend_detail_index_actions"}
-                        <nav class="product--actions">
-                            {include file="frontend/detail/actions.tpl"}
-                        </nav>
-                    {/block}
-                </div>
             {/block}
 
             {* Product - Base information *}
