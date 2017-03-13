@@ -15,14 +15,4 @@
 {/block}
 
 {block name="frontend_detail_data_delivery"}
-<div class="base-info--entry entry--sku panel has--border">
-    <div class="panel--body is--wide">
-        {block name="frontend_detail_data_delivery_start"}{/block}
-        {* Delivery informations *}
-        {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
-            {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle}
-        {/if}
-        {block name="frontend_detail_data_delivery_end"}{/block}
-    </div>
-</div>
 {/block}
