@@ -125,9 +125,6 @@
         {/foreach}
     {/if}
 
-    {block name="frontend_detail_data_delivery"}
-    {/block}
-
     {* @deprecated Liveshopping data *}
     {block name="frontend_detail_data_liveshopping"}{/block}
 {/block}
