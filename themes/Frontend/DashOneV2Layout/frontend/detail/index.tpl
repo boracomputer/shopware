@@ -117,12 +117,14 @@
 
                 <hr />
 
+                <div class="product--delivery_info">
                 {block name="frontend_detail_data_delivery"}
                     {* Delivery informations *}
                     {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
                         {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
                     {/if}
                 {/block}
+                </div>
                 <hr />
 
                 {* Include buy button and quantity box *}
