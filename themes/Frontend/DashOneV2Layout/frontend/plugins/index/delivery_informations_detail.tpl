@@ -4,7 +4,7 @@
     {$stock = $sArticle.attr1|json_decode:"true"}
 
     <strong class="entry--label">
-        Onlineversand:<br />
+        Onlineversand:
     </strong>
 
     <span class="entry--content">

@@ -134,7 +134,8 @@
 
             {* Product data *}
             {block name='frontend_detail_index_buy_container_inner'}
-
+            
+                <hr />
                 <strong class="entry--label">
                     {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
                 </strong>

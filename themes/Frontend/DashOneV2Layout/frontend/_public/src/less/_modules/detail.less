@@ -45,3 +45,23 @@
 .base-info--entry{
     margin: 0;
 }
+
+
+@media screen and (min-width: @tabletViewportWidth) {
+    // 768px
+    .product--details {
+            .product--buybox {
+                .buybox--inner {
+                    .product--price {
+                        margin-bottom: 0;
+                    }
+                    .product--tax {
+                        margin-bottom: 0;
+                    }
+                    .product--delivery {
+                        .unitize(margin-bottom, 30);
+                    }
+                }
+            }
+        }
+}
