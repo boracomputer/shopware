@@ -21,27 +21,39 @@
                 }
             }
             .buybox--inner {
+                .buybox--button-container{
+                    .buybox--quantity{
+                        width: 25%;
+                        margin: 0;
+                        float: left;
+                        display: inline-block;
+                    }
+                    .note--button{
+                        width: 25%;
+                        float: right;
+                    }
+                    .buybox--button{
+                        width: 50%;
+                    }
+                }
                 .product--price {
                     .price--content {
                         .nice-price(47, 60);
                     }
                 }
-                .base-info--entry{
-                    .unitize(font-size, 12);
-                    .unitize(line-height, 14);
-                    .unitize-padding(10, 0);
-
-                    .entry--label{
-                        width: 110px;
-                        display: inline-block;
-                        text-align: right;
-                        margin: 0 .5em 0 0;
-                    }
+            }
+            .base-info--entry{
+                .entry--label{
+                    width: 110px;
+                    display: inline-block;
+                    text-align: right;
+                    margin: 0 .5em 0 0;
                 }
             }
         }
     }
 }
+
 .base-info--entry{
     margin: 0;
 }
