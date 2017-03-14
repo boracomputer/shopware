@@ -1,5 +1,26 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
+{block name="frontend_index_header_javascript_jquery" append}
+<script type='text/javascript'>
+     var ccs_cc_args = ccs_cc_args || [];
+
+     // New Product Page
+     ccs_cc_args.push(['cpn', '{$sArticle.ordernumber}']);
+     ccs_cc_args.push(['mf', '{$sArticle.supplierName}']);
+     ccs_cc_args.push(['pn', '{$sArticle.suppliernumber}']);
+     ccs_cc_args.push(['upcean', '{$sArticle.ean}']);
+     ccs_cc_args.push(['lang', 'DE']);
+     ccs_cc_args.push(['market', 'DE']);
+
+     (function () {
+        var o = ccs_cc_args; o.push(['_SKey', 'b0e91762']); o.push(['_ZoneId', 'e34d8258dd']);
+        var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+        sc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.cnetcontent.com/jsc/h.js';
+        var n = document.getElementsByTagName('script')[0]; n.parentNode.insertBefore(sc, n);
+     })();
+     </script>
+{/block}
+
 {block name='frontend_detail_index_image_container'}
     <div class="product--image-container image-slider{if $sArticle.image.attribute && {config name=sUSEZOOMPLUS}} product--image-zoom{/if}"
         {if $sArticle.image}
