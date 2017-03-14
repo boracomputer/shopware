@@ -5,6 +5,7 @@
     .product--detail-upper {
         .product--buybox {
             .same-day-delivery {
+                .unitize(line-height, 18);
                 img{
                     float: left;
                     width: 36px;
@@ -15,9 +16,13 @@
                     background: #fff;
                     border-radius: 50%;
                 }
-                h2{
+                h3{
                     margin: 0;
                     .unitize(line-height, 36);
+                }
+                small{
+                    display: inline-block;
+                    .unitize(line-height, 12);
                 }
             }
             .buybox--inner {
