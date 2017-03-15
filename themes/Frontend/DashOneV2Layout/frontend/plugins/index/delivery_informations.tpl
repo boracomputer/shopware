@@ -16,9 +16,9 @@
 
     {$stock = $sArticle.attr1|json_decode:"true"}
     {*<pre>{$sArticle.stock|print_r}</pre>*}
-<div class="product--delivery-info delivery-info-online">
-
+<div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>
+
             {if $sArticle.ordernumber|strpos:"PCK" === 0}
                 <span class="delivery--text-available">
 			        <i class="fa fa-wrench"></i> wird zusammengebaut
@@ -59,5 +59,6 @@
 			        <i class="fa fa-times"></i> nicht verf&uuml;gbar
 	            </span>
 	        {/if}
+            
 </div>
 {/block}
