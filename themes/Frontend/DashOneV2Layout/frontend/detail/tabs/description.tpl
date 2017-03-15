@@ -7,7 +7,7 @@
     {block name='frontend_detail_description_title'}
     {/block}
 
-    {* CDNet description*}
+    {* CNet description*}
     <div id="ccs-inline-content"></div>
 
     {* Product description *}
