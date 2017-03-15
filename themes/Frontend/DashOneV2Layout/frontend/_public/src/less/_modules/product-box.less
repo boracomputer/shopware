@@ -1,12 +1,17 @@
 .product--box {
     .product--delivery-info{
-        float:left;
-        width: 50%;
         line-height: 1em;
         small{
             > a, > span{
                 .unitize(margin-left, 1);
             }
+        }
+        .label{
+            background: transparent;
+            .unitize(font-size, 12);
+            width: 130px;
+            display: inline-block;
+            text-align: left;
         }
     }
     .stores--stock{
@@ -24,7 +29,7 @@
             li{
                 .unitize(line-height, 16);
                 float: left;
-                
+                width: 50%;
             }
         }
         .btn{
