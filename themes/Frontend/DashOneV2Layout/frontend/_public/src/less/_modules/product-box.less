@@ -1,6 +1,7 @@
 .product--box {
     .product--delivery-info{
         line-height: 1em;
+        .unitize(font-size, 12);
         small{
             > a, > span{
                 .unitize(margin-left, 1);
@@ -8,11 +9,16 @@
         }
         .label{
             background: transparent;
-            .unitize(font-size, 12);
             width: 130px;
             display: inline-block;
             text-align: left;
             padding: 0;
+        }
+        input{
+            .unitize(font-size, 12);
+            .unitize-padding(0,4);
+            width: 50px;
+            border: 0;
         }
     }
     .stores--stock{
