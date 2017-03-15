@@ -18,7 +18,8 @@
     {*<pre>{$sArticle.stock|print_r}</pre>*}
 <div class="product--delivery-info delivery-info-online">
     <span class="product--delivery">
-        <small>Onlineversand:<br />
+        <small>
+            <span class="label">Onlineversand: </span>
             {if $sArticle.ordernumber|strpos:"PCK" === 0}
                 <span class="delivery--text-available">
 			        <i class="fa fa-wrench"></i> wird zusammengebaut
