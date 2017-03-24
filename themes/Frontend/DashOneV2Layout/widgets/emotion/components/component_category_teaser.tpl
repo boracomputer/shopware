@@ -1,6 +1,7 @@
 {block name="widget_emotion_component_category_teaser_panel"}
     {if $Data}
         {*$Data|dump*}
+        //skillbooks.de/image105/{$images.attribute1}
         <div class="emotion--category-teaser">
             {* Category teaser image *}
             {block name="widget_emotion_component_category_teaser_image"}
