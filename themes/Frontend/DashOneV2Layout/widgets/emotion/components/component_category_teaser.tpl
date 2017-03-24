@@ -40,7 +40,7 @@
 
                     @media screen and (min-width: 48em) {
                         #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image300/{$images.attribute1}}');
+                            background-image: url('//skillbooks.de/image300/{$images.attribute1}');
                         }
                     }
 
@@ -55,7 +55,7 @@
 
                     @media screen and (min-width: 78.75em) {
                         .is--fullscreen #teaser--{$Data.objectId} {
-                            background-image: url('{//skillbooks.de/image800/{$images.attribute1}}');
+                            background-image: url('{//skillbooks.de/image800/{$images.attribute1}');
                         }
                     }
 
