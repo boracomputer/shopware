@@ -5,10 +5,10 @@
      var ccs_cc_args = ccs_cc_args || [];
 
      // New Product Page
-     ccs_cc_args.push(['cpn', {strip}'{$sArticle.ordernumber}'{/strip}]);
-     ccs_cc_args.push(['mf', {strip}'{$sArticle.supplierName}'{/strip}]);
+     ccs_cc_args.push(['cpn', {strip}'{$sArticle.ordernumber|regex_replace:"/[\r\n]/" : ""}'{/strip}]);
+     ccs_cc_args.push(['mf', {strip}'{$sArticle.supplierName|regex_replace:"/[\r\n]/" : ""}'{/strip}]);
      ccs_cc_args.push(['pn', {strip}'{$sArticle.suppliernumber|regex_replace:"/[\r\n]/" : ""}'{/strip}]);
-     ccs_cc_args.push(['upcean', {strip}'{$sArticle.ean}'{/strip}]);
+     ccs_cc_args.push(['upcean', {strip}'{$sArticle.ean|regex_replace:"/[\r\n]/" : ""}'{/strip}]);
      ccs_cc_args.push(['lang', 'DE']);
      ccs_cc_args.push(['market', 'DE']);
 
@@ -48,7 +48,7 @@
 <div class="product--buybox block{if $sArticle.sConfigurator && $sArticle.sConfiguratorSettings.type==2} is--wide{/if}">
     <div class="panel has--border">
         <div class="panel--body is--wide">
-            {$sArticle.suppliernumber|regex_replace:"/[\r\n]/" : ""|dump}
+
             {block name="frontend_detail_rich_snippets_brand"}
                 <meta itemprop="brand" content="{$sArticle.supplierName|escape}"/>
             {/block}
