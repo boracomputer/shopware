@@ -2,21 +2,22 @@
 
 {block name="frontend_detail_description"}
 <script type='text/javascript'>
-var ccs_cc_args = ccs_cc_args || [];
-// New Product Page
-ccs_cc_args.push(['cpn', '206435']);
-ccs_cc_args.push(['mf', 'ASUS']);
-ccs_cc_args.push(['pn', '90MB0S00-M0EAY0']);
-ccs_cc_args.push(['upcean', '4712900467598']);
-ccs_cc_args.push(['lang', 'DE']);
-ccs_cc_args.push(['market', 'DE']);
-(function () {
-var o = ccs_cc_args; o.push(['_SKey', 'b0e91762']); o.push(['_ZoneId', 'e34d8258dd']);
-var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
-sc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.cnetcontent.com/jsc/h.js';
-var n = document.getElementsByTagName('script')[0]; n.parentNode.insertBefore(sc, n);
-})();
+    var ccs_cc_args = ccs_cc_args || [];
+    // New Product Page
+    ccs_cc_args.push(['cpn', '206435']);
+    ccs_cc_args.push(['mf', 'ASUS']);
+    ccs_cc_args.push(['pn', '90MB0S00-M0EAY0']);
+    ccs_cc_args.push(['upcean', '4712900467598']);
+    ccs_cc_args.push(['lang', 'DE']);
+    ccs_cc_args.push(['market', 'DE']);
+    (function () {
+        var o = ccs_cc_args; o.push(['_SKey', 'b0e91762']); o.push(['_ZoneId', 'e34d8258dd']);
+        var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+        sc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.cnetcontent.com/jsc/h.js';
+        var n = document.getElementsByTagName('script')[0]; n.parentNode.insertBefore(sc, n);
+    })();
 </script>
+
 <div class="content--description">
 
     {* Headline *}
