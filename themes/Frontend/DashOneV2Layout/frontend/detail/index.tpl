@@ -5,10 +5,10 @@
      var ccs_cc_args = ccs_cc_args || [];
 
      // New Product Page
-     ccs_cc_args.push(['cpn', '{strip}{$sArticle.ordernumber}{/strip}']);
-     ccs_cc_args.push(['mf', '{strip}{$sArticle.supplierName}{/strip}']);
-     ccs_cc_args.push(['pn', '{strip}{$sArticle.suppliernumber}{/strip}']);
-     ccs_cc_args.push(['upcean', '{strip}{$sArticle.ean}{/strip}']);
+     ccs_cc_args.push(['cpn', {strip}'{$sArticle.ordernumber}'{/strip}]);
+     ccs_cc_args.push(['mf', {strip}'{$sArticle.supplierName}'{/strip}]);
+     ccs_cc_args.push(['pn', {strip}'{$sArticle.suppliernumber}'{/strip}]);
+     ccs_cc_args.push(['upcean', {strip}'{$sArticle.ean}'{/strip}]);
      ccs_cc_args.push(['lang', 'DE']);
      ccs_cc_args.push(['market', 'DE']);
 
