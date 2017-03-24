@@ -1,6 +1,6 @@
 {block name="widget_emotion_component_category_teaser_panel"}
     {if $Data}
-        {$Data|dump}
+        {*$Data|dump*}
         <div class="emotion--category-teaser">
             {* Category teaser image *}
             {block name="widget_emotion_component_category_teaser_image"}
