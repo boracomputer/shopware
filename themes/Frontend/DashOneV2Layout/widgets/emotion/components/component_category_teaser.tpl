@@ -1,7 +1,7 @@
 {block name="widget_emotion_component_category_teaser_panel"}
     {if $Data}
+        {$Data|dump}
         <div class="emotion--category-teaser">
-
             {* Category teaser image *}
             {block name="widget_emotion_component_category_teaser_image"}
                 {if isset($Data.media)}
@@ -15,7 +15,7 @@
 
             {* Category teaser lnk *}
             {block name="widget_emotion_component_category_teaser_link"}
-                {$images|dump}
+
                 {if $Data.blog_category}
                     {$url = "{url controller=blog action=index sCategory=$Data.category_selection}"}
                 {else}
