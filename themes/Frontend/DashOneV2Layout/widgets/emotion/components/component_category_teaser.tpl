@@ -27,20 +27,20 @@
                 <style type="text/css">
 
                     #teaser--{$Data.objectId} {
-                        background-image: url('//skillbooks.de/image105/{$images.attribute1}');
+                        background-image: url('//images.skillbooks.de/image105/{$images.attribute1}');
                     }
 
                     {if isset($images[0].retinaSource)}
                     @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
                         #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image105/{$images.attribute1}');
+                            background-image: url('//images.skillbooks.de/image105/{$images.attribute1}');
                         }
                     }
                     {/if}
 
                     @media screen and (min-width: 48em) {
                         #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image300/{$images.attribute1}');
+                            background-image: url('//images.skillbooks.de/image300/{$images.attribute1}');
                         }
                     }
 
@@ -48,14 +48,14 @@
                     @media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2),
                            screen and (min-width: 48em) and (min-resolution: 192dpi) {
                         #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image300/{$images.attribute1}');
+                            background-image: url('//images.skillbooks.de/image300/{$images.attribute1}');
                         }
                     }
                     {/if}
 
                     @media screen and (min-width: 78.75em) {
                         .is--fullscreen #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image800/{$images.attribute1}');
+                            background-image: url('//images.skillbooks.de/image800/{$images.attribute1}');
                         }
                     }
 
@@ -63,7 +63,7 @@
                     @media screen and (min-width: 78.75em) and (-webkit-min-device-pixel-ratio: 2),
                            screen and (min-width: 78.75em) and (min-resolution: 192dpi) {
                         .is--fullscreen #teaser--{$Data.objectId} {
-                            background-image: url('//skillbooks.de/image800/{$images.attribute1}');
+                            background-image: url('//images.skillbooks.de/image800/{$images.attribute1}');
                         }
                     }
                     {/if}
