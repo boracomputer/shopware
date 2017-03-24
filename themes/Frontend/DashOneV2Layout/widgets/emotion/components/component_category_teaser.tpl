@@ -10,7 +10,7 @@
                     {$media = $Data.image}
                 {/if}
 
-                {$images = $media.attribute}
+                {$images = $Data.image.attribute}
             {/block}
 
             {* Category teaser lnk *}
