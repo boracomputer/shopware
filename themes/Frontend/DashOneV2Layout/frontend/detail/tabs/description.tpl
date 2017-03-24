@@ -3,11 +3,10 @@
 {block name="frontend_detail_description"}
 <script type='text/javascript'>
     var ccs_cc_args = ccs_cc_args || [];
-    // New Product Page
-    ccs_cc_args.push(['cpn', '206435']);
-    ccs_cc_args.push(['mf', 'ASUS']);
-    ccs_cc_args.push(['pn', '90MB0S00-M0EAY0']);
-    ccs_cc_args.push(['upcean', '4712900467598']);
+    ccs_cc_args.push(['cpn', '{$sArticle.ordernumber}']);
+    ccs_cc_args.push(['mf', '{$sArticle.supplierName}']);
+    ccs_cc_args.push(['pn', '{$sArticle.suppliernumber}']);
+    ccs_cc_args.push(['upcean', '{$sArticle.ean}']);
     ccs_cc_args.push(['lang', 'DE']);
     ccs_cc_args.push(['market', 'DE']);
     (function () {
