@@ -139,14 +139,16 @@
 
                 <hr />
 
-                {* Delivery Informations *}
-                {block name="frontend_detail_data_delivery"}
-                <div class="product--delivery_info">
-                    {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
-                        {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
-                    {/if}
-                </div>
-                <hr />
+                {block name="frontend_detail_data_delivery_wrapper"}
+                    {* Delivery Informations *}
+                    <div class="product--delivery_info">
+                    {block name="frontend_detail_data_delivery"}
+                        {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
+                            {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
+                        {/if}
+                    {/block}
+                    </div>
+                    <hr />
                 {/block}
 
                 {* Include buy button and quantity box *}
