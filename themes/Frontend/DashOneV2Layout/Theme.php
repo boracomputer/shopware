@@ -8,7 +8,7 @@ class Theme extends \Shopware\Components\Theme
 {
     protected $injectBeforePlugins = true;
     
-    protected $extend = 'Responsive';
+    protected $extend = 'DashoneV2';
 
     protected $name = <<<'SHOPWARE_EOD'
 D1V2 Layout
