@@ -6,7 +6,6 @@ use Shopware\Components\Form as Form;
 
 class Theme extends \Shopware\Components\Theme
 {
-    protected $injectBeforePlugins = true;
     
     protected $extend = 'DashoneV2';
 
