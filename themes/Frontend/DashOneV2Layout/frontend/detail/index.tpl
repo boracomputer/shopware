@@ -184,6 +184,8 @@
             </div>
                 <hr />
 
+                {include file="frontend/plugins/mille_commerzfinanz4/detail/data.tpl"}
+                
                 {* Product actions *}
                 {block name="frontend_detail_index_actions"}
                     <nav class="product--actions">
