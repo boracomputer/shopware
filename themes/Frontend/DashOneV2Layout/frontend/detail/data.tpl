@@ -127,5 +127,5 @@
 
     {* @deprecated Liveshopping data *}
     {block name="frontend_detail_data_liveshopping"}{/block}
-    {block name="commerzfinanz_detail_data"}{/block}
+
 {/block}
