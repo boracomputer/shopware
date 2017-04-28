@@ -1,6 +1,8 @@
 .nice-price(@font-size: 30, @height: 40){
     svg{
-        width: 100%;
+        width: @font-size*3px;
+        height: @height;
+        margin: 0 0 0 45%;
         .unitize-height(@height);
         text{
             .unitize(font-size, @font-size);
