@@ -1,4 +1,5 @@
 {extends file='parent:frontend/index/footer-navigation.tpl'}
+{namespace name="frontend/index/menu_footer"}
 
 {* Service hotline *}
 {block name="frontend_index_footer_column_service_hotline"}
