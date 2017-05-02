@@ -7,6 +7,7 @@
 {* Maincategories navigation top *}
 {block name='frontend_index_navigation_categories_top' append}
     {if count($sBreadcrumb)>1}
+        im in.
         <nav class="content--breadcrumb under--navigation">
             <div class="container">
                 {block name='frontend_index_breadcrumb_inner'}
