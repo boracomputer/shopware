@@ -1,6 +1,6 @@
 {extends file='parent:frontend/index/topbar-navigation.tpl'}
 
-{*block name="frontend_index_checkout_actions_service_menu"}
+{block name="frontend_index_checkout_actions_service_menu"}
     <div class="navigation--entry entry--account" role="menuitem">
         <div href="{url controller='account'}" class="entry--link js--account js--toggle-trigger" data-target="#top-bar--login">
             <i class="icon--account"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkMyAccount'}Mein Konto{/s}
@@ -16,7 +16,7 @@
         </div>
 
         {action module=widgets controller=StcomDashone action=index}
-{/block*}
+{/block}
 
 {*block name="frontend_index_top_bar_main"}
     <div class="top-bar">
