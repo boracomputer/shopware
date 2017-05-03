@@ -1,6 +1,6 @@
 {extends file='parent:frontend/home/index.tpl'}
 
-    {block name='frontend_home_index_promotions'}
+{block name='frontend_home_index_promotions'}
         {if $hasEmotion}
             <div class="content--emotions">
                 {foreach $emotions as $emotion}
@@ -19,4 +19,4 @@
                 {/foreach}
             </div>
         {/if}
-    {/block}
+{/block}
