@@ -12,7 +12,7 @@
                         {/if}
                     {else}
                         <div class="emotion--wrapper"
-                             data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller}"
+                             data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}"
                              data-availableDevices="{$emotion.devices}">
                         </div>
                     {/if}
