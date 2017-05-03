@@ -1,4 +1,4 @@
-{extends file='frontend/index/home.tpl'}
+{extends file='frontend/home/index.tpl'}
 
     {block name='frontend_home_index_promotions'}
         {if $hasEmotion}
