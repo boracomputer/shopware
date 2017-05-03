@@ -7,7 +7,7 @@
                 {foreach $emotions as $emotion}
                     {if $hasEscapedFragment}
                         {if 0|in_array:$emotion.devicesArray}
-                            shopID: {$shopID|var_dump}
+                            XshopIDX: {$shopID|var_dump}
                             <div class="emotion--fragment">
                                 {action module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}
                             </div>
