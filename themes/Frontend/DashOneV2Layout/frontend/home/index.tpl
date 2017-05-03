@@ -3,8 +3,8 @@
 {block name='frontend_home_index_promotions'}
         {if $hasEmotion}
             <div class="content--emotions">
-                {$emotions|dump}
                 {foreach $emotions as $emotion}
+                    <pre>{$emotion.attribute|print_r}</pre>
                     {if $hasEscapedFragment}
                         {if 0|in_array:$emotion.devicesArray}
                             <div class="emotion--fragment">
