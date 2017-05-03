@@ -1,9 +1,10 @@
 {if $sEmotions|@count > 0}
     {foreach $sEmotions as $emotion}
+        {$shopID|dump}{$emotion.attribute.shopid|dump}
         {if $shopID != $emotion.attribute.shopid}
             {continue}
         {/if}
-        
+
         {block name="widgets/emotion/index/container"}
 
             {* Config block for overriding configuration variables of the shopping world *}
