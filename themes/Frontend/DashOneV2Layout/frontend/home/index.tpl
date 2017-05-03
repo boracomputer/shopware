@@ -3,6 +3,7 @@
 {block name='frontend_home_index_promotions'}
         {if $hasEmotion}
             <div class="content--emotions">
+            home/index: {$shopID|dump}
                 {foreach $emotions as $emotion}
                     {if $hasEscapedFragment}
                         {if 0|in_array:$emotion.devicesArray}
