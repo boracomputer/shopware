@@ -1,5 +1,5 @@
 {block name="frontend_widgets_banner_slider"}
-shopID: {$shopID|var_dump}
+
     <div class="emotion--banner-slider image-slider"
          data-image-slider="true"
          data-thumbnails="false"
