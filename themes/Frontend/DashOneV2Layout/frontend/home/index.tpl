@@ -8,6 +8,7 @@
                     {if $hasEscapedFragment}
                         {if 0|in_array:$emotion.devicesArray}
                             XshopIDX: {$shopID|var_dump}
+                            
                             <div class="emotion--fragment">
                                 {action module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}
                             </div>
