@@ -30,6 +30,16 @@
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
     .header-main {
+        .container {
+            &.header--navigation {
+                .logo-main {
+                    .logo--link {
+                        .unitize(margin-top, -30);
+                        .unitize-height(100);
+                    }
+                }
+            }
+        }
         .top-bar {
             .container {
                 .top-bar--navigation {
@@ -46,6 +56,16 @@
                         box-shadow: 0 2px 3px 0px rgba(0,0,0,0.25);
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @phoneLandscapeViewportWidth) {
+    // 480px
+    .header-main {
+        .entry--cart {
+            .cart--link {
             }
         }
     }
