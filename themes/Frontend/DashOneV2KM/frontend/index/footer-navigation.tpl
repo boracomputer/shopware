@@ -3,6 +3,7 @@
 
 {block name="frontend_index_footer_column_service_menu"}
     <div class="footer--column column--menu block">
+        FOO
         {block name="frontend_index_footer_column_service_menu_headline"}
             <div class="column--headline">{s name="sFooterShopNavi1"}{/s}</div>
         {/block}
