@@ -11,7 +11,7 @@
             <nav class="column--navigation column--content">
                 <ul class="navigation--list" role="menu">
                     {block name="frontend_index_footer_column_service_menu_before"}{/block}
-                    {foreach $sMenu.kmBottom1 as $item}
+                    {foreach $sMenu.kmBottom as $item}
 
                         {block name="frontend_index_footer_column_service_menu_entry"}
                             <li class="navigation--entry" role="menuitem">
