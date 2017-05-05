@@ -9,8 +9,8 @@
 </div>
 
 <nav class="top-bar--login block js--toggle-target" role="menubar" id="top-bar--stores">
-    <small>
-    Verfügbarkeit Ihrer Filiale direkt anzeigen:
+
+    Artikel-Verfügbarkeit Ihrer Filiale direkt anzeigen:
     <form class="action--store action--content language--form" method="POST" data-action-form="true">
         <select name="tbStoreUser" class="sort--field action--field" data-auto-submit="true" data-class="">
             <option value="0">Filiale wählen</option>
@@ -19,7 +19,18 @@
             {/foreach}
         </select>
     </form>
-    </small>
+
+
+    Informationen zu unseren Filialen:
+    <form class="action--store action--content language--form" method="GET" action="{url controller='Filiale' action='info'}">
+        <select name="storeId" class="sort--field action--field" data-auto-submit="true" data-class="">
+            <option value="0">Filiale wählen</option>
+            {foreach $tbStores as $storeID => $store}
+            <option value="{$storeID}"{if $tbStoreUser==$storeID} SELECTED{/if}>{$store.shopName} {$store.name|utf8_encode}</option>
+            {/foreach}
+        </select>
+    </form>
+
 </nav>
 
 {/block}
