@@ -20,16 +20,8 @@
         </select>
     </form>
 
-
-    Informationen zu unseren Filialen:
-    <form class="action--store action--content language--form" method="GET" action="{url controller='Filiale' action='info'}">
-        <select name="storeId" class="sort--field action--field" data-auto-submit="true" data-class="">
-            <option value="0">Filiale wählen</option>
-            {foreach $tbStores as $storeID => $store}
-            <option value="{$storeID}"{if $tbStoreUser==$storeID} SELECTED{/if}>{$store.shopName} {$store.name|utf8_encode}</option>
-            {/foreach}
-        </select>
-    </form>
+    Informationen zu unseren Filialen:<br />
+    {include file="frontend/filiale/filiale_select_dropdown.tpl"}
 
 </nav>
 

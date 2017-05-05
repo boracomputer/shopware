@@ -35,7 +35,6 @@
                             </li>
                         {/block}
                     {/foreach}
-
                     {block name="frontend_index_footer_column_service_menu_after"}{/block}
                 </ul>
             </nav>
@@ -80,7 +79,7 @@
                 </ul>
             </nav>
         {/block}
-        
+
         {block name="frontend_index_footer_column_information_menu_headline"}
             <div class="column--headline">{s name="sFooterShopNavi5"}Rechtliches{/s}</div>
         {/block}
