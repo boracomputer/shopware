@@ -21,7 +21,7 @@
     </form>
 
     Informationen zu unseren Filialen:<br />
-    {include file="frontend/filiale/filiale_select_dropdown.tpl"}
+    {include file='frontend/filiale/filiale_select_dropdown.tpl'}
 
 </nav>
 
