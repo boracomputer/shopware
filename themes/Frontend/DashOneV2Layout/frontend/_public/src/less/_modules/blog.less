@@ -5,10 +5,23 @@
             .product--info {
                 .product--price-info {
                     .product--price {
+                        position: relative;
+                        &.pricelayer{
+                            position: absolute;
+                            &.fill{
+                                color: @theme-primary;
+                            }
+                            &.outline{
+                                -webkit-text-stroke-width: 8px;
+                                -webkit-text-stroke-color: white;
+                            }
+                            &.shadow{
+                                text-shadow: 0 0 8px rgba(0,0,0,0.5);
+                            }
+                        }
                         .price--default{
-                            color: @theme-primary;
+
                             .unitize(font-size, 28);
-                            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px rgba(0,0,0,0.5);
                             font-weight: bold;
                             sup{
                                 font-size: 50%;
