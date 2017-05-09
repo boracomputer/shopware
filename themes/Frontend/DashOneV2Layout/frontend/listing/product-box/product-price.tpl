@@ -7,9 +7,9 @@
         <span class="price--default is--nowrap{if $sArticle.has_pseudoprice} is--discount{/if}">
             {if $sArticle.priceStartingFrom && !$sArticle.liveshoppingData}{s name='ListingBoxArticleStartsAt'}{/s} {/if}
             {$price = ","|explode:$sArticle.price}
-            <span class="pricelayer shadow">{$price.0}<sup>{$price.1}</sup> &euro;<sup>*</sup></span>
-            <span class="pricelayer outline">{$price.0}<sup>{$price.1}</sup> &euro;<sup>*</sup></span>
-            <span class="pricelayer fill">{$price.0}<sup>{$price.1}</sup> &euro;<sup>*</sup></span>
+            <span class="pricelayer shadow">{$price.0}<sup>{$price.1}</sup> &euro;</span>
+            <span class="pricelayer outline">{$price.0}<sup>{$price.1}</sup> &euro;</span>
+            <span class="pricelayer fill">{$price.0}<sup>{$price.1}</sup> &euro;</span>
             {*<svg>
                 <text x="50%" text-anchor="middle" y="1.05em" class="shadow">{$price.0},<tspan class="sup" dy="-.6em" dx="0">{$price.1}{s name="Star"}{/s}</tspan></text>
                 <text x="50%" text-anchor="middle" y="1em" class="outline">{$price.0},<tspan class="sup" dy="-.6em" dx="0">{$price.1}{s name="Star"}{/s}</tspan></text>
