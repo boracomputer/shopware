@@ -36,6 +36,25 @@
             }
         }
     }
+    .container.header--navigation {
+        .shop--navigation {
+            .navigation--list {
+                .navigation--entry.entry--search {
+                    .main-search--results {
+                        .results--list {
+                            .list--entry {
+                                .search-result--link {
+                                    .entry--price{
+                                        .product--price(18); // _mixins/price.less
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: @tabletViewportWidth) {

@@ -4,35 +4,7 @@
         .box--content {
             .product--info {
                 .product--price-info {
-                    .product--price {
-                        position: relative;
-                        .pricelayer{
-                            position: absolute;
-                            top: 5px;
-                            font-weight: bold;
-                            &.fill{
-                                color: @theme-primary;
-                            }
-                            &.outline{
-                                -webkit-text-stroke-width: 8px;
-                                -webkit-text-stroke-color: white;
-                            }
-                            &.shadow{
-                                text-shadow: 0 0 8px rgba(0,0,0,0.5);
-                            }
-                        }
-                        .price--default{
-
-                            .unitize(font-size, 28);
-                            font-weight: bold;
-                            sup{
-                                font-size: 50%;
-                                top: -0.90em;
-                                left: .2em;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
+                    .product--price; // _mixins/price.less
                 }
             }
         }
