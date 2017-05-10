@@ -35,6 +35,7 @@
 .product--price(@font-size: 28, @top: 5px, @right: 0, @bottom: 0, @left: 0){
 
     .product--price {
+        min-height: @font-size*1.5px;
         position: relative;
         .pricelayer{
             position: absolute;
@@ -54,8 +55,7 @@
                 text-shadow: 0 0 8px rgba(0,0,0,0.5);
             }
         }
-        .price--default{
-
+        .price--default, .price--content{
             .unitize(font-size, @font-size);
             font-weight: bold;
             sup{

@@ -1,6 +1,7 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
 {block name="frontend_index_header_javascript_jquery" append}
+{if $shopID != 3}
 <script>
     jQuery(document).ready(function($) {
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
@@ -32,9 +33,11 @@
         });
     });
 </script>
+{/if}
 {/block}
 
 {block name="frontend_detail_data_delivery" append}
+{if $shopID != 3}
     <br />
     <strong class="entry--label">
         Filialbestand:
@@ -46,4 +49,5 @@
             </span>
         </a>
     </span>
+{/if}
 {/block}
