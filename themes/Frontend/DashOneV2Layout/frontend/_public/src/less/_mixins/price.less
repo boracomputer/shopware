@@ -32,19 +32,22 @@
     }
 }
 
-.product--price(@font-size: 28){
+.product--price(@font-size: 28, @top: 5px, @right: 0, @bottom: 0, @left: 0){
 
     .product--price {
         position: relative;
         .pricelayer{
             position: absolute;
-            top: 5px;
+            top: @top;
+            right: @right;
+            bottom: @bottom;
+            left: @left;
             font-weight: bold;
             &.fill{
                 color: @theme-primary;
             }
             &.outline{
-                -webkit-text-stroke-width: 8px;
+                -webkit-text-stroke-width: (@font-size/4px);
                 -webkit-text-stroke-color: white;
             }
             &.shadow{

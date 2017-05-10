@@ -45,7 +45,8 @@
                             .list--entry {
                                 .search-result--link {
                                     .entry--price{
-                                        .product--price(18); // _mixins/price.less
+                                        .product--price(18, 0, 0, 0, 0); // _mixins/price.less
+
                                     }
                                 }
                             }
@@ -99,6 +100,10 @@
                                         background: #f0f0f0;
                                         color: @theme-primary;
                                     }
+                                }
+                                &::after{
+                                    background: #FFF;
+                                    border-color: #FFF;
                                 }
                             }
                         }
