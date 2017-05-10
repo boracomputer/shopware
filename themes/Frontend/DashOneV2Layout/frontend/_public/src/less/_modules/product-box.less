@@ -16,7 +16,7 @@
             padding: 0;
         }
         input{
-            
+
         }
     }
     .stores--stock{
@@ -92,7 +92,8 @@
 			&.is--discount {
 				color: @badge-discount-bg;
 			}
-            .nice-price;
+            //.nice-price;
+            .product--price; // _mixins/price.less
 		}
     }
 }
@@ -103,6 +104,20 @@
 
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
+
+    .topseller {
+        .topseller--content {
+            .box--content {
+                .product--price {
+                    text-align: center !important;
+                    .price--default{
+                        .product--price; // _mixins/price.less
+                    }
+                }
+            }
+        }
+    }
+
     .box--slider .product--price-info .price--unit {
 
     }
