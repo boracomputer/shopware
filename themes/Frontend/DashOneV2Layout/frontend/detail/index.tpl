@@ -33,14 +33,17 @@
     </div>
 {/block}
 
-{* Product attribute 1 *}
-{block name='frontend_detail_data_attributes_attr1'}
-{/block}
-{block name='frontend_detail_data_attributes_attr2'}
-{/block}
+{* remove attributes *}
+{block name='frontend_detail_data_attributes_attr1'}{/block}
+{block name='frontend_detail_data_attributes_attr2'}{/block}
 
 {block name='frontend_detail_index_buy_container_inner' prepend}
+{/block}
 
+{* move cross-selling to top *}
+{block name="frontend_detail_index_tabs_cross_selling"}{/block}
+{block name="frontend_detail_index_detail" prepend}
+    {include file="frontend/detail/cross_selling.tpl"}
 {/block}
 
 {block name='frontend_detail_index_buy_container'}
@@ -185,7 +188,7 @@
                 <hr />
 
                 {include file="frontend/plugins/mille_commerzfinanz4/detail/data.tpl"}
-                
+
                 {* Product actions *}
                 {block name="frontend_detail_index_actions"}
                     <nav class="product--actions">
