@@ -140,3 +140,5 @@
                             {block name='frontend_detail_index_after_tabs'}{/block}
                         {/block}
                     </div>
+                {/block}
+            </div>
