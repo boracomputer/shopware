@@ -1,21 +1,28 @@
+.product--details  .tab--container
 .product--details {
     .product--header {
         .unitize-padding(30, 0, 0, 0);
     }
     .tab--navigation{
-        border: 1px solid @panel-border;
-        border-bottom: none;
+        border: none;
     }
     .tab-menu--product {
         .tab--navigation {
             .tab--link {
-                border-right: 1px solid @panel-border;
+                border: 1px solid @panel-border;
+                border-bottom: none;
             }
         }
+        .tab--container-list{
+        }
     }
-    .tab--container{
-        //border: 1px solid @panel-border;
+    .tab-menu--cross-selling{
+        .unitize-margin(0, 0, 10, 0);
+        .tab--container{
+            border: 1px solid @panel-border !important;
+        }
     }
+
     .product--detail-upper {
         .product--buybox {
             .same-day-delivery {
