@@ -32,17 +32,18 @@
                         }
                     }
                     .register--login-email{
-                        input.register--login-field{
-                            .unitize-padding(0,5,0,0);
-                        }
+                        .unitize-padding(0,5,0,0);
                     }
                     .register--login-password{
-                        input.register--login-field{
-                            .unitize-padding(0,0,0,5);
-                        }
+                        .unitize-padding(0,0,0,5);
                     }
                     .register--login-lostpassword a{
-                        color: @theme-text-dark;
+                        a[title^="Passwort"]{
+                            color: @theme-text-dark;
+                        }
+                        a[title^="Registrieren"]{
+                            font-weight: bold;
+                        }
                     }
                     .register--login-action button{
                         font-weight: bold;
