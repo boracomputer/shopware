@@ -16,6 +16,24 @@
                     z-index: 3001;
                     background-color: #FFFFFF;
                     color: @theme-text-dark;
+                    .register--login-description{
+                        .unitize(font-size, 12);
+                        text-transform: uppercase;
+                        color: @theme-primary;
+                        font-weight: bold;
+                    }
+                    .register--login-email, .register--login-password{
+                        width: 50%;
+                        input.register--login-field{
+                            width: 100%;
+                        }
+                    }
+                    .register--login-lostpassword a{
+                        color: @theme-text-dark;
+                    }
+                    .register--login-action button{
+                        font-weight: bold;
+                    }
                 }
                 #top-bar--stores{
                     .js--fancy-select{
