@@ -2,7 +2,7 @@
 
 {block name="frontend_index_checkout_actions_service_menu" append}
     <div class="navigation--entry entry--account" role="menuitem">
-        <div href="{url controller='account'}" class="entry--link js--account js--toggle-trigger" data-target="#top-bar--login">
+        <div href="{url controller='account'}" class="entry--link js--account" data-target="#top-bar--login">
             <i class="icon--account"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkMyAccount'}Mein Konto{/s}
         </div>
     </div>
