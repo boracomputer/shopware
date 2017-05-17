@@ -36,7 +36,7 @@
 {/if}
 {/block}
 
-{block name="frontend_detail_data_delivery"}
+{block name="frontend_detail_index_delivery"}
     {$smarty.block.parent}
     {if $shopID != 3}
         <br />
