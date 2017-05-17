@@ -142,8 +142,8 @@
 
                 <hr />
 
-                {block name="frontend_detail_data_delivery_wrapper"}
-                    {* Delivery Informations *}
+                {*block name="frontend_detail_data_delivery_wrapper"}
+                    {Delivery Informations}
                     <div class="product--delivery_info">
                     {block name="frontend_detail_data_delivery"}
                         {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
@@ -152,7 +152,7 @@
                     {/block}
                     </div>
                     <hr />
-                {/block}
+                {/block*}
 
                 {* Include buy button and quantity box *}
                 {block name="frontend_detail_index_buybox"}
