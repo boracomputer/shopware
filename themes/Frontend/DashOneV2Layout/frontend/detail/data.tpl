@@ -1,4 +1,4 @@
-{extends file='parent:frontend/detail/index.tpl'}
+{extends file='parent:frontend/detail/data.tpl'}
 
 {block name='frontend_detail_data_price_default'}
     <span class="price--content content--default">
