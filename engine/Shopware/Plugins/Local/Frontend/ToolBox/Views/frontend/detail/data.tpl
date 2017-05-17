@@ -2,7 +2,7 @@
 
 {block name="frontend_detail_data_delivery"}
     {$smarty.block.parent}
-    {if $shopID != 3}
+    {*if $shopID != 3*}
         <br />
         <strong class="entry--label">
             Filialbestand:
@@ -14,5 +14,5 @@
                 </span>
             </a>
         </span>
-    {/if}
+    {*/if*}
 {/block}

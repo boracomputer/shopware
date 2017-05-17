@@ -16,3 +16,7 @@
         <span class="pricelayer fill">{$price.0}<sup>{$price.1}</sup> &euro;</span>
     </span>
 {/block}
+
+{block name="frontend_detail_data_delivery"}
+    {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle}
+{/block}
