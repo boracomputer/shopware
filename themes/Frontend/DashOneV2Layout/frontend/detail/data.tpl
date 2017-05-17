@@ -18,5 +18,4 @@
 {/block}
 
 {block name="frontend_detail_data_delivery"}
-    {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle}
 {/block}
