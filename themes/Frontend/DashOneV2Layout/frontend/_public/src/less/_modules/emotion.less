@@ -1,0 +1,37 @@
+
+@media screen and (min-width: @desktopViewportWidth) {
+    .col-xl-8{
+        .emotion--product{
+            .product--box.box--emotion{
+                .liveshopping--listing{
+                    .product--image{
+                        height: 100%;
+                        .unitize-min-width(165);
+                        .unitize-margin(0,20,0,0);
+                        position: absolute;
+                        left: 10px;
+                    }
+                    .product--details{
+                        width: calc(100% - 200px);
+                        top: 0;
+                        right: 0;
+                    }
+                    .product--badges {
+                        left: auto;
+                        right: -1px;
+                        .product--badge{
+                            .unitize(font-size, 18);
+                            border-top-left-radius: 3px;
+                            border-top-right-radius: 0px;
+                            border-bottom-right-radius: 0px;
+                            border-bottom-left-radius: 3px;
+                        }
+                        .badge--discount{
+                            background: @theme-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
