@@ -8,6 +8,27 @@
     float: right;
 }
 
+.header-main {
+    background: #FFF;
+    .container.header--navigation {
+        .shop--navigation {
+            .navigation--list {
+                .navigation--entry.entry--cart {
+                    .cart--link {
+                        .cart--amount{
+                            color: @theme-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.navigation-main{
+    background: @theme-secondary;
+
+}
+
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
     .header-main {
