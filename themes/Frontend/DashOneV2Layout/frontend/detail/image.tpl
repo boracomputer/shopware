@@ -8,7 +8,7 @@
     {if $sArticle.image.description}
         {$alt = $sArticle.image.description|escape}
     {/if}
-
+    {$sArticle.image|dump}
     <span class="image--element"
           {if $sArticle.image}
           data-img-large="//images.skillbooks.de/image800/{$sArticle.image.attribute.attribute1}"
