@@ -74,6 +74,9 @@ jQuery(document).ready(function(){
 <style>
 @media screen and (min-width: 48em) {
     .content--filialen .content--custom .panel{
+        margin-top: 10px;
+    }
+    .content--filialen .content--custom .panel.is--filiale{
         width: calc(25% - 10px);
         float: left;
         min-height: 250px;
@@ -106,7 +109,7 @@ jQuery(document).ready(function(){
                         </div>
 
                         {foreach $tbStores as $tbStore}
-                            <div class="panel has--border">
+                            <div class="panel has--border is--filiale">
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
                                 <div class="panel--body">
                                     {$tbStore.shopname}<br />
