@@ -113,7 +113,7 @@ jQuery(document).ready(function(){
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
                                 <div class="panel--body">
                                     {$tbStore.shopname}<br />
-                                    {$tbStore.street} {$tbStore.street_no}<br />
+                                    {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
                                     {$tbStore.zip_code} {$tbStore.city}<br /><br />
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
                                     {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
