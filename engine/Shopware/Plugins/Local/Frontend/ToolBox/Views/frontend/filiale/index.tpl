@@ -14,7 +14,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
     var filialen={$tbStoresJSON};
-    console.log(filialen);
+    //console.log(filialen);
     var shopname, shopmarker;
     var markers = [];
     var options = {
@@ -29,9 +29,8 @@ jQuery(document).ready(function(){
                             options
                         );
 {literal}
-//console.log(shopmarker_bora);
-
     $.each(filialen, function(k, v){
+        console.log(v);
         var LatLng = v.gmap_location.split(",");
         if(v.shopName=="Bora Computer"){
             shopname = 'Bora Computer';
