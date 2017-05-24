@@ -88,16 +88,19 @@ jQuery(document).ready(function(){
 
                         {foreach $tbStores as $tbStore}
                             <div class="panel has-border">
-                                <h3 class="panel--title is--underline">Panel title</h3>
+                                <h3 class="panel--title is--underline">{$tbStore.name}</h3>
                                 <div class="panel--body">
+                                    {$tbStore.shopname}<br />
+                                    {$tbStore.street} {$tbStore.street_no}<br />
+                                    {$tbStore.zip_code} {$tbStore.city}<br /><br />
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
                                     {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
                                     {if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
-                                    {if $tbStore.info_opening_hours}<strong>>Öffnungseiten</strong>
-                                    <div class="panel--body">
+                                    <br />
+                                    {if $tbStore.info_opening_hours}<strong>Öffnungseiten</strong>
                                         {$tbStore.info_opening_hours}
-                                    </div>{/if}
-                                    <div class="{url controller=filiale action=info id=$tbStore.id}">zur Filialseite</a>
+                                    {/if}
+                                    <a href="{url controller=filiale action=info id=$tbStore.id}" class="">zur Filialseite</a>
                                 </div>
                             </div>
                         {/foreach}
