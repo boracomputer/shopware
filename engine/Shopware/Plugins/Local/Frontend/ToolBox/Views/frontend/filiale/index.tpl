@@ -80,7 +80,8 @@ jQuery(document).ready(function(){
         width: calc(25% - 10px);
         float: left;
         min-height: 250px;
-        margin: 0 5px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 </style>
@@ -99,8 +100,8 @@ jQuery(document).ready(function(){
 
 						<div id="google_map" style="height:300px"></div>
 
-                        <div class="panel">
-                            <h3 style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h3>
+                        <div class="panel has--border">
+                            <h3  class="panel--title is--underline" style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h3>
                             <div class="panel--body">
                                 <p style="text-align: center;">
                                     Unsere Services sind sind f&uuml;r Sie immer erreichbar. Kundenfreundlichkeit und Kundenservice sind unsere St&auml;rken. Schauen Sie bei uns vorbei und &uuml;berzeugen Sie sich von unseren Dienstleistungen.
