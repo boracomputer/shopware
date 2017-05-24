@@ -115,7 +115,7 @@ jQuery(document).ready(function(){
                                 <div class="panel--body">
                                     {$tbStore.shopName}<br />
                                     {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
-                                    {$tbStore.zip_code} {$tbStore.city}<br /><br />
+                                    {$tbStore.zip_code} {$tbStore.city|utf8_encode}<br /><br />
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
                                     {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
                                     {if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
