@@ -32,8 +32,8 @@ jQuery(document).ready(function(){
 //console.log(shopmarker_bora);
 
     $.each(filialen, function(k, v){
-
-        if(v.shopID=="1"){
+        var LatLng = v.gmap_location.split(",");
+        if(v.shopName=="Bora Computer"){
             shopname = 'Bora Computer';
             shopmarker = '//bora-computer.de/media/image/google_marker_bora.png';
         }
@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
         }
 	            markers[v.id] = new google.maps.Marker({
 	                map: googlemap,
-	                position: {lat: parseFloat(v.lat), lng: parseFloat(v.lng)},
+	                position: {lat: parseFloat(LatLng[0]), lng: parseFloat(LatLng[1])},
                     title: shopname+' - ' + v.name,
                     icon: shopmarker
 	            });
@@ -52,8 +52,8 @@ jQuery(document).ready(function(){
                     var content = ''
                     +'<h3 id="firstHeading" class="firstHeading">'+this.title+'</h3>'
                     +'<div id="bodyContent">'
-                    +'<p>'+v.address+'</p>'
-                    +'<p>'+v.info+'</p>'
+                    +'<p>'+v.street+' '+v.street_no+'<br>'+v.zip_code+' '+v.city+'</p>'
+                    +'<p>'+v.info_opening_hours+'</p>'
                     +'</div>';
 
                     infowindow.setContent(content);
