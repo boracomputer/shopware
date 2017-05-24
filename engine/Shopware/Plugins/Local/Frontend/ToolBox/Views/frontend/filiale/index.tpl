@@ -70,9 +70,20 @@ jQuery(document).ready(function(){
 </script>
 {/block}
 
+{block name="frontend_index_header_css_print"}
+<style>
+@media screen and (min-width: 48em) {
+    .content--filialen .content--custom .panel{
+        width: 25%;
+        float: left;
+        min-height: 250px;
+    }
+}
+</style>
+{/block}
 
 {block name="frontend_index_content"}
-	<div class="custom-page--content content block">
+	<div class="custom-page--content content--filialen content block">
 
         {* Custom page tab content *}
         {block name="frontend_custom_article"}
@@ -104,6 +115,7 @@ jQuery(document).ready(function(){
                                 </div>
                             </div>
                         {/foreach}
+                        <div class="clear"></div>
                     {/block}
                 {/block}
             </div>
