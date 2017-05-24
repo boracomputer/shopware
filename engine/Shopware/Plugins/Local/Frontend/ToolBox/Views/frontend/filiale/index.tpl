@@ -74,7 +74,7 @@ jQuery(document).ready(function(){
 <style>
 @media screen and (min-width: 48em) {
     .content--filialen .content--custom .panel{
-        width: 25%;
+        width: calc(25% - 10px);
         float: left;
         min-height: 250px;
     }
@@ -89,16 +89,16 @@ jQuery(document).ready(function(){
         {block name="frontend_custom_article"}
             <div class="content--custom">
                 {block name="frontend_custom_article_inner"}
-                    {* Custom page tab headline *}
-                    {block name="frontend_custom_article_headline"}
-                    	<h1 class="custom-page--tab-headline">{$tbStore.shopName} {$tbStore.name}</h1>
-                    {/block}
+
+                    <img src="/media/image/e1/7d/31/km_filialen_140x140.png" />
+                    
+
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
 						<div id="google_map" style="height:500px"></div>
 
                         {foreach $tbStores as $tbStore}
-                            <div class="panel has-border">
+                            <div class="panel has--border">
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
                                 <div class="panel--body">
                                     {$tbStore.shopname}<br />
