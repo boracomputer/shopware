@@ -79,7 +79,7 @@ jQuery(document).ready(function(){
     .content--filialen .content--custom .panel.is--filiale{
         width: calc(25% - 10px);
         float: left;
-        min-height: 250px;
+        min-height: 315px;
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -113,7 +113,7 @@ jQuery(document).ready(function(){
                             <div class="panel has--border is--filiale">
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
                                 <div class="panel--body">
-                                    {$tbStore.shopname}<br />
+                                    {$tbStore.shopName}<br />
                                     {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
                                     {$tbStore.zip_code} {$tbStore.city}<br /><br />
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
