@@ -84,7 +84,7 @@ jQuery(document).ready(function(){
                     {/block}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-						<div id="google_map" style="height:300px"></div>
+						<div id="google_map" style="height:500px"></div>
 
 						<div class="block-group">
 							<div class="block" style="width:50%">
