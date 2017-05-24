@@ -111,7 +111,7 @@ jQuery(document).ready(function(){
 
                         {foreach $tbStores as $tbStore}
                             <div class="panel has--border is--filiale">
-                                <h3 class="panel--title is--underline">{$tbStore.name}</h3>
+                                <h3 class="panel--title is--underline">{$tbStore.name|utf8_encode}</h3>
                                 <div class="panel--body">
                                     {$tbStore.shopName}<br />
                                     {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
