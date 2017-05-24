@@ -86,53 +86,21 @@ jQuery(document).ready(function(){
                     {block name="frontend_custom_article_content"}
 						<div id="google_map" style="height:500px"></div>
 
-						<div class="block-group">
-							<div class="block" style="width:50%">
-                        		{$tbStore.info_text1}
-							</div>
-							<div class="block" style="width:50%">
-								<br /><br />
-								<div class="block-group">
-									<div class="block" style="width:50%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Kontakt</div>
-											<div class="panel--body">
-												{if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
-												{if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
-												{if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
-											</div>
-										</div>
-									</div>
-									<div class="block" style="width:50%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Öffnungseiten</div>
-											<div class="panel--body">
-												{$tbStore.info_opening_hours}
-											</div>
-										</div>
-									</div>
-									{if $tbStore.info_parking && $tbStore.info_parking!=''}
-									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Anfahrt &amp; Parken</div>
-											<div class="panel--body">
-												{$tbStore.info_parking}
-											</div>
-										</div>
-									</div>
-									{/if}
-									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Feedback</div>
-											<div class="panel--body">
-												{include file="frontend/filiale/feedback.tpl"}
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
+                        {foreach $tbStores as $tbStore}
+                            <div class="panel has-border">
+                                <h3 class="panel--title is--underline">Panel title</h3>
+                                <div class="panel--body">
+                                    {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
+                                    {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
+                                    {if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
+                                    {if $tbStore.info_opening_hours}<strong>>Öffnungseiten</strong>
+                                    <div class="panel--body">
+                                        {$tbStore.info_opening_hours}
+                                    </div>{/if}
+                                    <div class="{url controller=filiale action=info id=$tbStore.id}">zur Filialseite</a>
+                                </div>
+                            </div>
+                        {/foreach}
                     {/block}
                 {/block}
             </div>
