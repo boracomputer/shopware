@@ -77,6 +77,7 @@ jQuery(document).ready(function(){
         width: calc(25% - 10px);
         float: left;
         min-height: 250px;
+        margin: 0 5px;
     }
 }
 </style>
@@ -89,14 +90,15 @@ jQuery(document).ready(function(){
         {block name="frontend_custom_article"}
             <div class="content--custom">
                 {block name="frontend_custom_article_inner"}
-
-                    <img src="/media/image/e1/7d/31/km_filialen_140x140.png" />
-                    
-
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-						<div id="google_map" style="height:500px"></div>
+                        <img src="/media/image/db/91/4d/km_filialen.png" />
 
+						<div id="google_map" style="height:300px"></div>
+
+                        <h1 style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h1>
+                        <p style="text-align: center;">Unsere Services sind sind f&uuml;r Sie immer erreichbar. Kundenfreundlichkeit und Kundenservice sind unsere St&auml;rken. Schauen Sie bei uns vorbei und &uuml;berzeugen Sie sich von unseren Dienstleistungen.</p>
+                        
                         {foreach $tbStores as $tbStore}
                             <div class="panel has--border">
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
