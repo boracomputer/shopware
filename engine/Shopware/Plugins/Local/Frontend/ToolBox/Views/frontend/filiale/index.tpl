@@ -14,6 +14,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
     var filialen={$tbStoresJSON};
+    console.log(filialen);
     var shopname, shopmarker;
     var markers = [];
     var options = {
