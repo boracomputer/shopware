@@ -13,6 +13,7 @@
     {* Product description *}
     {block name='frontend_detail_description_text'}
         <div class="product--description" itemprop="description">
+            {$sArticle|dump}
             {if $sArticle.description_long}
                 {$sArticle.description_long}
             {else}
