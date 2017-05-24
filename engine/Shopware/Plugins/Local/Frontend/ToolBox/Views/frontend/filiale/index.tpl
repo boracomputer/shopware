@@ -96,9 +96,15 @@ jQuery(document).ready(function(){
 
 						<div id="google_map" style="height:300px"></div>
 
-                        <h1 style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h1>
-                        <p style="text-align: center;">Unsere Services sind sind f&uuml;r Sie immer erreichbar. Kundenfreundlichkeit und Kundenservice sind unsere St&auml;rken. Schauen Sie bei uns vorbei und &uuml;berzeugen Sie sich von unseren Dienstleistungen.</p>
-                        
+                        <div class="panel">
+                            <h3 style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h3>
+                            <div class="panel--body">
+                                <p style="text-align: center;">
+                                    Unsere Services sind sind f&uuml;r Sie immer erreichbar. Kundenfreundlichkeit und Kundenservice sind unsere St&auml;rken. Schauen Sie bei uns vorbei und &uuml;berzeugen Sie sich von unseren Dienstleistungen.
+                                </p>
+                            </div>
+                        </div>
+
                         {foreach $tbStores as $tbStore}
                             <div class="panel has--border">
                                 <h3 class="panel--title is--underline">{$tbStore.name}</h3>
