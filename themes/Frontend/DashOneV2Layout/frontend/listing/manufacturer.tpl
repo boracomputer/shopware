@@ -1,3 +1,5 @@
+{extends file="parent:frontend/listing/manufacturer.tpl"}
+
 {block name="frontend_listing_text"}
     <div class="vendor--info panel has--border">
 
