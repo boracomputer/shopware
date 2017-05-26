@@ -28,3 +28,12 @@
         {$sArticle.description_long|strip_tags|truncate:240}
     </div>
 {/block}
+
+{* Product name *}
+{block name='frontend_listing_box_article_name'}
+    <a href="{$sArticle.linkDetails}"
+                class="product--title"
+                title="{$sArticle.articleName|escapeHtml}">
+        {$sArticle.articleName|truncate:50}
+    </a>
+{/block}
