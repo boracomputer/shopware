@@ -68,6 +68,23 @@ jQuery(document).ready(function(){
 ]}
 {/block}
 
+{block name="frontend_index_header_css_print"}
+<style>
+@media screen and (min-width: 48em) {
+    .content--filiale-info .block--left{
+        width: 65%;
+        padding: 20px 10px 0 0;
+    }
+    .content--filiale-info .block--right{
+        width: 35%;
+    }
+    .content--filiale-info .block--right .block{
+        padding: 10px;
+    }
+}
+</style>
+{/block}
+
 {block name="frontend_index_header"}
 	{include file="frontend/custom/header.tpl"}
 {/block}
@@ -78,7 +95,7 @@ jQuery(document).ready(function(){
 
         {* Custom page tab content *}
         {block name="frontend_custom_article"}
-            <div class="content--custom">
+            <div class="content--custom content--filiale-info">
                 {block name="frontend_custom_article_inner"}
                     {* Custom page tab headline *}
                     {block name="frontend_custom_article_headline"}
@@ -89,26 +106,26 @@ jQuery(document).ready(function(){
 						<div id="google_map" style="height:300px"></div>
 
 						<div class="block-group">
-							<div class="block" style="width:65%">
+							<div class="block block--left">
                         		{$tbStore.info_text1}
 							</div>
-							<div class="block" style="width:35%">
+							<div class="block block--right">
 								<br /><br />
 								<div class="block-group">
-									<div class="block" style="width:100%; padding: 10px;">
+									<div class="block" style="padding: 10px;">
 										<div class="panel has--border">
 											<div class="panel--title is--underline">Kontakt</div>
 											<div class="panel--body">
                                                 {$tbStore.shopName}<br />
-                                                {$tbStore.street} {$tbStore.street_no}<br />
-                                                {$tbStore.zip_code} {$tbStore.city}<br /><br />
+                                                {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
+                                                {$tbStore.zip_code} {$tbStore.city|utf8_encode}<br /><br />
 												{if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
 												{if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
 												{if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
 											</div>
 										</div>
 									</div>
-									<div class="block" style="width:100%; padding: 10px;">
+									<div class="block" style="padding: 10px;">
 										<div class="panel has--border">
 											<div class="panel--title is--underline">Öffnungseiten</div>
 											<div class="panel--body">
@@ -117,7 +134,7 @@ jQuery(document).ready(function(){
 										</div>
 									</div>
 									{if $tbStore.info_parking && $tbStore.info_parking!=''}
-									<div class="block" style="width:100%; padding: 10px;">
+									<div class="block" style="padding: 10px;">
 										<div class="panel has--border">
 											<div class="panel--title is--underline">Anfahrt &amp; Parken</div>
 											<div class="panel--body">
