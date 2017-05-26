@@ -96,9 +96,12 @@ jQuery(document).ready(function(){
 								<br /><br />
 								<div class="block-group">
 									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Kontakt</div>
+										<div class="panel has--border">
+											<div class="panel--title is--underline">Kontakt</div>
 											<div class="panel--body">
+                                                {$tbStore.shopName}<br />
+                                                {$tbStore.street} {$tbStore.street_no}<br />
+                                                {$tbStore.zip_code} {$tbStore.city}<br /><br />
 												{if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
 												{if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
 												{if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
@@ -107,7 +110,7 @@ jQuery(document).ready(function(){
 									</div>
 									<div class="block" style="width:100%; padding: 10px;">
 										<div class="panel has--border">
-											<div class="panel--header primary">Öffnungseiten</div>
+											<div class="panel--title is--underline">Öffnungseiten</div>
 											<div class="panel--body">
 												{$tbStore.info_opening_hours}
 											</div>
@@ -116,21 +119,21 @@ jQuery(document).ready(function(){
 									{if $tbStore.info_parking && $tbStore.info_parking!=''}
 									<div class="block" style="width:100%; padding: 10px;">
 										<div class="panel has--border">
-											<div class="panel--header primary">Anfahrt &amp; Parken</div>
+											<div class="panel--title is--underline">Anfahrt &amp; Parken</div>
 											<div class="panel--body">
 												{$tbStore.info_parking}
 											</div>
 										</div>
 									</div>
 									{/if}
-									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Feedback</div>
+									{*<div class="block" style="width:100%; padding: 10px;">
+										<div class="panel has--border">
+											<div class="panel--title is--underline">Feedback</div>
 											<div class="panel--body">
 												{include file="frontend/filiale/feedback.tpl"}
 											</div>
 										</div>
-									</div>
+									</div>*}
 								</div>
 
 							</div>
