@@ -89,13 +89,13 @@ jQuery(document).ready(function(){
 						<div id="google_map" style="height:300px"></div>
 
 						<div class="block-group">
-							<div class="block" style="width:50%">
+							<div class="block" style="width:65%">
                         		{$tbStore.info_text1}
 							</div>
-							<div class="block" style="width:50%">
+							<div class="block" style="width:35%">
 								<br /><br />
 								<div class="block-group">
-									<div class="block" style="width:50%; padding: 10px;">
+									<div class="block" style="width:100%; padding: 10px;">
 										<div class="panel">
 											<div class="panel--header primary">Kontakt</div>
 											<div class="panel--body">
@@ -105,8 +105,8 @@ jQuery(document).ready(function(){
 											</div>
 										</div>
 									</div>
-									<div class="block" style="width:50%; padding: 10px;">
-										<div class="panel">
+									<div class="block" style="width:100%; padding: 10px;">
+										<div class="panel has--border">
 											<div class="panel--header primary">Öffnungseiten</div>
 											<div class="panel--body">
 												{$tbStore.info_opening_hours}
@@ -115,7 +115,7 @@ jQuery(document).ready(function(){
 									</div>
 									{if $tbStore.info_parking && $tbStore.info_parking!=''}
 									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
+										<div class="panel has--border">
 											<div class="panel--header primary">Anfahrt &amp; Parken</div>
 											<div class="panel--body">
 												{$tbStore.info_parking}
