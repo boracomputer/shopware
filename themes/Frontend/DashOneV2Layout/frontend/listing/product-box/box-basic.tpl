@@ -23,6 +23,8 @@
     <div class="clear"></div>
 {/block}
 
-{block name="frontend_listing_box_article_description"}
-    {$smarty.block.parent}
+{block name='frontend_listing_box_article_description'}
+    <div class="product--description">
+        {$sArticle.description_long|strip_tags|truncate:240}
+    </div>
 {/block}
