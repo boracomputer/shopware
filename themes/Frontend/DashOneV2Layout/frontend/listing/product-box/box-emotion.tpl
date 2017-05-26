@@ -11,7 +11,7 @@
         {else}
             {$itemSize = "200px"}
         {/if}
-
+        {$articleThumbnails|dump}
         {foreach $articleThumbnails as $i => $maxWidth}
             {$srcSet = "{if $maxWidth@index !== 0}{$srcSet}, {/if}//images.skillbooks.de/image{$maxWidth}/{$sArticle.image.attribute.attribute1} {$maxWidth}w"}
 
@@ -19,7 +19,7 @@
                 {$srcSetRetina = "{if $image@index !== 0}{$srcSetRetina}, {/if}{$image.retinaSource} {$maxWidth}w"}
             {/if}
         {/foreach}
-        
+
     {elseif $sArticle.image.source}
         {$baseSource = $sArticle.image.source}
     {else}
