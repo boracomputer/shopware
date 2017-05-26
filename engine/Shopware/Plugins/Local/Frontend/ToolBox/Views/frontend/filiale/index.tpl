@@ -70,69 +70,64 @@ jQuery(document).ready(function(){
 </script>
 {/block}
 
+{block name="frontend_index_header_css_print"}
+<style>
+@media screen and (min-width: 48em) {
+    .content--filialen .content--custom .panel{
+        margin-top: 10px;
+    }
+    .content--filialen .content--custom .panel.is--filiale{
+        width: calc(33% - 10px);
+        float: left;
+        min-height: 315px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+</style>
+{/block}
 
 {block name="frontend_index_content"}
-	<div class="custom-page--content content block">
+	<div class="custom-page--content content--filialen content block">
 
         {* Custom page tab content *}
         {block name="frontend_custom_article"}
             <div class="content--custom">
                 {block name="frontend_custom_article_inner"}
-                    {* Custom page tab headline *}
-                    {block name="frontend_custom_article_headline"}
-                    	<h1 class="custom-page--tab-headline">{$tbStore.shopName} {$tbStore.name}</h1>
-                    {/block}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-						<div id="google_map" style="height:500px"></div>
+                        <img src="/media/image/db/91/4d/km_filialen.png" style="margin-bottom: 10px; "/>
 
-						<div class="block-group">
-							<div class="block" style="width:50%">
-                        		{$tbStore.info_text1}
-							</div>
-							<div class="block" style="width:50%">
-								<br /><br />
-								<div class="block-group">
-									<div class="block" style="width:50%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Kontakt</div>
-											<div class="panel--body">
-												{if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
-												{if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
-												{if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
-											</div>
-										</div>
-									</div>
-									<div class="block" style="width:50%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Öffnungseiten</div>
-											<div class="panel--body">
-												{$tbStore.info_opening_hours}
-											</div>
-										</div>
-									</div>
-									{if $tbStore.info_parking && $tbStore.info_parking!=''}
-									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Anfahrt &amp; Parken</div>
-											<div class="panel--body">
-												{$tbStore.info_parking}
-											</div>
-										</div>
-									</div>
-									{/if}
-									<div class="block" style="width:100%; padding: 10px;">
-										<div class="panel">
-											<div class="panel--header primary">Feedback</div>
-											<div class="panel--body">
-												{include file="frontend/filiale/feedback.tpl"}
-											</div>
-										</div>
-									</div>
-								</div>
+						<div id="google_map" style="height:300px"></div>
 
-							</div>
-						</div>
+                        <div class="panel has--border">
+                            <h3  class="panel--title is--underline" style="text-align: center;">K&amp;M Computer 29 Mal bundesweit!</h3>
+                            <div class="panel--body">
+                                <p style="text-align: center;">
+                                    Unsere Services sind sind f&uuml;r Sie immer erreichbar. Kundenfreundlichkeit und Kundenservice sind unsere St&auml;rken. Schauen Sie bei uns vorbei und &uuml;berzeugen Sie sich von unseren Dienstleistungen.
+                                </p>
+                            </div>
+                        </div>
+
+                        {foreach $tbStores as $tbStore}
+                            <div class="panel has--border is--filiale">
+                                <h3 class="panel--title is--underline">{$tbStore.name|utf8_encode}</h3>
+                                <div class="panel--body">
+                                    {$tbStore.shopName}<br />
+                                    {$tbStore.street|utf8_encode} {$tbStore.street_no}<br />
+                                    {$tbStore.zip_code} {$tbStore.city|utf8_encode}<br /><br />
+                                    {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
+                                    {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
+                                    {if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
+                                    <br />
+                                    {if $tbStore.info_opening_hours}<strong>Öffnungseiten</strong>
+                                        {$tbStore.info_opening_hours}
+                                    {/if}
+                                    <a href="{url controller=filiale action=info id=$tbStore.id}" class="">zur Filialseite</a>
+                                </div>
+                            </div>
+                        {/foreach}
+                        <div class="clear"></div>
                     {/block}
                 {/block}
             </div>
