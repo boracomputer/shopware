@@ -39,13 +39,6 @@
     </picture>
 {/block}
 
-{* Product description *}
-{block name='frontend_listing_box_article_description'}
-    <div class="product--description">
-        {$sArticle.description_long|strip_tags|truncate:240}
-    </div>
-{/block}
-
 {*block name='frontend_listing_box_article_price_info' append}
     {include file="frontend/listing/product-box/product-buynow.tpl"}
 {/block*}

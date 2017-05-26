@@ -11,7 +11,7 @@
             {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
         {/if}
     </div>
-    
+
 {/block}
 
 {block name='frontend_listing_box_article_actions'}{/block}
@@ -21,4 +21,13 @@
     <div class="clear"></div>
     {include file="frontend/listing/product-box/product-actions.tpl"}
     <div class="clear"></div>
+{/block}
+
+{block name="frontend_listing_box_article_description"}
+    {controllerName|lower}
+	{if {config name=showDescriptionInTheListing} == true || !$sArticle.liveShopping}
+		{$smarty.block.parent}
+	{else}
+		<div class="product--description"></div>
+	{/if}
 {/block}
