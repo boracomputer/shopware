@@ -24,10 +24,5 @@
 {/block}
 
 {block name="frontend_listing_box_article_description"}
-    {controllerName|lower}
-	{if {config name=showDescriptionInTheListing} == true || !$sArticle.liveShopping}
-		{$smarty.block.parent}
-	{else}
-		<div class="product--description"></div>
-	{/if}
+    {$smarty.block.parent}
 {/block}
