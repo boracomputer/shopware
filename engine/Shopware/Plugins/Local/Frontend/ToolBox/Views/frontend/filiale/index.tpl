@@ -77,7 +77,7 @@ jQuery(document).ready(function(){
         margin-top: 10px;
     }
     .content--filialen .content--custom .panel.is--filiale{
-        width: calc(25% - 10px);
+        width: calc(33% - 10px);
         float: left;
         min-height: 315px;
         margin-left: 5px;
