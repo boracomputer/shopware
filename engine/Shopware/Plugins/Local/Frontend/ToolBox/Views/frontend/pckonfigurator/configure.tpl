@@ -22,6 +22,5 @@
 {/block}
 
 {block name="frontend_detail_index_tabs"}
-    TABS.
-    {*include file="frontend/pckonfigurator/tabs.tpl"*}
+    {include file="frontend/pckonfigurator/tabs.tpl"}
 {/block}
