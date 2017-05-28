@@ -1,24 +1,21 @@
 
 @media screen and (min-width: @desktopViewportWidth) {
-    .col-xl-8{
+    .col-xl-3{
         .emotion--product{
             .product--box.box--emotion{
                 .liveshopping--listing{
                     .product--image{
-                        height: 100%;
-                        .unitize-min-width(165);
-                        .unitize-margin(0,20,0,0);
-                        position: absolute;
-                        left: 10px;
+                        height: 70%;
                     }
                     .product--details{
-                        width: calc(100% - 200px);
+                        /*width: calc(100% - 200px);
                         top: 0;
-                        right: 0;
+                        right: 0;*/
                     }
                     .product--badges {
                         left: auto;
                         right: -1px;
+                        top: -1px;
                         .product--badge{
                             .unitize(font-size, 18);
                             border-top-left-radius: 3px;
@@ -32,6 +29,13 @@
                     }
                 }
             }
+        }
+    }
+}
+.emotion--product {
+    .product--box {
+        .product--details{
+            bottom: 10px;
         }
     }
 }

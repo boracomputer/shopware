@@ -11,7 +11,7 @@
             {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
         {/if}
     </div>
-    
+
 {/block}
 
 {block name='frontend_listing_box_article_actions'}{/block}
@@ -21,4 +21,19 @@
     <div class="clear"></div>
     {include file="frontend/listing/product-box/product-actions.tpl"}
     <div class="clear"></div>
+{/block}
+
+{block name='frontend_listing_box_article_description'}
+    <div class="product--description">
+        {$sArticle.description_long|strip_tags|truncate:240}
+    </div>
+{/block}
+
+{* Product name *}
+{block name='frontend_listing_box_article_name'}
+    <a href="{$sArticle.linkDetails}"
+                class="product--title"
+                title="{$sArticle.articleName|escapeHtml}">
+        {$sArticle.articleName|truncate:50}
+    </a>
 {/block}

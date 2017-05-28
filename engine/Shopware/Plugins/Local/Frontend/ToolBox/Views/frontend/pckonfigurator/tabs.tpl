@@ -44,7 +44,7 @@
                                     {block name="frontend_detail_tabs_content_konfigurator_konfiguration"}
                                         <div class="tab--content">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
-                                                {include file="frontend/detail/tabs/description.tpl"}
+                                                
                                             {/block}
                                         </div>
                                     {/block}
