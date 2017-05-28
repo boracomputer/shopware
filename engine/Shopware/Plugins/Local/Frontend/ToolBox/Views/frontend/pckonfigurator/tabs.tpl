@@ -44,7 +44,13 @@
                                     {block name="frontend_detail_tabs_content_konfigurator_konfiguration"}
                                         <div class="tab--content">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
-                                                
+                                                {$tbKonfigItems|dump}
+                                                {*foreach $tbKonfigItems as $groupId => $groupItems}
+                                                    <h2>{$tbKonfigGroups[$groupId].name}</h2>
+                                                    {foreach $groupItems as $item}
+                                                        {$item.sArticle.articleName}<br />}
+                                                    {/foreach}
+                                                {/foreach*}
                                             {/block}
                                         </div>
                                     {/block}
