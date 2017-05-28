@@ -1,5 +1,9 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
+{block name='frontend_index_header_title'}{strip}
+{if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
+{/strip}{/block}
+
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
     <a href="#config" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
