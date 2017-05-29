@@ -29,5 +29,5 @@
     {include file="frontend/pckonfigurator/tabs.tpl"}
 {/block}
 
-{block name='frontend_detail_index_buy_container_base_info'}
+{block name='frontend_detail_index_buy_container_inner'}
 {/block}
