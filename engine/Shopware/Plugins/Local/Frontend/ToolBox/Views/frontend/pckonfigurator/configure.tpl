@@ -7,6 +7,14 @@
 {block name='frontend_index_header_javascript' append}
     <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
 {/block}
+{block name="frontend_index_header_css_print"}
+<style>
+    .tab--container .tab--content#group-1{
+        display: block;
+    }
+</style>
+{/block}
+
 
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
