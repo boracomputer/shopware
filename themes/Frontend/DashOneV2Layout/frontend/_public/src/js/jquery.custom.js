@@ -1,6 +1,4 @@
 $(function () {
-
-    .addPlugin('.collapse--header, .collapse--content', 'collapsePanel', ['l', 'xl']);
     
     $('body').on( 'click', '.js--toggle-trigger', function (e) {
         e.preventDefault();

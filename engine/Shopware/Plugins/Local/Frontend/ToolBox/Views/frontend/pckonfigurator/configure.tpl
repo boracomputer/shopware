@@ -5,7 +5,7 @@
 {/strip}{/block}
 
 {block name='frontend_index_header_javascript' append}
-    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.swag_live_shopping.js'}"></script>
+    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
 {/block}
 
 {block name="frontend_detail_index_buybox"}
