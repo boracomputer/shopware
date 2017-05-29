@@ -3,7 +3,7 @@
 {block name='frontend_listing_box_article_image_picture'}
     {if $sArticle.image.attribute}
 
-        {$baseSource = "//images.skillbooks.de/image300/{$sArticle.image.attribute.attribute1}"}
+        {$baseSource = "//images.skillbooks.de/image600/{$sArticle.image.attribute.attribute1}"}
 
         {if $itemCols && $emotion.grid.cols && !$fixedImageSize}
             {$colSize = 100 / $emotion.grid.cols}
