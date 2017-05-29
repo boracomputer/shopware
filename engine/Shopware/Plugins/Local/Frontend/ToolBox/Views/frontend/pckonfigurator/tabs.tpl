@@ -46,10 +46,15 @@
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
                                                 {*$tbKonfigItems|dump*}
                                                 {foreach $tbKonfigItems as $groupId => $groupItems}
-                                                <h2>{$tbKonfigGroups[$groupId].name}</h2>
-                                                {foreach $groupItems as $item}
-                                                    {$item.sArticle.articleName} ({$item.sArticle.price|currency})<br />
-                                                {/foreach}
+                                                    <div class="collapse--header">
+                                                        {$tbKonfigGroups[$groupId].name}
+                                                        <span class="collapse--toggler"></span>
+                                                    </div>
+                                                    <div class="collapse--content">
+                                                        {foreach $groupItems as $item}
+                                                            {$item.sArticle.articleName} ({$item.sArticle.price|currency})<br />
+                                                        {/foreach}
+                                                    </div>
                                                 {/foreach}
                                             {/block}
                                         </div>
