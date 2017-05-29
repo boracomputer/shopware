@@ -1,7 +1,7 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
 {block name="frontend_index_header_javascript_jquery" append}
-{if $shopID != 3}
+{if $shopID != 3 && !$isKonfigurator}
 <script>
     jQuery(document).ready(function($) {
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
