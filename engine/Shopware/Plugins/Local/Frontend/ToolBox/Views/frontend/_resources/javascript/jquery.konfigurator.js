@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-    $('body').on('.collapse--header', 'click', function(){
+    $('body').on('click', '.collapse--header', function(){
         console.log($(this));
         $(this).next('.collapse--content').slideToggle();
     });

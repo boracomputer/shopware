@@ -8,9 +8,9 @@
     <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
 {/block}
 
-{block name="frontend_index_header_css_print"}
+{block name="frontend_index_header_css_print" append}
 <style>
-    .tab--content .tab--content#group-1{
+    .tab--content .collapse--content#group-1{
         display: block;
     }
 </style>
