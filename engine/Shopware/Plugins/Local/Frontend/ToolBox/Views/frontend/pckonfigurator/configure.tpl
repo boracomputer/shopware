@@ -4,6 +4,10 @@
 {if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
+{block name='frontend_index_header_javascript' append}
+    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.swag_live_shopping.js'}"></script>
+{/block}
+
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
     <a href="#config" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
