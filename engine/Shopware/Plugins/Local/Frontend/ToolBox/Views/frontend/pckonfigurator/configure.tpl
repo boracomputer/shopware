@@ -9,7 +9,7 @@
 {/block}
 {block name="frontend_index_header_css_print"}
 <style>
-    .tab--container .tab--content#group-1{
+    .tab--content .tab--content#group-1{
         display: block;
     }
 </style>
