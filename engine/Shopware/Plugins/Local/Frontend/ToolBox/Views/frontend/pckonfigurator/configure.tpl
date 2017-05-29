@@ -4,18 +4,8 @@
 {if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
-{block name='frontend_index_header_javascript' append}
+{block name='frontend_index_header_javascript_jquery' append}
     <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
-    <script>
-    ;(function($, window, undefined) {
-        $(document).ready(function() {
-            $('body').on('click', '.collapse--header', function(){
-                console.log($(this));
-                $(this).next('.collapse--content').slideToggle();
-            });
-        });
-    })(jQuery, window);
-    </script>
 {/block}
 
 {block name="frontend_index_header_css_print" append}
