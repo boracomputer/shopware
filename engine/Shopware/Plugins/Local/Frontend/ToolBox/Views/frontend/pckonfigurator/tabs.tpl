@@ -44,8 +44,7 @@
                                     {block name="frontend_detail_tabs_content_konfigurator_konfiguration"}
                                         <div class="tab--content">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
-                                                {$tbKonfigItems|dump}
-
+                                                tab.
                                             {/block}
                                         </div>
                                     {/block}
