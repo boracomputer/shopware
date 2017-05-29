@@ -11,7 +11,8 @@
         {else}
             {$itemSize = "200px"}
         {/if}
-        {$articleThumbnails=[200,600,1280]}
+
+        {$articleThumbnails=[1280,600,300]}
         {foreach $articleThumbnails as $i => $maxWidth}
             {$srcSet = "{if $maxWidth@index !== 0}{$srcSet}, {/if}//images.skillbooks.de/image{$maxWidth}/{$sArticle.image.attribute.attribute1} {$maxWidth}w"}
 
