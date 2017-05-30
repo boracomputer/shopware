@@ -97,9 +97,9 @@ jQuery(document).ready(function(){
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
                         {if $shopID==1}
-                            <img src="/media/image/b1/33/4b/banner_filialen_index_bora.png" style="margin-bottom: 10px; max-width: 100%;"/>
+                            <img src="/media/image/ab/4c/04/banner_filialen_index_bora.jpg" style="margin-bottom: 10px; max-width: 100%;"/>
                         {elseif $shopID==5}
-                            <img src="/media/image/23/2f/e2/banner_filialen_index.png" style="margin-bottom: 10px; max-width: 100%;"/>
+                            <img src="/media/image/e6/ce/7f/banner_filialen_index_km.jpg" style="margin-bottom: 10px; max-width: 100%;"/>
                         {/if}
 
 						<div id="google_map" style="height:300px"></div>
