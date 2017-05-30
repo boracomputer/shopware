@@ -19,6 +19,28 @@
     .container--konfigurator{
         padding: 0 10px;
     }
+
+    .container--konfigurator .tab--content .collapse--header{
+
+    }
+    .container--konfigurator .tab--content .collapse--header .group--name{
+        width: 200px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .container--konfigurator .tab--content .collapse--header .item-selected--name{
+        font-style: italic;
+        display: inline-block;
+        max-width: calc(100% - 335px);
+        overflow: hidden;
+    }
+    .container--konfigurator .tab--content .collapse--header .item-selected--price{
+        float: right;
+        margin-right: 35px;
+        width: 100px;
+        display: inline-block;
+    }
+
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
         margin: 5px 0;
     }
