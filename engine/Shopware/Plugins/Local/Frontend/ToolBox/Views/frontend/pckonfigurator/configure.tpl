@@ -39,6 +39,7 @@
         margin-right: 35px;
         width: 100px;
         display: inline-block;
+        text-align: right;
     }
 
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
