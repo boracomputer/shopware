@@ -48,24 +48,24 @@
                         .badge--discount{
                             background: @theme-primary;
                         }
-                        .liveshopping--container{
-                            .unitize-padding(5,40,2,5);
-                            overflow: visible;
-                            height: auto;
-                            border-top-right-radius: 0;
-                            border-bottom-right-radius: 0;
+                    }
+                    .liveshopping--container{
+                        .unitize-padding(5,40,2,5);
+                        overflow: visible;
+                        height: auto;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        position: absolute;
+                        right: -10px;
+                        top: 0px;
+                        .liveshopping--price{
+                            .unitize(font-size, 28);
+                        }
+                        .liveshopping--pseudoprice{
                             position: absolute;
-                            right: -10px;
-                            top: 0px;
-                            .liveshopping--price{
-                                .unitize(font-size, 28);
-                            }
-                            .liveshopping--pseudoprice{
-                                position: absolute;
-                                color: @theme-text-dark;
-                                top: -2em;
-                                left: 3em;
-                            }
+                            color: @theme-text-dark;
+                            top: -2em;
+                            left: 3em;
                         }
                     }
                 }
