@@ -96,7 +96,7 @@ jQuery(document).ready(function(){
                 {block name="frontend_custom_article_inner"}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-                        <img src="/media/image/db/91/4d/km_filialen.png" style="margin-bottom: 10px; "/>
+                        <img src="/media/image/23/2f/e2/banner_filialen_index.png" style="margin-bottom: 10px; max-width: 100%;"/>
 
 						<div id="google_map" style="height:300px"></div>
 
