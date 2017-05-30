@@ -24,14 +24,14 @@
 
     }
     .container--konfigurator .tab--content .collapse--header .group--name{
-        width: 200px;
+        width: 150px;
         display: inline-block;
         font-weight: bold;
     }
     .container--konfigurator .tab--content .collapse--header .item-selected--name{
         font-style: italic;
         display: inline-block;
-        max-width: calc(100% - 360px);
+        max-width: calc(100% - 310px);
         overflow: hidden;
         white-space: nowrap;
     }

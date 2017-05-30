@@ -46,6 +46,9 @@
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
                                                 {*$tbKonfigItems|dump*}
                                                 {foreach $tbKonfigItems as $groupId => $groupItems}
+                                                    {if $groupItems|count==0}
+                                                        {continue}
+                                                    {/if}
                                                     <div class="collapse--header">
                                                         <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
                                                         <span class="item-selected--name"></span>
