@@ -1,6 +1,7 @@
 {block name="widget_emotion_component_banner"}
 
     {if $smarty.get.controllerName=='listing'}
+        {$Data.fileInfo.height = (($Data.fileInfo.width-230)/$Data.fileInfo.width)*$Data.fileInfo.height }
         {$Data.fileInfo.width = $Data.fileInfo.width-230}
     {/if}
 
