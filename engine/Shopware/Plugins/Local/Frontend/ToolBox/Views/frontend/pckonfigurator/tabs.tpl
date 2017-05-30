@@ -19,12 +19,12 @@
 
             {* Content list *}
             {block name="frontend_detail_tabs_content"}
-                <div class="tab--container-list">
+                <div class="tab--container-list ">
                     {block name="frontend_detail_tabs_content_inner"}
 
                         {* Description container *}
                         {block name="frontend_detail_tabs_content_konfigurator"}
-                            <div class="tab--container">
+                            <div class="tab--container container--konfigurator">
                                 {block name="frontend_detail_tabs_content_konfigurator_inner"}
 
                                     {* Description title *}
@@ -50,9 +50,15 @@
                                                         {$tbKonfigGroups[$groupId].name}
                                                         <span class="collapse--toggler"></span>
                                                     </div>
-                                                    <div class="collapse--content" id="group-{$groupId}">
+                                                    <div class="collapse--content konfigurator--group" data-groupId="{$groupId}">
                                                         {foreach $groupItems as $item}
-                                                            {$item.sArticle.articleName} ({$item.sArticle.price|currency})<br />
+                                                        <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
+                                                            <label>
+                                                                <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" />
+                                                                <span class="articleName">{$item.sArticle.articleName}</span>
+                                                                <span class="articlePrice">{$item.sArticle.price|currency}</span>
+                                                            </label>
+                                                        </div>
                                                         {/foreach}
                                                     </div>
                                                 {/foreach}
