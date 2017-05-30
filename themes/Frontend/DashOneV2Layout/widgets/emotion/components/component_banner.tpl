@@ -2,7 +2,7 @@
 
     {if $smarty.get.controllerName=='listing'}
         {*$Data.fileInfo.height = (($Data.fileInfo.width-230)/$Data.fileInfo.width)*$Data.fileInfo.height *}
-        {$Data.fileInfo.width = $Data.fileInfo.width-260}
+        {$Data.fileInfo.width = $Data.fileInfo.width-356}
     {/if}
 
     <div class="emotion--banner"
