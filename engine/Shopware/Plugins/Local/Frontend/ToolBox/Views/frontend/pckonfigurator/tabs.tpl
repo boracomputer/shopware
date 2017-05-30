@@ -53,6 +53,15 @@
                                                         <span class="collapse--toggler"></span>
                                                     </div>
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
+                                                        {if $tbKonfigGroups[$groupId].required != 1}
+                                                        <div class="konfigurator--group--item" data-itemArtnr="">
+                                                            <label>
+                                                                <input name="item[{$groupId}]" value="" type="radio" />
+                                                                <span class="articleName">{$tbKonfigGroups[$groupId].nulllabel}</span>
+                                                                <span class="articlePrice">{"0"|currency}</span>
+                                                            </label>
+                                                        </div>
+                                                        {/if}
                                                         {foreach $groupItems as $item}
                                                         <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
                                                             <label>
