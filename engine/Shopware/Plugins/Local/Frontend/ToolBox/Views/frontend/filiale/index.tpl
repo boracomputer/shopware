@@ -96,7 +96,11 @@ jQuery(document).ready(function(){
                 {block name="frontend_custom_article_inner"}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-                        <img src="/media/image/23/2f/e2/banner_filialen_index.png" style="margin-bottom: 10px; max-width: 100%;"/>
+                        {if $shopID==1}
+                            <img src="/media/image/b1/33/4b/banner_filialen_index_bora.png" style="margin-bottom: 10px; max-width: 100%;"/>
+                        {elseif $shopID==5}
+                            <img src="/media/image/23/2f/e2/banner_filialen_index.png" style="margin-bottom: 10px; max-width: 100%;"/>
+                        {/if}
 
 						<div id="google_map" style="height:300px"></div>
 
