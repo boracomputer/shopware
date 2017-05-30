@@ -43,7 +43,9 @@
 {* move cross-selling to top *}
 {block name="frontend_detail_index_tabs_cross_selling"}{/block}
 {block name="frontend_detail_index_detail" prepend}
-    {include file="frontend/detail/cross_selling.tpl"}
+    {block name="frontend_detail_index_tabs_cross_selling_top"}
+        {include file="frontend/detail/cross_selling.tpl"}
+    {/block}
 {/block}
 
 {block name='frontend_detail_index_buy_container'}

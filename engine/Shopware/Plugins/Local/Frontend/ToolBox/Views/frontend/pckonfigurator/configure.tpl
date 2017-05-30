@@ -46,6 +46,8 @@
 {block name="frontend_detail_index_actions"}
 {/block}
 
+{block name="frontend_detail_index_tabs_cross_selling_top"}{/block}
+
 {* Tab content container *}
 {block name="frontend_detail_index_tabs_cross_selling"}
 {/block}
