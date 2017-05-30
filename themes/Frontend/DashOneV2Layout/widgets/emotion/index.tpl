@@ -48,9 +48,7 @@
                                 {block name="widgets/emotion/index/element/config"}
                                     {$template = $element.component.template}
                                     {$Data = $element.data}
-                                    {if $smarty.get.d==1}
-                                        {$Data|dump}
-                                    {/if}
+                                    {$Data|dump}
                                     {$itemCls = "emotion--element"}
 
                                     {$itemCols = ($element.endCol - $element.startCol) + 1}
