@@ -19,10 +19,10 @@
     .container--konfigurator{
         padding: 0 10px;
     }
-    .container--konfigurator .tab--content .collapse--content .konfigurator--group .konfigurator--group--item{
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
         margin-bottom: 5px;
     }
-    .container--konfigurator .tab--content .collapse--content .konfigurator--group .konfigurator--group--item .articlePrice{
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .articlePrice{
         float: right;
     }
 </style>

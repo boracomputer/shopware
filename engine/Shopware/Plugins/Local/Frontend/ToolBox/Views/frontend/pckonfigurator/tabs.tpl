@@ -50,7 +50,7 @@
                                                         {$tbKonfigGroups[$groupId].name}
                                                         <span class="collapse--toggler"></span>
                                                     </div>
-                                                    <div class="collapse--content konfigurator--group" data-groupId="{$groupId}">
+                                                    <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
                                                         {foreach $groupItems as $item}
                                                         <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
                                                             <label>
