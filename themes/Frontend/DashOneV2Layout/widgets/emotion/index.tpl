@@ -1,6 +1,6 @@
 {if $sEmotions|@count > 0}
     {foreach $sEmotions as $emotion}
-
+        {$smarty.get|dump}
         {if $smarty.get.shopID|intval != $emotion.attribute.shopid|intval && $emotion.attribute.shopid!=0 && $emotion.attribute.shopid!=''}
             {continue}
         {/if}
@@ -48,7 +48,7 @@
                                 {block name="widgets/emotion/index/element/config"}
                                     {$template = $element.component.template}
                                     {$Data = $element.data}
-                                    {$controllerName|dump}
+
                                     {$itemCls = "emotion--element"}
 
                                     {$itemCols = ($element.endCol - $element.startCol) + 1}
