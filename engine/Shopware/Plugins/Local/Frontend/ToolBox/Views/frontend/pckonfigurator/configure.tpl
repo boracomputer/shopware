@@ -31,8 +31,9 @@
     .container--konfigurator .tab--content .collapse--header .item-selected--name{
         font-style: italic;
         display: inline-block;
-        max-width: calc(100% - 335px);
+        max-width: calc(100% - 360px);
         overflow: hidden;
+        white-space: nowrap;
     }
     .container--konfigurator .tab--content .collapse--header .item-selected--price{
         float: right;
@@ -77,6 +78,7 @@
 
 {block name="frontend_detail_index_tabs"}
     {include file="frontend/pckonfigurator/tabs.tpl"}
+    {$tbKonfigGroups|dump}
 {/block}
 
 {block name='frontend_detail_index_buy_container_inner'}
