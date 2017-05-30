@@ -20,7 +20,7 @@
         padding: 0 10px;
     }
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
-        margin-bottom: 5px;
+        margin: 5px 0;
     }
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .articlePrice{
         float: right;

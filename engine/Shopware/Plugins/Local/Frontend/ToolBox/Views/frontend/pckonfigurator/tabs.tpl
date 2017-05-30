@@ -47,7 +47,9 @@
                                                 {*$tbKonfigItems|dump*}
                                                 {foreach $tbKonfigItems as $groupId => $groupItems}
                                                     <div class="collapse--header">
-                                                        {$tbKonfigGroups[$groupId].name}
+                                                        <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
+                                                        <span class="item-selected--name"></span>
+                                                        <span class="item-selected--price"></span>
                                                         <span class="collapse--toggler"></span>
                                                     </div>
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
