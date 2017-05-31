@@ -26,7 +26,19 @@
 {block name="frontend_index_after_body"}{/block}
 
 
+{block name="frontend_detail_index_tabs_cross_selling_top"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+{block name="frontend_detail_index_buybox"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+{block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+
+{* remove tabs *}
+{block name="frontend_detail_tabs_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+{block name="frontend_detail_tabs_content_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+{block name="commerzfinanz_detail_tabs_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+{block name="commerzfinanz_detail_tabs_content_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}{/block}
+
+
 {* remove js *}
 {block name="frontend_index_header_javascript"}{/block}
 {block name="frontend_index_header_javascript_jquery"}{/block}
 {block name="frontend_index_header_javascript_jquery_lib"}{/block}
+konfigurator
