@@ -15,7 +15,7 @@
         var t = 0;
         $('.item--input:checked').each(function(){
             console.log($(this));
-            t += parseInt($(this).parent('label').parent('.konfigurator--group--item').data('itemPrice'));
+            t += parseInt($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
             console.log(t);
         });
         $('.konfigurator--footer .price').html( t.format(2, 3, '.', ',') + ' &euro;*' );
