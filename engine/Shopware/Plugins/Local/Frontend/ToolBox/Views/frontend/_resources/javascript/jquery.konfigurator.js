@@ -12,10 +12,11 @@
                 n.slideUp();
             }else{
                 $('.collapse--content').slideUp('fast', function(){
-                    $('html, body').animate({
-                        scrollTop: t.offset().top
-                    }, 1000);
+
                 });
+                $('html, body').animate({
+                    scrollTop: t.offset().top
+                }, 1000);
                 n.slideDown();
             }
         });
