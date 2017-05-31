@@ -17,7 +17,7 @@
     });
 
     function cacheConfigOptions(o){
-        $.ajax({
+        /*$.ajax({
             'dataType': 'jsonp',
             'url': '{/literal}{url controller="pckonfigurator" action="cacheKonfigurator"}{literal}',
             'data': {articles:JSON.stringify(a), configNr: {/literal}'{$sArticle.ordernumber}'{literal}},
@@ -35,7 +35,7 @@
                     });
                 }
             }
-        });
+        });*/
     }
 
     function initItems(){
