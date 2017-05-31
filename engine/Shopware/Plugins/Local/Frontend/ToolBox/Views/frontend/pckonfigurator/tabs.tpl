@@ -69,7 +69,7 @@
                                                             {if $groupItemsMan|count>1}
                                                                 <h3>{$hersteller}</h3>
                                                             {/if}
-                                                            {foreach $items as $i => $items}
+                                                            {foreach $items as $i => $item}
                                                                 <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
                                                                     <label>
                                                                         <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" />
