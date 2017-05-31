@@ -12,12 +12,12 @@
                 n.slideUp();
             }else{
                 $('.collapse--content').slideUp('fast', function(){
+                    n.slideDown('fast', function(){
+                        $('html, body').animate({
+                            scrollTop: t.offset().top
+                        }, 1000);
+                    });
                 });
-                n.slideDown();
-                $('html, body').animate({
-                    scrollTop: t.offset().top
-                }, 1000);
-
             }
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
