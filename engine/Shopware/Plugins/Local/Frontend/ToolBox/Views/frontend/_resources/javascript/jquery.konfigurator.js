@@ -11,10 +11,12 @@
             if( n.css('display')=='block' ){
                 n.slideUp();
             }else{
+                $('.collapse--content').slideUp('fast', function(){
+                });
+                n.slideDown();
                 $('.container--konfigurator').animate({
                     scrollTop: t.offset().top - $(this).offset().top + $(this).scrollTop()
                 }, 1000);
-                n.slideDown();
             }
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
