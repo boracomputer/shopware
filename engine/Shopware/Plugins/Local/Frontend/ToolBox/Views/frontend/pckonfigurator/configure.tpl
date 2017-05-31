@@ -49,6 +49,10 @@
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .articlePrice{
         float: right;
     }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .item--action{
+        
+    }
+
 </style>
 {/block}
 
