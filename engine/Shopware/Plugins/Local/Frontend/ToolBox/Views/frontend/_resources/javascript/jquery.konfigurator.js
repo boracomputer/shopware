@@ -5,12 +5,13 @@
     $(document).ready(function() {
         initItems();
         $('body').on('click', '.collapse--header', function(){
-            if( $(this).next('.collapse--content').css('display')=='block' ){
-                $(this).next('.collapse--content').slideUp();
+            var t = $(this);
+            if( t.next('.collapse--content').css('display')=='block' ){
+                t.next('.collapse--content').slideUp();
             }else{
                 $('.collapse--content').slideUp('fast', function(){
                     $('html, body').animate({
-                            scrollTop: $(this).offset().top
+                        scrollTop: t.offset().top;
                     }, 1000);
                 });
                 $(this).next('.collapse--content').slideDown();
