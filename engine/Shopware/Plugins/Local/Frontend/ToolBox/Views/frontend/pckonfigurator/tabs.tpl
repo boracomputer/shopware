@@ -87,15 +87,18 @@
                                                     </div>
                                                 {/foreach}
                                                 <div class="konfigurator--footer">
+                                                    <hr />
                                                     <div class="konfigurator--footer-total">
                                                         <span class="title">Gesamtsumme:</span>
                                                         <span class="price"></span>
                                                     </div>
                                                     <div class="konfigurator--footer-actions">
-                                                    <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
-                                                        Jetzt kbestellen <i class="icon--arrow-right"></i>
-                                                    </a>
+                                                        <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
+                                                            Jetzt kbestellen <i class="icon--arrow-right"></i>
+                                                        </a>
+
                                                     </div>
+
                                                 </div>
                                             {/block}
                                         </div>
