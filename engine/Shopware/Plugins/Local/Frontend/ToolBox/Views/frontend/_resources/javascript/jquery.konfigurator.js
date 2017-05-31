@@ -5,7 +5,7 @@
     $(document).ready(function() {
         initItems();
         $('body').on('click', '.collapse--header', function(){
-            $(this).next('.collapse--content').css('display');
+            console.log($(this).next('.collapse--content').css('display'));
             //$('.collapse--content').slideUp();
             $(this).next('.collapse--content').slideToggle();
         });
@@ -46,9 +46,10 @@
     }
 
     function updateTotalPrice(){
+        console.log(a);
         var t = 0;
-        for( var i=1; i<a.length; i++ ){
-            t += a[i-1].price;
+        for( var i=0; i<a.length; i++ ){
+            t += a[i].price;
         }
         /*$('.item--input:checked').each(function(){
             t += parseFloat($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
