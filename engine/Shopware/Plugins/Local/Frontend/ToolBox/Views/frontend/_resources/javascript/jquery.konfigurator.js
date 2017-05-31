@@ -4,7 +4,8 @@
 
     $(document).ready(function() {
         initItems();
-        $('body').on('click', '.collapse--header', function(){
+        $('body').on('click', '.collapse--header', function(e){
+
             var t = $(this);
             var n = t.next('.collapse--content');
 
@@ -15,10 +16,11 @@
                     n.slideDown('fast', function(){
                         $('html, body').animate({
                             scrollTop: t.offset().top
-                        }, 1000);
+                        }, 'fast');
                     });
                 });
             }
+            e.preventDefault();
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateGroup($(this));
