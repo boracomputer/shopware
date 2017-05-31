@@ -14,6 +14,7 @@
     function updateTotalPrice(){
         var t = 0;
         $('.item--input:selected').each(function(){
+            console.log($(this));
             t += $(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice');
         });
         $('.konfigurator--footer .price').html(t);
