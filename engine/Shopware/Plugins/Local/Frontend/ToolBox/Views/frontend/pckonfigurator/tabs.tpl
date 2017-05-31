@@ -72,6 +72,11 @@
                                                                 <span class="articleName">{$item.sArticle.articleName}</span>
                                                                 <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                             </label>
+                                                            <span class="itemActions">
+                                                                <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax'}" title="{s name='quickview'}Schnellansicht{/s}">
+                                                                    <i class="fa fa-eye"></i>
+                                                                </a>
+                                                            </span>
                                                         </div>
                                                         {/foreach}
                                                     </div>
