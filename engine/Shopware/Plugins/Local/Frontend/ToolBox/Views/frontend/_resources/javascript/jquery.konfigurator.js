@@ -8,7 +8,11 @@
             if( $(this).next('.collapse--content').css('display')=='block' ){
                 $(this).next('.collapse--content').slideUp();
             }else{
-                $('.collapse--content').slideUp();
+                $('.collapse--content').slideUp('fast', function(){
+                    $('html, body').animate({
+                            scrollTop: $(this).offset().top
+                    }, 1000);
+                });
                 $(this).next('.collapse--content').slideDown();
             }
         });

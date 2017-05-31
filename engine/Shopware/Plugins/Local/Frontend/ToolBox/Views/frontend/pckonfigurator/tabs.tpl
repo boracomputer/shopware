@@ -19,7 +19,7 @@
 
             {* Content list *}
             {block name="frontend_detail_tabs_content"}
-                <div class="tab--container-list ">
+                <div class="tab--container-list" id="config">
                     {block name="frontend_detail_tabs_content_inner"}
 
                         {* Description container *}
@@ -42,7 +42,7 @@
 
                                     {* Description content *}
                                     {block name="frontend_detail_tabs_content_konfigurator_konfiguration"}
-                                        <div class="tab--content" id="config">
+                                        <div class="tab--content">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
                                                 {*$tbKonfigItems|dump*}
                                                 {foreach $tbKonfigItems as $groupId => $groupItemsMan}
@@ -50,7 +50,7 @@
                                                         {continue}
                                                     {/if}
                                                     {$selectedArtnr = $tbKonfigSelected[$groupId]}
-                                                    <div class="collapse--header">
+                                                    <div class="collapse--header" id="">
                                                         <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
                                                         <span class="item-selected--name"></span>
                                                         <span class="item-selected--price"></span>
