@@ -164,37 +164,40 @@
 
             {* Product data *}
             {block name='frontend_detail_index_buy_container_inner'}
-            <div class="product--base-info">
+                {if $isKonfigurator != 1}
+                <div class="product--base-info">
+                    <hr />
+                    <strong class="entry--label">
+                        {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
+                    </strong>
+                    <span class="entry--content">{$sArticle.ordernumber}</span>
+                    <br>
+                    <strong class="entry--label">
+                        {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
+                    </strong>
+                    <span class="entry--content">{$sArticle.supplierName}</span>
+                    <br>
+                    <strong class="entry--label">
+                        {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
+                    </strong>
+                    <span class="entry--content">{$sArticle.suppliernumber}</span>
+                    <br>
+                    <strong class="entry--label">
+                        {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
+                    </strong>
+                    <span class="entry--content">{$sArticle.ean}</span>
+                </div>
                 <hr />
-                <strong class="entry--label">
-                    {s name="DetailDataId" namespace="frontend/detail/data"}{/s}
-                </strong>
-                <span class="entry--content">{$sArticle.ordernumber}</span>
-                <br>
-                <strong class="entry--label">
-                    {s name="DetailDataSupplier" namespace="frontend/detail/data"}Hersteller:{/s}
-                </strong>
-                <span class="entry--content">{$sArticle.supplierName}</span>
-                <br>
-                <strong class="entry--label">
-                    {s name="DetailDataSupplierNumber" namespace="frontend/detail/data"}Hersteller-Nr:{/s}
-                </strong>
-                <span class="entry--content">{$sArticle.suppliernumber}</span>
-                <br>
-                <strong class="entry--label">
-                    {s name="DetailDataEAN" namespace="frontend/detail/data"}EAN:{/s}
-                </strong>
-                <span class="entry--content">{$sArticle.ean}</span>
-            </div>
-                <hr />
-
+                {/if}
                 {include file="frontend/plugins/mille_commerzfinanz4/detail/data.tpl"}
 
                 {* Product actions *}
                 {block name="frontend_detail_index_actions"}
+                {if $isKonfigurator != 1}
                     <nav class="product--actions">
                         {include file="frontend/detail/actions.tpl"}
                     </nav>
+                {/if}
                 {/block}
 
             {/block}
