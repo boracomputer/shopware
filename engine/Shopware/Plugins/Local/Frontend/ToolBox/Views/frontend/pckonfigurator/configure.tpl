@@ -10,6 +10,9 @@
 
 {block name="frontend_index_header_css_print" append}
 <style>
+    .js--modal .content{
+        padding: 0px 10px;
+    }
     .container--konfigurator .tab--content .collapse--content{
         padding: 10px;
     }
