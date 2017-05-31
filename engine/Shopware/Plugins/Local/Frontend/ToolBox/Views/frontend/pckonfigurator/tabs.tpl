@@ -42,7 +42,7 @@
 
                                     {* Description content *}
                                     {block name="frontend_detail_tabs_content_konfigurator_konfiguration"}
-                                        <div class="tab--content">
+                                        <div class="tab--content" id="config">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
                                                 {*$tbKonfigItems|dump*}
                                                 {foreach $tbKonfigItems as $groupId => $groupItemsMan}
@@ -89,7 +89,7 @@
                                                     </div>
                                                 {/foreach}
                                                 <div class="konfigurator--footer">
-                                                    
+
                                                     <div class="konfigurator--footer-total">
                                                         <span class="title">Gesamtsumme:</span>
                                                         <span class="price"></span>
