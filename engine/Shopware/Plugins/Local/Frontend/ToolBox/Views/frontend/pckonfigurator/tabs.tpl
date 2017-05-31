@@ -74,7 +74,7 @@
                                                             {foreach $items as $i => $item}
                                                                 <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if !$selectedArtnr && $tbKonfigGroups[$groupId].required == 1} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if !$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
