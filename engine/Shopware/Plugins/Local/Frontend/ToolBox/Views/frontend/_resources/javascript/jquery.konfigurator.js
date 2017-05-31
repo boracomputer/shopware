@@ -62,7 +62,7 @@
     function updateGroup( el ){
         var gId = el.parents('.konfigurator--group').attr('data-groupId');
         var aNr = el.val();
-        var p = floatVal(el.parents('.konfigurator--group--item').attr('data-itemprice'));
+        var p = parseFloat(el.parents('.konfigurator--group--item').attr('data-itemprice'));
         a[gId] = { price: p, artnr: aNr, qty: 1 };
 
         updateGroupHeader(el);
