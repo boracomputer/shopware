@@ -1,6 +1,7 @@
 
 ;(function($, window, undefined) {
     $(document).ready(function() {
+        initItems();
         $('body').on('click', '.collapse--header', function(){
             $(this).next('.collapse--content').slideToggle();
         });
@@ -13,8 +14,9 @@
 
     function initItems(){
         $('.item--input:checked').each(function(){
-            
+            updateGroupHeader($(this));
         });
+        updateTotalPrice();
     }
 
     function updateTotalPrice(){
