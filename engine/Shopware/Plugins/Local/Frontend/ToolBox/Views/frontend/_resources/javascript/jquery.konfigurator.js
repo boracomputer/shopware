@@ -13,11 +13,11 @@
                 n.slideUp();
             }else{
                 $('.collapse--content').slideUp('fast', function(){
-                    n.slideDown('fast', function(){
-                        $('html, body').animate({
-                            scrollTop: t.offset().top
-                        }, 'fast');
-                    });
+                });
+                n.slideDown('fast', function(){
+                    $('html, body').animate({
+                        scrollTop: t.offset().top
+                    }, 'fast');
                 });
             }
             e.preventDefault();
