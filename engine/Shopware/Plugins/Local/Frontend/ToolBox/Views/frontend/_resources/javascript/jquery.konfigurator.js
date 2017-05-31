@@ -5,7 +5,7 @@
     $(document).ready(function() {
         initItems();
         $('body').on('click', '.collapse--header', function(){
-            if( $(this).next('.collapse--content').css('display')=='none' ){
+            if( $(this).next('.collapse--content').css('display')=='block' ){
                 $(this).next('.collapse--content').slideUp();
             }else{
                 $('.collapse--content').slideUp();
