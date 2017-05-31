@@ -14,9 +14,10 @@
                 $('.collapse--content').slideUp('fast', function(){
                 });
                 n.slideDown();
-                $('.container--konfigurator').animate({
-                    scrollTop: t.offset().top - $(this).offset().top + $(this).scrollTop()
+                $('html, body').animate({
+                    scrollTop: t.offset().top
                 }, 1000);
+
             }
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
