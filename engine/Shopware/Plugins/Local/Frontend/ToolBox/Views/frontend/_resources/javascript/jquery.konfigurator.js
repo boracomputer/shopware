@@ -48,9 +48,10 @@
     function updateTotalPrice(){
         console.log(a);
         var t = 0;
-        for( var i=0; i<a.length; i++ ){
-            t += a[i].price;
-        }
+        Object.keys(a).forEach(gId => {
+            t += a[gId].price;
+        });
+        
         /*$('.item--input:checked').each(function(){
             t += parseFloat($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
         });*/
