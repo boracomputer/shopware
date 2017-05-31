@@ -26,15 +26,15 @@
 {block name="frontend_index_after_body"}{/block}
 
 
-{block name="frontend_detail_index_tabs_cross_selling_top"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
-{block name="frontend_detail_index_buybox"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
-{block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
+{block name="frontend_detail_index_tabs_cross_selling_top"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="frontend_detail_index_buybox"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 
 {* remove tabs *}
-{block name="frontend_detail_tabs_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
-{block name="frontend_detail_tabs_content_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
-{block name="commerzfinanz_detail_tabs_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
-{block name="commerzfinanz_detail_tabs_content_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/block}
+{block name="frontend_detail_tabs_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="frontend_detail_tabs_content_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="commerzfinanz_detail_tabs_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="commerzfinanz_detail_tabs_content_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 
 
 {* remove js *}
