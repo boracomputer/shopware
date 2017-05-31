@@ -45,8 +45,8 @@
                                         <div class="tab--content">
                                             {block name="frontend_detail_tabs_content_konfigurator_konfiguration_inner"}
                                                 {*$tbKonfigItems|dump*}
-                                                {foreach $tbKonfigItems as $groupId => $groupItems}
-                                                    {if $groupItems|count==0}
+                                                {foreach $tbKonfigItems as $groupId => $groupItemsMan}
+                                                    {if $groupItemsMan|count==0}
                                                         {continue}
                                                     {/if}
                                                     <div class="collapse--header">
@@ -65,19 +65,24 @@
                                                             </label>
                                                         </div>
                                                         {/if}
-                                                        {foreach $groupItems as $item}
-                                                        <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
-                                                            <label>
-                                                                <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" />
-                                                                <span class="articleName">{$item.sArticle.articleName}</span>
-                                                                <span class="articlePrice">{$item.sArticle.price|currency}</span>
-                                                            </label>
-                                                            <div class="modal--size-table  float--left item--action" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-title="{$item.sArticle.articleName|escape}" data-mode="ajax">
-                                                                <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax' konfigurator=1}" title="{s name='quickview'}Schnellansicht{/s}">
-                                                                    <i class="fa fa-info"></i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                                        {foreach $groupItemsMan as $hersteller => $items}
+                                                            {if $groupItemsMan|count>1}
+                                                                <h3>{$hersteller}</h3>
+                                                            {/if}
+                                                            {foreach $items as $i => $items}
+                                                                <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
+                                                                    <label>
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" />
+                                                                        <span class="articleName">{$item.sArticle.articleName}</span>
+                                                                        <span class="articlePrice">{$item.sArticle.price|currency}</span>
+                                                                    </label>
+                                                                    <div class="modal--size-table  float--left item--action" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-title="{$item.sArticle.articleName|escape}" data-mode="ajax">
+                                                                        <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax' konfigurator=1}" title="{s name='quickview'}Schnellansicht{/s}">
+                                                                            <i class="fa fa-info"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            {/foreach}
                                                         {/foreach}
                                                     </div>
                                                 {/foreach}
