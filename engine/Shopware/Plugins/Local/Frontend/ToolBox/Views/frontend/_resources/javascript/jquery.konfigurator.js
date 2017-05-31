@@ -11,11 +11,8 @@
             if( n.css('display')=='block' ){
                 n.slideUp();
             }else{
-                $('.collapse--content').slideUp('fast', function(){
-
-                });
-                $('html, body').animate({
-                    scrollTop: t.offset().top
+                $('.container--konfigurator').animate({
+                    scrollTop: t.offset().top - $(this).offset().top + $(this).scrollTop()
                 }, 1000);
                 n.slideDown();
             }
