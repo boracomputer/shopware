@@ -13,7 +13,7 @@
 
     function updateTotalPrice(){
         var t = 0;
-        $('.item--input:selected').each(function(){
+        $('.item--input:checked').each(function(){
             console.log($(this));
             t += $(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice');
         });
