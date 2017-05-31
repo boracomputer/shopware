@@ -6,7 +6,7 @@
         initItems();
         $('body').on('click', '.collapse--header', function(){
             var t = $(this);
-            var n = tnext('.collapse--content');
+            var n = t.next('.collapse--content');
 
             if( n.css('display')=='block' ){
                 n.slideUp();
