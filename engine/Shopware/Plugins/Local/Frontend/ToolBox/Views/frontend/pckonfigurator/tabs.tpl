@@ -89,7 +89,7 @@
                                                     </div>
                                                 {/foreach}
                                                 <div class="konfigurator--footer">
-                                                    <hr />
+                                                    
                                                     <div class="konfigurator--footer-total">
                                                         <span class="title">Gesamtsumme:</span>
                                                         <span class="price"></span>

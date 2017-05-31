@@ -5,9 +5,12 @@
     $(document).ready(function() {
         initItems();
         $('body').on('click', '.collapse--header', function(){
-            console.log($(this).next('.collapse--content').css('display'));
-            //$('.collapse--content').slideUp();
-            $(this).next('.collapse--content').slideToggle();
+            if( $(this).next('.collapse--content').css('display')=='none' ){
+                $(this).next('.collapse--content').slideUp();
+            }else{
+                $('.collapse--content').slideUp();
+                $(this).next('.collapse--content').slideDown();
+            }
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateGroup($(this));
@@ -51,7 +54,7 @@
         Object.keys(a).forEach(gId => {
             t += a[gId].price;
         });
-        
+
         /*$('.item--input:checked').each(function(){
             t += parseFloat($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
         });*/

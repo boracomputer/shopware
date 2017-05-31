@@ -73,7 +73,7 @@
         line-height: 16px;
     }
     .container--konfigurator .tab--content .konfigurator--footer{
-        padding: 20px 0;
+        padding: 30px 0 20px 0;
     }
     .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-total .title{
         font-size: 16px;
