@@ -72,6 +72,28 @@
         height: 20px;
         line-height: 16px;
     }
+    .container--konfigurator .tab--content .konfigurator--footer{
+        padding: 20px 0;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-total .title{
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-total .price{
+        float: right;
+        margin: 0 55px 0 0;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-actions{
+        margin-top: 20px;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-actions .btn{
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
 
 </style>
 {/block}

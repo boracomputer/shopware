@@ -96,7 +96,7 @@
                                                     </div>
                                                     <div class="konfigurator--footer-actions">
                                                         <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
-                                                            Jetzt kbestellen <i class="icon--arrow-right"></i>
+                                                            Jetzt bestellen <i class="icon--arrow-right"></i>
                                                         </a>
 
                                                     </div>

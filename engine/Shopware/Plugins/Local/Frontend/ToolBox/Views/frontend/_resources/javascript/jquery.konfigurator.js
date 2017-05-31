@@ -22,7 +22,7 @@
     function updateTotalPrice(){
         var t = 0;
         $('.item--input:checked').each(function(){
-            t += parseInt($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
+            t += parseFloat($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
         });
         $('.konfigurator--footer .price').html( t.format(2, 3, '.', ',') + ' &euro;*' );
         return t.format(2, 3, '', '.');
@@ -30,7 +30,7 @@
 
     function updateGroupHeader( el ){
         var h = el.parents('.collapse--content').first().prev('.collapse--header');
-        h.find('.item-selected--name').text( el.next('.articleName').text().trunc(50) );
+        h.find('.item-selected--name').text( el.next('.articleName').text().trunc(60) );
         h.find('.item-selected--price').text( el.next('.articleName').next('.articlePrice').text() );
     }
 
@@ -43,7 +43,7 @@
     // js truncate
     String.prototype.trunc = String.prototype.trunc ||
         function(n){
-            return (this.length > n) ? this.substr(0,n-1)+' &hellip;' : this;
+            return (this.length > n) ? this.substr(0,n-1)+'...' : this;
     };
 
 })(jQuery, window);
