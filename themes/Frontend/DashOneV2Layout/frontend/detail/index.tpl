@@ -189,6 +189,7 @@
                 </div>
                 <hr />
                 {/if}
+
                 {include file="frontend/plugins/mille_commerzfinanz4/detail/data.tpl"}
 
                 {* Product actions *}
