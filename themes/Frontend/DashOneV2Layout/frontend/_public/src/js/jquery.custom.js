@@ -1,4 +1,5 @@
 $(function () {
+    
     $('body').on( 'click', '.js--toggle-trigger', function (e) {
         e.preventDefault();
         var t=$(this).attr('data-target');

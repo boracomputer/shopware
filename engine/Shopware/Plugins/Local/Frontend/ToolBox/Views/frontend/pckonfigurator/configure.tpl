@@ -4,6 +4,101 @@
 {if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
+{block name='frontend_index_header_javascript_jquery' append}
+    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
+{/block}
+
+{block name="frontend_index_header_css_print" append}
+<style>
+    .js--modal .content{
+        padding: 0px 10px;
+    }
+    .js--modal .content .image-slider--container{
+        height: auto;
+    }
+    .container--konfigurator .tab--content .collapse--content{
+        padding: 10px;
+    }
+    .container--konfigurator .tab--content .collapse--content#group-1{
+        display: block;
+    }
+    .container--konfigurator{
+        padding: 0 10px;
+    }
+
+    .container--konfigurator .tab--content .collapse--header{
+
+    }
+    .container--konfigurator .tab--content .collapse--header .group--name{
+        width: 150px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .container--konfigurator .tab--content .collapse--header .item-selected--name{
+        font-style: italic;
+        display: inline-block;
+        max-width: calc(100% - 310px);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .container--konfigurator .tab--content .collapse--header .item-selected--price{
+        float: right;
+        margin-right: 35px;
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+    }
+
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item:nth-child(even){
+        background: #f6f6f6;
+        padding: 5px 5px;
+    }
+
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
+        padding: 5px 5px;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item input{
+
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .articlePrice{
+        float: right;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .item--action{
+        position: absolute;
+        right: 130px;
+        margin-top: -19px;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item .item--action .btn{
+        height: 20px;
+        line-height: 16px;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer{
+        padding: 30px 0 20px 0;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-total .title{
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-total .price{
+        float: right;
+        margin: 0 55px 0 0;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-actions{
+        margin-top: 20px;
+    }
+    .container--konfigurator .tab--content .konfigurator--footer .konfigurator--footer-actions .btn{
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+
+</style>
+{/block}
+
+
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
     <a href="#config" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
@@ -21,10 +116,16 @@
 {block name="frontend_detail_index_actions"}
 {/block}
 
+{block name="frontend_detail_index_tabs_cross_selling_top"}{/block}
+
 {* Tab content container *}
 {block name="frontend_detail_index_tabs_cross_selling"}
 {/block}
 
 {block name="frontend_detail_index_tabs"}
-    {*include file="frontend/pckonfigurator/tabs.tpl"*}
+    {include file="frontend/pckonfigurator/tabs.tpl"}
+    {$tbKonfigGroups|dump}
+{/block}
+
+{block name='frontend_detail_index_buy_container_inner'}
 {/block}

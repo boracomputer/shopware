@@ -1,30 +1,82 @@
 
 @media screen and (min-width: @desktopViewportWidth) {
-    .col-xl-3{
+    .content--home{
+        .content--emotions{
+            border-left: 1px solid @border-color;
+            border-right: 1px solid @border-color;
+            .emotion--wrapper{
+                margin-left: -1px;
+                margin-right: -1px;
+            }
+        }
+    }
+    .col-xl-6{
         .emotion--product{
             .product--box.box--emotion{
+                .product--info{
+                    position: relative;
+                    overflow: visible;
+                    .product--title{
+                        position: absolute;
+                        bottom: 0;
+                        .unitize(font-size, 20);
+                        text-align: center;
+                    }
+                }
                 .liveshopping--listing{
                     .product--image{
-                        height: 70%;
+                        height: 80%;
+                        img{
+                            margin: 0;
+                            top: 35px;
+                            left: 20px;
+                        }
                     }
                     .product--details{
-                        /*width: calc(100% - 200px);
-                        top: 0;
-                        right: 0;*/
+                        position: static;
+                        .product--title{
+                            font-weight: bold;
+                        }
                     }
                     .product--badges {
                         left: auto;
                         right: -1px;
-                        top: -1px;
+                        top: 20px;
                         .product--badge{
-                            .unitize(font-size, 18);
+                            .unitize(font-size, 36);
                             border-top-left-radius: 3px;
                             border-top-right-radius: 0px;
                             border-bottom-right-radius: 0px;
                             border-bottom-left-radius: 3px;
+                            .unitize-padding(10,60,10,15);
+                        }
+                        .badge--liveshopping {
+                            .counter--text{
+                                .unitize(font-size, 24);
+                            }
                         }
                         .badge--discount{
                             background: @theme-primary;
+                        }
+                    }
+                    .liveshopping--container{
+                        .unitize-padding(5,40,2,5);
+                        overflow: visible;
+                        height: auto;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        position: absolute;
+                        right: -10px;
+                        top: 200px;
+                        z-index: 9999;
+                        .liveshopping--price{
+                            .unitize(font-size, 32);
+                        }
+                        .liveshopping--pseudoprice{
+                            position: absolute;
+                            color: @theme-text-dark;
+                            top: -2em;
+                            right: 40px;
                         }
                     }
                 }

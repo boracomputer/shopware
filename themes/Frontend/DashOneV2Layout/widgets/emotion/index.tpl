@@ -1,7 +1,7 @@
 {if $sEmotions|@count > 0}
     {foreach $sEmotions as $emotion}
-
-        {if $smarty.get.shopID|intval != $emotion.attribute.shopid|intval}
+        {*$smarty.get|dump*}
+        {if $smarty.get.shopID|intval != $emotion.attribute.shopid|intval && $emotion.attribute.shopid!=0 && $emotion.attribute.shopid!=''}
             {continue}
         {/if}
 

@@ -16,7 +16,7 @@
                         {/if}
 
                         {block name='frontend_listing_box_article_image_picture_element'}
-                            <img srcset="http://images.skillbooks.de/image300/{$sArticle.image.attribute.attribute1}"
+                            <img srcset="//images.skillbooks.de/image300/{$sArticle.image.attribute.attribute1}"
                                  alt="{$desc}"
                                  title="{$desc|truncate:25:""}" />
                         {/block}
