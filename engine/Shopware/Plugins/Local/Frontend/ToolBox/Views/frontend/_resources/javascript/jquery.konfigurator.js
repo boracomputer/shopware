@@ -47,11 +47,9 @@
 
     function updateTotalPrice(){
         var t = 0;
-        a.foreach(function(v, i){
-            console.log(v);
-            console.log(i);
-            t += v.price;
-        })
+        for( var i=1; i<a.length; i++ ){
+            t += a[i-1].price;
+        }
         /*$('.item--input:checked').each(function(){
             t += parseFloat($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
         });*/
