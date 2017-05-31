@@ -73,7 +73,7 @@
                                                                 <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                             </label>
                                                             <div class="modal--size-table  float--left item--action" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-mode="ajax">
-                                                                <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax_konfigurator'}" title="{s name='quickview'}Schnellansicht{/s}">
+                                                                <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajaxKonfigurator'}" title="{s name='quickview'}Schnellansicht{/s}">
                                                                     <i class="fa fa-eye"></i>
                                                                 </a>
                                                             </div>
