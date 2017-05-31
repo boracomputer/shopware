@@ -6,15 +6,17 @@
         initItems();
         $('body').on('click', '.collapse--header', function(){
             var t = $(this);
-            if( t.next('.collapse--content').css('display')=='block' ){
-                t.next('.collapse--content').slideUp();
+            var n = tnext('.collapse--content');
+
+            if( n.css('display')=='block' ){
+                n.slideUp();
             }else{
                 $('.collapse--content').slideUp('fast', function(){
                     $('html, body').animate({
-                        scrollTop: t.offset().top;
+                        scrollTop: t.offset().top
                     }, 1000);
                 });
-                $(this).next('.collapse--content').slideDown();
+                n.slideDown();
             }
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
