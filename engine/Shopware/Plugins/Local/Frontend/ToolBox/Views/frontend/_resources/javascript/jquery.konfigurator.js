@@ -11,12 +11,16 @@
         });
     });
 
+    function initItems(){
+        $('.item--input:checked').each(function(){
+            
+        });
+    }
+
     function updateTotalPrice(){
         var t = 0;
         $('.item--input:checked').each(function(){
-            console.log($(this));
             t += parseInt($(this).parent('label').parent('.konfigurator--group--item').attr('data-itemPrice'));
-            console.log(t);
         });
         $('.konfigurator--footer .price').html( t.format(2, 3, '.', ',') + ' &euro;*' );
         return t.format(2, 3, '', '.');
@@ -37,7 +41,7 @@
     // js truncate
     String.prototype.trunc = String.prototype.trunc ||
         function(n){
-            return (this.length > n) ? this.substr(0,n-1)+'&hellip;' : this;
+            return (this.length > n) ? this.substr(0,n-1)+' &hellip;' : this;
     };
 
 })(jQuery, window);
