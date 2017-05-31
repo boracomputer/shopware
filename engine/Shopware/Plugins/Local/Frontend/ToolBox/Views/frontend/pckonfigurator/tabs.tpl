@@ -57,9 +57,9 @@
                                                     </div>
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
                                                         {if $tbKonfigGroups[$groupId].required != 1}
-                                                        <div class="konfigurator--group--item" data-itemArtnr="">
+                                                        <div class="konfigurator--group--item" data-itemArtnr="" data-itemPrice="0">
                                                             <label>
-                                                                <input name="item[{$groupId}]" value="" type="radio" />
+                                                                <input name="item[{$groupId}]" value="" type="radio" class="item--input" />
                                                                 <span class="articleName">{$tbKonfigGroups[$groupId].nulllabel}</span>
                                                                 <span class="articlePrice">{"0"|currency}</span>
                                                             </label>
@@ -70,9 +70,9 @@
                                                                 <h3>{$hersteller}</h3>
                                                             {/if}
                                                             {foreach $items as $i => $item}
-                                                                <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}">
+                                                                <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input" />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
@@ -86,6 +86,17 @@
                                                         {/foreach}
                                                     </div>
                                                 {/foreach}
+                                                <div class="konfigurator--footer">
+                                                    <div class="konfigurator--footer-total">
+                                                        <span class="title">Gesamtsumme:</span>
+                                                        <span class="price"></span>
+                                                    </div>
+                                                    <div class="konfigurator--footer-actions">
+                                                    <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
+                                                        Jetzt kbestellen <i class="icon--arrow-right"></i>
+                                                    </a>
+                                                    </div>
+                                                </div>
                                             {/block}
                                         </div>
                                     {/block}
