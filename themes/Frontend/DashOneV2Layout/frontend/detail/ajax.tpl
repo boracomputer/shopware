@@ -34,10 +34,9 @@
     {if !$smarty.get.konfigurator}
         {$smarty.block.parent}
     {else}
-        <button class="buybox--button block btn is--primary is--icon-right is--center konfigurator--select-item modal--close" name="Konfigurieren" style="width: 100%; height: auto; position: relative; top: 0; left: 0;">
+        <button class="btn is--primary is--icon-right is--center konfigurator--select-item modal--close" name="Konfigurieren" style="width: 100%; height: auto; position: relative; top: 0; left: 0; font-size: 16px;">
             In den PC einbauen <i class="icon--plus3"></i>
         </button>
-        <div class="clear"></div>
     {/if}
 {/block}
 {block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
