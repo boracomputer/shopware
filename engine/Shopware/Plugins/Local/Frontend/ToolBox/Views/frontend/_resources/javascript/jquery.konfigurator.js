@@ -35,11 +35,12 @@
                     var $d = $('<div/>', {
                         html: data
                     })
-                    console.log($d);
                     $.modal.open( $d, {
                         width: 800,
                         title: t.attr('data-title'),
-                    })
+                    });
+                    console.log($d.find('.konfigurator--select-item'));
+                    $d.find('.konfigurator--select-item').hide();
                 }
             });
 
@@ -50,12 +51,7 @@
             // update caching
         });
     });
-    $( document ).ajaxComplete(function(event, xhr, settings) {
-        console.log(event);
-        console.log(xhr);
-        console.log(settings);
-        //$( ".log" ).text( "Triggered ajaxComplete handler." );
-    });
+
     function cacheConfigOptions(o){
         /*$.ajax({
             'dataType': 'jsonp',
