@@ -49,7 +49,7 @@
                                                     {if $groupItemsMan|count==0}
                                                         {continue}
                                                     {/if}
-                                                    {$selectedArtnr = $tbKonfigSelected[$groupId]}
+                                                    {$selectedArtnr = $tbKonfigSelected[$groupId]['artnr']}
                                                     <div class="collapse--header" id="">
                                                         <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
                                                         <span class="item-selected--name"></span>
@@ -74,7 +74,7 @@
                                                             {foreach $items as $i => $item}
                                                                 <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if !$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
