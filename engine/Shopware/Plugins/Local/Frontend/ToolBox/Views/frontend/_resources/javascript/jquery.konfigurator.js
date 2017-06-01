@@ -1,6 +1,6 @@
 
 ;(function($, window, undefined) {
-    var a={};
+    var c={}; var i;
 
     $(document).ready(function() {
         initItems();
@@ -22,9 +22,16 @@
             }
             e.preventDefault();
         });
+        $('.container--konfigurator').on('click', '.action--quickview', function(){
+            i = $(this).parents('.konfigurator--group--item').find('input.item--input');
+        });
+        $('.js--modal').on('click', '.konfigurator--select-item', function(){
+            i.prop("checked", true);
+            updateItem(i);
+            
+        });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
-            updateGroup($(this));
-            updateTotalPrice();
+            updateItem($(this));
             // update caching
         });
     });
@@ -57,12 +64,15 @@
         });
         updateTotalPrice();
     }
-
+    function updateItem( el ){
+        updateGroup( el );
+        updateTotalPrice();
+    }
     function updateTotalPrice(){
         console.log(a);
         var t = 0;
         Object.keys(a).forEach(gId => {
-            t += a[gId].price;
+            t += c[gId].price;
         });
 
         /*$('.item--input:checked').each(function(){
@@ -76,7 +86,7 @@
         var gId = el.parents('.konfigurator--group').attr('data-groupId');
         var aNr = el.val();
         var p = parseFloat(el.parents('.konfigurator--group--item').attr('data-itemprice'));
-        a[gId] = { price: p, artnr: aNr, qty: 1 };
+        c[gId] = { price: p, artnr: aNr, qty: 1 };
 
         updateGroupHeader(el);
     }
