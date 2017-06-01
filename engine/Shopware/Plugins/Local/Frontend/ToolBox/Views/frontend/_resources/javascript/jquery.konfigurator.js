@@ -1,44 +1,77 @@
 
 ;(function($, window, undefined) {
-    var a={};
+    var c={}; var i; var uId; var cId;
 
     $(document).ready(function() {
         initItems();
-        $('body').on('click', '.collapse--header', function(){
-            if( $(this).next('.collapse--content').css('display')=='none' ){
-                $(this).next('.collapse--content').slideUp();
+        uId = $('.container--konfigurator').attr('data-uID');
+        cId = $('.container--konfigurator').attr('data-cID');
+
+        $('body').on('click', '.collapse--header', function(e){
+
+            var t = $(this);
+            var n = t.next('.collapse--content');
+
+            if( n.css('display')=='block' ){
+                n.slideUp();
             }else{
-                $('.collapse--content').slideUp();
-                $(this).next('.collapse--content').slideDown();
+                $('.collapse--content').slideUp('fast', function(){
+                });
+                n.slideDown('fast', function(){
+                    $('html, body').animate({
+                        scrollTop: t.offset().top
+                    }, 'fast');
+                });
             }
+            e.preventDefault();
         });
+
+        $('.container--konfigurator').on('click', '.action--quickview', function(){
+            i = $(this).parents('.konfigurator--group--item').find('input.item--input');
+        });
+
+        $('.container--konfigurator').on('click', '.action--quickview', function(e){
+            e.preventDefault();
+            var t = $(this);
+            $.loadingIndicator.open();
+            $.ajax({
+                url: t.attr('href'),
+                success: function (data) {
+                    $.loadingIndicator.close();
+                    var $d = $('<div/>', {
+                        html: data
+                    })
+                    $.modal.open( $d, {
+                        width: 800,
+                        title: t.attr('data-title'),
+                    });
+                    $d.find('.konfigurator--select-item').click(function(){
+                        $.modal.close();
+                        i.parents('.konfigurator--group').find('input').attr('checked', false)
+                        i.attr('checked', 'checked');
+                        i.prop("checked", true);
+                        updateItem(i);
+                    });
+                }
+            });
+
+        });
+
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
-            updateGroup($(this));
-            updateTotalPrice();
+            updateItem($(this));
             // update caching
         });
     });
 
-    function cacheConfigOptions(o){
-        /*$.ajax({
+    function cacheConfigOptions(){
+        $.ajax({
             'dataType': 'jsonp',
-            'url': '{/literal}{url controller="pckonfigurator" action="cacheKonfigurator"}{literal}',
-            'data': {articles:JSON.stringify(a), configNr: {/literal}'{$sArticle.ordernumber}'{literal}},
+            'url': '/pckonfigurator/cache',
+            'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
             'complete': function (r) {
-                if( o===1 ){
-                    $.ajax({
-                        'dataType': 'jsonp',
-                        'url': '{/literal}{url controller="konfigurator" action="addConfigToBasket"}{literal}',
-                        'data': {configNr: {/literal}'{$sArticle.ordernumber}'{literal}, price: loadOverviewPrice()},
-                        'complete': function (result){
-                            $('#modalLoading').modal('hide');
-                            $('button.buyconfig').attr('disabled', '');
-                            window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
-                        }
-                    });
-                }
+                //window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
             }
-        });*/
+        });
     }
 
     function initItems(){
@@ -47,12 +80,15 @@
         });
         updateTotalPrice();
     }
-
+    function updateItem( el ){
+        updateGroup( el );
+        updateTotalPrice();
+        cacheConfigOptions();
+    }
     function updateTotalPrice(){
-        console.log(a);
         var t = 0;
-        Object.keys(a).forEach(gId => {
-            t += a[gId].price;
+        Object.keys(c).forEach(gId => {
+            t += c[gId].price;
         });
 
         /*$('.item--input:checked').each(function(){
@@ -66,7 +102,7 @@
         var gId = el.parents('.konfigurator--group').attr('data-groupId');
         var aNr = el.val();
         var p = parseFloat(el.parents('.konfigurator--group--item').attr('data-itemprice'));
-        a[gId] = { price: p, artnr: aNr, qty: 1 };
+        c[gId] = { price: p, artnr: aNr, qty: 1 };
 
         updateGroupHeader(el);
     }

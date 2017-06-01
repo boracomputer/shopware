@@ -19,12 +19,12 @@
 
             {* Content list *}
             {block name="frontend_detail_tabs_content"}
-                <div class="tab--container-list ">
+                <div class="tab--container-list" id="config">
                     {block name="frontend_detail_tabs_content_inner"}
 
                         {* Description container *}
                         {block name="frontend_detail_tabs_content_konfigurator"}
-                            <div class="tab--container container--konfigurator">
+                            <div class="tab--container container--konfigurator" data-uID="{$tbKonfigUID}" data-cID="{$tbKonfigID}">
                                 {block name="frontend_detail_tabs_content_konfigurator_inner"}
 
                                     {* Description title *}
@@ -49,8 +49,8 @@
                                                     {if $groupItemsMan|count==0}
                                                         {continue}
                                                     {/if}
-                                                    {$selectedArtnr = $tbKonfigSelected[$groupId]}
-                                                    <div class="collapse--header">
+                                                    {$selectedArtnr = $tbKonfigSelected[$groupId]['artnr']}
+                                                    <div class="collapse--header" id="">
                                                         <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
                                                         <span class="item-selected--name"></span>
                                                         <span class="item-selected--price"></span>
@@ -69,17 +69,17 @@
                                                         {/if}
                                                         {foreach $groupItemsMan as $hersteller => $items}
                                                             {if $groupItemsMan|count>1}
-                                                                <h3>{$hersteller}</h3>
+                                                                <h4>{$hersteller}</h4>
                                                             {/if}
                                                             {foreach $items as $i => $item}
                                                                 <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if !$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
-                                                                    <div class="modal--size-table  float--left item--action" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-title="{$item.sArticle.articleName|escape}" data-mode="ajax">
-                                                                        <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax' konfigurator=1}" title="{s name='quickview'}Schnellansicht{/s}">
+                                                                    <div class="float--left item--action" data-width="800" data-height="440">
+                                                                        <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax' konfigurator=1 groupId=$groupId}" title="{s name='quickview'}Schnellansicht{/s}" data-title="{$item.sArticle.articleName|escape}">
                                                                             <i class="fa fa-info"></i>
                                                                         </a>
                                                                     </div>
@@ -89,7 +89,7 @@
                                                     </div>
                                                 {/foreach}
                                                 <div class="konfigurator--footer">
-                                                    
+
                                                     <div class="konfigurator--footer-total">
                                                         <span class="title">Gesamtsumme:</span>
                                                         <span class="price"></span>

@@ -124,7 +124,7 @@
 
 {block name="frontend_detail_index_tabs"}
     {include file="frontend/pckonfigurator/tabs.tpl"}
-    {$tbKonfigGroups|dump}
+    {*$tbKonfigGroups|dump*}
 {/block}
 
 {block name='frontend_detail_index_buy_container_inner'}

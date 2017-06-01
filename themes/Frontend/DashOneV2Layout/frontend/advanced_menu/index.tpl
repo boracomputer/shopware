@@ -1,5 +1,27 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
+{block name="frontend_plugins_advanced_menu_list_item"}
+    {$icon=0}
+    {if $shopID==1}
+        {if $category.attribute.attribute4!=''}
+            {$icon=$category.attribute.attribute4}
+        {/if}
+    {elseif $shopID==5}
+        {if $category.attribute.attribute5!=''}
+            {$icon=$category.attribute.attribute5}
+        {/if}
+    {/if}
+    <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
+        {*if $icon!=0}
+            <img src="{link file={$icon.media.path}}" />
+        {/if*}
+        {$category.name}
+    </a>
+    {if $category.sub}
+        {call name=categories_top categories=$category.sub level=$level+1}
+    {/if}
+{/block}
+
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
@@ -12,9 +34,11 @@
             {$link = $mainCategory.external}
         {/if}
 
+
+
         {$hasCategories = $mainCategory.activeCategories > 0  && $columnAmount < 4}
         {$hasTeaser = (!empty($mainCategory.media) || !empty($mainCategory.attribute.attribute4)) && $columnAmount > 0}
-        {$image =  ";"|explode:$mainCategory.attribute.attribute4}
+        {*$image =  ";"|explode:$mainCategory.attribute.attribute4*}
 
         <div class="menu--container">
             {block name="frontend_plugins_advanced_menu_main_container"}
@@ -52,9 +76,9 @@
                                     {/if}
 
                                     <div class="teaser--text">
-                                        {if $image.1}<a href="{$image.1}">{/if}
+                                        {*if $image.1}<a href="{$image.1}">{/if}
                                             <img src="{$image.0}" />
-                                        {if $image.1}</a>{/if}
+                                        {if $image.1}</a>{/if*}
                                     </div>
                                 </div>
                             {/block}
