@@ -54,6 +54,8 @@
             $('.js--modal').on('click', '.konfigurator--select-item', function(){
                 var i = $('#group-{$smarty.get.groupId}').find('input[data-itemArtnr={$sArticle.ordernumber}]');
                 i.prop("checked", true).attr('checked', 'checked');
+                console.log(i);
+                $.modal.close();
                 //updateItem(i);
             });
         </script>
