@@ -22,14 +22,14 @@
             }
             e.preventDefault();
         });
+
         $('.container--konfigurator').on('click', '.action--quickview', function(){
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
-        $('.js--modal').on('click', '.konfigurator--select-item', function(){
+        $('body').on('click', '.konfigurator--select-item', function(){
             console.log(i);
             i.prop("checked", true);
             updateItem(i);
-
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateItem($(this));
