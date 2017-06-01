@@ -35,7 +35,7 @@
                 }
             });
             console.log(m);
-            console.log(m._$content);
+            console.log(m._$content[0]);
             m._$content.ready(function(){
                 console.log($(this));
                 console.log($(this).find('.konfigurator--select-item'));
