@@ -26,6 +26,7 @@
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
         $('.js--modal').on('click', '.konfigurator--select-item', function(){
+            console.log(i);
             i.prop("checked", true);
             updateItem(i);
 
