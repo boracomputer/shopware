@@ -52,7 +52,7 @@
     {if $smarty.get.konfigurator}
         <script>
             $('.js--modal').on('click', '.konfigurator--select-item', function(){
-                var i = $('#group-{$groupId}').find('input[data-itemArtnr=$sArticle.ordernumber]');
+                var i = $('#group-{$smarty.get.groupId}').find('input[data-itemArtnr={$sArticle.ordernumber}]');
                 console.log(i);
                 //i.prop("checked", true);
                 //updateItem(i);
