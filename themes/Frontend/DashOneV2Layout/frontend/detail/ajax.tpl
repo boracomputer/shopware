@@ -49,7 +49,7 @@
 {* remove js *}
 {block name="frontend_index_header_javascript"}{/block}
 {block name="frontend_index_header_javascript_jquery" append}
-    {if $smarty.get.konfigurator}
+    {*if $smarty.get.konfigurator}
         <script>
             $('.js--modal').on('click', '.konfigurator--select-item', function(){
                 var i = $('#group-{$smarty.get.groupId}').find('input[data-itemArtnr={$sArticle.ordernumber}]');
@@ -59,7 +59,7 @@
                 //updateItem(i);
             });
         </script>
-    {/if}
+    {/if*}
 {/block}
 
 {*block name="frontend_index_header_javascript_jquery_lib"}{/block*}

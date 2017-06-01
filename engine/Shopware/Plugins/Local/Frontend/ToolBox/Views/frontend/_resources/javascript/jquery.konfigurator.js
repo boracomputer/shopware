@@ -27,14 +27,17 @@
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
-            $.modal.open($(this).attr('href'), {
+            $.modal.open( $(this).attr('href'), {
                 mode: 'ajax',
                 width: 800,
                 title: $(this).attr('data-title'),
                 onClose: function(){
                     //$.modal.destroy();
-                    $('.js--overlay').remove();
+                    //$('.js--overlay').remove();
                 }
+            }, function(a,b){
+                console.log(a);
+                console.log(b);
             });
             e.preventDefault();
         });
