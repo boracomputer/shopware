@@ -28,12 +28,17 @@
         });
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
             e.preventDefault();
+            var t = $(this);
             $.ajax({
-                url: $(this).attr('href'),
+                url: t.attr('href'),
                 success: function (data) {
-                    $.modal.open( data, {
+                    var $d = $('<div/>', {
+                        html: data
+                    })
+                    console.log($d);
+                    $.modal.open( $d, {
                         width: 800,
-                        title: $(this).attr('data-title'),
+                        title: t.attr('data-title'),
                     })
                 }
             });
