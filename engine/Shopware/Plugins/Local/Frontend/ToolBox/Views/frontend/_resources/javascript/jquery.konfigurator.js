@@ -30,9 +30,11 @@
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
             e.preventDefault();
             var t = $(this);
+            $.loadingIndicator.open();
             $.ajax({
                 url: t.attr('href'),
                 success: function (data) {
+                    $.loadingIndicator.close();
                     var $d = $('<div/>', {
                         html: data
                     })
@@ -58,26 +60,15 @@
         });
     });
 
-    function cacheConfigOptions(o){
-        /*$.ajax({
+    function cacheConfigOptions(){
+        $.ajax({
             'dataType': 'jsonp',
-            'url': '{/literal}{url controller="pckonfigurator" action="cacheKonfigurator"}{literal}',
-            'data': {articles:JSON.stringify(a), configNr: {/literal}'{$sArticle.ordernumber}'{literal}},
+            'url': '/pckonfigurator/cache',
+            'data': { articles: JSON.stringify(a), uID: 0, cID: 0 },
             'complete': function (r) {
-                if( o===1 ){
-                    $.ajax({
-                        'dataType': 'jsonp',
-                        'url': '{/literal}{url controller="konfigurator" action="addConfigToBasket"}{literal}',
-                        'data': {configNr: {/literal}'{$sArticle.ordernumber}'{literal}, price: loadOverviewPrice()},
-                        'complete': function (result){
-                            $('#modalLoading').modal('hide');
-                            $('button.buyconfig').attr('disabled', '');
-                            window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
-                        }
-                    });
-                }
+                //window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
             }
-        });*/
+        });
     }
 
     function initItems(){
@@ -89,6 +80,7 @@
     function updateItem( el ){
         updateGroup( el );
         updateTotalPrice();
+        cacheConfigOptions();
     }
     function updateTotalPrice(){
         var t = 0;
