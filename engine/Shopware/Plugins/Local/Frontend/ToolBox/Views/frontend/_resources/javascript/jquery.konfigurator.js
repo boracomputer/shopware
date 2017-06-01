@@ -35,13 +35,18 @@
                 onClose: function(){
                 }
             });
-            console.log(m);
-            console.log(m._$content[0]);
-            m._$content[0].ready(function(){
+            //console.log(m);
+            //console.log(m._$content[0]);
+            m._$content.ready(function(){
+                console.log('ready');
                 console.log($(this));
                 console.log($(this).find('.konfigurator--select-item'));
-            })
-
+            });
+            m._$content.load(function(){
+                console.log('load');
+                console.log($(this));
+                console.log($(this).find('.konfigurator--select-item'));
+            });
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateItem($(this));
