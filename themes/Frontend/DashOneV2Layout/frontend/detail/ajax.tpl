@@ -30,7 +30,15 @@
 {block name="frontend_detail_index_header"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 {block name="frontend_detail_index_name"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 {block name="frontend_detail_index_tabs_cross_selling_top"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
-{block name="frontend_detail_index_buybox"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+{block name="frontend_detail_index_buybox"}
+    {if !$smarty.get.konfigurator}
+        {$smarty.block.parent}
+    {else}
+        <button class="buybox--button block btn is--primary is--icon-right is--center" name="Konfigurieren">
+            In den PC einbauen <i class="icon--plus3"></i>
+        </button>
+    {/if}
+{/block}
 {block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 {* remove tabs *}
 {block name="frontend_detail_tabs_rating"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
@@ -38,8 +46,31 @@
 {block name="commerzfinanz_detail_tabs_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 {block name="commerzfinanz_detail_tabs_content_description"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
 
+{* Previous product *}
+{block name='frontend_detail_article_back'}
+    <a href="#" class="navigation--link link--prev">
+        <div class="link--prev-button">
+            <span class="link--prev-inner">{s name='DetailNavPrevious'}{/s}</span>
+        </div>
+        <div class="image--wrapper">
+            <div class="image--container"></div>
+        </div>
+    </a>
+{/block}
+
+{* Next product *}
+{block name='frontend_detail_article_next'}
+    <a href="#" class="navigation--link link--next">
+        <div class="link--next-button">
+            <span class="link--next-inner">{s name='DetailNavNext'}{/s}</span>
+        </div>
+        <div class="image--wrapper">
+            <div class="image--container"></div>
+        </div>
+    </a>
+{/block}
 
 {* remove js *}
-{*block name="frontend_index_header_javascript"}{/block*}
-{*block name="frontend_index_header_javascript_jquery"}{/block*}
-{*block name="frontend_index_header_javascript_jquery_lib"}{/block*}
+{block name="frontend_index_header_javascript"}{/block}
+{block name="frontend_index_header_javascript_jquery"}{/block}
+{block name="frontend_index_header_javascript_jquery_lib"}{/block}
