@@ -13,7 +13,7 @@
     {/if}
     <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
         {if $icon!=0}
-        {$icon|dump}
+        {$category|dump}
             <img src="{link file={$icon.media.path}}" />
         {/if}
         {$category.name}
