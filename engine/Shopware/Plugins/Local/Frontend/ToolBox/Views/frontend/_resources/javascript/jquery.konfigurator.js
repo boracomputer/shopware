@@ -64,8 +64,9 @@
         $.ajax({
             'dataType': 'jsonp',
             'url': '/pckonfigurator/cache',
-            'data': { articles: JSON.stringify(a), uID: 0, cID: 0 },
+            'data': { articles: JSON.stringify(c), uID: 0, cID: 0 },
             'complete': function (r) {
+                console.log(r);
                 //window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
             }
         });
