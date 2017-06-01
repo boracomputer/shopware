@@ -35,6 +35,7 @@
                 }
             });
             console.log(m);
+            console.log(m._$content);
             e.preventDefault();
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
