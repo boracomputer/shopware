@@ -26,6 +26,7 @@
         $('.container--konfigurator').on('click', '.action--quickview', function(){
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
+
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
             e.preventDefault();
             var t = $(this);
@@ -39,8 +40,12 @@
                         width: 800,
                         title: t.attr('data-title'),
                     });
-                    console.log($d.find('.konfigurator--select-item'));
-                    $d.find('.konfigurator--select-item').hide();
+                    $d.find('.konfigurator--select-item').click(function(){
+                        $.modal.close();
+                        i.parents('').find('input').attr('checked', false)
+                        i.attr('checked', 'checked');
+                        updateItem(i);
+                    });
                 }
             });
 
