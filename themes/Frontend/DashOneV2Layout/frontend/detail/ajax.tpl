@@ -37,6 +37,7 @@
         <button class="buybox--button block btn is--primary is--icon-right is--center konfigurator--select-item modal--close" name="Konfigurieren" style="width: 100%;">
             In den PC einbauen <i class="icon--plus3"></i>
         </button>
+        <div class="clear"></div>
     {/if}
 {/block}
 {block name="frontend_detail_index_delivery_wrapper"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
