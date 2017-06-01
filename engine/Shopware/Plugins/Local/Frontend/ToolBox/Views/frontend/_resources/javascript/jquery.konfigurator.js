@@ -1,9 +1,12 @@
 
 ;(function($, window, undefined) {
-    var c={}; var i;
+    var c={}; var i; var uId; var cId;
 
     $(document).ready(function() {
         initItems();
+        uId = $('.container--konfigurator').attr('data-uID');
+        cId = $('.container--konfigurator').attr('data-cID');
+
         $('body').on('click', '.collapse--header', function(e){
 
             var t = $(this);
@@ -64,7 +67,7 @@
         $.ajax({
             'dataType': 'jsonp',
             'url': '/pckonfigurator/cache',
-            'data': { articles: JSON.stringify(c), uID: 0, cID: 0 },
+            'data': { articles: JSON.stringify(c), uID: uID, cID: cID },
             'complete': function (r) {
                 console.log(r);
                 //window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';

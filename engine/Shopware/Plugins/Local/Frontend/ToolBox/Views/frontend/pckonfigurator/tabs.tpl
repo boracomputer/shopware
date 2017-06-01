@@ -24,7 +24,7 @@
 
                         {* Description container *}
                         {block name="frontend_detail_tabs_content_konfigurator"}
-                            <div class="tab--container container--konfigurator" data-uID="{$tbKonfigUID}">
+                            <div class="tab--container container--konfigurator" data-uID="{$tbKonfigUID}" data-cID="{$tbKonfigID}">
                                 {block name="frontend_detail_tabs_content_konfigurator_inner"}
 
                                     {* Description title *}
