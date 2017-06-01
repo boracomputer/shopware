@@ -67,7 +67,7 @@
         $.ajax({
             'dataType': 'jsonp',
             'url': '/pckonfigurator/cache',
-            'data': { articles: JSON.stringify(c), uID: uID, cID: cID },
+            'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
             'complete': function (r) {
                 console.log(r);
                 //window.location.href = '{/literal}{url controller="checkout" action="cart"}{literal}';
