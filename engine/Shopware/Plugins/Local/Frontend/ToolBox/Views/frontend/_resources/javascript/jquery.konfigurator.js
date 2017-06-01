@@ -27,6 +27,7 @@
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
+            e.preventDefault();
             var m = $.modal.open( $(this).attr('href'), {
                 mode: 'ajax',
                 width: 800,
@@ -40,7 +41,7 @@
                 console.log($(this));
                 console.log($(this).find('.konfigurator--select-item'));
             })
-            e.preventDefault();
+
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateItem($(this));
