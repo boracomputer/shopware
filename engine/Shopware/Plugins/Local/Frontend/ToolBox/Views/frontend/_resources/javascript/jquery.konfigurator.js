@@ -36,6 +36,10 @@
             });
             console.log(m);
             console.log(m._$content);
+            m._$content.ready(function(){
+                console.log($(this));
+                console.log($(this).find('.konfigurator--select-item'));
+            })
             e.preventDefault();
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
