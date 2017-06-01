@@ -44,6 +44,7 @@
                         $.modal.close();
                         i.parents('.konfigurator--group').find('input').attr('checked', false)
                         i.attr('checked', 'checked');
+                        i.prop("checked", true);
                         updateItem(i);
                     });
                 }
