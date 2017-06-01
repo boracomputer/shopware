@@ -28,7 +28,7 @@
         $('.js--modal').on('click', '.konfigurator--select-item', function(){
             i.prop("checked", true);
             updateItem(i);
-            
+
         });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateItem($(this));
@@ -69,9 +69,8 @@
         updateTotalPrice();
     }
     function updateTotalPrice(){
-        console.log(a);
         var t = 0;
-        Object.keys(a).forEach(gId => {
+        Object.keys(c).forEach(gId => {
             t += c[gId].price;
         });
 
