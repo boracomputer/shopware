@@ -49,4 +49,4 @@
 {* remove js *}
 {block name="frontend_index_header_javascript"}{/block}
 {block name="frontend_index_header_javascript_jquery"}{/block}
-{*block name="frontend_index_header_javascript_jquery_lib"}{/block*}
+{block name="frontend_index_header_javascript_jquery_lib"}{/block}
