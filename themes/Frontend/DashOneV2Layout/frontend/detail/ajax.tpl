@@ -53,7 +53,7 @@
         <script>
             $('.js--modal').on('click', '.konfigurator--select-item', function(){
                 var i = $('#group-{$smarty.get.groupId}').find('input[data-itemArtnr={$sArticle.ordernumber}]');
-                i.prop("checked", true);
+                i.prop("checked", true).attr('checked', 'checked');
                 //updateItem(i);
             });
         </script>

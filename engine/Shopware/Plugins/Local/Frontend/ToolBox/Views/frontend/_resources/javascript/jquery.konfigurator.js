@@ -26,7 +26,11 @@
         $('.container--konfigurator').on('click', '.action--quickview', function(){
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
-        
+        $('.container--konfigurator').on('click', '.action--quickview', function(){
+            $.modal.open($(this).attr('href'), {
+                mode: 'ajax'
+            });
+        });
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
             updateItem($(this));
             // update caching
