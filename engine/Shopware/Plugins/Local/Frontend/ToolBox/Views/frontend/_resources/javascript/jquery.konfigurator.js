@@ -42,7 +42,7 @@
                     });
                     $d.find('.konfigurator--select-item').click(function(){
                         $.modal.close();
-                        i.parents('').find('input').attr('checked', false)
+                        i.parents('.konfigurator--group').find('input').attr('checked', false)
                         i.attr('checked', 'checked');
                         updateItem(i);
                     });
