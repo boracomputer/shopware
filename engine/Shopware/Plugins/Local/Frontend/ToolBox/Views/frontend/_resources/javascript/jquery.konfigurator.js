@@ -28,11 +28,13 @@
         });
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
             e.preventDefault();
-            var m = $.modal.open( $(this).attr('href'), {
-                mode: 'ajax',
-                width: 800,
-                title: $(this).attr('data-title'),
-                onClose: function(){
+            $.ajax({
+                url: $(this).attr('href'),
+                success: function (data) {
+                    $.modal.open( data, {
+                        width: 800,
+                        title: $(this).attr('data-title'),
+                    })
                 }
             });
 
