@@ -28,7 +28,13 @@
         });
         $('.container--konfigurator').on('click', '.action--quickview', function(e){
             $.modal.open($(this).attr('href'), {
-                mode: 'ajax'
+                mode: 'ajax',
+                width: 800,
+                title: $(this).attr('data-title'),
+                onClose: function(){
+                    //$.modal.destroy();
+                    $('.js--overlay').remove();
+                }
             });
             e.preventDefault();
         });
