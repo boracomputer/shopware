@@ -51,7 +51,7 @@
                                                     {/if}
                                                     {$selectedArtnr = $tbKonfigSelected[$groupId]['artnr']}
                                                     <div class="collapse--header" id="">
-                                                        <span class="group--name">{$tbKonfigGroups[$groupId].name} ({$selectedArtnr})</span>
+                                                        <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
                                                         <span class="item-selected--name"></span>
                                                         <span class="item-selected--price"></span>
                                                         <span class="collapse--toggler"></span>
@@ -75,7 +75,7 @@
                                                                 <div class="konfigurator--group--item{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
                                                                         <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
-                                                                        <span class="articleName">{$item.sArticle.articleName} ({$item.artnr})</span>
+                                                                        <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
                                                                     <div class="float--left item--action" data-width="800" data-height="440">
