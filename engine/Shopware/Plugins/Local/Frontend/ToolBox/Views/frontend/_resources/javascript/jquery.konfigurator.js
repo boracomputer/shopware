@@ -60,6 +60,7 @@
             e.preventDefault();
             $.ajax({
                 'dataType': 'jsonp',
+                'method': 'POST',
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
                 'complete': function (response) {
@@ -70,8 +71,8 @@
                             'data-add-article': 'true',
                             'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
                         });
-                        b.swAddArticle();
-                        //b.trigger('click');
+                        //b.swAddArticle();
+                        b.trigger('click');
                     }
                 }
             });
@@ -86,6 +87,7 @@
     function cacheConfigOptions(){
         $.ajax({
             'dataType': 'jsonp',
+            'method': 'POST',
             'url': '/pckonfigurator/cache',
             'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
             'complete': function (r) {
