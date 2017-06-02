@@ -10,12 +10,7 @@
 
 {block name="frontend_index_header_css_print" append}
 <style>
-    .js--modal .content{
-        padding: 0px 10px;
-    }
-    .js--modal .content .image-slider--container{
-        height: auto;
-    }
+    
     .container--konfigurator .tab--content .collapse--content{
         padding: 10px;
     }
