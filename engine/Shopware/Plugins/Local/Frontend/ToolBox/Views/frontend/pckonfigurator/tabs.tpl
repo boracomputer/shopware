@@ -51,7 +51,7 @@
                                                     {/if}
                                                     {$selectedArtnr = $tbKonfigSelected[$groupId]['artnr']}
                                                     <div class="collapse--header" id="">
-                                                        <span class="group--name">{$tbKonfigGroups[$groupId].name}</span>
+                                                        <span class="group--name">{$tbKonfigGroups[$groupId].name} ({$selectedArtnr})</span>
                                                         <span class="item-selected--name"></span>
                                                         <span class="item-selected--price"></span>
                                                         <span class="collapse--toggler"></span>
@@ -59,9 +59,9 @@
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
 
                                                         {if $tbKonfigGroups[$groupId].required != 1}
-                                                        <div class="konfigurator--group--item{if !$selectedArtnr} selected{/if}" data-itemArtnr="" data-itemPrice="0">
+                                                        <div class="konfigurator--group--item{if !$selectedArtnr || $selectedArtnr==''} selected{/if}" data-itemArtnr="" data-itemPrice="0">
                                                             <label>
-                                                                <input name="item[{$groupId}]" value="" type="radio" class="item--input"{if !$selectedArtnr} checked="checked"{/if} />
+                                                                <input name="item[{$groupId}]" value="" type="radio" class="item--input"{if !$selectedArtnr || $selectedArtnr==''} checked="checked"{/if} />
                                                                 <span class="articleName">{$tbKonfigGroups[$groupId].nulllabel}</span>
                                                                 <span class="articlePrice">{"0"|currency}</span>
                                                             </label>
@@ -71,15 +71,17 @@
                                                             {if $groupItemsMan|count>1}
                                                                 <h4>{$hersteller}</h4>
                                                             {/if}
+
                                                             {if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr}
                                                                 {$itemSelected=1}
                                                             {else}
                                                                 {$itemSelected=0}
                                                             {/if}
+
                                                             {foreach $items as $i => $item}
-                                                                <div class="konfigurator--group--item{if $itemSelected} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
+                                                                <div class="konfigurator--group--item{if $itemSelected==1} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if $itemSelected} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if $itemSelected==1} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
