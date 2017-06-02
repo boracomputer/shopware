@@ -130,8 +130,8 @@
     }
 
     function updateGroupHeader( el ){
-        el.parents('.konfigurator--group').find('konfigurator--group--item').removeClass('selected');
-        el.parents('konfigurator--group--item').addClass('selected');
+        el.parents('.konfigurator--group').find('.konfigurator--group--item').removeClass('selected');
+        el.parents('.konfigurator--group--item').addClass('selected');
         var h = el.parents('.collapse--content').first().prev('.collapse--header');
         h.find('.item-selected--name').text( el.next('.articleName').text().trunc(60) );
         h.find('.item-selected--price').text( el.next('.articleName').next('.articlePrice').text() );
