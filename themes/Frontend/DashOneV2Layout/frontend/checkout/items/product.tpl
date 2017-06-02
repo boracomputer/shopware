@@ -1,4 +1,4 @@
-{extends file='parent:frontend/checkout/items/product.tpl'}
+{*extends file='parent:frontend/checkout/items/product.tpl'*}
 
 {namespace name="frontend/checkout/cart_item"}
 
@@ -6,7 +6,7 @@
 
     {if $sBasketItem.additional_details.sConfigurator}
         {$detailLink={url controller=detail sArticle=$sBasketItem.articleID number=$sBasketItem.ordernumber forceSecure}}
-    {elseif $sBasketItem.ordernumber|strpos:"PCK."!==false}
+    {elseif $sBasketItem.ordernumber|strpos:"PCK"!==false}
         {$params = "."|explode:$sBasketItem.ordernumber}
         {$detailLink={url controller=pckonfigurator action=configure id=$params[1] uId=$params[2]}}
     {else}
