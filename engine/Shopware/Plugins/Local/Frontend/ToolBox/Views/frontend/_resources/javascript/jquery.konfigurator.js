@@ -63,13 +63,10 @@
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
                 'complete': function (artnr) {
-                    var artnr=data;
                     var b = $('<button/>', {
-                        'data-addArticleUrl': '/checkout/addArticle/sAdd/'+data
+                        'data-addArticleUrl': '/checkout/addArticle/sAdd/'+artnr
                     });
-                    b.swAddArticle({
-
-                    });
+                    b.swAddArticle(;
                     b.trigger('click');
                 }
             });
