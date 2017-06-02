@@ -71,17 +71,10 @@
                                                             {if $groupItemsMan|count>1}
                                                                 <h4>{$hersteller}</h4>
                                                             {/if}
-
-                                                            {if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr}
-                                                                {$itemSelected=1}
-                                                            {else}
-                                                                {$itemSelected=0}
-                                                            {/if}
-
                                                             {foreach $items as $i => $item}
-                                                                <div class="konfigurator--group--item{if $itemSelected===1} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
+                                                                <div class="konfigurator--group--item{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if $itemSelected===1} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName} ({$item.artnr})</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
