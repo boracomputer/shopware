@@ -82,7 +82,7 @@
                                                                 <div class="konfigurator--group--item{if $itemSelected===1} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
                                                                         <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if $itemSelected===1} checked="checked"{/if} />
-                                                                        <span class="articleName">{$item.sArticle.articleName}</span>
+                                                                        <span class="articleName">{$item.sArticle.articleName} ({$item.artnr})</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
                                                                     <div class="float--left item--action" data-width="800" data-height="440">
