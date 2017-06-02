@@ -57,6 +57,7 @@
         });
 
         $('.container--konfigurator').on('click', '.buybox--button-konfigurator', function(e){
+            e.preventDefault();
             $.ajax({
                 'dataType': 'jsonp',
                 'url': '/pckonfigurator/basket',
