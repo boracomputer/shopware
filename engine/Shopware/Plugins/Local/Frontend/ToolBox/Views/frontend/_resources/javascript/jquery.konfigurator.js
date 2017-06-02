@@ -71,7 +71,7 @@
                             'data-add-article': 'true',
                             'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
                         });
-                        //b.swAddArticle();
+                        b.swAddArticle();
                         b.trigger('click');
                     }
                 }
