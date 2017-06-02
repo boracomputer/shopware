@@ -59,7 +59,7 @@
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
 
                                                         {if $tbKonfigGroups[$groupId].required != 1}
-                                                        <div class="konfigurator--group--item" data-itemArtnr="" data-itemPrice="0">
+                                                        <div class="konfigurator--group--item{if !$selectedArtnr} selected{/if}" data-itemArtnr="" data-itemPrice="0">
                                                             <label>
                                                                 <input name="item[{$groupId}]" value="" type="radio" class="item--input"{if !$selectedArtnr} checked="checked"{/if} />
                                                                 <span class="articleName">{$tbKonfigGroups[$groupId].nulllabel}</span>
@@ -71,10 +71,15 @@
                                                             {if $groupItemsMan|count>1}
                                                                 <h4>{$hersteller}</h4>
                                                             {/if}
+                                                            {if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr}
+                                                                {$itemSelected=1}
+                                                            {else}
+                                                                {$itemSelected=0}
+                                                            {/if}
                                                             {foreach $items as $i => $item}
-                                                                <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
+                                                                <div class="konfigurator--group--item{if $itemSelected} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
-                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
+                                                                        <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if $itemSelected} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>

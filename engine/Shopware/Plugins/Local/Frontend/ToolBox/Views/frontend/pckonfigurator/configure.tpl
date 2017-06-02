@@ -52,6 +52,12 @@
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
         padding: 5px 5px;
     }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item.selected{
+        background: #444;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item.selected label{
+        color: #f5f5f5;
+    }
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item input{
 
     }
