@@ -62,13 +62,16 @@
                 'dataType': 'jsonp',
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
-                'complete': function (artnr) {
-                    console.log(artnr);
-                    /*var b = $('<button/>', {
-                        'data-addArticleUrl': '/checkout/addArticle/sAdd/'+artnr
-                    });
-                    b.swAddArticle();
-                    b.trigger('click');*/
+                'complete': function (response) {
+                    if( response.responseText == 0 ){
+
+                    }else{
+                        var b = $('<button/>', {
+                            'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
+                        });
+                        b.swAddArticle();
+                        b.trigger('click');
+                    }
                 }
             });
         });
