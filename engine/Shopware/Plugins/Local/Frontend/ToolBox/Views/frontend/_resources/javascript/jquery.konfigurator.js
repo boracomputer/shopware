@@ -67,10 +67,11 @@
 
                     }else{
                         var b = $('<button/>', {
+                            'data-add-article': 'true',
                             'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
                         });
                         b.swAddArticle();
-                        b.trigger('click');
+                        //b.trigger('click');
                     }
                 }
             });
