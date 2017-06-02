@@ -95,7 +95,7 @@
                                                         <span class="price"></span>
                                                     </div>
                                                     <div class="konfigurator--footer-actions">
-                                                        <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
+                                                        <a href="{url controller='pckonfigurator' action='basket'}" class="buybox--button buybox--button-konfigurator btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
                                                             Jetzt bestellen <i class="icon--arrow-right"></i>
                                                         </a>
 

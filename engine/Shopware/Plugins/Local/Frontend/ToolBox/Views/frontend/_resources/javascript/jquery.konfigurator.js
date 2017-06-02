@@ -30,7 +30,7 @@
             i = $(this).parents('.konfigurator--group--item').find('input.item--input');
         });
 
-        $('.container--konfigurator').on('click', '.action--quickview', function(e){
+        $('.container--konfigurator').on('click', '.action--quickview, .buybox--button-konfigurator', function(e){
             e.preventDefault();
             var t = $(this);
             $.loadingIndicator.open();
@@ -38,23 +38,35 @@
                 url: t.attr('href'),
                 success: function (data) {
                     $.loadingIndicator.close();
-                    var $d = $('<div/>', {
-                        html: data
-                    })
-                    $.modal.open( $d, {
-                        width: 800,
-                        title: t.attr('data-title'),
-                    });
-                    $d.find('.konfigurator--select-item').click(function(){
-                        $.modal.close();
-                        i.parents('.konfigurator--group').find('input').attr('checked', false)
-                        i.attr('checked', 'checked');
-                        i.prop("checked", true);
-                        updateItem(i);
-                    });
+
+                    if( t.hasClass('action--quickview') ){
+                        var $d = $('<div/>', {
+                            html: data
+                        });
+                        $.modal.open( $d, {
+                            width: 800,
+                            title: t.attr('data-title'),
+                        });
+                        $d.find('.konfigurator--select-item').click(function(){
+                            $.modal.close();
+                            i.parents('.konfigurator--group').find('input').attr('checked', false)
+                            i.attr('checked', 'checked');
+                            i.prop("checked", true);
+                            updateItem(i);
+                        });
+                    }
+                    if( t.hasClass('buybox--button-konfigurator') ){
+                        var artnr=data;
+                        var b = $('<button/>', {
+                            'data-addArticleUrl': '/checkout/addArticle/sAdd/'+data
+                        });
+                        b.swAddArticle({
+
+                        });
+                        b.trigger('click');
+                    }
                 }
             });
-
         });
 
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
