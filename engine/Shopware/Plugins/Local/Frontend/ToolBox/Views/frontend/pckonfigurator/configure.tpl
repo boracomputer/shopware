@@ -1,7 +1,7 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
 {block name='frontend_index_header_title'}{strip}
-{if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
+{$sArticle.articleName} | {{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
 {block name='frontend_index_header_javascript_jquery' append}
@@ -10,7 +10,7 @@
 
 {block name="frontend_index_header_css_print" append}
 <style>
-    
+
     .container--konfigurator .tab--content .collapse--content{
         padding: 10px;
     }
