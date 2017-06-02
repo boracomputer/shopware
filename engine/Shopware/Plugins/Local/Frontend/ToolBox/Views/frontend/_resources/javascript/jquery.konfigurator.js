@@ -66,7 +66,7 @@
                     var b = $('<button/>', {
                         'data-addArticleUrl': '/checkout/addArticle/sAdd/'+artnr
                     });
-                    b.swAddArticle(;
+                    b.swAddArticle();
                     b.trigger('click');
                 }
             });
