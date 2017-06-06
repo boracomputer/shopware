@@ -37,7 +37,7 @@
             $.ajax({
                 url: t.attr('href'),
                 success: function (data) {
-                    //$.loadingIndicator.close();
+                    $.loadingIndicator.close(function{
                         var $d = $('<div/>', {
                             html: data
                         });
@@ -52,6 +52,7 @@
                             i.prop("checked", true);
                             updateItem(i);
                         });
+                    });
                 }
             });
         });
