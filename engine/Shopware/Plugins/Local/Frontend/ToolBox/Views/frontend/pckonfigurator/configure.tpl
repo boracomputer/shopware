@@ -99,7 +99,7 @@
 </style>
 {/block}
 
-
+{* replace buy button with config button *}
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
     <a href="#config" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
@@ -108,25 +108,25 @@
 </div>
 {/block}
 
-{block name="frontend_detail_data_delivery_wrapper"}
-{/block}
+{block name='frontend_detail_index_buy_container_inner'}{/block}
 
-{block name='frontend_detail_index_buy_container_inner'}
-{/block}
+{* remove article actions (bewerten/merken) *}
+{block name="frontend_detail_index_actions"}{/block}
 
-{block name="frontend_detail_index_actions"}
-{/block}
-
+{* remove cross selling container *}
 {block name="frontend_detail_index_tabs_cross_selling_top"}{/block}
+
+{* remove filialen- & same day delivery availabelity *}
+{block name="frontend_detail_data_delivery_wrapper"}{/block}
+{block name="frontend_detail_index_delivery_samedaydelivery"}{/block}
+{block name="frontend_detail_index_delivery_stores"}{/block}
 
 {* Tab content container *}
 {block name="frontend_detail_index_tabs_cross_selling"}
 {/block}
 
+{* add konfigurator-tab *}
 {block name="frontend_detail_index_tabs"}
     {include file="frontend/pckonfigurator/tabs.tpl"}
     {*$tbKonfigGroups|dump*}
-{/block}
-
-{block name='frontend_detail_index_buy_container_inner'}
 {/block}
