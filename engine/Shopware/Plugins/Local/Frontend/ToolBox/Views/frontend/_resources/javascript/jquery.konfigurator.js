@@ -75,10 +75,9 @@
                             'data-add-article': 'true',
                             'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
                         });
-                        $.unsubscribe('plugin/swAddArticle/onAddArticle');
                         b.swAddArticle();
                         b.trigger('click');
-                        $('container--ajax-cart').removeClass('is--open').addClass('is--hidden');
+                        $('.container--ajax-cart').removeClass('is--open').addClass('is--hidden');
                     }
                 }
             });
