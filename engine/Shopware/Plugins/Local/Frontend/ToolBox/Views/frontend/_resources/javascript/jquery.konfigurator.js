@@ -59,12 +59,14 @@
 
         $('.container--konfigurator').on('click', '.buybox--button-konfigurator', function(e){
             e.preventDefault();
+            $.loadingIndicator.open();
             $.ajax({
                 'dataType': 'jsonp',
                 'method': 'POST',
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
                 'complete': function (response) {
+                    $.loadingIndicator.close();
                     if( response.responseText == 0 ){
 
                     }else{
@@ -72,7 +74,7 @@
                             'data-add-article': 'true',
                             'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
                         });
-                        b.swAddArticle();
+                        b.swAddArticle({showModal: false});
                         b.trigger('click');
                     }
                 }
