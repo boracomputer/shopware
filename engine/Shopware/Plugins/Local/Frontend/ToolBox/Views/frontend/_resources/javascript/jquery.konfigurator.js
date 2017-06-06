@@ -66,7 +66,7 @@
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
                 'complete': function (response) {
-                    $.loadingIndicator.close();
+                    //$.loadingIndicator.close();
                     if( response.responseText == 0 ){
 
                     }else{
