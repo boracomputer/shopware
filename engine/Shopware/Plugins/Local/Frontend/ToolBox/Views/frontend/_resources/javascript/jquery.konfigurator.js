@@ -37,7 +37,7 @@
             $.ajax({
                 url: t.attr('href'),
                 success: function (data) {
-                    $.loadingIndicator.close(function{
+                    $.loadingIndicator.close(function(){
                         var $d = $('<div/>', {
                             html: data
                         });
