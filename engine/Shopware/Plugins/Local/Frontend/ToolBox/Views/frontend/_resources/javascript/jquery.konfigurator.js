@@ -66,6 +66,7 @@
                 'url': '/pckonfigurator/basket',
                 'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
                 'complete': function (response) {
+
                     //$.loadingIndicator.close();
                     if( response.responseText == 0 ){
 
@@ -77,7 +78,7 @@
                         $.unsubscribe('plugin/swAddArticle/onAddArticle');
                         b.swAddArticle();
                         b.trigger('click');
-                        //$.swCollapseCart.closeMenu();
+                        $('container--ajax-cart').removeClass('is--open').addClass('is--hidden');
                     }
                 }
             });
