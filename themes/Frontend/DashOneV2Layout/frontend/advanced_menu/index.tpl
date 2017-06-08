@@ -13,7 +13,9 @@
     {/if}
     <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
         {if $icon != ''}
-            <img src="{link file=$icon}" class="pictogram" />
+        <span class="pictogram">
+            <img src="{link file=$icon}" />
+        </span>
         {/if}
         {$category.name}
     </a>
