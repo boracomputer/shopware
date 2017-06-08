@@ -105,7 +105,7 @@ jQuery(document).ready(function(){
                     {block name="frontend_custom_article_content"}
                         {*$tbStore|dump*}
                         {if $tbStore.banner_top}
-                            <img src="{$tbStore.banner_top}" />
+                            <img src="{$tbStore.banner_top}" style="margin-bottom: 7px;" />
                         {/if}
 						<div id="google_map" style="height:300px"></div>
 
