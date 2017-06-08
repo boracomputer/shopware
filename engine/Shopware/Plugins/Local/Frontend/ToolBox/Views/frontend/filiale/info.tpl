@@ -103,6 +103,9 @@ jQuery(document).ready(function(){
                     {/block}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
+                        {if $tbStore.banner_top}
+                            <img src="{$tbStore.banner_top}" />
+                        {/if}
 						<div id="google_map" style="height:300px"></div>
 
 						<div class="block-group">
