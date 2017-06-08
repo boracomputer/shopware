@@ -2,6 +2,7 @@
 
 {block name="frontend_plugins_advanced_menu_list_item"}
     {$icon=0}
+    {$category.attribute|dump}
     {if $shopID==1}
         {if $category.attribute.attribute4!=''}
             {$icon=$category.attribute.attribute4}
