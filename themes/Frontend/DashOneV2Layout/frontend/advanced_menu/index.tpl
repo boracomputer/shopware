@@ -10,6 +10,10 @@
         {if $category.attribute.attribute5 != ''}
             {$icon=$category.attribute.attribute5}
         {/if}
+    {elseif $shopID==3}
+        {if $category.attribute.attribute7 != ''}
+            {$icon=$category.attribute.attribute7}
+        {/if}
     {/if}
     <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
         {if $icon != ''}
