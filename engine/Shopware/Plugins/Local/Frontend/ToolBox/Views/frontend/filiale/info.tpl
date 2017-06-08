@@ -103,7 +103,7 @@ jQuery(document).ready(function(){
                     {/block}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
-                        {$tbStore|dump}
+                        {*$tbStore|dump*}
                         {if $tbStore.banner_top}
                             <img src="{$tbStore.banner_top}" />
                         {/if}
