@@ -41,7 +41,7 @@
             </form>
         {/block}
 
-        <div class="modal--size-table  float--left" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-mode="ajax">
+        <div class="modal--size-table  float--left" data-content="" data-modalbox="true" data-targetSelector="a" data-width="800" data-height="440" data-mode="ajax" data-title="{$sArticle.articleName|escape}">
             <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$sArticle.articleID} template='ajax'}" title="{s name='quickview'}Schnellansicht{/s}">
                 <i class="fa fa-eye"></i>
             </a>

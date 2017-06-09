@@ -38,6 +38,7 @@
 
 {block name="frontend_detail_index_delivery"}
     {$smarty.block.parent}
+    {block name="frontend_detail_index_delivery_stores"}
     {if $shopID != 3}
         <br />
         <strong class="entry--label">
@@ -51,4 +52,5 @@
             </a>
         </span>
     {/if}
+    {/block}
 {/block}

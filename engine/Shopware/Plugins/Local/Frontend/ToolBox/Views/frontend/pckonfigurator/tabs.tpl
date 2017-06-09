@@ -59,9 +59,9 @@
                                                     <div class="collapse--content konfigurator--group" data-groupId="{$groupId}" id="group-{$groupId}">
 
                                                         {if $tbKonfigGroups[$groupId].required != 1}
-                                                        <div class="konfigurator--group--item" data-itemArtnr="" data-itemPrice="0">
+                                                        <div class="konfigurator--group--item{if !$selectedArtnr || $selectedArtnr==''} selected{/if}" data-itemArtnr="" data-itemPrice="0">
                                                             <label>
-                                                                <input name="item[{$groupId}]" value="" type="radio" class="item--input"{if !$selectedArtnr} checked="checked"{/if} />
+                                                                <input name="item[{$groupId}]" value="" type="radio" class="item--input"{if !$selectedArtnr || $selectedArtnr==''} checked="checked"{/if} />
                                                                 <span class="articleName">{$tbKonfigGroups[$groupId].nulllabel}</span>
                                                                 <span class="articlePrice">{"0"|currency}</span>
                                                             </label>
@@ -72,17 +72,19 @@
                                                                 <h4>{$hersteller}</h4>
                                                             {/if}
                                                             {foreach $items as $i => $item}
-                                                                <div class="konfigurator--group--item" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
+                                                                <div class="konfigurator--group--item{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} selected{/if}" data-itemArtnr="{$item.artnr}" data-itemPrice="{$item.sArticle.price}">
                                                                     <label>
                                                                         <input name="item[{$groupId}]" value="{$item.artnr}" type="radio" class="item--input"{if (!$selectedArtnr && $tbKonfigGroups[$groupId].required == 1 && $i === 0) || $selectedArtnr==$item.artnr} checked="checked"{/if} />
                                                                         <span class="articleName">{$item.sArticle.articleName}</span>
                                                                         <span class="articlePrice">{$item.sArticle.price|currency}</span>
                                                                     </label>
+                                                                    {if $groupId != 14}
                                                                     <div class="float--left item--action" data-width="800" data-height="440">
                                                                         <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$item.articleID} template='ajax' konfigurator=1 groupId=$groupId}" title="{s name='quickview'}Schnellansicht{/s}" data-title="{$item.sArticle.articleName|escape}">
                                                                             <i class="fa fa-info"></i>
                                                                         </a>
                                                                     </div>
+                                                                    {/if}
                                                                 </div>
                                                             {/foreach}
                                                         {/foreach}
@@ -95,7 +97,7 @@
                                                         <span class="price"></span>
                                                     </div>
                                                     <div class="konfigurator--footer-actions">
-                                                        <a href="{url controller='pckonfigurator' action='addToBasket'}" class="buybox--button btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
+                                                        <a href="{url controller='pckonfigurator' action='basket'}" class="buybox--button buybox--button-konfigurator btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
                                                             Jetzt bestellen <i class="icon--arrow-right"></i>
                                                         </a>
 

@@ -25,11 +25,15 @@
 {* Hide additional content before the actual content starts *}
 {block name="frontend_index_after_body"}{/block}
 
+{* remove header (name is in title) *}
+{block name="frontend_detail_index_header"}{/block}
+
+{* remove cross selling *}
+{block name="frontend_detail_index_tabs_cross_selling_top"}{/block}
+
 
 {* remove things for konfigurator item quick view *}
-{block name="frontend_detail_index_header"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
-{block name="frontend_detail_index_name"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
-{block name="frontend_detail_index_tabs_cross_selling_top"}{if !$smarty.get.konfigurator}{$smarty.block.parent}{/if}{/block}
+
 {block name="frontend_detail_index_buybox"}
     {if !$smarty.get.konfigurator}
         {$smarty.block.parent}

@@ -3,3 +3,9 @@
 {block name="frontend_listing_index_tagcloud"}
     {$sCategoryContent.attribute.attribute3}
 {/block}
+
+{block name="frontend_listing_index_topseller"}
+    {if !$hasEmotion && {config name=topSellerActive} && !$sCategoryContent.attribute.attribute6}
+        {action module=widgets controller=listing action=top_seller sCategory=$sCategoryContent.id}
+    {/if}
+{/block}

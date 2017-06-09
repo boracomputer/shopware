@@ -37,24 +37,50 @@
             $.ajax({
                 url: t.attr('href'),
                 success: function (data) {
-                    $.loadingIndicator.close();
-                    var $d = $('<div/>', {
-                        html: data
-                    })
-                    $.modal.open( $d, {
-                        width: 800,
-                        title: t.attr('data-title'),
-                    });
-                    $d.find('.konfigurator--select-item').click(function(){
-                        $.modal.close();
-                        i.parents('.konfigurator--group').find('input').attr('checked', false)
-                        i.attr('checked', 'checked');
-                        i.prop("checked", true);
-                        updateItem(i);
+                    $.loadingIndicator.close(function(){
+                        var $d = $('<div/>', {
+                            html: data
+                        });
+                        $.modal.open( $d, {
+                            width: 800,
+                            title: t.attr('data-title'),
+                        });
+                        $d.find('.konfigurator--select-item').click(function(){
+                            $.modal.close();
+                            i.parents('.konfigurator--group').find('input').attr('checked', false)
+                            i.attr('checked', 'checked');
+                            i.prop("checked", true);
+                            updateItem(i);
+                        });
                     });
                 }
             });
+        });
 
+        $('.container--konfigurator').on('click', '.buybox--button-konfigurator', function(e){
+            e.preventDefault();
+            $.loadingIndicator.open();
+            $.ajax({
+                'dataType': 'jsonp',
+                'method': 'POST',
+                'url': '/pckonfigurator/basket',
+                'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
+                'complete': function (response) {
+
+                    //$.loadingIndicator.close();
+                    if( response.responseText == 0 ){
+
+                    }else{
+                        var b = $('<button/>', {
+                            'data-add-article': 'true',
+                            'data-addArticleUrl': '/checkout/addArticle/sAdd/'+response.responseText
+                        });
+                        b.swAddArticle();
+                        b.trigger('click');
+                        $('.container--ajax-cart').removeClass('is--open');
+                    }
+                }
+            });
         });
 
         $('.konfigurator--group--item').on('click', 'input[type="radio"]', function(){
@@ -66,6 +92,7 @@
     function cacheConfigOptions(){
         $.ajax({
             'dataType': 'jsonp',
+            'method': 'POST',
             'url': '/pckonfigurator/cache',
             'data': { articles: JSON.stringify(c), uID: uId, cID: cId },
             'complete': function (r) {
@@ -108,6 +135,8 @@
     }
 
     function updateGroupHeader( el ){
+        el.parents('.konfigurator--group').find('.konfigurator--group--item').removeClass('selected');
+        el.parents('.konfigurator--group--item').addClass('selected');
         var h = el.parents('.collapse--content').first().prev('.collapse--header');
         h.find('.item-selected--name').text( el.next('.articleName').text().trunc(60) );
         h.find('.item-selected--price').text( el.next('.articleName').next('.articlePrice').text() );

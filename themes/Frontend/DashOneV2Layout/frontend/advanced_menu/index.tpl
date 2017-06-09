@@ -1,20 +1,26 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
 {block name="frontend_plugins_advanced_menu_list_item"}
-    {$icon=0}
+    {$icon = ''}
     {if $shopID==1}
-        {if $category.attribute.attribute4!=''}
+        {if $category.attribute.attribute4 != ''}
             {$icon=$category.attribute.attribute4}
         {/if}
     {elseif $shopID==5}
-        {if $category.attribute.attribute5!=''}
+        {if $category.attribute.attribute5 != ''}
             {$icon=$category.attribute.attribute5}
+        {/if}
+    {elseif $shopID==3}
+        {if $category.attribute.attribute7 != ''}
+            {$icon=$category.attribute.attribute7}
         {/if}
     {/if}
     <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
-        {*if $icon!=0}
-            <img src="{link file={$icon.media.path}}" />
-        {/if*}
+        {if $icon != ''}
+        <span class="pictogram">
+            <img src="{link file=$icon}" />
+        </span>
+        {/if}
         {$category.name}
     </a>
     {if $category.sub}

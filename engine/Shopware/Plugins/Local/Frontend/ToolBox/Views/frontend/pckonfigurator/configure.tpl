@@ -1,7 +1,7 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
 {block name='frontend_index_header_title'}{strip}
-{if $sBreadcrumb}{foreach from=$sBreadcrumb|array_reverse item=breadcrumb}{$breadcrumb.name} | {/foreach}{/if}{{config name=sShopname}|escapeHtml}
+{$sArticle.articleName} | {{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
 {block name='frontend_index_header_javascript_jquery' append}
@@ -10,12 +10,7 @@
 
 {block name="frontend_index_header_css_print" append}
 <style>
-    .js--modal .content{
-        padding: 0px 10px;
-    }
-    .js--modal .content .image-slider--container{
-        height: auto;
-    }
+
     .container--konfigurator .tab--content .collapse--content{
         padding: 10px;
     }
@@ -56,6 +51,12 @@
 
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item{
         padding: 5px 5px;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item.selected{
+        background: #444;
+    }
+    .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item.selected label{
+        color: #f5f5f5;
     }
     .container--konfigurator .tab--content .collapse--content.konfigurator--group .konfigurator--group--item input{
 
@@ -98,7 +99,7 @@
 </style>
 {/block}
 
-
+{* replace buy button with config button *}
 {block name="frontend_detail_index_buybox"}
 <div class="buybox--button-container block-group">
     <a href="#config" class="buybox--button block btn is--primary is--icon-right is--center" name="Jetzt konfigurieren">
@@ -107,25 +108,25 @@
 </div>
 {/block}
 
-{block name="frontend_detail_data_delivery_wrapper"}
-{/block}
+{block name='frontend_detail_index_buy_container_inner'}{/block}
 
-{block name='frontend_detail_index_buy_container_inner'}
-{/block}
+{* remove article actions (bewerten/merken) *}
+{block name="frontend_detail_index_actions"}{/block}
 
-{block name="frontend_detail_index_actions"}
-{/block}
-
+{* remove cross selling container *}
 {block name="frontend_detail_index_tabs_cross_selling_top"}{/block}
+
+{* remove filialen- & same day delivery availabelity *}
+{block name="frontend_detail_data_delivery_wrapper"}{/block}
+{block name="frontend_detail_index_delivery_samedaydelivery"}{/block}
+{block name="frontend_detail_index_delivery_stores"}{/block}
 
 {* Tab content container *}
 {block name="frontend_detail_index_tabs_cross_selling"}
 {/block}
 
+{* add konfigurator-tab *}
 {block name="frontend_detail_index_tabs"}
     {include file="frontend/pckonfigurator/tabs.tpl"}
     {*$tbKonfigGroups|dump*}
-{/block}
-
-{block name='frontend_detail_index_buy_container_inner'}
 {/block}
