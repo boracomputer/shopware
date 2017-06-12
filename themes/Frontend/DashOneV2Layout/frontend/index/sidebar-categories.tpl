@@ -43,3 +43,4 @@
 {/if}
 
 {$sCategories|dump}
+{$sMainCategories|dump}
