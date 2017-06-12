@@ -31,7 +31,7 @@
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
-        {if !$mainCategory.active || $mainCategory.hideTop}
+        {if !$mainCategory.active || $mainCategory.hideTop || $mainCategory.articleCount==0}
             {continue}
         {/if}
 
@@ -40,11 +40,8 @@
             {$link = $mainCategory.external}
         {/if}
 
-
-
         {$hasCategories = $mainCategory.activeCategories > 0  && $columnAmount < 4}
         {$hasTeaser = (!empty($mainCategory.media) || !empty($mainCategory.attribute.attribute4)) && $columnAmount > 0}
-        {*$image =  ";"|explode:$mainCategory.attribute.attribute4*}
 
         <div class="menu--container">
             {block name="frontend_plugins_advanced_menu_main_container"}
