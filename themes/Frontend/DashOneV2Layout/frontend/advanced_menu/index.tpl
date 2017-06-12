@@ -1,6 +1,9 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
 {block name="frontend_plugins_advanced_menu_list_item"}
+{if $category.articleCount===0}
+    
+{else}
     {$icon = ''}
     {if $shopID==1}
         {if $category.attribute.attribute4 != ''}
@@ -26,14 +29,12 @@
     {if $category.sub}
         {call name=categories_top categories=$category.sub level=$level+1}
     {/if}
+{/if}
+
 {/block}
 
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
-
-        {if !$mainCategory.active || $mainCategory.hideTop || $mainCategory.articleCount==0}
-            {continue}
-        {/if}
 
         {$link = $mainCategory.link}
         {if $mainCategory.external}
