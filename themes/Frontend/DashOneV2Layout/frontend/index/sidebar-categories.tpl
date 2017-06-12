@@ -6,7 +6,7 @@
 
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
-            {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount==0}
+            {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
                 {continue}
             {/if}
             {block name="frontend_index_categories_left_entry"}
@@ -41,3 +41,5 @@
 {elseif $sMainCategories}
     {call name=categories categories=$sMainCategories}
 {/if}
+
+{$sCategories|dump}
