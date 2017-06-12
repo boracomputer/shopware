@@ -1,15 +1,14 @@
 {* Maincategories left *}
 {function name=categories level=0}
-    {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount==0}
-        {continue}
-    {/if}
-    
     <ul class="sidebar--navigation categories--navigation navigation--list{if !$level} is--drop-down{/if} is--level{$level}{if $level > 1} navigation--level-high{/if} is--rounded" role="menu">
         {* @deprecated The block "frontend_index_categories_left_ul" will be removed in further versions, please use "frontend_index_categories_left_before" *}
         {block name="frontend_index_categories_left_ul"}{/block}
 
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
+            {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount==0}
+                {continue}
+            {/if}
             {block name="frontend_index_categories_left_entry"}
                 <li class="navigation--entry{if $category.flag} is--active{/if}{if $category.subcategories} has--sub-categories{/if}{if $category.childrenCount} has--sub-children{/if}" role="menuitem">
                     <a class="navigation--link{if $category.flag} is--active{/if}{if $category.subcategories} has--sub-categories{/if}{if $category.childrenCount} link--go-forward{/if}"
