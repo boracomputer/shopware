@@ -42,5 +42,5 @@
     {call name=categories categories=$sMainCategories}
 {/if}
 
-{$sCategories|dump}
-{$sMainCategories|dump}
+{$sAdvancedMenu|dump}
+{*$sMainCategories|dump*}
