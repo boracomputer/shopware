@@ -1,50 +1,62 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
-{block name="frontend_plugins_advanced_menu_list_item"}
-    {$icon = ''}
-    {if $shopID==1}
-        {if $category.attribute.attribute4 != ''}
-            {$icon=$category.attribute.attribute4}
+{block name="frontend_plugins_advanced_menu_list"}
+    {foreach $categories as $category}
+        {if $category.hideTop || $category.articleCount===0}
+            {continue}
         {/if}
-    {elseif $shopID==5}
-        {if $category.attribute.attribute5 != ''}
-            {$icon=$category.attribute.attribute5}
+
+        {$categoryLink = $category.link}
+        {if $category.external}
+            {$categoryLink = $category.external}
         {/if}
-    {elseif $shopID==3}
-        {if $category.attribute.attribute7 != ''}
-            {$icon=$category.attribute.attribute7}
-        {/if}
-    {/if}
-    <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
-        {if $icon != ''}
-        <span class="pictogram">
-            <img src="{link file=$icon}" />
-        </span>
-        {/if}
-        {$category.name}
-    </a>
-    {if $category.sub}
-        {call name=categories_top categories=$category.sub level=$level+1}
-    {/if}
+
+        <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
+            {block name="frontend_plugins_advanced_menu_list_item"}
+
+                {$icon = ''}
+                {if $shopID==1}
+                    {if $category.attribute.attribute4 != ''}
+                        {$icon=$category.attribute.attribute4}
+                    {/if}
+                {elseif $shopID==5}
+                    {if $category.attribute.attribute5 != ''}
+                        {$icon=$category.attribute.attribute5}
+                    {/if}
+                {elseif $shopID==3}
+                    {if $category.attribute.attribute7 != ''}
+                        {$icon=$category.attribute.attribute7}
+                    {/if}
+                {/if}
+
+                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
+                    {if $icon != ''}
+                        <span class="pictogram">
+                            <img src="{link file=$icon}" />
+                        </span>
+                    {/if}
+                    {$category.name}
+                </a>
+
+                {if $category.sub}
+                    {call name=categories_top categories=$category.sub level=$level+1}
+                {/if}
+
+            {/block}
+        </li>
+    {/foreach}
 {/block}
 
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
-
-        {if !$mainCategory.active || $mainCategory.hideTop}
-            {continue}
-        {/if}
 
         {$link = $mainCategory.link}
         {if $mainCategory.external}
             {$link = $mainCategory.external}
         {/if}
 
-
-
         {$hasCategories = $mainCategory.activeCategories > 0  && $columnAmount < 4}
         {$hasTeaser = (!empty($mainCategory.media) || !empty($mainCategory.attribute.attribute4)) && $columnAmount > 0}
-        {*$image =  ";"|explode:$mainCategory.attribute.attribute4*}
 
         <div class="menu--container">
             {block name="frontend_plugins_advanced_menu_main_container"}
