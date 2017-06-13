@@ -2,7 +2,7 @@
 
 {block name="frontend_plugins_advanced_menu_list_item"}
 {if $category.articleCount===0}
-    
+
 {else}
     {$icon = ''}
     {if $shopID==1}
