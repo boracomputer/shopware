@@ -41,6 +41,3 @@
 {elseif $sMainCategories}
     {call name=categories categories=$sMainCategories}
 {/if}
-
-{$sAdvancedMenu|dump}
-{*$sMainCategories|dump*}
