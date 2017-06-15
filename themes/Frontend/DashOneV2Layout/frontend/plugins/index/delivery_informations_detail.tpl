@@ -28,17 +28,17 @@
             <i class="fa fa-percent"></i> Sofort Download
         </span>
 
-    {elseif $stock[26]>0}
+    {elseif $stock[32]>0}
         <span class="delivery--text-available">
             <i class="fa fa-check"></i>
-            {if $stock[26]<10 && $stock[26]>0}
-               <strong>Lagernd</strong> (nur {$stock[26]} St&uuml;ck)
+            {if $stock[32]<10 && $stock[32]>0}
+               <strong>Lagernd</strong> (nur {$stock[32]} St&uuml;ck)
             {else}
                <strong>Lagernd</strong> (&gt;10 St&uuml;ck)
             {/if}
         </span>
 
-    {elseif $sArticle.attr2=='W' || $sArticle.attr2=='B'}
+    {elseif $stock[33]>0}
         <span class="delivery--text-available">
             <i class="fa fa-clock-o"></i> Artikel wird bestellt
         </span>
