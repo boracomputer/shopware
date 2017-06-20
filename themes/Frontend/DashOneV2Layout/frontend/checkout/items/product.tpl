@@ -116,6 +116,7 @@
                     {* Product delivery information *}
                     {block name='frontend_checkout_cart_item_delivery_informations'}
                         {if {config name=BasketShippingInfo} && $sBasketItem.shippinginfo}
+                            {$sBasketItem|dump}
                             {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sBasketItem}
                             {block name='frontend_checkout_cart_item_delivery_informations_stores'}{/block}
                             {block name='frontend_checkout_cart_item_delivery_informations_sdd'}{/block}
