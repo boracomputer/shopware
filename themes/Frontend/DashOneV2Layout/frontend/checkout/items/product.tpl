@@ -1,4 +1,4 @@
-{*extends file='parent:frontend/checkout/items/product.tpl'*}
+{extends file='parent:frontend/checkout/items/product.tpl'}
 
 {namespace name="frontend/checkout/cart_item"}
 
