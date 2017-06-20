@@ -1,4 +1,4 @@
-{extends file='parent:frontend/checkout/confirm-item.tpl'}
+{extends file='frontend/checkout/confirm_item.tpl'}
 
 {block name='frontend_checkout_cart_item_details_inline'}
 {/block}
