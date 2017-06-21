@@ -14,7 +14,7 @@
 
         <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
             {block name="frontend_plugins_advanced_menu_list_item"}
-                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">{$category.name}</a>
+                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">{$category.name} ({$category.attribute.disableshopid})</a>
 
                 {if $category.sub}
                     {call name=categories_top categories=$category.sub level=$level+1}
@@ -26,7 +26,7 @@
 
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
-        {if $category.attribute.disableshopid|intVal === $Shop->getId()|intVal || $category.hideTop || $category.articleCount===0}
+        {if $category.attribute.disableshopid == $Shop->getId() || $category.hideTop || $category.articleCount===0}
             {continue}
         {/if}
 
