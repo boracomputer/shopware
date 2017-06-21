@@ -6,6 +6,7 @@
 
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
+            {$category.attribute|dump}
             {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
                 {continue}
             {/if}
