@@ -6,10 +6,11 @@
 
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
-            {$category.attribute|dump}
-            {if $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
+
+            {if $category.attribute.disableshopid|intVal === $Shop->getId()|intVal || $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
                 {continue}
             {/if}
+            
             {block name="frontend_index_categories_left_entry"}
                 <li class="navigation--entry{if $category.flag} is--active{/if}{if $category.subcategories} has--sub-categories{/if}{if $category.childrenCount} has--sub-children{/if}" role="menuitem">
                     <a class="navigation--link{if $category.flag} is--active{/if}{if $category.subcategories} has--sub-categories{/if}{if $category.childrenCount} link--go-forward{/if}"
