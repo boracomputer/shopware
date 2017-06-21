@@ -3,7 +3,7 @@
 {* TOPBAR *}
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
-        {if $category.attribute.disableshopid|intVal === $Shop->getId()|intVal || $category.hideTop}
+        {if $category.attribute.disableshopid == $Shop->getId() || $category.hideTop}
             {continue}
         {/if}
 
