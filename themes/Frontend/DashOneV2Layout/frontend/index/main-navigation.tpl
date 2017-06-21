@@ -9,7 +9,7 @@
         <li class="navigation--entry{if $sCategory.flag} is--active{/if}" role="menuitem">
         {block name='frontend_index_navigation_categories_top_link'}
             <a class="navigation--link{if $sCategory.flag} is--active{/if}" href="{$sCategory.link}" title="{$sCategory.description}" itemprop="url">
-                <span itemprop="name">{$sCategory.description} ({$sCategory.attribute.disableshopid|intVal})</span>
+                <span itemprop="name">{$sCategory.description} ({$sCategory.attribute.disableshopid|intVal|var_dump} / {$Shop->getId()|intVal|var_dump})</span>
             </a>
         {/block}
         </li>
