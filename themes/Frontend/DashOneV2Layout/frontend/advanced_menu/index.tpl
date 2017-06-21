@@ -14,7 +14,7 @@
 
         <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
             {block name="frontend_plugins_advanced_menu_list_item"}
-                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">{$category.name} ({$category.attribute.disableshopid})</a>
+                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">{$category.name}</a>
 
                 {if $category.sub}
                     {call name=categories_top categories=$category.sub level=$level+1}
