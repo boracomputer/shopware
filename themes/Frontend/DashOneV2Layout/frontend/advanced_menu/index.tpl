@@ -3,7 +3,7 @@
 {* TOPBAR *}
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
-        {if $category.attribute.disableshopid == $Shop->getId() || $category.hideTop}
+        {if $category.attribute.disableshopid|intVal === $Shop->getId()|intVal || $category.hideTop}
             {continue}
         {/if}
 
@@ -26,7 +26,7 @@
 
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
-        {if $category.attribute.disableshopid == $Shop->getId() || $category.hideTop || $category.articleCount===0}
+        {if $category.attribute.disableshopid|intVal === $Shop->getId()|intVal || $category.hideTop || $category.articleCount===0}
             {continue}
         {/if}
 
