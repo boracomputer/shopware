@@ -1,42 +1,7 @@
-.nice-price(@font-size: 30, @height: 40){
-    svg{
-        width: @font-size*3px;
-        height: @height;
-        margin: 0 0 0 45%;
-        .unitize-height(@height);
-        text{
-            .unitize(font-size, @font-size);
-            font-family: @font-headings;
-            font-weight: 700;
-            &.shadow{
-                fill: @border-color;
-                stroke: @border-color;
-                stroke-width: 0.1em;
-                display: none;
-            }
-            &.outline{
-                filter: drop-shadow(0.03em 0.03em 1px rgb(208, 208, 208));
-                fill: @border-color;
-                stroke: #fff;
-                stroke-width: 0.1em;
-                text-shadow: .03em .03em 1px @border-color;
-                display: none;
-            }
-            &.baseline{
-                fill: @brand-primary;
-                stroke: @brand-primary;
-                stroke-width: 0px;
-            }
-            .sup{
-                .unitize(font-size, 18);
-            }
-        }
-    }
-}
-
 .product--price(@font-size: 28, @top: 5px, @right: 0, @bottom: 0, @left: 0){
 
     .product--price {
+        
         min-height: @font-size*1.5px;
         position: relative;
         .pricelayer{
