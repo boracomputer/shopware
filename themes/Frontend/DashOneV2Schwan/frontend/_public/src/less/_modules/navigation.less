@@ -4,9 +4,60 @@
     .js--menu-scroller {
         .js--menu-scroller--arrow{
             background: #FFE700;
+            display: none !important;
             &.right--arrow{
                 .unitize(padding-left, 12);
             }
         }
     }
+
+    .container {
+        background: @brand-primary;
+        .navigation--list-wrapper {
+
+            .navigation--list {
+
+                .navigation--entry {
+
+                    &.is--active {
+                        .navigation--link {
+                        }
+                    }
+                    &.is--hovered {
+                        .navigation--link {
+                        }
+                    }
+                    &.is--home {
+                    }
+                    .navigation--link {
+
+                        font-size: 13.7px;
+
+                        &.is--active {
+
+                        }
+                        &.is--first {
+                        }
+                        &.is--last {
+
+                        }
+                        &:hover {
+
+                        }
+                        span {
+                        }
+                        i {
+
+                        }
+                    }
+                    &:first-child {
+                    }
+                    &:last-child {
+
+                    }
+                }
+            }
+        }
+    }
+
 }

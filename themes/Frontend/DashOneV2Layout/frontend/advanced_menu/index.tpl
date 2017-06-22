@@ -50,6 +50,10 @@
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
+        {if !$mainCategory.active || $mainCategory.hideTop}
+            {continue}
+        {/if}
+
         {$link = $mainCategory.link}
         {if $mainCategory.external}
             {$link = $mainCategory.external}

@@ -10,7 +10,7 @@
             {include file="frontend/_includes/messages.tpl" type="error" content=$errorNote}
         {/if}
         <select name="orderAttributes[attribute1]" class="" required="required" aria-required="true">
-            <option>Selstabholer&#x96;Filiale wählen&#x85;</option>
+            <option value="">Selstabholer&#x96;Filiale wählen&#x85;</option>
             {foreach $tbStores as $store}
             <option value="{$store.id}">{$store.shopName|utf8_encode} {$store.name|utf8_encode}</option>
             {/foreach}
