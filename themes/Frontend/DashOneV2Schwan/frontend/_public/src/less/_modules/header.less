@@ -1,53 +1,21 @@
 .header-main {
-
-    .top-bar {
-        .container {
-            .top-bar--navigation {
-                .navigation--entry {
-                    &.entry--account {
-                    }
-                    &.entry--note {
-                    }
-                }
-            }
-        }
-    }
-    .container {
-        &.header--navigation {
-            .logo-main {
-                .logo--shop {
-                }
-            }
-            .shop--navigation {
-                .navigation--list {
-                    .navigation--entry {
-                        .btn,
-                        .entry--link {
-
-                            &:hover {
-
-                                .badge {
-
-                                }
-                            }
-                            .badge {
-
-                            }
-                        }
-                        &.entry--menu-left {
-
-                            .btn {
-
-                                &:hover {
-
-                                }
-                            }
+    background: #FFF;
+    .container.header--navigation {
+        .shop--navigation {
+            .navigation--list {
+                .navigation--entry.entry--cart {
+                    .cart--link {
+                        .cart--amount{
+                            color: @theme-secondary;
                         }
                     }
                 }
             }
         }
     }
+}
+.navigation-main{
+    background: @theme-secondary;
 }
 
 @media screen and (min-width: @phoneLandscapeViewportWidth) {
