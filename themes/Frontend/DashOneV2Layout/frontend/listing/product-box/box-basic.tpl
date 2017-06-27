@@ -9,9 +9,13 @@
     <div class="product--description">
         {if $sArticle.attr7}
             {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
+        {elseif $sArticle.description_long}
+            {$sArticle.description_long|strip_tags|truncate:240}
         {/if}
     </div>
-
+    <div class="product--ordernumber">
+        Artnr.: {$sArticle.ordernumber}
+    </div>
 {/block}
 
 {block name='frontend_listing_box_article_actions'}{/block}
@@ -21,15 +25,6 @@
     <div class="clear"></div>
     {include file="frontend/listing/product-box/product-actions.tpl"}
     <div class="clear"></div>
-{/block}
-
-{block name='frontend_listing_box_article_description'}
-    <div class="product--description">
-        {$sArticle.description_long|strip_tags|truncate:240}
-    </div>
-    <div class="product--ordernumber">
-        Artnr.: {$sArticle.ordernumber}
-    </div>
 {/block}
 
 {* Product name *}
