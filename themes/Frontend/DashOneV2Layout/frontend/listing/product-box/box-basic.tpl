@@ -28,7 +28,7 @@
         {$sArticle.description_long|strip_tags|truncate:240}
     </div>
     <div class="product--ordernumber">
-        Artn.: {$sArticle.ordernumber}
+        Artnr.: {$sArticle.ordernumber}
     </div>
 {/block}
 
