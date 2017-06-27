@@ -1,16 +1,18 @@
 {extends file='parent:frontend/index/footer-navigation.tpl'}
 {namespace name="frontend/index/menu_footer"}
 
-{block name="frontend_index_footer_column_service_hotline_content" append}
-    <div class="column--headline">{s name="sFooterServiceOpeningHead"}Öffnungszeiten{/s}</div>
-    <div class="column--content">
-        <p class="column--desc">
-            {s name="sFooterServiceOpening"}<p><strong>Laden:</strong><br />Mo,Mi,Do,Fr: 09:00 - 20:00 Uhr<br>Di: 09:00 - 19:00 Uhr<br>Sa: 09:00 - 18:00 Uhr</p><p><strong>Technik:</strong><br />Mo,Mi,Do,Fr: 11:00 - 20:00 Uhr<br>Di: 11:00 - 19:00 Uhr<br>Sa: geschlossen</p>{/s}
-        </p>
+{block name="frontend_index_footer_column_service_menu"}
+    <div class="footer--column column--menu block">
+        <div class="column--headline">{s name="sFooterServiceOpeningHead"}Öffnungszeiten{/s}</div>
+        <div class="column--content">
+            <p class="column--desc">
+                {s name="sFooterServiceOpening"}<p><strong>Laden:</strong><br />Mo,Mi,Do,Fr: 09:00 - 20:00 Uhr<br>Di: 09:00 - 19:00 Uhr<br>Sa: 09:00 - 18:00 Uhr</p><p><strong>Technik:</strong><br />Mo,Mi,Do,Fr: 11:00 - 20:00 Uhr<br>Di: 11:00 - 19:00 Uhr<br>Sa: geschlossen</p>{/s}
+            </p>
+        </div>
     </div>
 {/block}
 
-{block name="frontend_index_footer_column_service_menu"}
+{block name="frontend_index_footer_column_information_menu"}
     <div class="footer--column column--menu block">
 
         {block name="frontend_index_footer_column_service_menu_headline"}
@@ -48,11 +50,7 @@
                 </ul>
             </nav>
         {/block}
-    </div>
-{/block}
 
-{block name="frontend_index_footer_column_information_menu"}
-    <div class="footer--column column--menu block">
         {block name="frontend_index_footer_column_information_menu_headline"}
             <div class="column--headline">{s name="sFooterShopNavi2"}{/s}</div>
         {/block}
