@@ -19,6 +19,7 @@
             {else}
                 {$sArticle.attr7}
             {/if}
+            {s name="DetailDescriptionGarantie"}<hr /><strong>Bitte beachten Sie: </strong>Die Herstellergarantie des Artikels umfasst grundsätzlich alle Mängel, die innerhalb der Garantiezeit entstehen und nicht von Ihnen verursacht wurden. Die Garantieleistung des Herstellers erstreckt sich räumlich mindestens auf das Land der Bundesrepublik Deutschland. Bitte wenden Sie sich im Garantiefall an den Garantiegeber. Die Kontaktdaten für den entsprechenden Garantieanspruch entnehmen Sie bitte unserer <a href="/hersteller">Herstellerübersicht</a>. Gesetzliche Gewährleistungsrechte werden durch eine zusätzliche Herstellergarantie nicht eingeschränkt. Bei Fragen zu den genauen Bedingungen der Herstellergarantie Ihres Produktes wenden Sie sich bitte an <a href="mailto:">support@bora-computer.de</a>.{/s}
         </div>
     {/block}
 
