@@ -25,7 +25,7 @@
     </div>
 {/block}
 
-{block name="frontend_note_item_actions_buy"}
+{block name='frontend_note_item_actions_compare' append}
 
 <form name="sAddToBasket" method="post" action="{url controller='checkout' action='addArticle'}" class="buybox--form float--right" data-add-article="true" data-eventname="submit" data-showmodal="false" data-addarticleurl="{url controller='checkout' action='ajaxAddArticleCart'}">
     <input type="hidden" name="sAdd" value="{$sArticle.ordernumber}">
