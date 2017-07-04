@@ -8,16 +8,16 @@
             color: @theme-primary;
         }
         h1{
-            .unitize(font-size, 40);
+            .unitize(font-size, 25);
         }
         h2{
-            .unitize(font-size, 35);
+            .unitize(font-size, 20);
         }
         h3{
-            .unitize(font-size, 30);
+            .unitize(font-size, 15);
         }
         h4, h5, h6{
-            .unitize(font-size, 25);
+            .unitize(font-size, 10);
         }
     }
 }
@@ -37,6 +37,22 @@
 }
 
 @media screen and (min-width: @desktopViewportWidth) {
+    .emotion-heading-big{
+        .emotion--html{
+            h1{
+                .unitize(font-size, 40);
+            }
+            h2{
+                .unitize(font-size, 35);
+            }
+            h3{
+                .unitize(font-size, 30);
+            }
+            h4, h5, h6{
+                .unitize(font-size, 25);
+            }
+        }
+    }
     .content--home{
         .content--emotions{
             border-left: 1px solid @border-color;
