@@ -13,6 +13,11 @@
     .container.header--navigation {
         .shop--navigation {
             .navigation--list {
+                .navigation--entry{
+                    .btn, .entry--link{
+                        background: @theme-secondary;
+                    }
+                }
                 .navigation--entry.entry--cart {
                     .cart--link {
                         .cart--amount{
@@ -27,6 +32,7 @@
 .navigation-main{
     background: @theme-secondary;
 }
+
 
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
