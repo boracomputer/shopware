@@ -15,3 +15,10 @@
         {/block}
     </div>
 {/block}
+
+{block name="frontend_index_footer_column_newsletter_form" append}
+<hr />
+<p><small>
+    {s name="sFooterVatInfo"}*Alle Preise verstehen sich inkl. Mehrwertsteuer zzgl. Versandkosten und ggf. Nachnahmegebühren, wenn nicht anders beschrieben{/s}
+</small></p>
+{/block}

@@ -24,3 +24,15 @@
         {/if}
     </div>
 {/block}
+
+{block name='frontend_note_item_actions_compare' append}
+
+<form name="sAddToBasket" method="post" action="{url controller='checkout' action='addArticle'}" class="buybox--form float--right" data-add-article="true" data-eventname="submit" data-showmodal="false" data-addarticleurl="{url controller='checkout' action='ajaxAddArticleCart'}">
+    <input type="hidden" name="sAdd" value="{$sBasketItem.ordernumber}">
+    <input type="hidden" name="sQuantity" value="1">
+    <button class="buybox--button btn action--to-basket is--primary is--icon-right is--full is--small float--left" name="{s name='ButtonToBasket'}In den Warenkorb{/s}">
+        {s name='ButtonToBasket'}In den Warenkorb{/s} <i class="icon--arrow-right"></i>
+    </button>
+</form>
+
+{/block}
