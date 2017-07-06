@@ -2,10 +2,14 @@
 {* Properties *}
 {block name='frontend_detail_properties'}
     {if $sArticle.sProperties}
-        {$sArticle.sProperties|dump}
+        {foreach $sArticle.sProperties as $i => $sProperty}
+            {$properties[$sProperty['attributes']['core']->getAttribute()['cfgname']][] = $sProperty}
+        {/foreach}
+        {$properties|dump}
         <div class="product--properties panel has--border">
             <table class="product--properties-table">
-                {foreach $sArticle.sProperties as $sProperty}
+
+                {foreach $sArticle.sProperties as $i => $sProperty}
                     <tr class="product--properties-row">
                         {* Property label *}
                         {block name='frontend_detail_description_properties_label'}
