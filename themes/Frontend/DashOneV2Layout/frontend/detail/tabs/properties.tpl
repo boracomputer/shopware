@@ -3,8 +3,8 @@
 {block name='frontend_detail_properties'}
     {if $sArticle.sProperties}
         {foreach $sArticle.sProperties as $i => $sProperty}
-            {$sProperty.attributes.core->get('cfgname')|dump}
-            {*$properties[][] = $sProperty*}
+            {*$sProperty.attributes.core->get('cfgname')|dump*}
+            {$properties[$sProperty.attributes.core->get('cfgname')][] = $sProperty}
         {/foreach}
         {$sArticle.sProperties|dump}
         <div class="product--properties panel has--border">
