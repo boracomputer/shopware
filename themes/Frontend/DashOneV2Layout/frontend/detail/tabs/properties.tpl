@@ -2,6 +2,7 @@
 {* Properties *}
 {block name='frontend_detail_properties'}
     {if $sArticle.sProperties}
+        {$sArticle.sProperties|dump}
         <div class="product--properties panel has--border">
             <table class="product--properties-table">
                 {foreach $sArticle.sProperties as $sProperty}
