@@ -6,7 +6,7 @@
             {*$sProperty.attributes.core->getAttribute().cfgname|dump*}
             {*$properties[][] = $sProperty*}
         {/foreach}
-        {$properties|dump}
+        {$sArticle.sProperties|dump}
         <div class="product--properties panel has--border">
             <table class="product--properties-table">
 
