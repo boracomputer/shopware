@@ -3,7 +3,7 @@
 {block name='frontend_detail_properties'}
     {if $sArticle.sProperties}
         {foreach $sArticle.sProperties as $i => $sProperty}
-            {$sProperty.attributes.core->getAttribute().cfgname|dump}
+            {*$sProperty.attributes.core->getAttribute().cfgname|dump*}
             {*$properties[][] = $sProperty*}
         {/foreach}
         {$properties|dump}
