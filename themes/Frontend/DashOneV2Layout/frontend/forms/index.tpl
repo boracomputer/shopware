@@ -5,9 +5,9 @@
         {$smarty.block.parent}
     {/if}
 {/block}
-{block name='frontend_index_breadcrumb'}
-    {if $sSupport.id!=26}
-        {$smarty.block.parent}
+{block name='frontend_index_start' append}
+    {if $sSupport.id==26}
+        {$sBreadcrumb=[]}
     {/if}
 {/block}
 
