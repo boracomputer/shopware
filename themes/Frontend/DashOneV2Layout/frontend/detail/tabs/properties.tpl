@@ -8,13 +8,9 @@
         {/foreach}
         {*$properties|dump*}
         <div class="product--properties">
-            <table class="product--properties-table">
                 {foreach $properties as $groupName => $sProperties}
-                    <tr class="product--properties-row">
-                        <td class="product--properties-group" colspan="2">
-                            <h3>{$groupName}</h3>
-                        </td>
-                    </tr>
+                    <h3>{$groupName}</h3>
+                    <table class="product--properties-table">
                     {foreach $sProperties as $i => $sProperty}
                     <tr class="product--properties-row">
                         {* Property label *}
@@ -28,8 +24,8 @@
                         {/block}
                     </tr>
                     {/foreach}
+                    </table>
                 {/foreach}
-            </table>
         </div>
     {/if}
 {/block}
