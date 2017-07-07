@@ -12,7 +12,7 @@
 {/block}
 
 {block name='frontend_forms_index_content'}
-    {$sSupport|dump}
+    {*$sSupport|dump*}
     {if $sSupport.id!=26}
         {$smarty.block.parent}
     {else}
