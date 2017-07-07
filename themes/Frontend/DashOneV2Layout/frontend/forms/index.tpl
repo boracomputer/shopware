@@ -12,6 +12,7 @@
 {/block}
 
 {block name='frontend_forms_index_content'}
+    {$sFid|dump}
     {if $sFid!=26}
         {$smarty.block.parent}
     {else}
