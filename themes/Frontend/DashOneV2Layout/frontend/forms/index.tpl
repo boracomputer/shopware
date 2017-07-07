@@ -1,19 +1,19 @@
 {extends file='parent:frontend/forms/index.tpl'}
 
 {block name='frontend_index_content_left'}
-    {if $sFid!=26}
+    {if $sSupport.id!=26}
         {$smarty.block.parent}
     {/if}
 {/block}
 {block name='frontend_index_breadcrumb'}
-    {if $sFid!=26}
+    {if $sSupport.id!=26}
         {$smarty.block.parent}
     {/if}
 {/block}
 
 {block name='frontend_forms_index_content'}
-    {$sFid|dump}
-    {if $sFid!=26}
+    {$sSupport|dump}
+    {if $sSupport.id!=26}
         {$smarty.block.parent}
     {else}
         {if $sSupport.sElements}
