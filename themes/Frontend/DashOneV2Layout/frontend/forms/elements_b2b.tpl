@@ -13,7 +13,7 @@
                     {elseif $sElement.name=='l_str;l_nr'}
                         <h3>Lieferadresse</h3> (falls abweichend von Rechnungsanschrift)
                     {elseif $sElement.name=='kommentar'}
-                        <br />
+                        <h3>Ihre Nachricht an uns</h3>
                     {/if}
                     {if $sSupport.sFields[$sKey]||$sElement.note}
                         {block name='frontend_forms_elements_form_builder'}
