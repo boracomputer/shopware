@@ -6,7 +6,15 @@
         {block name='frontend_forms_elements_form_content'}
             <div class="forms--inner-form panel--body">
                 {foreach $sSupport.sElements as $sKey => $sElement}
-                {$sKey|dump}
+                    {if $sElement.name=='firma'}
+                        <h3>Ihre geschäftlichen Angaben</h3>
+                    {elseif $sElement.name=='r_str;r_nr'}
+                        <h3>Rechnungsanschrift</h3>
+                    {elseif $sElement.name=='l_str;l_nr'}
+                        <h3>Lieferadresse</h3> (falls abweichend von Rechnungsanschrift)
+                    {elseif $sElement.name=='kommentar'}
+                        <br />
+                    {/if}
                     {if $sSupport.sFields[$sKey]||$sElement.note}
                         {block name='frontend_forms_elements_form_builder'}
                             <div {if $sSupport.sElements[$sKey].typ eq 'textarea'}class="textarea"{elseif $sSupport.sElements[$sKey].typ eq 'checkbox'}class="forms--checkbox"{elseif $sSupport.sElements[$sKey].typ eq 'select'}class="field--select"{/if}>
