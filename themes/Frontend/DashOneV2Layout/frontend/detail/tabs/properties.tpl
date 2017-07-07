@@ -7,7 +7,7 @@
             {$properties[$sProperty.attributes.core->get('cfgname')][] = $sProperty}
         {/foreach}
         {*$properties|dump*}
-        <div class="product--properties panel has--border">
+        <div class="product--properties">
             <table class="product--properties-table">
                 {foreach $properties as $groupName => $sProperties}
                     <tr class="product--properties-row">
