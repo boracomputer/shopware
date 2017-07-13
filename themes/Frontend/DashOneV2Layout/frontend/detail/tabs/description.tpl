@@ -24,6 +24,7 @@
     {/block}
 
 
+
     {* Product - Further links *}
     {block name='frontend_detail_description_links'}
         {* Further links title *}
