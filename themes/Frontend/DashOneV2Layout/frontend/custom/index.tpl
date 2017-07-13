@@ -1,4 +1,4 @@
-{extends file="parent:frontend/index/content.tpl"}
+{extends file="parent:frontend/custom/index.tpl"}
 
 {block name='frontend_index_start' append}
     {$sBreadcrumb=[]}
