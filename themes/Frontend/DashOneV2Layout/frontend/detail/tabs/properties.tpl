@@ -22,14 +22,16 @@
                         {block name='frontend_detail_description_properties_content'}
                             <td class="product--properties-value">
                                 {if $sProperty.value=='Y'}
-                                    Ja
+                                <i class="fa fa-check" aria-hidden="true"></i> Ja
                                 {elseif $sProperty.value=='N'}
-                                    Nein
+                                <i class="fa fa-times" aria-hidden="true"></i> Nein
                                 {else}
                                     {$sProperty.value|escape}
                                 {/if}
-                                {*if $sProperty.attributes.core->get('cfgunit')} ({$sProperty.attributes.core->get('cfgunit')}){/if*}
-                                
+                                {if $sProperty.attributes.core->get('cfgunit')}
+                                    &nbsp;({$sProperty.attributes.core->get('cfgunit')})
+                                {/if}
+
                             </td>
                         {/block}
                     </tr>
