@@ -15,8 +15,9 @@
         <div class="product--description" itemprop="description">
             {if $sArticle.attr8}
                 {$sArticle.attr8}
+                <div class="clear"></div>
             {/if}
-            
+
             {if $sArticle.description_long}
                 {$sArticle.description_long}
             {else}
