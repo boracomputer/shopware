@@ -14,7 +14,7 @@
     {block name='frontend_detail_description_text'}
         <div class="product--description" itemprop="description">
             {if $sArticle.attr8}
-                {$sArticle.attr8}
+                {$sArticle.attr8|replace:"\n":"<br />"}
                 <div class="clear"></div>
             {/if}
 
