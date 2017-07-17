@@ -29,7 +29,7 @@
                                     {$sProperty.value|escape}
                                 {/if}
                                 {if $sProperty.attributes.core->get('cfgunit')}
-                                    &nbsp;({$sProperty.attributes.core->get('cfgunit')})
+                                    &nbsp;{$sProperty.attributes.core->get('cfgunit')}
                                 {/if}
 
                             </td>
