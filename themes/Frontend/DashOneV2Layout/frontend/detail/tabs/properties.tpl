@@ -21,7 +21,7 @@
                         {* Property content *}
                         {block name='frontend_detail_description_properties_content'}
                             <td class="product--properties-value">
-                                {$sProperty.value|escape}{if $sProperty.attributes.core->get('cfgunit')} ({$sProperty.attributes.core->get('cfgunit')}){/if}
+                                {$sProperty.value|escape}
                             </td>
                         {/block}
                     </tr>
