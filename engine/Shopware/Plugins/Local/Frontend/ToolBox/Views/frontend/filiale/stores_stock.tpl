@@ -1,3 +1,6 @@
+{if $smarty.get.d==1}
+    {$stock.stockStoresDetail|dump}
+{/if}
 <table border="0" class="product--delivery" cellpadding="0" cellspacing="0" style="font-size:12px;">
     {$i=1}
     {foreach $stock.stockStoresDetail as $storeId => $options}
