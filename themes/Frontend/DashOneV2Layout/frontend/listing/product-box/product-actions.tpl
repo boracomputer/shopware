@@ -41,11 +41,11 @@
             </form>
         {/block}
 
-        <div class="modal--size-table  float--left" data-width="800" data-height="440">
+        {*<div class="modal--size-table  float--left" data-width="800" data-height="440">
             <a class="btn is--small product--action btn action--quickview" href="{url controller=detail sArticle={$sArticle.articleID} template='ajax'}" title="{s name='quickview'}Schnellansicht{/s}" data-title="{$sArticle.articleName|escapeHtml}">
                 <i class="fa fa-eye"></i>
             </a>
-        </div>
+        </div>*}
 
         {* @deprecated: block no longer in use *}
         {block name='frontend_listing_box_article_actions_more'}{/block}
