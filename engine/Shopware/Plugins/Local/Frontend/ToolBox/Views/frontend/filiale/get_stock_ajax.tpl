@@ -5,6 +5,7 @@
     {$i=1}
     {foreach $stock.stockStoresDetail as $storeId => $options}
         {if $storeId==32 || $storeId==33}{continue}{/if}
+        
         {$i=$i+1}
         {if $i%2 == 0}
             <tr>
