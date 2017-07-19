@@ -32,7 +32,7 @@
                 <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
                     {if $icon != ''}
                         <span class="pictogram">
-                            <img src="{link file=$icon}" />
+                            <img src="{link file=$icon}?l=1" />
                         </span>
                     {/if}
                     {$category.name}
