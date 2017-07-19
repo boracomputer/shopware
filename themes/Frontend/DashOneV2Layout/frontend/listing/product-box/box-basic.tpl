@@ -4,6 +4,13 @@
 {block name='frontend_listing_box_article_rating'}
 {/block}
 
+{block name='frontend_listing_box_article_badges'}
+    {if $smarty.get.d==1}
+        {$sArticle.attr8|dump}
+    {/if}
+    {include file="frontend/listing/product-box/product-badges.tpl"}
+{/block}
+
 {* Product description *}
 {block name='frontend_listing_box_article_description'}
     <div class="product--description">
