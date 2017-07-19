@@ -33,15 +33,15 @@
 			        <i class="fa fa-percent"></i> Sofortdownload
 	            </span>
 
-	        {elseif $stock[32]>0}
+	        {elseif $sArticle.attr13>0}
 	            <span class="delivery--text-available">
 				    <i class="fa fa-check"></i> <strong>Lagernd</strong>
 	            </span>
 
-	        {elseif $stock[33]>0}
+	        {*{elseif $stock[33]>0}
 	            <span class="delivery--text-available">
 			        <i class="fa fa-clock-o"></i> wird bestellt
-	            </span>
+	            </span>*}
 
 	        {else}
 	            <span>
