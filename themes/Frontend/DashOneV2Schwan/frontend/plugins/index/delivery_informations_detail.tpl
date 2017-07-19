@@ -1,8 +1,6 @@
 {* Delivery informations *}
 {block name='frontend_widgets_delivery_infos'}
 
-    {$stock = $sArticle.attr1|json_decode:"true"}
-
     <strong class="entry--label">
         Verfügbarkeit:
     </strong>
@@ -28,7 +26,7 @@
             <i class="fa fa-percent"></i> Sofort Download
         </span>
 
-    {elseif $stock[13]>0}
+    {elseif $sArticle.attr13>0}
         <span class="delivery--text-available">
             <i class="fa fa-check"></i> <strong>Lagernd</strong>
         </span>
