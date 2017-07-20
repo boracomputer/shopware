@@ -37,10 +37,10 @@
                         {/foreach}
 
                         {foreach $Data.thumbnails as $image}
-                            {$srcSet = "{if $srcSet}{$srcSet}, {/if}{$image.source} {$image.maxWidth}w"}
+                            {$srcSet = "{if $srcSet}{$srcSet}, {/if}{$image.source}?t={$smarty.now} {$image.maxWidth}w"}
 
                             {if $image.retinaSource}
-                                {$srcSet = "{if $srcSet}{$srcSet}, {/if}{$image.retinaSource} {$image.maxWidth * 2}w"}
+                                {$srcSet = "{if $srcSet}{$srcSet}, {/if}{$image.retinaSource}?t={$smarty.now} {$image.maxWidth * 2}w"}
                             {/if}
                         {/foreach}
                     {else}
