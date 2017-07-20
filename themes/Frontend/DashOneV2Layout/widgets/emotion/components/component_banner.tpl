@@ -47,7 +47,7 @@
                         {$baseSource = $Data.source}
                     {/if}
 
-                    <img src="{$baseSource}"
+                    <img src="{$baseSource}?t={$smarty.now}"
                          class="banner--image"
                          {if $srcSet}sizes="{$itemSize}" srcset="{$srcSet}"{/if}
                          {if $Data.title}alt="{$Data.title|escape}" {/if}/>
