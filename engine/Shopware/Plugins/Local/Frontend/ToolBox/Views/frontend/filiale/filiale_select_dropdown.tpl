@@ -3,7 +3,8 @@
     <ul class="service--list is--rounded" role="menu">
         {foreach $tbStores as $storeID => $store}
             <li class="service--entry" role="menuitem">
-                <a class="service--link" href="{url controller='Filiale' action='info' storeId=$storeID}">
+                {$shop="`$store.shopName`-`$store.name`"|urlencode}
+                <a class="service--link" href="{url controller='Filiale' action='info' storeId=$storeID shop=$shop}">
                     {$store.shopName} {$store.name|utf8_encode}
                 </a>
             </li>
