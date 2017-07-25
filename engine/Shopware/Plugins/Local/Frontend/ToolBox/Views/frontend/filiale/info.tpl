@@ -125,7 +125,7 @@ jQuery(document).ready(function(){
                                                 {$tbStore.zip_code} {$tbStore.city|utf8_encode}<br /><br />
 												{if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
 												{if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
-												{if $tbStore.fax}Telefon: {$tbStore.fax}<br />{/if}
+												{if $tbStore.fax}Fax: {$tbStore.fax}<br />{/if}
 											</div>
 										</div>
 									</div>

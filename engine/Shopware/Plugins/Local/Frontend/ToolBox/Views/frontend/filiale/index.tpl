@@ -123,6 +123,7 @@ jQuery(document).ready(function(){
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
                                     {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
                                     {if $tbStore.fax}Fax: {$tbStore.fax}<br />{/if}
+                                    
                                     <br />
                                     {if $tbStore.info_opening_hours}<strong>Öffnungseiten</strong>
                                         {$tbStore.info_opening_hours}
