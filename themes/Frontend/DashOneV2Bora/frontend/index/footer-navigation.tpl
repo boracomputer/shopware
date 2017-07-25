@@ -39,11 +39,7 @@
                 </ul>
             </nav>
         {/block}
-    </div>
-{/block}
 
-{block name="frontend_index_footer_column_information_menu"}
-    <div class="footer--column column--menu block">
         {block name="frontend_index_footer_column_information_menu_headline"}
             <div class="column--headline">{s name="sFooterShopNavi2"}{/s}</div>
         {/block}
@@ -79,5 +75,12 @@
                 </ul>
             </nav>
         {/block}
+        
     </div>
 {/block}
+
+{* name="frontend_index_footer_column_information_menu"}
+    <div class="footer--column column--menu block">
+
+    </div>
+{/block*}
