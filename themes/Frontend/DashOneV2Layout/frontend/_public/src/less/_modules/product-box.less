@@ -66,7 +66,7 @@
     }
     .product--ordernumber {
         position: absolute;
-        top: 10px;
+        .unitize(top, 2);
         left: 0;
         .unitize(font-size, 10);
         color: @text-color-dark;
@@ -109,6 +109,11 @@
 			}
             .product--price;
 		}
+        .price--pseudo{
+            margin-top: -1em;
+            float: left;
+            font-weight: bold;
+        }
     }
     .box--content{
         .product--info{
