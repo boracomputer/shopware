@@ -28,8 +28,10 @@ jQuery(document).ready(function(){
 {literal}
         if(tbStore.shopName=="Bora Computer")
             shopmarker = 'https://bora-computer.de/media/image/google_marker_bora.png';
-        else
+        else if(tbStore.shopName=="K&M Computer")
             shopmarker = 'https://www.kmcomputer.de/media/image/google_marker_km.png';
+        else
+            shopmarker = 'https://www.schwanthaler-computer.de/media/image/google_markerschwan.png';
 
 	    markers[tbStore.id] = new google.maps.Marker({
 	        map: googlemap,

@@ -92,6 +92,13 @@
                     }
                 }
                 .product--price(36); // _mixins/price.less
+                .product--price{
+                    .content--discount{
+                        .price--line-through{
+                            .unitize(font-size, 16);
+                        }
+                    }
+                }
             }
             .base-info--entry,
             .product--delivery_info{
@@ -101,6 +108,9 @@
                     text-align: right;
                     margin: 0 .5em 0 0;
                 }
+            }
+            .price--discount-icon, .content--discount .price--discount-percentage{
+                display: none;
             }
         }
     }
