@@ -145,16 +145,12 @@
                 <hr />
 
                 {block name="frontend_detail_index_delivery_wrapper"}
-
                 <div class="product--delivery">
-                    <div class="delivery--information">
-
                     {block name="frontend_detail_index_delivery"}
                         {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
                             {include file="frontend/plugins/index/delivery_informations_detail.tpl" sArticle=$sArticle}
                         {/if}
                     {/block}
-                    </div>
                 </div>
 
                 <hr />

@@ -1,8 +1,9 @@
 {* Delivery informations *}
 {block name='frontend_widgets_delivery_infos'}
 
-{$stock = $sArticle.attr1|json_decode:"true"}
+    {$stock = $sArticle.attr1|json_decode:"true"}
 
+    <div class="delivery--information delivery--information-online">
         <strong class="entry--label">
             Onlineversand:
         </strong>
@@ -49,5 +50,5 @@
             </span>
         {/if}
         </span>
-
+    </div>
 {/block}

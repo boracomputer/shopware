@@ -40,18 +40,18 @@
     {$smarty.block.parent}
     {block name="frontend_detail_index_delivery_stores"}
     {if $shopID != 3}
-
-                <strong class="entry--label">
-                    Filialbestand:
-                </strong>
-                <span class="entry--content">
-                <a href="#" class="js--toggle-trigger" id="get-stock">
-                    <span class="{$sArticle.stock.textClass}">
-                        <i class="{$sArticle.stock.textIcon}"></i> {$sArticle.stock.text}
-                    </span>
-                </a>
+        <div class="delivery--information delivery--information-sdd">
+            <strong class="entry--label">
+                Filialbestand:
+            </strong>
+            <span class="entry--content">
+            <a href="#" class="js--toggle-trigger" id="get-stock">
+                <span class="{$sArticle.stock.textClass}">
+                    <i class="{$sArticle.stock.textIcon}"></i> {$sArticle.stock.text}
                 </span>
-
+            </a>
+            </span>
+        </div>
     {/if}
     {/block}
 {/block}
