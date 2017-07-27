@@ -55,7 +55,7 @@
 	            </span>
 
 	        {else}
-	            <span>
+	            <span class="delivery--text-not-available">
 			        <i class="fa fa-times"></i> nicht verf&uuml;gbar
 	            </span>
 	        {/if}
