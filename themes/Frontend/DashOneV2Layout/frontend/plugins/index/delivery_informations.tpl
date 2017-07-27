@@ -31,7 +31,7 @@
 
             {elseif $sArticle.sReleaseDate && $sArticle.sReleaseDate|date_format:"%Y%m%d" > $smarty.now|date_format:"%Y%m%d"}
 	            <span class="{$classStockOrderable}">
-			        <i class="fa fa-clock-o"></i> Artikel wird bestellt
+			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>
 
 	        {elseif $sArticle.esd}
