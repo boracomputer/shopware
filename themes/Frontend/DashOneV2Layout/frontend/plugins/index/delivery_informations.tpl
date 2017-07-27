@@ -15,8 +15,9 @@
 	{/if*}
 
     {$stock = $sArticle.attr1|json_decode:"true"}
-    {*<pre>{$sArticle.stock|print_r}</pre>*}
 
+    <div class="product--delivery">
+        <div class="delivery--information delivery--information-online">
             <span class="label">Onlineversand: </span>
 
             {if $sArticle.ordernumber|strpos:"PCK" === 0}
@@ -59,5 +60,6 @@
 			        <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar
 	            </span>
 	        {/if}
-
+        </div>
+    </div>
 {/block}
