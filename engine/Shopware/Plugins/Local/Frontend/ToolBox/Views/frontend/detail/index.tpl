@@ -40,8 +40,7 @@
     {$smarty.block.parent}
     {block name="frontend_detail_index_delivery_stores"}
     {if $shopID != 3}
-        <div class="product--delivery">
-            <div class="delivery--information delivery--information-stores">
+
                 <strong class="entry--label">
                     Filialbestand:
                 </strong>
@@ -52,8 +51,7 @@
                     </span>
                 </a>
                 </span>
-            </div>
-        </div>
+
     {/if}
     {/block}
 {/block}

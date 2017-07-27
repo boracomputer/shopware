@@ -3,15 +3,13 @@
 
 {$stock = $sArticle.attr1|json_decode:"true"}
 
-<div class="product--delivery">
-    <div class="delivery--information delivery--information-online">
         <strong class="entry--label">
             Onlineversand:
         </strong>
 
         <span class="entry--content">
         {if $sArticle.ordernumber|strpos:"PCK" === 0}
-            <span class="{$classStockOrderable}">
+            <span class="{$classStockAvailable}">
                 <i class="fa fa-wrench"></i> wird zusammengebaut
             </span>
 
@@ -26,12 +24,12 @@
             </span>
 
         {elseif $sArticle.esd}
-            <span class="{$classStockOrderable}">
+            <span class="{$classStockAvailable}">
                 <i class="fa fa-percent"></i> Sofort Download
             </span>
 
         {elseif $stock[32]>0}
-            <span class="{$classStockOrderable}">
+            <span class="{$classStockAvailable}">
                 <i class="{$iconStockAvailable}"></i>
                 {if $stock[32]<10 && $stock[32]>0}
                    <strong>Lagernd</strong> (nur {$stock[32]} St&uuml;ck)
@@ -51,6 +49,5 @@
             </span>
         {/if}
         </span>
-    </div>
-</div>
+
 {/block}
