@@ -15,33 +15,33 @@
 	{/if*}
 
     {$stock = $sArticle.attr1|json_decode:"true"}
-    {*<pre>{$sArticle.stock|print_r}</pre>*}
-<div class="product--delivery product--delivery-info delivery-info-online">
+
+        <div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>
 
             {if $sArticle.ordernumber|strpos:"PCK" === 0}
-                <span class="delivery--text-available">
+                <span class="{$classStockOrderable}">
 			        <i class="fa fa-wrench"></i> wird zusammengebaut
 		        </span>
 
 	        {elseif isset($sArticle.active) && !$sArticle.active}
-                <span>
-                    <i class="fa fa-times"></i> nicht verf&uuml;gbar
+                <span class="{$classStockOutOfStock}">
+                    <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar
                 </span>
 
             {elseif $sArticle.sReleaseDate && $sArticle.sReleaseDate|date_format:"%Y%m%d" > $smarty.now|date_format:"%Y%m%d"}
-	            <span class="delivery--text-available">
-			        <i class="fa fa-clock-o"></i> Artikel wird bestellt
+	            <span class="{$classStockOrderable}">
+			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>
 
 	        {elseif $sArticle.esd}
-	            <span class="delivery--text-available">
+	            <span class="{$classStockAvailable}">
 			        <i class="fa fa-percent"></i> Sofort Download
 	            </span>
 
 	        {elseif $stock[32]>0}
-	            <span class="delivery--text-available">
-				    <i class="fa fa-check"></i>
+	            <span class="{$classStockAvailable}">
+				    <i class="{$iconStockAvailable}"></i>
             	    {if $stock[32]<10 && $stock[32]>0}
             	       <strong>Lagernd</strong> (nur {$stock[32]} St&uuml;ck)
             	    {else}
@@ -50,15 +50,14 @@
 	            </span>
 
 	        {elseif $stock[33]>0}
-	            <span class="delivery--text-available">
-			        <i class="fa fa-clock-o"></i> Artikel wird bestellt
+	            <span class="{$classStockOrderable}">
+			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>
 
 	        {else}
-	            <span>
-			        <i class="fa fa-times"></i> nicht verf&uuml;gbar
+	            <span class="{$classStockOutOfStock}">
+			        <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar
 	            </span>
 	        {/if}
-
-</div>
+        </div>
 {/block}

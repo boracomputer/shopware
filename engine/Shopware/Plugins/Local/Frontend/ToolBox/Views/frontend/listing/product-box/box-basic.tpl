@@ -7,6 +7,7 @@
         <div class="btn icon--cross is--small js--toggle-close"></div>
         <ul>
         {foreach $sArticle.stock.stockStoresDetail as $storeId => $options}
+            {if $storeId==32 || $storeId==33}{continue}{/if}
             <li class="{$options.textClass}"><i class="{$options.textIcon}"></i> {$tbStores[$storeId].name|utf8_encode}</li>
         {/foreach}
         </ul>

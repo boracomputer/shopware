@@ -20,7 +20,19 @@
 
                         {* Property content *}
                         {block name='frontend_detail_description_properties_content'}
-                            <td class="product--properties-value">{$sProperty.value|escape}</td>
+                            <td class="product--properties-value">
+                                {if $sProperty.value=='Y'}
+                                <i class="fa fa-check" aria-hidden="true"></i> Ja
+                                {elseif $sProperty.value=='N'}
+                                <i class="fa fa-times" aria-hidden="true"></i> Nein
+                                {else}
+                                    {$sProperty.value|escape}
+                                {/if}
+                                {if $sProperty.attributes.core->get('cfgunit')}
+                                    &nbsp;{$sProperty.attributes.core->get('cfgunit')}
+                                {/if}
+
+                            </td>
                         {/block}
                     </tr>
                     {/foreach}

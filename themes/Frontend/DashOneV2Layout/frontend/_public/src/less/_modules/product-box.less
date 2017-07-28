@@ -1,5 +1,16 @@
 .product--box {
-
+    .product--badge{
+        &.badge--ecolabel{
+            padding: 0;
+            opacity: .8;
+            a{
+                .unitize-padding(5,10,5,10);
+                display: block;
+                color: #FFF;
+                display: block;
+            }
+        }
+    }
     .product--delivery-info{
 
         line-height: 1em;
@@ -55,7 +66,7 @@
     }
     .product--ordernumber {
         position: absolute;
-        top: 10px;
+        .unitize(top, 2);
         left: 0;
         .unitize(font-size, 10);
         color: @text-color-dark;
@@ -93,11 +104,28 @@
 			display: inline-block;
 			color: @theme-primary;
 			font-weight: bold;
+            float: left;
 			&.is--discount {
 				color: @badge-discount-bg;
 			}
             .product--price;
 		}
+        .price--pseudo{
+            margin-top: -1em;
+            float: left;
+            font-weight: bold;
+        }
+    }
+    .box--content{
+        .product--info{
+            .product--title{
+                text-transform: none;
+                .unitize(font-size, 14);
+                height: 3.3rem;
+                line-height: 1.1em;
+                font-weight: bold;
+            }
+        }
     }
 }
 

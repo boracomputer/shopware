@@ -13,7 +13,23 @@
     {* Product description *}
     {block name='frontend_detail_description_text'}
         <div class="product--description" itemprop="description">
-            {*$sArticle|dump*}
+            {if $sArticle.attr8|count>0}
+                <table><tb>
+                    <tr><td><strong>Name des Herstellers</strong></td><td>{$sArticle.supplierName}</td></tr>
+                    <tr><td><strong>Modellbezeichnung</strong></td><td>{$sArticle.suppliernumber}</td></tr>
+                    <tr><td><strong>Energieeffizienzklasse</strong></td><td>{$sArticle.attr8.class}</td></tr>
+                    <tr><td><strong>Bildschirmdiagonale</strong></td><td>{$sArticle.attr8.sizeInch} Zoll</td></tr>
+                    <tr><td><strong>Leistungsaufnahme</strong></td><td>{$sArticle.attr8.watts} Watt</td></tr>
+                    <tr><td><strong>J&auml;hrlicher Energieverbrauch*</strong></td><td>{$sArticle.attr8.kwhYear} kWh/Jahr</td></tr>
+                </tb></table>
+                <small>* 4 Stunden Nutzung pro Tag an 365 Tagen pro Jahr</small>
+                <hr />
+            {/if}
+            {if $sArticle.attr9}
+                {$sArticle.attr9|replace:"\n":"<br />"}
+                <div class="clear"></div>
+            {/if}
+
             {if $sArticle.description_long}
                 {$sArticle.description_long}
             {else}
