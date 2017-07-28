@@ -101,7 +101,7 @@ jQuery(document).ready(function(){
                 {block name="frontend_custom_article_inner"}
                     {* Custom page tab headline *}
                     {block name="frontend_custom_article_headline"}
-                    	<h1 class="custom-page--tab-headline">{$tbStore.shopName} {$tbStore.name}</h1>
+                    	<h1 class="custom-page--tab-headline">{$tbStore.shopName} {$tbStore.city|utf8_encode}</h1>
                     {/block}
                     {* Custom page tab inner content *}
                     {block name="frontend_custom_article_content"}
