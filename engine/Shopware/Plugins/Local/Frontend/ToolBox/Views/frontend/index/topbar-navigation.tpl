@@ -10,9 +10,10 @@
 
     <nav class="top-bar--login block js--toggle-target" role="menubar" id="top-bar--stores">
         Artikel-Verfügbarkeit Ihrer Filiale direkt anzeigen:
-        <form class="action--store action--content language--form" method="POST" data-action-form="true">
-            <select name="tbStoreUser" class="sort--field action--field" data-auto-submit="true" data-class="">
-                <option value="0">Filiale wählen</option>
+        <form class="action--store action--content language--form" method="POST">
+            <select name="tbStoreUser" class="sort--field action--field" data-auto-submit="true">
+                <option value="" disabled>Filiale wählen...</option>
+                <option value="0">Alle Filialbestände anzeigen</option>
                 {foreach $tbStores as $storeID => $store}
                 <option value="{$storeID}"{if $tbStoreUser==$storeID} SELECTED{/if}>{$store.shopName} {$store.name|utf8_encode}</option>
                 {/foreach}
