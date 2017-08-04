@@ -5,7 +5,7 @@
 {if $smarty.get.d}
     <div class="navigation--entry entry--preisliste has--drop-down" role="menuitem" aria-haspopup="true" data-drop-down-menu="true">
         <div class="entry--link">
-            <i class="icon--service"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkPreislisten'}Preislisten{/s}
+            <i class="icon--download"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkPreislisten'}Preislisten{/s}
             {block name="frontend_index_checkout_actions_service_menu_include"}
                 {include file="widgets/index/menu.tpl" sGroup=gSchwanPreislisten}
             {/block}
