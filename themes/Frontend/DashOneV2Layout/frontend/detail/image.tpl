@@ -38,7 +38,7 @@
 
 
 {block name='frontend_detail_images_image_element'}
-
+{if $sArticle.image.attribute}
     {$alt = $sArticle.articleName|escape}
 
     {if $image.description}
@@ -65,4 +65,7 @@
             </span>
         {/block}
     </span>
+{else}
+    {$smarty.block.parent}
+{/if}
 {/block}
