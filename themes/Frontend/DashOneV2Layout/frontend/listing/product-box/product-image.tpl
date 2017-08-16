@@ -9,19 +9,7 @@
 
                     {$desc = $sArticle.articleName|escape}
 
-                    {if isset($sArticle.image.thumbnails)}
-
-                        {if $sArticle.image.description}
-                            {$desc = $sArticle.image.description|escape}
-                        {/if}
-
-                        {block name='frontend_listing_box_article_image_picture_element'}
-                            <img srcset="{$sArticle.image.thumbnails[0].sourceSet}"
-                                 alt="{$desc}"
-                                 title="{$desc|truncate:160}" />
-                        {/block}
-
-                    {elseif isset($sArticle.image.attribute)}
+                    {if isset($sArticle.image.attribute)}
 
                         {if $sArticle.image.description}
                             {$desc = $sArticle.image.description|escape}
@@ -31,6 +19,18 @@
                             <img srcset="//images.skillbooks.de/image300/{$sArticle.image.attribute.attribute1}"
                                  alt="{$desc}"
                                  title="{$desc|truncate:25:""}" />
+                        {/block}
+
+                    {elseif isset($sArticle.image.thumbnails)}
+
+                        {if $sArticle.image.description}
+                            {$desc = $sArticle.image.description|escape}
+                        {/if}
+
+                        {block name='frontend_listing_box_article_image_picture_element'}
+                            <img srcset="{$sArticle.image.thumbnails[0].sourceSet}"
+                                 alt="{$desc}"
+                                 title="{$desc|truncate:160}" />
                         {/block}
                         
                     {else}
