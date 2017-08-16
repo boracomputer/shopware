@@ -7,10 +7,10 @@
 {* Product description *}
 {block name='frontend_listing_box_article_description'}
     <div class="product--description">
-    {if $sArticle.attr7}
+    {if $sArticle.description}
+        {$sArticle.description|strip_tags|truncate:240}
+    {elseif $sArticle.attr7}
         {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
-    {elseif $sArticle.description_long}
-        {$sArticle.description_long|strip_tags|truncate:240}
     {/if}
     </div>
     <div class="product--ordernumber">
