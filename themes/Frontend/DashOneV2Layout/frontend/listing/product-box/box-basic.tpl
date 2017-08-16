@@ -8,7 +8,7 @@
 {block name='frontend_listing_box_article_description'}
     <div class="product--description">
     {if $sArticle.description}
-        {$sArticle.description|strip_tags|truncate:240}
+        {$sArticle.description|strip_tags|truncate:500}
     {elseif $sArticle.attr7}
         {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
     {/if}

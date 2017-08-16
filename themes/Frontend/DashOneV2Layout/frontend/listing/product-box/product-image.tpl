@@ -9,7 +9,19 @@
 
                     {$desc = $sArticle.articleName|escape}
 
-                    {if isset($sArticle.image.attribute)}
+                    {if isset($sArticle.image.thumbnails)}
+
+                        {if $sArticle.image.description}
+                            {$desc = $sArticle.image.description|escape}
+                        {/if}
+
+                        {block name='frontend_listing_box_article_image_picture_element'}
+                            <img srcset="{$sArticle.image.thumbnails[0].sourceSet}"
+                                 alt="{$desc}"
+                                 title="{$desc|truncate:160}" />
+                        {/block}
+
+                    {elseif isset($sArticle.image.attribute)}
 
                         {if $sArticle.image.description}
                             {$desc = $sArticle.image.description|escape}
@@ -20,6 +32,7 @@
                                  alt="{$desc}"
                                  title="{$desc|truncate:25:""}" />
                         {/block}
+                        
                     {else}
                         <img src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                              alt="{$desc}"
