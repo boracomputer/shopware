@@ -9,7 +9,7 @@
 
                     {$desc = $sArticle.articleName|escape}
 
-                    {if isset($sArticle.image.attribute)}
+                    {if isset($sArticle.image.attribute) && $sArticle.image.attribute|count>0}
 
                         {if $sArticle.image.description}
                             {$desc = $sArticle.image.description|escape}
@@ -32,7 +32,7 @@
                                  alt="{$desc}"
                                  title="{$desc|truncate:160}" />
                         {/block}
-                        
+
                     {else}
                         <img src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                              alt="{$desc}"
