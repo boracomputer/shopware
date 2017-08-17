@@ -2,13 +2,13 @@
 
 
 {block name='frontend_detail_image_default_image_element'}
-
+{if $sArticle.image.attribute}
     {$alt = $sArticle.articleName|escape}
 
     {if $sArticle.image.description}
         {$alt = $sArticle.image.description|escape}
     {/if}
-    
+
     <span class="image--element"
           {if $sArticle.image}
           data-img-large="//images.skillbooks.de/image800/{$sArticle.image.attribute.attribute1}"
@@ -31,11 +31,14 @@
             </span>
         {/block}
     </span>
+{else}
+    {$smarty.block.parent}
+{/if}
 {/block}
 
 
 {block name='frontend_detail_images_image_element'}
-
+{if $sArticle.image.attribute}
     {$alt = $sArticle.articleName|escape}
 
     {if $image.description}
@@ -62,4 +65,7 @@
             </span>
         {/block}
     </span>
+{else}
+    {$smarty.block.parent}
+{/if}
 {/block}

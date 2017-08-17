@@ -7,12 +7,14 @@
     {block name='frontend_detail_description_title'}
     {/block}
 
-    {* CNet description*}
-    <div id="ccs-inline-content"></div>
-
     {* Product description *}
     {block name='frontend_detail_description_text'}
         <div class="product--description" itemprop="description">
+            {if $sArticle.attr9}
+                {$sArticle.attr9|replace:"\n":"<br />"}
+                <div class="clear"></div>
+            {/if}
+
             {if $sArticle.attr8|count>0}
                 <table><tb>
                     <tr><td><strong>Name des Herstellers</strong></td><td>{$sArticle.supplierName}</td></tr>
@@ -25,21 +27,19 @@
                 <small>* 4 Stunden Nutzung pro Tag an 365 Tagen pro Jahr</small>
                 <hr />
             {/if}
-            {if $sArticle.attr9}
-                {$sArticle.attr9|replace:"\n":"<br />"}
-                <div class="clear"></div>
-            {/if}
+
+            {* CNet description*}
+            <div id="ccs-inline-content"></div>
 
             {if $sArticle.description_long}
                 {$sArticle.description_long}
             {else}
                 {$sArticle.attr7}
             {/if}
+
             {s name="DetailDescriptionGarantie"}<hr /><strong>Bitte beachten Sie: </strong>Die Herstellergarantie des Artikels umfasst grundsätzlich alle Mängel, die innerhalb der Garantiezeit entstehen und nicht von Ihnen verursacht wurden. Die Garantieleistung des Herstellers erstreckt sich räumlich mindestens auf das Land der Bundesrepublik Deutschland. Bitte wenden Sie sich im Garantiefall an den Garantiegeber. Die Kontaktdaten für den entsprechenden Garantieanspruch entnehmen Sie bitte unserer <a href="/hersteller">Herstellerübersicht</a>. Gesetzliche Gewährleistungsrechte werden durch eine zusätzliche Herstellergarantie nicht eingeschränkt. Bei Fragen zu den genauen Bedingungen der Herstellergarantie Ihres Produktes wenden Sie sich bitte an <a href="mailto:">support@bora-computer.de</a>.{/s}
         </div>
     {/block}
-
-
 
     {* Product - Further links *}
     {block name='frontend_detail_description_links'}

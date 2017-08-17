@@ -8,7 +8,12 @@
         <ul>
         {foreach $sArticle.stock.stockStoresDetail as $storeId => $options}
             {if $storeId==32 || $storeId==33}{continue}{/if}
-            <li class="{$options.textClass}"><i class="{$options.textIcon}"></i> {$tbStores[$storeId].name|utf8_encode}</li>
+            <li class="{$options.textClass}">
+                <i class="{$options.textIcon}"></i> {$tbStores[$storeId].name|utf8_encode}
+                {if $options.stock>=1 && $options.stock<=5}
+                    ({$options.stock} Stk.)
+                {/if}
+            </li>
         {/foreach}
         </ul>
     </div>

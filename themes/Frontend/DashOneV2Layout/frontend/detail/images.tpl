@@ -1,8 +1,9 @@
 {extends file='parent:frontend/detail/images.tpl'}
 
 {block name='frontend_detail_image_thumbnail_items'}
-
+{if isset($sArticle.image.attribute) && $sArticle.image.attribute|count>0}
     {* Thumbnail - Main image *}
+
     {if $sArticle.image.attribute}
 
         {$alt = $sArticle.articleName|escape}
@@ -46,4 +47,7 @@
             {/block}
         {/if}
     {/foreach}
+{else}
+    {$smarty.block.parent}
+{/if}
 {/block}

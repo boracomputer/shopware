@@ -4,6 +4,22 @@
 .js--modal .content .image-slider--container{
     height: auto;
 }
+.product--details{
+    .product--properties{
+        .product--properties-table{
+            tr:nth-child(even){
+                td{
+                    background: #ffffff;
+                }
+            }
+            tr:nth-child(odd){
+                td{
+                    background: #f5f5f5;
+                }
+            }
+        }
+    }
+}
 
 .product--details {
     .product--header {
@@ -100,21 +116,20 @@
                         }
                     }
                 }
-            }
-            .product--delivery{
-                .unitize(font-size, 12);
-                .unitize(line-height, 20);
-                margin-bottom: 0;
-                .delivery--information{
-                    .entry--label{
-                        width: 42%;
-                        display: inline-block;
-                        text-align: right;
-                        margin: 0 .5em 0 0;
+                .product--delivery{
+                    .unitize(font-size, 12);
+                    .unitize(line-height, 20);
+                    margin-bottom: 0;
+                    .delivery--information{
+                        .entry--label{
+                            width: 42%;
+                            display: inline-block;
+                            text-align: right;
+                            margin: 0 .5em 0 0;
+                        }
                     }
                 }
             }
-
             .price--discount-icon, .content--discount .price--discount-percentage{
                 display: none;
             }
