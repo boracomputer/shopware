@@ -34,8 +34,8 @@
                 </span>
 
             {elseif $sArticle.attr5=='EDU'}
-	            <span class="{$classStockOrderable}">
-			        <i class="fa fa-question"></i> nur auf Anfrage
+	            <span class="{$classStockOutOfStock}">
+			        <i class="{$iconStockOutOfStock}"></i> nur auf Anfrage
 	            </span>
 
 	        {elseif $sArticle.esd}
