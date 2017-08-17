@@ -101,8 +101,6 @@
                 {/if}
             {/block}
 
-            {if}
-
             <div itemprop="offers" itemscope itemtype="{if $sArticle.sBlockPrices}http://schema.org/AggregateOffer{else}http://schema.org/Offer{/if}" class="buybox--inner">
 
                 {block name='frontend_detail_index_data'}
