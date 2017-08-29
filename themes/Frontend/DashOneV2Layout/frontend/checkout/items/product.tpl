@@ -30,8 +30,11 @@
             {/if}
             <img srcset="//images.skillbooks.de/image105/{$image.attribute.attribute1}" alt="{$desc}" title="{$desc|truncate:160}" />
     </a>
-{else}
+
+{elseif $image.thumbnails[0]}
     {$smarty.block.parent}
+{else}
+    <img src="{link file='frontend/_public/src/img/no-picture.jpg'}" alt="{$desc}" title="{$desc|truncate:160}" />
 {/if}
 {/block}
 
