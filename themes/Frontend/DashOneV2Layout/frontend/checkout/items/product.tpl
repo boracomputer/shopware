@@ -2,6 +2,8 @@
 {namespace name="frontend/checkout/cart_item"}
 
 {block name="frontend_checkout_cart_item_image_container_inner"}
+{$image = $sBasketItem.additional_details.image}
+
 {if $image.attribute}
     {if $sBasketItem.additional_details.sConfigurator}
         {$detailLink={url controller=detail sArticle=$sBasketItem.articleID number=$sBasketItem.ordernumber forceSecure}}
@@ -12,7 +14,6 @@
         {$detailLink=$sBasketItem.linkDetails}
     {/if}
 
-    {$image = $sBasketItem.additional_details.image}
     {$desc = $sBasketItem.articlename|escape}
 
     <a href="{$detailLink}" title="{$sBasketItem.articlename|strip_tags}" class="table--media-link"
