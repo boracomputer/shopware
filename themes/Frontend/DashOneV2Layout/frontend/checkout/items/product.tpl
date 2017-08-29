@@ -3,7 +3,7 @@
 
 {block name="frontend_checkout_cart_item_image_container_inner"}
 {$image = $sBasketItem.image}
-{if $smarty.get.d!=null}
+{if $smarty.get.d==1}
     {$image|dump}
 {/if}
 {if $image.attribute}
