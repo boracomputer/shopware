@@ -1,9 +1,7 @@
 {extends file="parent:frontend/checkout/confirm.tpl"}
 
 {block name='frontend_checkout_confirm_submit' prepend}
-{if $smarty.get.d|isset}
-    {$basketFalseStock|dump}
-{/if}
+
 {if $basketFalseStock|count>0}
     <div class="alert is--warning is--rounded">
         <div class="alert--icon">
