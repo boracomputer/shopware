@@ -1,6 +1,6 @@
 {namespace name="frontend/checkout/cart_item"}
 
-<div class="table--tr block-group row--product{if $isLast} is--last-row{/if}" style="{if $sBasketItem.id|in_array:$basketFalseStock}background-color:#FAA;{/if}">
+<div class="table--tr block-group row--product{if $isLast} is--last-row{/if}" style="{if $sBasketItem.id|in_array:$basketFalseStock}background-color:#FCC; border-bottom: 1px solid #FAA;{/if}">
 
     {if $sBasketItem.additional_details.sConfigurator}
         {$detailLink={url controller=detail sArticle=$sBasketItem.articleID number=$sBasketItem.ordernumber forceSecure}}
@@ -100,6 +100,15 @@
     {* Product quantity *}
     {block name='frontend_checkout_cart_item_quantity'}
         <div class="panel--td column--quantity is--align-right">
+            {if $sBasketItem.id|in_array:$basketFalseStock}
+                <p style="line-height:1.2em;"><small><strong>
+                    {if $sBasketItem.attitional_details.attr13|intval > 0}
+                        Nur {$sBasketItem.attitional_details.attr13} Stück lagernd
+                    {else}
+                        nicht lagernd
+                    {/if}
+                </strong></small></p>
+            {/if}
 
             {* Label *}
             {block name='frontend_checkout_cart_item_quantity_label'}
