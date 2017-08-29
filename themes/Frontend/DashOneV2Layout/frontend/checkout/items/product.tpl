@@ -3,7 +3,9 @@
 
 {block name="frontend_checkout_cart_item_image_container_inner"}
 {$image = $sBasketItem.image}
-
+{if $smarty.get.d!=null}
+    {$image|dump}
+{/if}
 {if $image.attribute}
     {if $sBasketItem.additional_details.sConfigurator}
         {$detailLink={url controller=detail sArticle=$sBasketItem.articleID number=$sBasketItem.ordernumber forceSecure}}
