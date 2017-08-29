@@ -24,7 +24,6 @@
 
                                             {$image = $sBasketItem.additional_details.image}
                                             {$desc = $sBasketItem.articlename|escape}
-                                            {block name="frontend_checkout_cart_item_image_container_inner"}
                                             {if $image.attribute}
                                                 {if $sBasketItem.additional_details.sConfigurator}
                                                     {$detailLink={url controller=detail sArticle=$sBasketItem.articleID number=$sBasketItem.ordernumber forceSecure}}
