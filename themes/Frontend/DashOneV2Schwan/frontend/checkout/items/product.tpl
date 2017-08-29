@@ -102,7 +102,7 @@
         <div class="panel--td column--quantity is--align-right">
             {if $sBasketItem.id|in_array:$basketFalseStock}
                 <p style="line-height:1.2em;"><small><strong>
-                    {if $sBasketItem.attitional_details.attr13|intval > 0}
+                    {if $sBasketItem.additional_details.attr13|intval > 0}
                         Nur {$sBasketItem.attitional_details.attr13} Stück lagernd
                     {else}
                         nicht lagernd
