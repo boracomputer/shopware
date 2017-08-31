@@ -10,7 +10,7 @@
                data-offcanvas="true"
                data-offCanvasSelector=".action--filter-options"
                data-closeButtonSelector=".filter--close-btn">
-                <i class="icon--blank fa fa-sliders"></i>
+                <i class="fa fa-sliders"></i>
                 {s name='ListingFilterButton'}{/s}
                 <span class="action--collapse-icon"></span>
             </a>
