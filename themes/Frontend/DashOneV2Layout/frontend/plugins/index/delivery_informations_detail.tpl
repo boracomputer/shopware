@@ -32,7 +32,7 @@
             <span class="{$classStockOrderable}">
                 <i class="fa fa-university"></i> nur auf Anfrage
             </span>
-            
+
         {elseif $stock[32]>0}
             <span class="{$classStockAvailable}">
                 <i class="{$iconStockAvailable}"></i>
@@ -43,7 +43,7 @@
                 {/if}
             </span>
 
-        {elseif $stock[33]>0}
+        {elseif $stock[33]>0 || $sArticle.attr5=='MDS'}
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
             </span>
