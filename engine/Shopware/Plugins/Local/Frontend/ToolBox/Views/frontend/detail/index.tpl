@@ -55,3 +55,16 @@
     {/if}
     {/block}
 {/block}
+
+{block name="frontend_detail_index_actions" append}
+    {if $marketingAktionen|count>0}
+        <hr />
+        {foreach $marketingAktionen as $aktion}
+            {if $aktion.banner_small}
+                <a href="{url controller=aktion action=index aktion=$aktion.slug1}">
+                    <img src="{$aktion.banner_small}" />
+                </a>
+            {/if}
+        {/foreach}
+    {/if}
+{/block}
