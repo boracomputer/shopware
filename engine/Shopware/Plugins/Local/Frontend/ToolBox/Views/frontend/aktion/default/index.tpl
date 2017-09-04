@@ -19,7 +19,7 @@
 {block name="frontend_index_header_meta_keywords"}{/block}
 
 {* meta description *}
-{block name="frontend_index_header_meta_description"}{$tbAktion['description']}{/block}
+{block name="frontend_index_header_meta_description"}{$tbAktion['description']|strip_tags}{/block}
 
 {* main content *}
 {block name='frontend_index_content'}
