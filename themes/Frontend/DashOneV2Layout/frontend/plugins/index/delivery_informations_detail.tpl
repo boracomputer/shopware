@@ -11,7 +11,8 @@
         <span class="entry--content">
         {if $sArticle.ordernumber|strpos:"PCK" === 0}
             <span class="{$classStockAvailable}">
-                <i class="fa fa-wrench"></i> wird zusammengebaut
+                <i class="fa fa-wrench"></i> wird zusammengebaut<br />
+                Zusammenbau dauert 3-5 Tage
             </span>
 
         {elseif isset($sArticle.active) && !$sArticle.active}
