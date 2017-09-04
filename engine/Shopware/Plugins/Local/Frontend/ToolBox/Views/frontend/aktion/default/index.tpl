@@ -11,7 +11,7 @@
 {/block}
 
 {* body class for sidebar wrapper / render aktionen like listings *}
-{block name="frontend_index_body_classes"}is--ctl-listing is--act-index{/block}
+{block name="frontend_index_body_classes"}is--ctl-register is--act-index is--target-account{/block}
 
 {* page title *}
 {block name='frontend_index_header_title'}{$tbAktion['name']} | {{config name=sShopname}|escapeHtml}{/block}
