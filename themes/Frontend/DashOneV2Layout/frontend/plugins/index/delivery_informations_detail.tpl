@@ -44,9 +44,13 @@
                 {/if}
             </span>
 
-        {elseif $stock[33]>0 || $sArticle.attr5=='MDS'}
+        {elseif $sArticle.attr5=='MDS'}
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Artikel wird innerhalb von 3-5 Tagen zusammengebaut
+            </span>
+        {elseif $stock[33]>0}
+            <span class="{$classStockOrderable}">
+                <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
             </span>
 
         {else}
