@@ -1,6 +1,6 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
-{block name="frontend_index_header_javascript_jquery" append}
+{block name="frontend_index_javascript_async_ready" append}
 {if $shopID != 3 && !$isKonfigurator}
 <script>
     jQuery(document).ready(function($) {
