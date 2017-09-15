@@ -1,7 +1,7 @@
 {extends file="parent:frontend/listing/product-box/box-big-image.tpl"}
 
 {block name='frontend_listing_box_article_picture'}
-    <a href="{$sArticle.linkDetails|rewrite:$sArticle.articleName}"
+    <a href="{$sArticle.linkDetails}"
        title="{$sArticle.articleName|escape}"
        class="product--image">
         {block name='frontend_listing_box_article_image_element'}
