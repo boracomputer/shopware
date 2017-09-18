@@ -7,7 +7,7 @@
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
 
-            {if $category.attribute.disableshopid === $Shop->getId() || $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
+            {if $category.attribute.disableshopid|intval === $Shop->getId() || $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
                 {continue}
             {/if}
 
@@ -36,7 +36,7 @@
         {/foreach}
         {block name="frontend_index_categories_left_after"}{/block}
     </ul>
-    
+
 
 {/function}
 
