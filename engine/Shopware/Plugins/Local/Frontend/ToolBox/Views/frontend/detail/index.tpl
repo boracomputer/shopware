@@ -7,9 +7,9 @@
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
         $('#get-stock').on('click', function(event) {
             event.preventDefault();
-            /*$.overlay.open({
-                'closeOnClick': false
-            });*/
+            $.overlay.open({
+                //'closeOnClick': false
+            });
             $.loadingIndicator.open({
                 'openOverlay': false
             });
