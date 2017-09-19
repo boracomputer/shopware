@@ -51,7 +51,7 @@
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
-        {if !$mainCategory.active || $mainCategory.hideTop}
+        {if !$mainCategory.active || $mainCategory.hideTop || $mainCategory.attribute.disableshopid|intval === $Shop->getId()}
             {continue}
         {/if}
 
