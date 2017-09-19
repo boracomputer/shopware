@@ -72,7 +72,7 @@
 
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
-                {if !verify_int($groupname)}
+                {if !is_numeric($groupname)}
                     <h2>{$groupname}</h2>
                 {/if}
                     <div class="listing"
