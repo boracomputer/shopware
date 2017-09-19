@@ -31,11 +31,11 @@
                 {/if}
 
                 <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>
-                    {if $icon != ''}
+                    {*if $icon != ''}
                         <span class="pictogram">
                             <img src="{link file=$icon}" />
                         </span>
-                    {/if}
+                    {/if*}
                     {$category.name}
                 </a>
 
