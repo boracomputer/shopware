@@ -30,13 +30,13 @@
                     {/if}
                 {/if}
 
-                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>{$category.name}</a>
+                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>
                     {if $icon != ''}
                         <span class="pictogram">
                             <img src="{link file=$icon}" />
                         </span>
                     {/if}
-                    {*$category.name*}
+                    {$category.name}
                 </a>
 
                 {if $category.sub}
