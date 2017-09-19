@@ -3,7 +3,7 @@
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
 
-        {if $category.hideTop || $category.articleCount===0 || $category.attribute.disableshopid|intval === $Shop->getId()}
+        {if $category.hideTop || $category.articleCount===0 || $category.attribute.disableshopid|intval == $Shop->getId()}
             {continue}
         {/if}
 
@@ -36,7 +36,7 @@
                             <img src="{link file=$icon}" />
                         </span>
                     {/if}
-                    {$category.name}
+                    {*$category.name*}
                 </a>
 
                 {if $category.sub}
