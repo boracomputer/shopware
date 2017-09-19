@@ -55,8 +55,6 @@
             <div style="clear:both;"></div>
         </div>
 
-            <hr />
-
             {if $tbAktion.banner}
                 <img src="{$tbAktion.banner}" style="width:100%" />
             {/if}
@@ -74,7 +72,9 @@
 
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
+                {if !verify_int($groupname)}
                     <h2>{$groupname}</h2>
+                {/if}
                     <div class="listing"
                         data-ajax-wishlist="true"
                         data-compare-ajax="true"
