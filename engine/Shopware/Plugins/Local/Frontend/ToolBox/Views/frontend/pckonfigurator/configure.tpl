@@ -4,7 +4,7 @@
 {$sArticle.articleName} | {{config name=sShopname}|escapeHtml}
 {/strip}{/block}
 
-{block name='frontend_index_header_javascript_jquery' append}
+{block name='frontend_index_header_javascript_jquery_lib' append}
     <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
 {/block}
 
