@@ -28,10 +28,14 @@
                 <span class="{$classStockOutOfStock}">
                     <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar
                 </span>
-
             {elseif $sArticle.sReleaseDate && $sArticle.sReleaseDate|date_format:"%Y%m%d" > $smarty.now|date_format:"%Y%m%d"}
+                <span class="{$classStockOrderable}">
+                    <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
+                </span>
+
+            {elseif $sArticle.attr5=='EDU'}
 	            <span class="{$classStockOrderable}">
-			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
+			        <i class="fa fa-university"></i> nur auf Anfrage
 	            </span>
 
 	        {elseif $sArticle.esd}
@@ -49,7 +53,7 @@
             	    {/if}
 	            </span>
 
-	        {elseif $stock[33]>0}
+	        {elseif $stock[33]>0 || $sArticle.attr5=='MDS'}
 	            <span class="{$classStockOrderable}">
 			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>

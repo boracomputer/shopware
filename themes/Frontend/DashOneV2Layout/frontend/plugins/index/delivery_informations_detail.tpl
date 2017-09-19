@@ -11,7 +11,8 @@
         <span class="entry--content">
         {if $sArticle.ordernumber|strpos:"PCK" === 0}
             <span class="{$classStockAvailable}">
-                <i class="fa fa-wrench"></i> wird zusammengebaut
+                <i class="fa fa-wrench"></i> wird zusammengebaut<br />
+                Zusammenbau dauert 3-5 Tage
             </span>
 
         {elseif isset($sArticle.active) && !$sArticle.active}
@@ -28,6 +29,10 @@
             <span class="{$classStockAvailable}">
                 <i class="fa fa-percent"></i> Sofort Download
             </span>
+        {elseif $sArticle.attr5=='EDU'}
+            <span class="{$classStockOrderable}">
+                <i class="fa fa-university"></i> nur auf Anfrage
+            </span>
 
         {elseif $stock[32]>0}
             <span class="{$classStockAvailable}">
@@ -39,6 +44,10 @@
                 {/if}
             </span>
 
+        {elseif $sArticle.attr5=='MDS'}
+            <span class="{$classStockOrderable}">
+                <i class="{$iconStockOrderable}"></i> Artikel wird innerhalb von 3-5 Tagen zusammengebaut
+            </span>
         {elseif $stock[33]>0}
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Artikel wird bestellt

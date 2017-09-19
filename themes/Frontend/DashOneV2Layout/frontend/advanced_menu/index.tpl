@@ -2,7 +2,8 @@
 
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
-        {if $category.hideTop || $category.articleCount===0}
+
+        {if $category.hideTop || $category.articleCount===0 || $category.attribute.disableshopid|intval == $Shop->getId()}
             {continue}
         {/if}
 
@@ -29,12 +30,12 @@
                     {/if}
                 {/if}
 
-                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}">
-                    {if $icon != ''}
+                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>
+                    {*if $icon != ''}
                         <span class="pictogram">
                             <img src="{link file=$icon}" />
                         </span>
-                    {/if}
+                    {/if*}
                     {$category.name}
                 </a>
 
@@ -50,7 +51,7 @@
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
-        {if !$mainCategory.active || $mainCategory.hideTop}
+        {if !$mainCategory.active || $mainCategory.hideTop || $mainCategory.attribute.disableshopid|intval === $Shop->getId()}
             {continue}
         {/if}
 
@@ -61,12 +62,13 @@
 
         {$hasCategories = $mainCategory.activeCategories > 0  && $columnAmount < 4}
         {$hasTeaser = (!empty($mainCategory.media) || !empty($mainCategory.attribute.attribute4)) && $columnAmount > 0}
+        {*$hasTeaser = (!empty($mainCategory.media) || !empty($mainCategory.cmsHeadline) || !empty($mainCategory.cmsText)) && $columnAmount > 0*}
 
         <div class="menu--container">
             {block name="frontend_plugins_advanced_menu_main_container"}
                 <div class="button-container">
                     {block name="frontend_plugins_advanced_menu_button_category"}
-                        <a href="{$link|escapeHtml}" class="button--category" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}">
+                        <a href="{$link|escapeHtml}" class="button--category" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}"{if $mainCategory.external} target="{$mainCategory.externalTarget}"{/if}>
                             <i class="icon--arrow-right"></i>
                             {s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name}
                         </a>
@@ -92,10 +94,24 @@
                                 {if $hasCategories}
                                     <div class="menu--delimiter" style="right: {$columnAmount * 25}%;"></div>
                                 {/if}
+
                                 <div class="menu--teaser"{if $hasCategories} style="width: {$columnAmount * 25}%;"{else} style="width: 100%;"{/if}>
                                     {if !empty($mainCategory.media)}
-                                        <a href="{$link|escapeHtml}" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}" class="teaser--image" style="background-image: url({link file={$mainCategory.media.path}});"></a>
+                                        <a href="{$link|escapeHtml}" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}" class="teaser--image" style="background-image: url({link file={$mainCategory.media.path}});"{if $mainCategory.external} target="{$mainCategory.externalTarget}"{/if}></a>
                                     {/if}
+
+                                    {*if !empty($mainCategory.cmsHeadline)}
+                                        <div class="teaser--headline">{$mainCategory.cmsHeadline}</div>
+                                    {/if*}
+
+                                    {*if !empty($mainCategory.cmsText)}
+                                        <div class="teaser--text">
+                                            {$mainCategory.cmsText|strip_tags|truncate:250:"..."}
+                                            <a class="teaser--text-link" href="{$link|escapeHtml}" title="{s name="learnMoreLink" namespace="frontend/plugins/advanced_menu/advanced_menu"}mehr erfahren{/s}">
+                                                {s name="learnMoreLink" namespace="frontend/plugins/advanced_menu/advanced_menu"}mehr erfahren{/s}
+                                            </a>
+                                        </div>
+                                    {/if*}
 
                                     <div class="teaser--text">
                                         {*if $image.1}<a href="{$image.1}">{/if}

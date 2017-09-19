@@ -11,7 +11,7 @@
 {/block}
 
 {* body class for sidebar wrapper / render aktionen like listings *}
-{block name="frontend_index_body_classes"}is--ctl-listing is--act-index{/block}
+{block name="frontend_index_body_classes"}is--ctl-register is--act-index is--target-account{/block}
 
 {* page title *}
 {block name='frontend_index_header_title'}{$tbAktion['name']} | {{config name=sShopname}|escapeHtml}{/block}
@@ -19,7 +19,7 @@
 {block name="frontend_index_header_meta_keywords"}{/block}
 
 {* meta description *}
-{block name="frontend_index_header_meta_description"}{$tbAktion['description']}{/block}
+{block name="frontend_index_header_meta_description"}{$tbAktion['description']|strip_tags}{/block}
 
 {* main content *}
 {block name='frontend_index_content'}
@@ -44,7 +44,7 @@
                 {$text="Diese Aktion ist gültig vom `$tbAktion.valid_from|date_format:'%d.%m.%Y'` bis einschließlich `$tbAktion.valid_to|date_format:'%d.%m.%Y'`"}
             {/if}
 
-            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap;'>
+            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap; padding-right: 5px;'>
                 <div class="alert--icon">
                     <i class="icon--element icon--{$icon}"></i>
                 </div>
@@ -54,8 +54,6 @@
             </div>
             <div style="clear:both;"></div>
         </div>
-
-            <hr />
 
             {if $tbAktion.banner}
                 <img src="{$tbAktion.banner}" style="width:100%" />
@@ -74,7 +72,9 @@
 
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
+                {if !is_numeric($groupname)}
                     <h2>{$groupname}</h2>
+                {/if}
                     <div class="listing"
                         data-ajax-wishlist="true"
                         data-compare-ajax="true"

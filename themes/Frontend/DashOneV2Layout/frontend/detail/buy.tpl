@@ -15,9 +15,8 @@
             {s name="DetailBuyActionAdd"}{/s} <i class="icon--arrow-right"></i>
         </button>
     {else}
-        <button class="buybox--button block btn is--primary is--icon-right is--center"
-                name="{s name="DetailBuyActionAdd"}{/s}"{if $buy_box_display} style="{$buy_box_display}"{/if}>
-            {s name="DetailBuyActionAdd"}{/s} <i class="icon--arrow-right"></i>
-        </button>
+    <button class="buybox--button block btn is--primary is--icon-right is--center" {if $buy_box_display}style="{$buy_box_display}"{/if}>
+        {s name="DetailBuyActionAdd"}{/s} <i class="icon--arrow-right"></i>
+    </button>
     {/if}
 {/block}

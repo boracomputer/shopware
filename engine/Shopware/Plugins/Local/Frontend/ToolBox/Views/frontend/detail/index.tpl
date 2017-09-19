@@ -1,15 +1,13 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
-{block name="frontend_index_header_javascript_jquery" append}
+{block name="frontend_index_javascript_async_ready" append}
 {if $shopID != 3 && !$isKonfigurator}
 <script>
     jQuery(document).ready(function($) {
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
         $('#get-stock').on('click', function(event) {
             event.preventDefault();
-            $.overlay.open({
-                'closeOnClick': false
-            });
+
             $.loadingIndicator.open({
                 'openOverlay': false
             });
@@ -54,4 +52,17 @@
         </div>
     {/if}
     {/block}
+{/block}
+
+{block name="frontend_detail_index_actions" append}
+    {if $marketingAktionen|count>0}
+        <hr />
+        {foreach $marketingAktionen as $aktion}
+            {if $aktion.banner_small}
+                <a href="{url controller=aktion action=index aktion=$aktion.slug1}">
+                    <img src="{$aktion.banner_small}" />
+                </a>
+            {/if}
+        {/foreach}
+    {/if}
 {/block}
