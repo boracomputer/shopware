@@ -44,7 +44,7 @@
                 {$text="Diese Aktion ist gültig vom `$tbAktion.valid_from|date_format:'%d.%m.%Y'` bis einschließlich `$tbAktion.valid_to|date_format:'%d.%m.%Y'`"}
             {/if}
 
-            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap;'>
+            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap; padding-right: 5px;'>
                 <div class="alert--icon">
                     <i class="icon--element icon--{$icon}"></i>
                 </div>
