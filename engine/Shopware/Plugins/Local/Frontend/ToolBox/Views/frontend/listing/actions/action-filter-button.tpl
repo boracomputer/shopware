@@ -3,7 +3,6 @@
 
 {block name="frontend_listing_actions_filter_button" append}
 {if $shopID != 3}
-<div class="sort--select select-field">
     <form class="action--store" method="POST">
         <select name="tbStoreUser"
                 class="sort--field action--field store--select"
@@ -14,6 +13,5 @@
             {/foreach}
         </select>
     </form>
-</div>
 {/if}
 {/block}
