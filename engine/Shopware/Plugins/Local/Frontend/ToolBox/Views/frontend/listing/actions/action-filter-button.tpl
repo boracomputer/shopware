@@ -4,6 +4,7 @@
 {block name="frontend_listing_actions_filter_button" append}
 {if $shopID != 3}
     <div class="sort--select select-field">
+    <form class="action--store action--content language--form" method="POST">
         <select name="tbStoreUser"
                 class="sort--field action--field"
                 data-auto-submit="true">
@@ -12,6 +13,7 @@
                 <option value="{$storeID}"{if $tbStoreUser==$storeID} SELECTED{/if}>{$store.shopName} {$store.name|utf8_encode}</option>
             {/foreach}
         </select>
+    </form>
     </div>
 {/if}
 {/block}
