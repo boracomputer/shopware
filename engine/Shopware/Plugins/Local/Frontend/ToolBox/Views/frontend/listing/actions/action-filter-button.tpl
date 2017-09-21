@@ -3,10 +3,10 @@
 
 {block name="frontend_listing_actions_filter_button" append}
 {if $shopID != 3}
-    <div class="sort--select select-field">
+<div class="sort--select select-field">
     <form class="action--store" method="POST">
         <select name="tbStoreUser"
-                class="sort--field action--field"
+                class="sort--field action--field store--select"
                 data-auto-submit="true">
             <option value="0">Alle Filialbestände anzeigen</option>
             {foreach $tbStores as $storeID => $store}
@@ -14,6 +14,6 @@
             {/foreach}
         </select>
     </form>
-    </div>
+</div>
 {/if}
 {/block}
