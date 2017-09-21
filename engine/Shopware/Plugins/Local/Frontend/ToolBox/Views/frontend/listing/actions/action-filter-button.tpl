@@ -4,7 +4,7 @@
 {block name="frontend_listing_actions_filter_button" append}
 {if $shopID != 3}
     <div class="sort--select select-field">
-    <form class="action--store action--content language--form" method="POST">
+    <form class="action--store action--sort action--content" method="POST">
         <select name="tbStoreUser"
                 class="sort--field action--field"
                 data-auto-submit="true">
