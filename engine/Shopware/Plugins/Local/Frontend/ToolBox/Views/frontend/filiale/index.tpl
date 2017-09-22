@@ -7,7 +7,7 @@
 {block name='frontend_index_header_title'}{$tbStore['name']} | {{config name=sShopname}|escapeHtml}{/block}
 
 {block name="frontend_index_header_javascript_jquery" append}
-    <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyCzswhAGvIOYcWcyPPHcoXmJl_MunsWWS4" type="text/javascript"></script>
+    <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyBtEub3B_5Yw2PVwJeNDF2jfrSuqNipyPY" type="text/javascript"></script>
 {/block}
 
 {block name="frontend_index_header_javascript_jquery" append}
@@ -123,7 +123,7 @@ jQuery(document).ready(function(){
                                     {if $tbStore.email_support}<a href="mailto:{$tbStore.email_support}">{$tbStore.email_support}</a><br />{/if}
                                     {if $tbStore.phone}Telefon: {$tbStore.phone}<br />{/if}
                                     {if $tbStore.fax}Fax: {$tbStore.fax}<br />{/if}
-                                    
+
                                     <br />
                                     {if $tbStore.info_opening_hours}<strong>Öffnungseiten</strong>
                                         {$tbStore.info_opening_hours}

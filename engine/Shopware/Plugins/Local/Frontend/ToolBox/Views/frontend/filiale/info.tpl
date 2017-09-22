@@ -7,7 +7,7 @@ check{extends file="frontend/index/index.tpl"}
 {block name='frontend_index_header_title'}{$tbStore['name']} | {{config name=sShopname}|escapeHtml}{/block}
 
 {block name="frontend_index_header_javascript_jquery" append}
-    <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyCzswhAGvIOYcWcyPPHcoXmJl_MunsWWS4" type="text/javascript"></script>
+    <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyBtEub3B_5Yw2PVwJeNDF2jfrSuqNipyPY" type="text/javascript"></script>
 {/block}
 
 {block name="frontend_index_javascript_async_ready" append}
