@@ -10,7 +10,7 @@ check{extends file="frontend/index/index.tpl"}
     <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyCzswhAGvIOYcWcyPPHcoXmJl_MunsWWS4" type="text/javascript"></script>
 {/block}
 
-{block name="frontend_index_header_javascript_jquery" append}
+{block name="frontend_index_javascript_async_ready" append}
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	var tbStore = {$tbStoreJSON};
