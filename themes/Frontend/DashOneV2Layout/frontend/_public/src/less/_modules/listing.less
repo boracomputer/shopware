@@ -1,3 +1,19 @@
+.option--container{
+    .filter-panel--label{
+        .unitize-padding(0,0,0,5);
+        display: inline-block;
+    }
+}
+.action--store{
+    &.action--filter-btn{
+        width: 100%;
+    }
+    .store--select{
+        .unitize(height, 34);
+        .unitize(line-height, 34);
+    }
+}
+
 @media screen and(min-width: @tabletViewportWidth) {
     .action--filter-options {
         #filter,
@@ -17,20 +33,5 @@
             width: 33%;
             margin-left: 0;
         }
-    }
-}
-.option--container{
-    .filter-panel--label{
-        .unitize-padding(0,0,0,5);
-        display: inline-block;
-    }
-}
-.action--store{
-    &.action--filter-btn{
-        width: 100%;
-    }
-    .store--select{
-        .unitize(height, 34);
-        .unitize(line-height, 34);
     }
 }
