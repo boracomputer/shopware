@@ -32,6 +32,6 @@
     <a href="{$sArticle.linkDetails}"
                 class="product--title"
                 title="{$sArticle.articleName|escapeHtml}">
-        {$sArticle.articleName|escape|truncate:50}
+        {$sArticle.articleName|unescape|truncate:50}
     </a>
 {/block}
