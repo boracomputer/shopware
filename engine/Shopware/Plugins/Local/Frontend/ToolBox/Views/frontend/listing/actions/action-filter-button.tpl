@@ -17,7 +17,7 @@
     </div>
 {/if}
 {if $shopID != 3}
-    <form class="action--store" method="POST">
+    <form class="action--store action--filter-btn" method="POST">
         <select name="tbStoreUser"
                 class="sort--field action--field store--select"
                 data-auto-submit="true">
