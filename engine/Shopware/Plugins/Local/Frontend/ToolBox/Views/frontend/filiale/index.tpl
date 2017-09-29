@@ -10,7 +10,7 @@
     <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyBtEub3B_5Yw2PVwJeNDF2jfrSuqNipyPY" type="text/javascript"></script>
 {/block}
 
-{block name="frontend_index_header_javascript_jquery" append}
+{block name="frontend_index_javascript_async_ready" append}
 <script type="text/javascript">
 jQuery(document).ready(function(){
     var filialen={$tbStoresJSON};
