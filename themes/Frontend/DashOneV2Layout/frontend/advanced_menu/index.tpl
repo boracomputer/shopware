@@ -92,7 +92,7 @@
                         {if $hasTeaser}
                             {block name="frontend_plugins_advanced_menu_teaser"}
                                 {if $hasCategories}
-                                    <div class="menu--delimiter" style="right: {$columnAmount * 25}%;"></div>
+                                    {*<div class="menu--delimiter" style="right: {$columnAmount * 25}%;"></div>*}
                                 {/if}
 
                                 <div class="menu--teaser"{if $hasCategories} style="width: {$columnAmount * 25}%;"{else} style="width: 100%;"{/if}>
