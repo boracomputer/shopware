@@ -53,7 +53,7 @@
             	    {/if}
 	            </span>
 
-	        {elseif $stock[33]>0 || $sArticle.attr5=='MDS'}
+	        {elseif $stock[33]>0 || $sArticle.attr5=='MDS' || $sArticle.attr2=='B'}
 	            <span class="{$classStockOrderable}">
 			        <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>

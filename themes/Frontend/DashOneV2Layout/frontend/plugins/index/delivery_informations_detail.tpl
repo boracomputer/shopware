@@ -48,7 +48,7 @@
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Artikel wird innerhalb von 3-5 Tagen zusammengebaut
             </span>
-        {elseif $stock[33]>0}
+        {elseif $stock[33]>0  || $sArticle.attr2=='B'}
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Artikel wird bestellt
             </span>
