@@ -114,6 +114,9 @@
                                     {/if*}
 
                                     <div class="teaser--text">
+                                        {if $smarty.get.foo!==null}
+                                            <pre>{$mainCategory.attribute|print_r}</pre>
+                                        {/if}
                                         {if $mainCategory.attribute.topbarbannerlink}<a href="{$mainCategory.attribute.topbarbannerlink}">{/if}
                                             <img src="{$mainCategory.attribute.topbarbannerimage}" />
                                         {if $mainCategory.attribute.topbarbannerlink}</a>{/if}
