@@ -114,9 +114,9 @@
                                     {/if*}
 
                                     <div class="teaser--text">
-                                        {*if $image.1}<a href="{$image.1}">{/if}
-                                            <img src="{$image.0}" />
-                                        {if $image.1}</a>{/if*}
+                                        {if $mainCategory.attribute.topbarbannerlink}<a href="{$mainCategory.attribute.topbarbannerlink}">{/if}
+                                            <img src="{$mainCategory.attribute.topbarbannerimage}" />
+                                        {if $mainCategory.attribute.topbarbannerlink}</a>{/if}
                                     </div>
                                 </div>
                             {/block}
