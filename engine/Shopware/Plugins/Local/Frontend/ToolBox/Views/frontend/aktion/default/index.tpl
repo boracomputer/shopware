@@ -72,7 +72,7 @@
 
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
-                    <h2>{$groupname}</h2>
+                    {if !$groupname|isInt}<h2>{$groupname}</h2>{/if}
                     <div class="listing"
                         data-ajax-wishlist="true"
                         data-compare-ajax="true"
@@ -95,7 +95,7 @@
 
             {if $descr.1}
                 <div class="panel has--border is--rounded">
-                    <div class="panel--body" style="color: #999; font-size:12px;">
+                    <div class="panel--body" style="color: #999;">
                         {$descr.1}
                     </div>
                 </div>
