@@ -72,7 +72,7 @@
 
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
-                    {if !$groupname|isInt}<h2>{$groupname}</h2>{/if}
+                    {if !$groupname|is_numeric}<h2>{$groupname}</h2>{/if}
                     <div class="listing"
                         data-ajax-wishlist="true"
                         data-compare-ajax="true"
