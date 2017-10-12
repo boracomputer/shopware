@@ -13,6 +13,7 @@
 {* body class for sidebar wrapper / render aktionen like listings *}
 {block name="frontend_index_body_classes"}is--ctl-register is--act-index is--target-account{/block}
 
+
 {* page title *}
 {block name='frontend_index_header_title'}{$tbAktion['name']} | {{config name=sShopname}|escapeHtml}{/block}
 {* meta keywords *}
@@ -44,7 +45,7 @@
                 {$text="Diese Aktion ist gültig vom `$tbAktion.valid_from|date_format:'%d.%m.%Y'` bis einschließlich `$tbAktion.valid_to|date_format:'%d.%m.%Y'`"}
             {/if}
 
-            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap; padding-right: 5px;'>
+            <div class='alert is--{$class} is--rounded' style='float: right; font-size: 0.75em; line-height: 1em; white-space: nowrap;'>
                 <div class="alert--icon">
                     <i class="icon--element icon--{$icon}"></i>
                 </div>
@@ -55,26 +56,23 @@
             <div style="clear:both;"></div>
         </div>
 
-            {if $tbAktion.banner}
+            {*if $tbAktion.banner}
                 <img src="{$tbAktion.banner}" style="width:100%" />
-            {/if}
+            {/if*}
 
             {if $tbAktion.description}
                 <div class="panel has--border is--rounded">
                     <div class="panel--body">
-                        {$tbAktion.description}
+                        {$descr = "[[BOTTOM]]"|explode:$tbAktion.description}
+                        {$descr.0}
                     </div>
                 </div>
                 <br />
             {/if}
 
-
-
             <div class="listing--container">
                 {foreach $tbAktion.articles as $groupname => $sArticles}
-                {if !is_numeric($groupname)}
                     <h2>{$groupname}</h2>
-                {/if}
                     <div class="listing"
                         data-ajax-wishlist="true"
                         data-compare-ajax="true"
@@ -94,6 +92,16 @@
                     </div>
                 {/foreach}
             </div>
+
+            {if $descr.1}
+                <div class="panel has--border is--rounded">
+                    <div class="panel--body" style="color: #999; font-size:12px;">
+                        {$descr.1}
+                    </div>
+                </div>
+                <br />
+            {/if}
+
         </div>
     </div>
 
