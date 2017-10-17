@@ -1,6 +1,6 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
-{function name="categories_top" level=0}
+{function name="categories_top" level=0 teaserWidth=0}
 
     {$columnIndex = 0}
     {$menuSizePercentage = 100 - (25 * $columnAmount * intval($hasTeaser))}
