@@ -119,9 +119,9 @@
                         {if $mainCategory.attribute.topbarbannerwidth}
                             {$teaserWidth=$mainCategory.attribute.topbarbannerwidth}
                         {elseif $hasCategories}
-                            {$teaserWidth='100%'}
-                        {else}
                             {$teaserWidth='25%'}
+                        {else}
+                            {$teaserWidth='100%'}
                         {/if}
                     {/if}
                     <div class="content--wrapper{if $hasCategories} has--content{/if}{if $hasTeaser} has--teaser{/if}">
