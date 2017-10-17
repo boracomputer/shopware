@@ -4,7 +4,8 @@
 
     {if $teaserWidth=='0px' || $teaserWidth=='' || $teaserWidth==0}
         {$columnCount = 4}
-    {if $teaserWidth|strpos:"%"!==false}
+
+    {elseif $teaserWidth|strpos:"%"!==false}
         {$tw=$teaserWidth|replace:'%':''}
         {if $tw<=25}
             {$columnCount = 3}
