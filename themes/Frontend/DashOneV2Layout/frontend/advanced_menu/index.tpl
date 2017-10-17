@@ -6,79 +6,56 @@
     {$menuSizePercentage = 100 - (25 * $columnAmount * intval($hasTeaser))}
     {$columnCount = 4 - ($columnAmount * intval($hasTeaser))}
 
-    <ul class="menu--list menu--level-{$level} columns--{$columnCount}"{if $level === 0} style="width: calc( 100% - $teaserWidth );">
-        {block name="frontend_plugins_advanced_menu_list"}
-            {foreach $categories as $category}
-                {if $category.hideTop}
-                    {continue}
-                {/if}
+    <ul class="menu--list menu--level-{$level} columns--{$columnCount}"{if $level === 0} style="width: calc( 100% - {$teaserWidth} );"{/if}>
+    {block name="frontend_plugins_advanced_menu_list"}
+        {foreach $categories as $category}
 
-                {$categoryLink = $category.link}
-                {if $category.external}
-                    {$categoryLink = $category.external}
-                {/if}
+            {if $category.hideTop || $category.articleCount===0 || $category.attribute.disableshopid|intval == $Shop->getId()}
+                {continue}
+            {/if}
 
-                <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
-                    {block name="frontend_plugins_advanced_menu_list_item"}
-                        <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>{$category.name}</a>
+            {$categoryLink = $category.link}
+            {if $category.external}
+                {$categoryLink = $category.external}
+            {/if}
 
-                        {if $category.sub}
-                            {call name=categories_top categories=$category.sub level=$level+1}
+            <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
+                {block name="frontend_plugins_advanced_menu_list_item"}
+
+                    {$icon = ''}
+                    {if $shopID==1}
+                        {if $category.attribute.attribute4 != ''}
+                            {$icon=$category.attribute.attribute4}
                         {/if}
-                    {/block}
-                </li>
-            {/foreach}
-        {/block}
+                    {elseif $shopID==5}
+                        {if $category.attribute.attribute5 != ''}
+                            {$icon=$category.attribute.attribute5}
+                        {/if}
+                    {elseif $shopID==3}
+                        {if $category.attribute.attribute7 != ''}
+                            {$icon=$category.attribute.attribute7}
+                        {/if}
+                    {/if}
+
+                    <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>
+                        {*if $icon != ''}
+                            <span class="pictogram">
+                                <img src="{link file=$icon}" />
+                            </span>
+                        {/if*}
+                        {$category.name}
+                    </a>
+
+                    {if $category.sub}
+                        {call name=categories_top categories=$category.sub level=$level+1}
+                    {/if}
+
+                {/block}
+            </li>
+        {/foreach}
+    {/block}
     </ul>
 {/function}
-
-{block name="frontend_plugins_advanced_menu_list"}
-    {foreach $categories as $category}
-
-        {if $category.hideTop || $category.articleCount===0 || $category.attribute.disableshopid|intval == $Shop->getId()}
-            {continue}
-        {/if}
-
-        {$categoryLink = $category.link}
-        {if $category.external}
-            {$categoryLink = $category.external}
-        {/if}
-
-        <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
-            {block name="frontend_plugins_advanced_menu_list_item"}
-
-                {$icon = ''}
-                {if $shopID==1}
-                    {if $category.attribute.attribute4 != ''}
-                        {$icon=$category.attribute.attribute4}
-                    {/if}
-                {elseif $shopID==5}
-                    {if $category.attribute.attribute5 != ''}
-                        {$icon=$category.attribute.attribute5}
-                    {/if}
-                {elseif $shopID==3}
-                    {if $category.attribute.attribute7 != ''}
-                        {$icon=$category.attribute.attribute7}
-                    {/if}
-                {/if}
-
-                <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>
-                    {*if $icon != ''}
-                        <span class="pictogram">
-                            <img src="{link file=$icon}" />
-                        </span>
-                    {/if*}
-                    {$category.name}
-                </a>
-
-                {if $category.sub}
-                    {call name=categories_top categories=$category.sub level=$level+1}
-                {/if}
-
-            {/block}
-        </li>
-    {/foreach}
-{/block}
 
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
@@ -131,7 +108,6 @@
                             {/block}
                         {/if}
 
-
                         {if $hasTeaser}
                             {block name="frontend_plugins_advanced_menu_teaser"}
                                 {*<div class="menu--teaser"{if $hasCategories} style="width: {$columnAmount * 25}%;"{else} style="width: 100%;"{/if}>*}
@@ -140,23 +116,7 @@
                                         <a href="{$link|escapeHtml}" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}" class="teaser--image" style="background-image: url({link file={$mainCategory.media.path}});"{if $mainCategory.external} target="{$mainCategory.externalTarget}"{/if}></a>
                                     {/if}
 
-                                    {*if !empty($mainCategory.cmsHeadline)}
-                                        <div class="teaser--headline">{$mainCategory.cmsHeadline}</div>
-                                    {/if*}
-
-                                    {*if !empty($mainCategory.cmsText)}
-                                        <div class="teaser--text">
-                                            {$mainCategory.cmsText|strip_tags|truncate:250:"..."}
-                                            <a class="teaser--text-link" href="{$link|escapeHtml}" title="{s name="learnMoreLink" namespace="frontend/plugins/advanced_menu/advanced_menu"}mehr erfahren{/s}">
-                                                {s name="learnMoreLink" namespace="frontend/plugins/advanced_menu/advanced_menu"}mehr erfahren{/s}
-                                            </a>
-                                        </div>
-                                    {/if*}
-
                                     <div class="teaser--text">
-                                        {*if $smarty.get.foo!==null}
-                                            <pre>{$mainCategory.attribute|print_r}</pre>
-                                        {/if*}
                                         {if $mainCategory.attribute.topbarbannerlink}<a href="{$mainCategory.attribute.topbarbannerlink}">{/if}
                                             <img src="{$mainCategory.attribute.topbarbannerimage}" style="float:right" />
                                         {if $mainCategory.attribute.topbarbannerlink}</a>{/if}
