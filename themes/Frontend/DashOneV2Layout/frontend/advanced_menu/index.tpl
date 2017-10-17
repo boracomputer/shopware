@@ -1,5 +1,37 @@
 {extends file="parent:frontend/advanced_menu/index.tpl"}
 
+{function name="categories_top" level=0}
+
+    {$columnIndex = 0}
+    {$menuSizePercentage = 100 - (25 * $columnAmount * intval($hasTeaser))}
+    {$columnCount = 4 - ($columnAmount * intval($hasTeaser))}
+
+    <ul class="menu--list menu--level-{$level} columns--{$columnCount}"{if $level === 0} style="width: calc( 100% - $teaserWidth );">
+        {block name="frontend_plugins_advanced_menu_list"}
+            {foreach $categories as $category}
+                {if $category.hideTop}
+                    {continue}
+                {/if}
+
+                {$categoryLink = $category.link}
+                {if $category.external}
+                    {$categoryLink = $category.external}
+                {/if}
+
+                <li class="menu--list-item item--level-{$level}"{if $level === 0} style="width: 100%"{/if}>
+                    {block name="frontend_plugins_advanced_menu_list_item"}
+                        <a href="{$categoryLink|escapeHtml}" class="menu--list-item-link" title="{$category.name|escape}"{if $category.external} target="{$category.externalTarget}"{/if}>{$category.name}</a>
+
+                        {if $category.sub}
+                            {call name=categories_top categories=$category.sub level=$level+1}
+                        {/if}
+                    {/block}
+                </li>
+            {/foreach}
+        {/block}
+    </ul>
+{/function}
+
 {block name="frontend_plugins_advanced_menu_list"}
     {foreach $categories as $category}
 
@@ -82,20 +114,28 @@
                 </div>
 
                 {if $hasCategories || $hasTeaser}
+                    {$teaserWidth='0px'}
+                    {if $hasTeaser}
+                        {if $mainCategory.attribute.topbarbannerwidth}
+                            {$teaserWidth=$mainCategory.attribute.topbarbannerwidth}
+                        {elseif $hasCategories}
+                            {$teaserWidth='100%'}
+                        {else}
+                            {$teaserWidth='25%'}
+                        {/if}
+                    {/if}
                     <div class="content--wrapper{if $hasCategories} has--content{/if}{if $hasTeaser} has--teaser{/if}">
                         {if $hasCategories}
                             {block name="frontend_plugins_advanced_menu_sub_categories"}
-                                {call name="categories_top" categories=$mainCategory.sub}
+                                {call name="categories_top" categories=$mainCategory.sub teaserWidth=$teaserWidth}
                             {/block}
                         {/if}
 
+
                         {if $hasTeaser}
                             {block name="frontend_plugins_advanced_menu_teaser"}
-                                {if $hasCategories}
-                                    {*<div class="menu--delimiter" style="right: {$columnAmount * 25}%;"></div>*}
-                                {/if}
-
-                                <div class="menu--teaser"{if $hasCategories} style="width: {$columnAmount * 25}%;"{else} style="width: 100%;"{/if}>
+                                {*<div class="menu--teaser"{if $hasCategories} style="width: {$columnAmount * 25}%;"{else} style="width: 100%;"{/if}>*}
+                                <div class="menu--teaser" style="width: {$teaserWidth};">
                                     {if !empty($mainCategory.media)}
                                         <a href="{$link|escapeHtml}" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}" class="teaser--image" style="background-image: url({link file={$mainCategory.media.path}});"{if $mainCategory.external} target="{$mainCategory.externalTarget}"{/if}></a>
                                     {/if}
@@ -118,7 +158,7 @@
                                             <pre>{$mainCategory.attribute|print_r}</pre>
                                         {/if*}
                                         {if $mainCategory.attribute.topbarbannerlink}<a href="{$mainCategory.attribute.topbarbannerlink}">{/if}
-                                            <img src="{$mainCategory.attribute.topbarbannerimage}" />
+                                            <img src="{$mainCategory.attribute.topbarbannerimage}" style="float:right" />
                                         {if $mainCategory.attribute.topbarbannerlink}</a>{/if}
                                     </div>
                                 </div>
