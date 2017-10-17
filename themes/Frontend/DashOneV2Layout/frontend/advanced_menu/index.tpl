@@ -1,4 +1,4 @@
-{extends file="parent:frontend/advanced_menu/index.tpl"}
+{*extends file="parent:frontend/advanced_menu/index.tpl"*}
 
 {function name="categories_top" level=0 teaserWidth=0}
 
@@ -57,6 +57,7 @@
     </ul>
 {/function}
 
+<div class="advanced-menu" data-advanced-menu="true" data-hoverDelay="{$hoverDelay}">
 {block name="frontend_plugins_advanced_menu"}
     {foreach $sAdvancedMenu as $mainCategory}
 
@@ -130,3 +131,4 @@
         </div>
     {/foreach}
 {/block}
+</div>
