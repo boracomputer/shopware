@@ -23,7 +23,10 @@
                 <span class="{config name=classStockOrderable}">
 			        <i class="fa fa-wrench"></i> wird zusammengebaut
 		        </span>
-
+            {elseif $sArticle.ordernumber|strpos:"BW" === 0}
+                <span class="{config name=classStockAvailable}">
+                    <i class="{config name=iconStockAvailable}"></i> Versandfertig in 1-2 Tagen
+                </span>
 	        {elseif isset($sArticle.active) && !$sArticle.active}
                 <span class="{config name=classStockOutOfStock}">
                     <i class="{config name=iconStockOutOfStock}"></i> nicht verf&uuml;gbar
