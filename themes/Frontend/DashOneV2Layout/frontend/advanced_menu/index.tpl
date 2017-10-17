@@ -2,9 +2,28 @@
 
 {function name="categories_top" level=0 teaserWidth=0}
 
-    {$columnIndex = 0}
-    {$menuSizePercentage = 100 - (25 * $columnAmount * intval($hasTeaser))}
-    {$columnCount = 4 - ($columnAmount * intval($hasTeaser))}
+    {if $teaserWidth=='0px' || $teaserWidth=='' || $teaserWidth==0}
+        {$columnCount = 4}
+    {if $teaserWidth|strpos:"%"!==false}
+        {$tw=$teaserWidth|replace:'%':''}
+        {if $tw<=25}
+            {$columnCount = 3}
+        {elseif $tw<=50}
+            {$columnCount = 2}
+        {elseif $tw<=75}
+            {$columnCount = 1}
+        {/if}
+    {elseif $teaserWidth|strpos:"px"!==false}
+        {$tw=$teaserWidth|replace:'px':''}
+        {if $tw<=250}
+            {$columnCount = 3}
+        {elseif $tw<=500}
+            {$columnCount = 2}
+        {elseif $tw<=750}
+            {$columnCount = 1}
+        {/if}
+    {/if}
+
 
     <ul class="menu--list menu--level-{$level} columns--{$columnCount}"{if $level === 0} style="width: calc( 100% - {$teaserWidth} );"{/if}>
     {block name="frontend_plugins_advanced_menu_list"}
