@@ -1,7 +1,14 @@
 .option--container{
-    .filter-panel--label{
+    .filter-panel--label:not(.value-tree--label){
         .unitize-padding(0,0,0,5);
         display: inline-block;
+    }
+}
+.search--results{
+    .filter-panel{
+        &.filter--property{
+            display: none;
+        }
     }
 }
 .action--store{
