@@ -8,7 +8,7 @@
 {block name='frontend_listing_box_article_description'}
     <div class="product--description">
     {if $sArticle.ordernumber|strpos:"BW"!==false}
-        {$sArticle.attr18}
+        {$sArticle.attr18|replace:"<hr />":""}
     {elseif $sArticle.description}
         {$sArticle.description|strip_tags|truncate:500}
     {elseif $sArticle.attr7}
