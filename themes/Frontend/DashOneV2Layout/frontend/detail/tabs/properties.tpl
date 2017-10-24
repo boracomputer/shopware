@@ -4,7 +4,9 @@
     {if $sArticle.sProperties}
         {foreach $sArticle.sProperties as $i => $sProperty}
             {*$sProperty.attributes.core->get('cfgname')|dump*}
-            {$properties[$sProperty.attributes.core->get('cfgname')][] = $sProperty}
+            {if $sProperty.attributes}
+                {$properties[$sProperty.attributes.core->get('cfgname')][] = $sProperty}
+            {/if}
         {/foreach}
         {*$properties|dump*}
         <div class="product--properties">
