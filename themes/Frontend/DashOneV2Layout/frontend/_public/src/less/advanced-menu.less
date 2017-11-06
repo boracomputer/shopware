@@ -17,10 +17,19 @@
          .menu--list-item-link{
              .unitize(font-size, 12);
              .unitize-padding(0,0,5,0);
+             &:hover{
+                 font-weight: bold;
+                 .unitize-padding(0,0,5,10);
+             }
          }
     }
     .menu--level-1{
         margin: 0;
+        .menu--list-item{
+            &:hover{
+                background: none !important;
+            }
+        }
     }
     .clearfix();
     .menu--teaser {
