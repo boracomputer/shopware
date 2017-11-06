@@ -3,6 +3,7 @@
     background-color: #EEE;
     .item--level-0{
         .menu--list-item-link{
+            .unitize(font-size, 14);
             .pictogram{
                 float: left;
                 display: inline-block;
@@ -11,6 +12,15 @@
                 .unitize-margin(-3, 10, 0, 0);
             }
         }
+    }
+    .item--level-1{
+         .menu--list-item-link{
+             .unitize(font-size, 12);
+             .unitize-padding(0,0,5,0);
+         }
+    }
+    .menu--level-1{
+        margin: 0;
     }
     .clearfix();
     .menu--teaser {
