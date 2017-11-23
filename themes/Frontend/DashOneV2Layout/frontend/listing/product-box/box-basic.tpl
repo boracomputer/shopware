@@ -7,7 +7,9 @@
 {* Product description *}
 {block name='frontend_listing_box_article_description'}
     <div class="product--description">
-    {if $sArticle.description}
+    {if $sArticle.ordernumber|strpos:"BW"!==false}
+        {$sArticle.attr18|replace:"<hr />":""}
+    {elseif $sArticle.description}
         {$sArticle.description|strip_tags|truncate:500}
     {elseif $sArticle.attr7}
         {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
@@ -32,6 +34,6 @@
     <a href="{$sArticle.linkDetails}"
                 class="product--title"
                 title="{$sArticle.articleName|escapeHtml}">
-        {$sArticle.articleName|truncate:50}
+        {$sArticle.articleName|unescape|truncate:50}
     </a>
 {/block}

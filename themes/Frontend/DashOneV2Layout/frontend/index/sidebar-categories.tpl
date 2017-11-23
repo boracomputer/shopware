@@ -6,8 +6,10 @@
 
         {block name="frontend_index_categories_left_before"}{/block}
         {foreach $categories as $category}
-
-            {if $category.attribute.disableshopid|intval === $Shop->getId() || $category.description=='hidden' || $category.description=='Tagesdeal' || $category.articleCount===0}
+            {*if $smarty.get.foo!==null}
+                <pre>{$category|print_r}</pre>
+            {/if*}
+            {if $category.attribute.disableshopid|intval === $Shop->getId() || $category.description=='hidden' || $category.description=='Tagesdeal' || ($category.articleCount===0 && $category.external=='')}
                 {continue}
             {/if}
 

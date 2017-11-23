@@ -54,7 +54,13 @@
                                                     {block name="frontend_listing_filter_facet_value_list_label"}
                                                         <label class="filter-panel--label"
                                                                for="__{$facet->getFieldName()|escape:'htmlall'}__{$option->getId()|escape:'htmlall'}">
-                                                            {$option->getLabel()|escape}{if $unit}&nbsp;{$unit}{/if}
+                                                            {if $option->getLabel()=='N'}
+                                                                Nein
+                                                            {elseif $option->getLabel()=='Y'}
+                                                                Ja
+                                                            {else}
+                                                                {$option->getLabel()|escape}{if $unit}&nbsp;{$unit}{/if}
+                                                            {/if}
                                                         </label>
                                                     {/block}
                                                 </div>

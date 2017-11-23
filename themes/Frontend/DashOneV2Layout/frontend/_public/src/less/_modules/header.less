@@ -10,7 +10,9 @@
 .content--breadcrumb{
     //display: none;
 }
-
+.results--list{
+    .box-shadow(0 0 40px -15px #000);
+}
 .header-main{
     .top-bar{
         .container{
@@ -96,6 +98,15 @@
 }
 
 @media screen and (min-width: @tabletViewportWidth) {
+    .is--ctl-register{
+        &.is--target-checkout{
+            &.is--minimal-header {
+                .header-main{
+                    .unitize(height, 115);
+                }
+            }
+        }
+    }
     // 768px
     .header-main {
         .top-bar {
@@ -149,7 +160,6 @@
             }
         }
     }
-
     .service--list {
         .unitize-min-width(150);
         .unitize-padding(5, 0);

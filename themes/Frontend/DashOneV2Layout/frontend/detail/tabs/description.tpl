@@ -10,30 +10,40 @@
     {* Product description *}
     {block name='frontend_detail_description_text'}
         <div class="product--description" itemprop="description">
+
+            {* B-Ware Beschreibung *}
+            {if $sArticle.ordernumber|strpos:"BW"!==false}
+                {$sArticle.attr18}
+            {/if}
+
+            {* Reasons to buy *}
             {if $sArticle.attr9}
                 {$sArticle.attr9|replace:"\n":"<br />"}
                 <div class="clear"></div>
             {/if}
 
+            {* Energieeffizienz *}
             {if $sArticle.attr8|count>0}
-                <table><tb>
+                <table><tbody>
                     <tr><td><strong>Name des Herstellers</strong></td><td>{$sArticle.supplierName}</td></tr>
                     <tr><td><strong>Modellbezeichnung</strong></td><td>{$sArticle.suppliernumber}</td></tr>
                     <tr><td><strong>Energieeffizienzklasse</strong></td><td>{$sArticle.attr8.class}</td></tr>
                     <tr><td><strong>Bildschirmdiagonale</strong></td><td>{$sArticle.attr8.sizeInch} Zoll</td></tr>
                     <tr><td><strong>Leistungsaufnahme</strong></td><td>{$sArticle.attr8.watts} Watt</td></tr>
                     <tr><td><strong>J&auml;hrlicher Energieverbrauch*</strong></td><td>{$sArticle.attr8.kwhYear} kWh/Jahr</td></tr>
-                </tb></table>
+                </tbody></table>
                 <small>* 4 Stunden Nutzung pro Tag an 365 Tagen pro Jahr</small>
-                <hr />
+                <hr>
             {/if}
 
             {* CNet description*}
             <div id="ccs-inline-content"></div>
 
             {if $sArticle.description_long}
+                {* Ausfühliche Beschreibung *}
                 {$sArticle.description_long}
             {else}
+                {* Ainfo Beschreibung (aus Fuman) *}
                 {$sArticle.attr7}
             {/if}
 
