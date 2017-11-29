@@ -5,7 +5,7 @@
 {/strip}{/block}
 
 {block name='frontend_index_javascript_async_ready' append}
-    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}"></script>
+    <script type="text/javascript" src="{link file='frontend/_resources/javascript/jquery.konfigurator.js'}?t={$smarty.now}"></script>
 {/block}
 
 {block name="frontend_index_header_css_print" append}
