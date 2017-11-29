@@ -59,7 +59,7 @@
 
         $('.container--konfigurator').on('click', '.buybox--button-konfigurator', function(e){
             e.preventDefault();
-            $.loadingIndicator.open();
+            //$.loadingIndicator.open();
             $.ajax({
                 'dataType': 'jsonp',
                 'method': 'POST',
@@ -106,6 +106,7 @@
             updateGroup($(this));
         });
         updateTotalPrice();
+        cacheConfigOptions();
     }
     function updateItem( el ){
         updateGroup( el );
