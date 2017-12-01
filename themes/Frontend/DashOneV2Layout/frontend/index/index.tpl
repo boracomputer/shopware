@@ -40,18 +40,3 @@
     {/block}
 </div>
 {/block}
-
-{block name="frontend_index_javascript_async_ready" prepend}
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" media="all" rel="stylesheet" type="text/css">
-    
-    {{compileLess timestamp={themeTimestamp} output="lessFiles"}}
-    {foreach $lessFiles as $stylesheet}
-        <link href="{$stylesheet}" media="all" rel="stylesheet" type="text/css" />
-    {/foreach}
-
-    {if $theme.additionalCssData}
-        {$theme.additionalCssData}
-    {/if}
-{/block}
