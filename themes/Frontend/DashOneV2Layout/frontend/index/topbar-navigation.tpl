@@ -3,9 +3,9 @@
 {block name="frontend_index_checkout_actions_service_menu" append}
     {if $shopID!=3}
     <div class="navigation--entry entry--business" role="menuitem">
-        <div href="/business" class="entry--link">
+        <a href="/business" class="entry--link">
             <i class="icon--briefcase"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkBusiness'}Businesskunde{/s}
-        </div>
+        </a>
     </div>
     {/if}
 
