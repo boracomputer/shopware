@@ -3,7 +3,7 @@
 {block name="frontend_index_javascript_async_ready" append}
 {if $shopID != 3 && !$isKonfigurator}
 <script>
-    jQuery(document).ready(function($) {
+    document.asyncReady(function() {
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
         $('#get-stock').on('click', function(event) {
             event.preventDefault();

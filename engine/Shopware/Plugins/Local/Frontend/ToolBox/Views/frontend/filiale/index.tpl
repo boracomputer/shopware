@@ -12,7 +12,7 @@
 
 {block name="frontend_index_javascript_async_ready" append}
 <script type="text/javascript">
-jQuery(document).ready(function(){
+document.asyncReady(function() {
     var filialen={$tbStoresJSON};
     //console.log(filialen);
     var shopname, shopmarker;

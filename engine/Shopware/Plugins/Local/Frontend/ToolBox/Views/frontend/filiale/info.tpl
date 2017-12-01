@@ -12,7 +12,7 @@ check{extends file="frontend/index/index.tpl"}
 
 {block name="frontend_index_javascript_async_ready" append}
 <script type="text/javascript">
-jQuery(document).ready(function(){
+document.asyncReady(function() {
 	var tbStore = {$tbStoreJSON};
     var markers = [];
     var shopmarker;

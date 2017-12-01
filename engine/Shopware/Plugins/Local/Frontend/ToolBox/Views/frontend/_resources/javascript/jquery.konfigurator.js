@@ -2,7 +2,7 @@
 ;(function($, window, undefined) {
     var c={}; var i; var uId; var cId;
 
-    $(document).ready(function() {
+    document.asyncReady(function() {
         initItems();
         uId = $('.container--konfigurator').attr('data-uID');
         cId = $('.container--konfigurator').attr('data-cID');
