@@ -1,8 +1,8 @@
-
+document.asyncReady(function() {
 ;(function($, window, undefined) {
     var c={}; var i; var uId; var cId;
 
-    document.asyncReady(function() {
+    $(document).ready(function() {
         initItems();
         uId = $('.container--konfigurator').attr('data-uID');
         cId = $('.container--konfigurator').attr('data-cID');
@@ -156,3 +156,4 @@
     };
 
 })(jQuery, window);
+});
