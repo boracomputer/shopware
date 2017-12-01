@@ -40,3 +40,14 @@
     {/block}
 </div>
 {/block}
+
+{block name="frontend_index_javascript_async_ready" prepend}
+    {{compileLess timestamp={themeTimestamp} output="lessFiles"}}
+    {foreach $lessFiles as $stylesheet}
+        <link href="{$stylesheet}" media="all" rel="stylesheet" type="text/css" />
+    {/foreach}
+
+    {if $theme.additionalCssData}
+        {$theme.additionalCssData}
+    {/if}
+{/block}
