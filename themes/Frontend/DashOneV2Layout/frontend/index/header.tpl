@@ -2,4 +2,8 @@
 
 {* Stylesheets *}
 {block name="frontend_index_header_css_screen"}
+    {{compileLess timestamp={themeTimestamp} output="lessFiles"}}
+    {foreach $lessFiles as $stylesheet}
+        <link href="{$stylesheet}" media="all" rel="stylesheet" type="text/css" />
+    {/foreach}
 {/block}
