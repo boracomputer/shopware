@@ -40,10 +40,3 @@
     {/block}
 </div>
 {/block}
-
-{* Stylesheets *}
-{block name="frontend_index_javascript_async_ready" prepend}
-    {if $theme.additionalCssData}
-        {$theme.additionalCssData}
-    {/if}
-{/block}
