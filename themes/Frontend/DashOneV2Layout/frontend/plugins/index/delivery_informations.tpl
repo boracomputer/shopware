@@ -19,7 +19,7 @@
         <div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>
 
-            {if $sArticle.ordernumber|strpos:"PCK" === 0}
+            {if $sArticle.ordernumber|strpos:"PCK" === 0 || $sArticle.attr5=='MDS'}
                 <span class="{config name=classStockOrderable}">
 			        <i class="fa fa-wrench"></i> wird zusammengebaut
 		        </span>
@@ -56,7 +56,7 @@
             	    {/if}
 	            </span>
 
-	        {elseif $stock[33]>0 || $sArticle.attr5=='MDS'}
+	        {elseif $stock[33]>0}
 	            <span class="{config name=classStockOrderable}">
 			        <i class="{config name=iconStockOrderable}"></i> Artikel wird bestellt
 	            </span>
