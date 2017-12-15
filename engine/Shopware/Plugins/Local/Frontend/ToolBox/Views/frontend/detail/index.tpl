@@ -13,7 +13,7 @@
             });
             $.ajax({
                 'url': window.controller['stores_getStockAjax'],
-                'data': { ordernumber: {$sArticle.ordernumber} },
+                'data': { ordernumber: {$sArticle.ordernumber}, articleId: {$sArticle.articleId} },
                 'success': function( result ){
                     $.loadingIndicator.close(function () {
                         $.modal.open(result, {
