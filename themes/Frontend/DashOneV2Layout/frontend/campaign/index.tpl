@@ -10,6 +10,10 @@
             {continue}
 
         {/if}
+        {if $smarty.get.foo=='bar'}
+            {$shopID|var_dump}
+            <pre>{$emotion.attribute|print_r}</pre>
+        {/if}
         <div class="content--emotions">
             <div class="emotion--wrapper"
                  data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller}"
