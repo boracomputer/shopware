@@ -4,22 +4,15 @@
 {block name='frontend_home_index_promotions'}
     {foreach $landingPage.emotions as $emotion}
 
-    {if $smarty.get.foo=='bar'}
-        {$shopID|var_dump}
-        <pre>{$emotion.attribute|print_r}</pre>
-    {/if}
-
         {if $shopID != $emotion.attribute.shopid|intval
             && $emotion.attribute.shopid!=0
             && $emotion.attribute.shopid!=''}
-
             {continue}
-
         {/if}
 
         <div class="content--emotions">
             <div class="emotion--wrapper"
-                 data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller}"
+                 data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}"
                  data-availableDevices="{$emotion.devices}">
             </div>
         </div>
