@@ -9,9 +9,9 @@
                     <pre>{$emotion|print_r}</pre>
                     foobar
                 {/if}
-                    {if $shopID !== $emotion.attribute.shopid
-                        && $emotion.attribute.shopid!=0
-                        && $emotion.attribute.shopid!=''}
+                    {if $shopID !== $emotion.shopid
+                        && $emotion.shopid!=0
+                        && $emotion.shopid!=''}
                     {else}
                     <div class="emotion--wrapper"
                          data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}"
