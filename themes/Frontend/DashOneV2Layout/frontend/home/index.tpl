@@ -4,6 +4,10 @@
         {if $hasEmotion}
             <div class="content--emotions">
                 {foreach $emotions as $emotion}
+                {if $smarty.get.foo=='bar'}
+                    {$shopID|var_dump}
+                    <pre>{$emotion.attribute|print_r}</pre>
+                {/if}
                     {if $shopID != $emotion.attribute.shopid|intval
                         && $emotion.attribute.shopid!=0
                         && $emotion.attribute.shopid!=''}
