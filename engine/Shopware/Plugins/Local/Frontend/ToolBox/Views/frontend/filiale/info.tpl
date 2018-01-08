@@ -109,9 +109,16 @@ document.asyncReady(function() {
                         {if $tbStore.banner_top}
 
                             {if $tbStoreSlider.values|count > 1}
-                                <div class="emotion--element" style="height:500px;">
+                            <section class="emotion--container emotion--column-12 emotion--mode-fluid emotion--0"
+                     data-emotion="true"
+                     data-gridMode="fluid"
+                     data-fullscreen="false"
+                     data-columns="1"
+                     data-cellSpacing="5"
+                     data-cellHeight="500"
+                     data-baseWidth="1160">
                                     {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider}
-                                </div>
+                            </section>
                             {else}
                                 <img src="{$tbStore.banner_top}" style="margin-bottom: 7px;" />
                             {/if}
