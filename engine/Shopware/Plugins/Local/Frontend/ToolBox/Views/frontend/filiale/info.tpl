@@ -109,7 +109,7 @@ document.asyncReady(function() {
                         {if $tbStore.banner_top}
 
                             {if $tbStoreSlider.values|count > 1}
-                                <div style="height:500px;">
+                                <div class="emotion--element" style="height:500px;">
                                     {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider}
                                 </div>
                             {else}
