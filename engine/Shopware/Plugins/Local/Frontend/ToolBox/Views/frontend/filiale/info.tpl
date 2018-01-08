@@ -107,7 +107,12 @@ document.asyncReady(function() {
                     {block name="frontend_custom_article_content"}
                         {*$tbStore|dump*}
                         {if $tbStore.banner_top}
-                            <img src="{$tbStore.banner_top}" style="margin-bottom: 7px;" />
+
+                            {if $tbStoreSlider.values|count > 1}
+                                {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider }
+                            {else}
+                                <img src="{$tbStore.banner_top}" style="margin-bottom: 7px;" />
+                            {/if}
                         {/if}
 						<div id="google_map" style="height:300px"></div>
 
