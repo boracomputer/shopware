@@ -109,7 +109,7 @@ document.asyncReady(function() {
                         {if $tbStore.banner_top}
 
                             {if $tbStoreSlider.values|count > 1}
-                                {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider }
+                                {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider}
                             {else}
                                 <img src="{$tbStore.banner_top}" style="margin-bottom: 7px;" />
                             {/if}
