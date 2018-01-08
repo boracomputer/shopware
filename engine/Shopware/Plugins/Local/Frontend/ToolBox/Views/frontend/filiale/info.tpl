@@ -84,6 +84,9 @@ document.asyncReady(function() {
         padding: 10px;
     }
 }
+.emotion--banner-slider .banner-slider--banner{
+    width:100%;
+}
 </style>
 {/block}
 
@@ -116,8 +119,8 @@ document.asyncReady(function() {
                                          data-columns="1"
                                          data-cellSpacing="5"
                                          data-cellHeight="500"
-                                         data-baseWidth="1160">
-                                    <div class="emotion--element col-1 row-1 start-col-1 start-row-1 col-xs-12 start-col-xs-1 row-xs-8 start-row-xs-1 col-s-12 start-col-s-1 row-s-14 start-row-s-1 col-m-12 start-col-m-1 row-m-17 start-row-m-1 col-l-12 start-col-l-1 row-l-24 start-row-l-1 col-xl-12 start-col-xl-1 row-xl-25 start-row-xl-1">
+                                         data-baseWidth="1160" style="height:500px">
+                                    <div style="height:500px" class="emotion--element col-1 row-1 start-col-1 start-row-1 col-xs-12 start-col-xs-1 row-xs-8 start-row-xs-1 col-s-12 start-col-s-1 row-s-14 start-row-s-1 col-m-12 start-col-m-1 row-m-17 start-row-m-1 col-l-12 start-col-l-1 row-l-24 start-row-l-1 col-xl-12 start-col-xl-1 row-xl-25 start-row-xl-1">
                                         {include 'widgets/emotion/components/component_banner_slider.tpl' Data=$tbStoreSlider}
                                     </div>
                                 </section>
