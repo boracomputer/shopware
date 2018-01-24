@@ -22,11 +22,12 @@
 }
 
 .product--details {
+
     .product--header {
         .unitize-padding(30, 0, 0, 0);
         .product--info{
             .product--title{
-                font-weight: bold;
+                font-family: "Oswald", "Open Sans", sans-serif;
             }
         }
     }
@@ -104,7 +105,8 @@
                         float: right;
                     }
                     .buybox--button{
-                        width: 70%;
+                        width: 68%;
+                        float: right;
                     }
                 }
                 .product--price(36); // _mixins/price.less
@@ -167,6 +169,18 @@
             .product--info{
                 .product--title{
                     width: 86%;
+                    .unitize(font-size, 24);
+                }
+            }
+        }
+        .product--detail-upper {
+            .product--buybox {
+                .buybox--inner {
+                    .buybox--button-container {
+                        .buybox--button{
+                            .unitize(height, 42);
+                        }
+                    }
                 }
             }
         }
