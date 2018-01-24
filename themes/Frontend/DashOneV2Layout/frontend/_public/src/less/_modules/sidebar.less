@@ -11,12 +11,27 @@
         .sidebar--categories-wrapper {
             .sidebar--categories-navigation {
                 .sidebar--navigation {
+                    font-family: "Oswald", "Open Sans", sans-serif;
+                    text-transform: none;
                     // ul
                     .navigation--entry {
                         // li
                         .navigation--link {
                             // a
                             text-transform: none;
+                            &.is--active{
+                                font-weight: normal;
+                            }
+                            &:hover{
+                                color: @theme-primary;
+                            }
+                        }
+                    }
+                    .is--level1{
+                        .navigation--link{
+                            &.is--active{
+                                font-weight: normal;
+                            }
                         }
                     }
                 }
