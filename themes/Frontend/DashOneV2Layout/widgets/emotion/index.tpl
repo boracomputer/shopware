@@ -104,7 +104,7 @@
                                     {block name="widgets/emotion/index/inner-element"}
 
                                         {if $template == 'component_article'}
-                                            {include file="widgets/emotion/components/component_article.tpl"}
+                                            {include file="widgets/emotion/components/component_article.tpl" boxBasic=($element.cssClass|strpos:"box-basic"!==false)}
 
                                         {elseif $template == 'component_article_slider'}
                                             {include file="widgets/emotion/components/component_article_slider.tpl"}
