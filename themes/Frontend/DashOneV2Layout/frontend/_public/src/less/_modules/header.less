@@ -61,17 +61,29 @@
                         color: @theme-primary;
                     }
                 }
-                .navigation--entry.entry--service{
-                    width: 100%;
-                    color: @theme-primary;
-                    .service--list{
-                        top: 5px;
-                        .unitize-padding(5,5,5,5);
+                .navigation--entry{
+                    &:not(.entry--note){
+                        border-right: 1px dashed #FFF;
+                    }
+                    &.entry--service{
                         width: 100%;
-                        max-height: 200px;
-                        overflow-y: auto;
+                        color: @theme-primary;
+                        .service--list{
+                            top: 5px;
+                            .unitize-padding(5,5,5,5);
+                            width: 100%;
+                            max-height: 200px;
+                            overflow-y: auto;
+                        }
+                    }
+                    &.entry--compare{
+                        .compare--quantity{
+                            background: #FFF;
+                            color: @theme-primary;
+                        }
                     }
                 }
+
             }
         }
     }
