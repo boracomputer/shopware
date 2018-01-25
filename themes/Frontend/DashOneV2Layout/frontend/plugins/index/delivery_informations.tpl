@@ -21,7 +21,7 @@
 
             {if $sArticle.ordernumber|strpos:"PCK" === 0 || $sArticle.attr5=='MDS'}
                 <span class="{config name=classStockOrderable}">
-			        <i class="fa fa-wrench"></i> wird zusammengebaut
+			        <i class="fa fa-wrench"></i> Zusammenbau bei Bestellung
 		        </span>
             {elseif $sArticle.ordernumber|strpos:"BW" === 0}
                 <span class="{config name=classStockAvailable}">
