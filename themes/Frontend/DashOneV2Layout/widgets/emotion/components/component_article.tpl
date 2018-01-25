@@ -2,7 +2,7 @@
     {if $Data}
         <div class="emotion--product{if $Data.no_border} is--no-border{/if}">
 
-            {include file="frontend/listing/box_article.tpl" sArticle=$Data {if boxBasic}{else}productBoxLayout="emotion"{/if} imageOnly=$Data.productImageOnly}
+            {include file="frontend/listing/box_article.tpl" sArticle=$Data {if $boxBasic}{else}productBoxLayout="emotion"{/if} imageOnly=$Data.productImageOnly}
         </div>
     {/if}
 {/block}
