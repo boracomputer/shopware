@@ -36,7 +36,7 @@
                    class="btn action--note btn is--small product--action"
                    data-ajaxUrl="{url controller='note' action='ajaxAdd' ordernumber=$sArticle.ordernumber}"
                    data-text="{s name="DetailNotepadMarked"}{/s}">
-                    <i class="icon--add-to-list"></i> Merkzettel
+                    <i class="icon--tag"></i> Merken
                 </button>
             </form>
         {/block}
