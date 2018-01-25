@@ -1,4 +1,4 @@
-.product--price(@font-size: 28, @top: 5px, @right: 0, @bottom: 0, @left: 0){
+.product--price(@font-size: 28, @top: 0px, @right: 0, @bottom: 0, @left: 0){
 
     .product--price {
 
@@ -12,6 +12,8 @@
             bottom: @bottom;
             left: @left;
             font-weight: bold;
+            width: 100%;
+            text-align: center;
             &.fill{
                 color: @theme-primary;
             }
@@ -35,17 +37,5 @@
             }
         }
     }
-    .box--emotion{
-        .product--price{
-            position: relative;
-            .price--default{
-                position: absolute;
-                left: 50%;
-                .pricelayer{
-                    position: relative;
-                    left: -50%;
-                }
-            }
-        }
-    }
+
 }
