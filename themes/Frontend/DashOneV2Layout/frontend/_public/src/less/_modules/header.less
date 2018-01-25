@@ -18,6 +18,7 @@
         .container{
             .top-bar--navigation{
                 .unitize(min-width, 275);
+                padding: 0;
                 .top-bar--login{
                     z-index: 3001;
                     background-color: #FFFFFF;
@@ -62,6 +63,7 @@
                     }
                 }
                 .navigation--entry{
+                    .unitize-padding(0,10,0,10);
                     &:not(.entry--note){
                         border-right: 1px dashed #FFF;
                     }
