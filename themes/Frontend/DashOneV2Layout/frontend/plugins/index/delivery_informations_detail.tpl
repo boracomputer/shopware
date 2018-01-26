@@ -50,7 +50,7 @@
             </span>
         {elseif $stock[33]>0  || $sArticle.attr2=='B'}
             <span class="{$classStockOrderable}">
-                <i class="{$iconStockOrderable}"></i> Lieferbar in 7 - 21 Werktagen
+                <i class="{$iconStockOrderable}"></i> Verfügbar in 7 - 21 Werktagen
             </span>
 
         {else}
