@@ -58,7 +58,7 @@
 
 	        {elseif $stock[33]>0}
 	            <span class="{config name=classStockOrderable}">
-			        <i class="{config name=iconStockOrderable}"></i> Artikel wird bestellt
+			        <i class="{config name=iconStockOrderable}"></i> Lieferbar in 7 - 21 Werktagen
 	            </span>
 
 	        {else}
