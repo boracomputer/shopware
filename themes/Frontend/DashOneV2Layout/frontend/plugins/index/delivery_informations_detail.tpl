@@ -52,7 +52,7 @@
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Verfügbar in 7 - 21 Werktagen
             </span>
-
+            
         {else}
             <span class="{$classStockOutOfStock}">
                 <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar
