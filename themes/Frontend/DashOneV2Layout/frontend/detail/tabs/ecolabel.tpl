@@ -1,7 +1,7 @@
 {block name='frontend_detail_tabs_ecolabel'}
-
     {* Energieeffizienz *}
     {if $sArticle.attr8|count>0}
+    <div class="product--ecolabel">
         <table><tbody>
             <tr><td><strong>Name des Herstellers</strong></td><td>{$sArticle.supplierName}</td></tr>
             <tr><td><strong>Modellbezeichnung</strong></td><td>{$sArticle.suppliernumber}</td></tr>
@@ -14,7 +14,7 @@
         <hr>
 
         <img src='//ecolabel.skillbooks.de/{$sArticle.ordernumber}-{if $shopID==1}bora{elseif $shopID==3}schwan{elseif $shopID==5}km{else}blank{/if}.png'>
-
+    </div>
     {/if}
 
 {/block}

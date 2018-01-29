@@ -6,6 +6,9 @@
         {if $sArticle.sProperties}
             <a href="#" class="tab--link" title="{s name='DetailTabsProperties'}Datenblatt{/s}" data-tabName="properties">{s name='DetailTabsProperties'}Dtaenblatt{/s}</a>
         {/if}
+        {if $sArticle.attr8|count>1}
+            <a href="#" class="tab--link" title="{s name='DetailTabsProperties'}Energieeffizienz{/s}" data-tabName="ecolabel">{s name='DetailTabsEcolabel'}Energieeffizienz{/s}</a>
+        {/if}
     {/block}
 {/block}
 
