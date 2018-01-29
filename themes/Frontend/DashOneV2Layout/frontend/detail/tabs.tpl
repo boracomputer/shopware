@@ -7,7 +7,12 @@
             <a href="#" class="tab--link" title="{s name='DetailTabsProperties'}Datenblatt{/s}" data-tabName="properties">{s name='DetailTabsProperties'}Dtaenblatt{/s}</a>
         {/if}
         {if $sArticle.attr8|count>1}
-            <a href="#" class="tab--link" title="{s name='DetailTabsEcolabel'}Energieeffizienz{/s}" data-tabName="ecolabel">{s name='DetailTabsEcolabel'}Energieeffizienz{/s}</a>
+            <a href="#" class="tab--link" title="{s name='DetailTabsEcolabel'}Energieeffizienz{/s}" data-tabName="ecolabel">
+                {s name='DetailTabsEcolabel'}Energieeffizienz{/s}&nbsp;
+                <div class="product--badge badge--ecolabel modal--size-table" style="background: {$sArticle.attr8.color}">
+                        {$sArticle.attr8.class}
+                </div>
+            </a>
         {/if}
     {/block}
 {/block}
