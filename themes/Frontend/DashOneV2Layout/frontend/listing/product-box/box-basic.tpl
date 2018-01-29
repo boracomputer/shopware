@@ -10,7 +10,7 @@
     {if $sArticle.ordernumber|strpos:"BW"!==false}
         {$sArticle.attr18|replace:"<hr />":""}
     {elseif $sArticle.description}
-        {$sArticle.description|strip_tags|truncate:500}
+        {$sArticle.description|truncate:500}
     {elseif $sArticle.attr7}
         {$sArticle.attr7|strip_tags|truncate:"200":"&#x85;"}
     {/if}
