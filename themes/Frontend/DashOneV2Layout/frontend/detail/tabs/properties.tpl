@@ -1,3 +1,14 @@
+{* Offcanvas buttons *}
+{block name='frontend_detail_properties_buttons_offcanvas'}
+    <div class="buttons--off-canvas">
+        {block name='frontend_detail_properties_buttons_offcanvas_inner'}
+            <a href="#" title="{"{s name="OffcanvasCloseMenu" namespace="frontend/detail/description"}{/s}"|escape}" class="close--off-canvas">
+                <i class="icon--arrow-left"></i>
+                {s name="OffcanvasCloseMenu" namespace="frontend/detail/description"}{/s}
+            </a>
+        {/block}
+    </div>
+{/block}
 
 {* Properties *}
 {block name='frontend_detail_properties'}

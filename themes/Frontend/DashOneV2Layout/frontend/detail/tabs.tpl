@@ -9,9 +9,9 @@
         {if $sArticle.attr8|count>1}
             <a href="#" class="tab--link" title="{s name='DetailTabsEcolabel'}Energieeffizienz{/s}" data-tabName="ecolabel">
                 {s name='DetailTabsEcolabel'}Energieeffizienz{/s}&nbsp;
-                <div class="product--badge badge--ecolabel modal--size-table" style="background: {$sArticle.attr8.color}">
+                <span class="product--badge badge--ecolabel" style="background: {$sArticle.attr8.color}">
                         {$sArticle.attr8.class}
-                </div>
+                </span>
             </a>
         {/if}
     {/block}
