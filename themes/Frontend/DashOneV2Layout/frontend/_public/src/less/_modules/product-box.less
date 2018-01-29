@@ -78,10 +78,11 @@
 		.unitize(font-size, 11);
         .unitize(line-height, 13);
         ul{
-            margin-left: 0;
-            .unitize(padding-left, 10);
+            margin: 0 !important;
+            padding: 0 !important;
+            //.unitize(padding-left, 10);
             li{
-                .unitize(text-indent, -6);
+                //.unitize(text-indent, -6);
             }
         }
         /*&:after{
@@ -143,7 +144,14 @@
 
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
-
+    .box--basic{
+        .product--info{
+            .unitize-padding(0,0,0,165);
+        }
+        .product--image{
+            .unitize(left, 10);
+        }
+    }
     .topseller {
         .topseller--content {
             .box--content {
