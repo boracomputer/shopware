@@ -74,9 +74,16 @@
     }
     .product--description {
         position: relative;
-		.unitize-height(120);
+		.unitize-height(170);
 		.unitize(font-size, 11);
         .unitize(line-height, 13);
+        ul{
+            margin-left: 0;
+            .unitize(padding-left, 10);
+            li{
+                .unitize(text-indent, -6);
+            }
+        }
         /*&:after{
             position: absolute;
             bottom: 0; left: 0;
@@ -91,6 +98,7 @@
         }*/
 	}
     .product--price-info {
+        height: auto;
 		.price--unit {
 			display: none;
 		}
