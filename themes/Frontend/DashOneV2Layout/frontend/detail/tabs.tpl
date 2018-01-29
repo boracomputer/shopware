@@ -45,4 +45,39 @@
             </div>
         {/block}
     {/if}
+    {if $sArticle.attr8|count>1}
+        {block name="frontend_detail_tabs_content_ecolabel"}
+            <div class="tab--container">
+                {block name="frontend_detail_tabs_content_ecolabel_inner"}
+
+                    {* Description title *}
+                    {block name="frontend_detail_tabs_content_ecolabel_title"}
+                        <div class="tab--header">
+                            {block name="frontend_detail_tabs_content_ecolabel_title_inner"}
+                                <a href="#" class="tab--title" title="{s name='DetailTabsEcolabel'}{/s}">{s name='DetailTabsEcolabel'}Energieeffizienz{/s}</a>
+                            {/block}
+                        </div>
+                    {/block}
+
+                    {* Description preview *}
+                    {block name="frontend_detail_tabs_ecolabel_preview"}
+                        <div class="tab--preview">
+                            {block name="frontend_detail_tabs_content_ecolabel_preview_inner"}
+                            {/block}
+                        </div>
+                    {/block}
+
+                    {* Description content *}
+                    {block name="frontend_detail_tabs_content_ecolabel_description"}
+                        <div class="tab--content">
+                            {block name="frontend_detail_tabs_content_ecolabel_description_inner"}
+                                {include file="frontend/detail/tabs/ecolabel.tpl"}
+                            {/block}
+                        </div>
+                    {/block}
+
+                {/block}
+            </div>
+        {/block}
+    {/if}
 {/block}

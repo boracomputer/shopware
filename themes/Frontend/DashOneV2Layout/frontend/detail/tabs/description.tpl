@@ -22,20 +22,6 @@
                 <div class="clear"></div>
             {/if}
 
-            {* Energieeffizienz *}
-            {if $sArticle.attr8|count>0}
-                <table><tbody>
-                    <tr><td><strong>Name des Herstellers</strong></td><td>{$sArticle.supplierName}</td></tr>
-                    <tr><td><strong>Modellbezeichnung</strong></td><td>{$sArticle.suppliernumber}</td></tr>
-                    <tr><td><strong>Energieeffizienzklasse</strong></td><td>{$sArticle.attr8.class}</td></tr>
-                    <tr><td><strong>Bildschirmdiagonale</strong></td><td>{$sArticle.attr8.sizeInch} Zoll</td></tr>
-                    <tr><td><strong>Leistungsaufnahme</strong></td><td>{$sArticle.attr8.watts} Watt</td></tr>
-                    <tr><td><strong>J&auml;hrlicher Energieverbrauch*</strong></td><td>{$sArticle.attr8.kwhYear} kWh/Jahr</td></tr>
-                </tbody></table>
-                <small>* 4 Stunden Nutzung pro Tag an 365 Tagen pro Jahr</small>
-                <hr>
-            {/if}
-
             {* CNet description*}
             <div id="ccs-inline-content"></div>
 
