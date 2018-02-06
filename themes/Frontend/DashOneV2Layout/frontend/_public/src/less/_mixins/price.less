@@ -1,16 +1,19 @@
-.product--price(@font-size: 28, @top: 5px, @right: 0, @bottom: 0, @left: 0){
+.product--price(@font-size: 28, @align: right){
 
     .product--price {
 
-        min-height: @font-size*1.5px;
+        min-height: @font-size*1.25px;
         position: relative;
         .pricelayer{
+            font-family: "Oswald", "Open Sans", sans-serif;
             position: absolute;
-            top: @top;
-            right: @right;
-            bottom: @bottom;
-            left: @left;
+            top: 3px;
+            right: 0;
+            bottom: 0;
+            left: 0;
             font-weight: bold;
+            width: 100%;
+            text-align: @align;
             &.fill{
                 color: @theme-primary;
             }
@@ -34,4 +37,5 @@
             }
         }
     }
+
 }

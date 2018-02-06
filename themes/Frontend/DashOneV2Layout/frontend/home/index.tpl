@@ -4,18 +4,16 @@
         {if $hasEmotion}
             <div class="content--emotions">
                 {foreach $emotions as $emotion}
-                    {if $hasEscapedFragment}
-                        {if 0|in_array:$emotion.devicesArray}
-                            <div class="emotion--fragment">
-                                {action module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}
-                            </div>
-                        {/if}
-                    {else}
-                        <div class="emotion--wrapper"
-                             data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}"
-                             data-availableDevices="{$emotion.devices}">
-                        </div>
+
+                    {if $shopID != $emotion.shopid
+                        && $emotion.shopid!=0
+                        && $emotion.shopid!=''}
+                        {continue}
                     {/if}
+                    <div class="emotion--wrapper"
+                         data-controllerUrl="{url module=widgets controller=emotion action=index emotionId=$emotion.id controllerName=$Controller shopID=$shopID}"
+                         data-availableDevices="{$emotion.devices}">
+                    </div>
                 {/foreach}
             </div>
         {/if}

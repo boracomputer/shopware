@@ -4,6 +4,7 @@
 .js--modal .content .image-slider--container{
     height: auto;
 }
+
 .product--details{
     .product--properties{
         .product--properties-table{
@@ -20,13 +21,13 @@
         }
     }
 }
-
 .product--details {
+
     .product--header {
         .unitize-padding(30, 0, 0, 0);
         .product--info{
             .product--title{
-                font-weight: bold;
+                font-family: "Oswald", "Open Sans", sans-serif;
             }
         }
     }
@@ -104,7 +105,10 @@
                         float: right;
                     }
                     .buybox--button{
-                        width: 70%;
+                        width: 68%;
+                        float: right;
+                        font-weight: normal;
+                        .unitize(font-size, 18);
                     }
                 }
                 .product--price(36); // _mixins/price.less
@@ -140,13 +144,15 @@
             }
         }
     }
-    .product--properties{
+    .product--properties,
+    .product--ecolabel{
         width: 100%;
         .unitize-padding(30,30,30,30);
         .product--properties-table{
 
         }
     }
+
 }
 
 .base-info--entry{
@@ -157,6 +163,31 @@
 @media screen and (min-width: @tabletViewportWidth) {
     // 768px
     .product--details {
+        .tab-menu--product{
+            .tab--navigation{
+                .tab--link{
+                    font-family: "Oswald", "Open Sans", sans-serif;
+                    text-transform: none;
+                    background-color: #f5f5f5;
+                    &.is--active{
+                        background-color: #fff;
+                        border-bottom: 1px solid #FFF;
+                    }
+                    .product--rating-count,
+                    .badge--ecolabel{
+                        .unitize(font-size, 18);
+                        color: #FFF;
+                        .unitize-padding(0, 7, 0, 7);
+                        border-radius: 50%;
+                        color: #FFF;
+                        font-weight: bold;
+                    }
+                    .product--rating-count{
+                        background: @gray-dark;
+                    }
+                }
+            }
+        }
         .tab--container{
             //border: 1px solid @panel-border !important;
         }
@@ -167,6 +198,18 @@
             .product--info{
                 .product--title{
                     width: 86%;
+                    .unitize(font-size, 24);
+                }
+            }
+        }
+        .product--detail-upper {
+            .product--buybox {
+                .buybox--inner {
+                    .buybox--button-container {
+                        .buybox--button{
+                            .unitize(height, 42);
+                        }
+                    }
                 }
             }
         }
@@ -179,7 +222,7 @@
                     margin-bottom: 0 !important;
                 }
                 .product--delivery {
-                    .unitize(margin-bottom, 30);
+                    .unitize(margin-bottom, 10);
                 }
             }
         }

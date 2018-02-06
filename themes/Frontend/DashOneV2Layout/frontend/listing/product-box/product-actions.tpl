@@ -20,7 +20,7 @@
                 <form action="{url controller='compare' action='add_article' articleID=$sArticle.articleID}" method="post" class="float--left">
                     <button type="submit"
                         title="{s name='ListingBoxLinkCompare'}{/s}"
-                        class="product--action action--compare"
+                        class="btn product--action action--compare"
                         data-product-compare-add="true">
                             <i class="icon--compare"></i> {s name='ListingBoxLinkCompare'}{/s}
                     </button>
@@ -33,10 +33,10 @@
             <form action="{url controller='note' action='add' ordernumber=$sArticle.ordernumber}" method="post" class="float--left">
                 <button type="submit"
                    title="{"{s name='DetailLinkNotepad' namespace='frontend/detail/actions'}{/s}"|escape}"
-                   class="action--note btn is--small product--action"
+                   class="btn action--note btn is--small product--action"
                    data-ajaxUrl="{url controller='note' action='ajaxAdd' ordernumber=$sArticle.ordernumber}"
                    data-text="{s name="DetailNotepadMarked"}{/s}">
-                    <i class="icon--new"></i>
+                    <i class="icon--tag"></i> Merken
                 </button>
             </form>
         {/block}

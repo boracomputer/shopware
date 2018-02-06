@@ -1,6 +1,14 @@
 {extends file='parent:frontend/index/topbar-navigation.tpl'}
 
 {block name="frontend_index_checkout_actions_service_menu" append}
+    {if $shopID!=3}
+    <div class="navigation--entry entry--business" role="menuitem">
+        <a href="/business" class="entry--link">
+            <i class="icon--briefcase"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkBusiness'}Businesskunde{/s}
+        </a>
+    </div>
+    {/if}
+
     <div class="navigation--entry entry--account" role="menuitem">
         <div href="{url controller='account'}" class="entry--link js--account" data-target="#top-bar--login">
             <i class="icon--account"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkMyAccount'}Mein Konto{/s}
