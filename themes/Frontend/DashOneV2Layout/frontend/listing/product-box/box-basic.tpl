@@ -23,10 +23,19 @@
 {block name='frontend_listing_box_article_actions'}{/block}
 
 {block name='frontend_listing_box_article_info_container' append}
+{if $sArticle.ordernumber==323239}
+<div class="alert is--error is--rounded">
+    <div class="alert--icon">
+        <i class="icon--element icon--cross"></i>
+    </div>
+    <div class="alert--content">SOLD OUT</div>
+</div>
+{else}
     {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle}
     <div class="clear"></div>
     {include file="frontend/listing/product-box/product-actions.tpl"}
     <div class="clear"></div>
+{/if}
 {/block}
 
 {* Product name *}
