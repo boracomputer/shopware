@@ -5,14 +5,6 @@
     <div class="product--actions">
 
         {block name='frontend_listing_box_article_actions_buynow'}
-        {if $sArticle.ordernumber==323239}
-        <div class="alert is--error is--rounded">
-            <div class="alert--icon">
-                <i class="icon--element icon--cross"></i>
-            </div>
-            <div class="alert--content">SOLD OUT</div>
-        </div>
-        {else}
         <form name="sAddToBasket" method="post" action="{url controller='checkout' action='addArticle'}" class="buybox--form float--right" data-add-article="true" data-eventname="submit" data-showmodal="false" data-addarticleurl="{url controller='checkout' action='ajaxAddArticleCart'}">
             <input type="hidden" name="sAdd" value="{$sArticle.ordernumber}">
             <input type="hidden" name="sQuantity" value="1">
@@ -20,7 +12,6 @@
                 {s name='ButtonToBasket'}In den Warenkorb{/s} <i class="icon--arrow-right"></i>
             </button>
         </form>
-        {/if}
         {/block}
 
         {* Compare button *}
