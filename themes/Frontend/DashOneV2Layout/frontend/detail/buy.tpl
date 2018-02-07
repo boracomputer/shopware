@@ -9,14 +9,7 @@
             <i class="icon--compare"></i> {s name="DetailActionLinkCompare" namespace="frontend/detail/actions"}{/s}
         </a>
     {/if*}
-{if $sArticle.ordernumber==323239}
-    <div class="alert is--error is--rounded">
-        <div class="alert--icon">
-            <i class="icon--element icon--cross"></i>
-        </div>
-        <div class="alert--content">SOLD OUT</div>
-    </div>
-{else}
+
     {if $sArticle.sConfigurator && !$activeConfiguratorSelection}
         <button class="buybox--button block btn is--disabled is--icon-right" disabled="disabled" aria-disabled="true"
                 name="{s name="DetailBuyActionAdd"}{/s}"{if $buy_box_display} style="{$buy_box_display}"{/if}>
@@ -27,6 +20,6 @@
         {s name="DetailBuyActionAdd"}{/s} <i class="icon--arrow-right"></i>
     </button>
     {/if}
-{/if}
+
 
 {/block}
