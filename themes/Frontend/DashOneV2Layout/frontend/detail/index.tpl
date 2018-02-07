@@ -158,7 +158,7 @@
 
                 {* Include buy button and quantity box *}
                 {block name="frontend_detail_index_buybox"}
-                {if $sArticle.ordernumber==323239}
+                {*if $sArticle.ordernumber==323239}
                     <div class="alert is--error is--rounded">
                         <div class="alert--icon">
                             <i class="icon--element icon--cross"></i>
@@ -167,7 +167,8 @@
                     </div>
                 {else}
                     {include file="frontend/detail/buy.tpl"}
-                {/if}
+                {/if*}
+                {include file="frontend/detail/buy.tpl"}
                 {/block}
 
             </div>
