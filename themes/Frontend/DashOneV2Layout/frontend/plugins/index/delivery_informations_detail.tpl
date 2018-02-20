@@ -1,7 +1,7 @@
 {* Delivery informations *}
 {block name='frontend_widgets_delivery_infos'}
 
-    {$stock = $sArticle.attr1|json_decode:"true"}
+    {$stock = $sArticle.stock.stockStores}
 
     <div class="delivery--information delivery--information-online">
         <strong class="entry--label">
@@ -52,7 +52,7 @@
             <span class="{$classStockOrderable}">
                 <i class="{$iconStockOrderable}"></i> Verfügbar in 7 - 21 Werktagen
             </span>
-            
+
         {else}
             <span class="{$classStockOutOfStock}">
                 <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar

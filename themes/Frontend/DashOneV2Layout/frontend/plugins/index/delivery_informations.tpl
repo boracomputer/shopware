@@ -14,7 +14,7 @@
 	    </span>
 	{/if*}
 
-    {$stock = $sArticle.attr1|json_decode:"true"}
+    {$stock = $sArticle.stock.stockStores}
 
         <div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>
