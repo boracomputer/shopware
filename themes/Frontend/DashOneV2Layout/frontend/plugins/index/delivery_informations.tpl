@@ -15,6 +15,7 @@
 	{/if*}
 
     {$stock = $sArticle.stock.stockStores}
+    
 
         <div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>

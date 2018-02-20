@@ -3,6 +3,7 @@
 
     {$stock = $sArticle.stock.stockStores}
 
+
     <div class="delivery--information delivery--information-online">
         <strong class="entry--label">
             Onlineversand:
