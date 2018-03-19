@@ -1,7 +1,7 @@
 {extends file='parent:frontend/detail/index.tpl'}
 
 {block name="frontend_index_javascript_async_ready" append}
-{if $shopID != 3 && !$isKonfigurator}
+{if ($shopID == 1 || $shopID == 5) && !$isKonfigurator}
 <script>
     document.asyncReady(function() {
         window.controller['stores_getStockAjax'] = '{url controller="Filiale" action="getStockAjax"}';
