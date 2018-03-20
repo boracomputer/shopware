@@ -16,6 +16,11 @@
                 (Dauer 3-5 Tage)
             </span>
 
+        {elseif $sArticle.attr3=='H2Z' || $sArticle.attr4=='THE'}
+            <span class="{$classStockOrderable}">
+                <i class="{$iconStockOrderable}"></i> Verfügbar in 1 Woche
+            </span>
+
         {elseif isset($sArticle.active) && !$sArticle.active}
             <span class="{$classStockOutOfStock}">
                 <i class="{$iconStockOutOfStock}"></i> nicht verf&uuml;gbar

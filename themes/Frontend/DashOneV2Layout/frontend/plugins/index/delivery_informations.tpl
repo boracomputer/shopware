@@ -15,7 +15,7 @@
 	{/if*}
 
     {$stock = $sArticle.stock.stockStores}
-    
+
 
         <div class="product--delivery product--delivery-info delivery-info-online">
             <span class="label">Onlineversand: </span>
@@ -27,6 +27,10 @@
             {elseif $sArticle.ordernumber|strpos:"BW" === 0}
                 <span class="{config name=classStockAvailable}">
                     <i class="{config name=iconStockAvailable}"></i> Versandfertig in 1-2 Tagen
+                </span>
+            {elseif $sArticle.attr3=='H2Z' || $sArticle.attr4=='THE'}
+                <span class="{$classStockOrderable}">
+                    <i class="{$iconStockOrderable}"></i> Verfügbar in 1 Woche
                 </span>
 	        {elseif isset($sArticle.active) && !$sArticle.active}
                 <span class="{config name=classStockOutOfStock}">
