@@ -1,7 +1,7 @@
 {extends file='parent:frontend/index/topbar-navigation.tpl'}
 
 {block name='frontend_index_checkout_actions_service_menu'}
-{if $shopID != 3}
+{if $shopID == 1 || $shopID == 5}
     <div class="navigation--entry entry--stores" role="menuitem">
         <div href="#" class="entry--link js--toggle-trigger" data-target="#top-bar--stores">
             <i class="icon--house"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkUserStore'}Meine Filiale{/s}
