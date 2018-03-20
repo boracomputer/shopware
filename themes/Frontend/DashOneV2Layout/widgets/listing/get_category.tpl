@@ -3,7 +3,7 @@
 
 {block name="widgets_listing_get_category_categories_item"}
     {if $children.active}
-        {if $children.attribute.disableshopid|intval === $Shop->getId() || $children.description=='hidden' || $category.description=='Tagesdeal' || ($children.articleCount===0 && $children.external=='')}
+        {if $children.attribute.disableshopid|intval === $smarty.get.shopID || $children.description=='hidden' || $category.description=='Tagesdeal' || ($children.articleCount===0 && $children.external=='')}
         {else}
             <li class="navigation--entry" role="menuitem">
                 {block name="widgets_listing_get_category_categories_item_link"}
