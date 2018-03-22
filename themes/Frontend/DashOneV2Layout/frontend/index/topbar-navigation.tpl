@@ -2,6 +2,7 @@
 
 {block name="frontend_index_checkout_actions_service_menu" append}
     {if $shopID==1 || $shopID==5}
+    
     <div class="navigation--entry entry--business" role="menuitem">
         <a href="/business" class="entry--link">
             <i class="icon--briefcase"></i> {s namespace='frontend/index/checkout_actions' name='IndexLinkBusiness'}Businesskunde{/s}
