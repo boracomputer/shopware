@@ -12,19 +12,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1637074749692388');
 fbq('track', 'PageView');
-{if {controllerName|lower} == "detail"}
-    fbq('track', 'ViewContent');
-{/if}
 
-{if {controllerName|lower} == "checkout" && $actionName=="finish"}
-    fbq('track', 'Purchase', {value: '{$sAmountWithTax}', currency: 'EUR'});
-{/if}
-{if {controllerName|lower} == "register" && $actionName=="saveRegister"}
-    fbq('track', 'CompleteRegistration');
-{/if}
-{if {controllerName|lower} == "search"}
-    fbq('track', 'Search');
-{/if}
 </script>
 <noscript>
  <img height="1" width="1"
