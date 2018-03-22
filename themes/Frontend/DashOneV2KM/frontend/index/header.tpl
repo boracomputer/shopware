@@ -1,6 +1,6 @@
 {extends file='parent:frontend/index/header.tpl'}
 
-{block name="frontend_index_header_css_ie" append}{strip}
+{block name="frontend_index_header_css_ie" append}
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,4 +19,4 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1637074749692388&ev=PageView
 &noscript=1"/>
 </noscript>
-{/strip}{/block}
+{/block}
