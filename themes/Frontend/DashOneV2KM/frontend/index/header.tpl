@@ -1,6 +1,6 @@
 {extends file='parent:frontend/index/header.tpl'}
 
-{block name="frontend_index_header_javascript_tracking"}{strip}
+{block name="frontend_index_header_css_ie" append}{strip}
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
