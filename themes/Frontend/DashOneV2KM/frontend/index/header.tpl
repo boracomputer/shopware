@@ -1,9 +1,8 @@
 {extends file='parent:frontend/index/header.tpl'}
 
-{block name="frontend_index_header_css_ie" append}
+{block name="frontend_index_header_css_ie" append}{literal}
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
@@ -19,4 +18,4 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1637074749692388&ev=PageView
 &noscript=1"/>
 </noscript>
-{/block}
+{/literal}{/block}
