@@ -15,9 +15,7 @@ fbq('track', 'PageView');
 {if {controllerName|lower} == "detail"}
     fbq('track', 'ViewContent');
 {/if}
-{*if {controllerName|lower} == "checkout" && $actionName=="ajaxAddArticleCart"}
-    fbq('track', 'AddToCart');
-{/if*}
+
 {if {controllerName|lower} == "checkout" && $actionName=="finish"}
     fbq('track', 'Purchase', {value: '{$sAmountWithTax}', currency: 'EUR'});
 {/if}
