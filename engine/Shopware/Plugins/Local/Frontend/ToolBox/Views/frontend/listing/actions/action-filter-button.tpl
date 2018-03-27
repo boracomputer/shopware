@@ -16,7 +16,7 @@
         </a>
     </div>
 {/if}
-{if $shopID != 3}
+{if $shopID == 1 || $shopID == 5}
     <form class="action--store action--filter-btn" method="POST">
         <select name="tbStoreUser"
                 class="sort--field action--field store--select"

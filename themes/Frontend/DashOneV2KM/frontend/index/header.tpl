@@ -17,6 +17,9 @@ fbq('track', 'PageView');
 {if {controllerName|lower} == "checkout" && $actionName=="finish"}
     fbq('track', 'Purchase', {literal}{ value: '{/literal}{$sAmountWithTax}{literal}', currency: 'EUR' }{/literal});
 {/if}
+{if {controllerName|lower} == "checkout" && $actionName=="confirm"}
+    fbq('track', 'InitiateCheckout');
+{/if}
 {if {controllerName|lower} == "register" && $actionName=="saveRegister"}
     fbq('track', 'CompleteRegistration');
 {/if}
