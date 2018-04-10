@@ -28,7 +28,7 @@
                 <span class="{config name=classStockAvailable}">
                     <i class="{config name=iconStockAvailable}"></i> Versandfertig in 1-2 Tagen
                 </span>
-            {elseif $sArticle.attr3=='H2Z' || $sArticle.attr4=='THE'}
+            {elseif $sArticle.attr3=='H2Z' && $sArticle.attr4=='THE'}
                 <span class="{$classStockOrderable}">
                     <i class="{$iconStockOrderable}"></i> Verfügbar in 1 Woche
                 </span>
