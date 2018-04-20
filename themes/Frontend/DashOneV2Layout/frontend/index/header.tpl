@@ -43,6 +43,10 @@
             .content-main--inner{
                 padding: 10px !important;
             }
+        }
+        {/literal}{/if}
+        {if {controllerName|lower} == "detail"}{literal}
+        @media screen and (min-width: 64em){
             #ban-right{
                 width: 160px;
                 height: 600px;
