@@ -11,5 +11,7 @@
         {$theme.additionalCssData}
     {/if}
 
+    <style>
 
+    </style>
 {/block}
