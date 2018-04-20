@@ -12,7 +12,7 @@
     {/if}
 
     <style>
-        {literal}{if ({controllerName|lower} == "index"}
+        {if {controllerName|lower} == "index"}{literal}
         @media screen and (min-width: 64em){
             .#wp{
                 background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg) no-repeat center top;
@@ -29,6 +29,6 @@
                 height: 100%;
             }
         }
-        {/if}{/literal}
+        {/literal}{/if}
     </style>
 {/block}
