@@ -41,6 +41,7 @@
 {/block}
 
 {block name='frontend_index_before_page' append}
+    <!-- BANNER RIGHT -->
     {if $sArticle.id|in_array:['43498', '43496', '43497', '43461']}
     <div id="ban-right">
         <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
