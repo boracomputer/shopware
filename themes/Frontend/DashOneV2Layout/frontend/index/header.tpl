@@ -37,6 +37,9 @@
                 max-width: 62.375rem;
                 position: relative;
             }
+            .footer-main{
+                position: relative;
+            }
         }
         {/literal}{/if}
     </style>
