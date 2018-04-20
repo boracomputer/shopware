@@ -1,6 +1,6 @@
 {extends file='parent:frontend/index/index.tpl'}
 
-{block name='frontend_index_before_page' append}
+{block name='frontend_index_body_inline' append}
     <div id="wp">
         <a href=""></a>
     </div>
