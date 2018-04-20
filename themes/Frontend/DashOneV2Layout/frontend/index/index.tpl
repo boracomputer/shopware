@@ -3,11 +3,14 @@
 {block name='frontend_index_before_page' append}
 
     {if {controllerName|lower} == "index"}
-    <div id="wp">
-        <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
-    </div>
+        <div id="wp">
+            <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
+        </div>
     {/if}
 
+{/block}
+
+{block name='frontend_index_content_top' append}
     <!-- BANNER RIGHT -->
     {if {controllerName|lower} == "detail"}
         {if $sArticle.articleID|in_array:['43498', '43496', '43497', '43461']}
@@ -16,7 +19,6 @@
         </div>
         {/if}
     {/if}
-
 {/block}
 
 {block name='frontend_index_navigation'}

@@ -43,6 +43,18 @@
             .content-main--inner{
                 padding: 10px !important;
             }
+            #ban-right{
+                width: 160px;
+                height: 600px;
+                position: absolute;
+                background: url(/uploads/aktionen/asus_amd_x470/X470_CrossSeries_160x600.jpg);
+                right: -175px;
+            }
+            #ban-right a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
         {/literal}{/if}
     </style>
