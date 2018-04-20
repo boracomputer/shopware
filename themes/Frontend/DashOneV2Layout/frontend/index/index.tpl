@@ -1,7 +1,9 @@
 {extends file='parent:frontend/index/index.tpl'}
 
-{block name='frontend_index_before_page'}
-    <div id="wp"></div>
+{block name='frontend_index_before_page' append}
+    <div id="wp">
+        <a href=""></a>
+    </div>
 {/block}
 
 {block name='frontend_index_navigation'}

@@ -10,4 +10,14 @@
     {if $theme.additionalCssData}
         {$theme.additionalCssData}
     {/if}
+
+    <style>    
+        {if ({controllerName|lower} == "index"}
+        .page-wrap{
+            background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg) no-repeat top center;
+            background-size: auto;
+            background-attachment: fixed;
+        }
+        {/if}
+    </style>
 {/block}
