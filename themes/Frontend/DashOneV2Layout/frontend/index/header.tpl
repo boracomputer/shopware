@@ -40,6 +40,9 @@
             .footer-main{
                 position: relative;
             }
+            .content-main--inner{
+                padding: 10px;
+            }
         }
         {/literal}{/if}
     </style>
