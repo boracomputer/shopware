@@ -41,7 +41,7 @@
                 position: relative;
             }
             .content-main--inner{
-                padding: 10px;
+                padding: 10px !important;
             }
         }
         {/literal}{/if}

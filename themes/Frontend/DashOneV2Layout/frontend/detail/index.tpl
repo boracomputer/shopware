@@ -40,6 +40,14 @@
 {block name='frontend_detail_index_buy_container_inner' prepend}
 {/block}
 
+{block name='frontend_index_before_page' append}
+    {if $sArticle.ordernumber|in_array:['43498', '43496', '43497', '43461']}
+    <div id="ban-right">
+        <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
+    </div>
+    {/if}
+{/block}
+
 {* move cross-selling to top *}
 {block name="frontend_detail_index_tabs_cross_selling"}{/block}
 {block name="frontend_detail_index_detail" prepend}
