@@ -1,5 +1,9 @@
 {extends file='parent:frontend/index/index.tpl'}
 
+{block name='frontend_index_before_page'}
+    <div id="wp"></div>
+{/block}
+
 {block name='frontend_index_navigation'}
 <div id="topbar">
     <header class="header-main">
