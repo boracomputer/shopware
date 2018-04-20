@@ -8,8 +8,8 @@
     </div>
     {/if}
 
+    <!-- BANNER RIGHT -->
     {if {controllerName|lower} == "detail"}
-        <!-- BANNER RIGHT -->
         {if $sArticle.articleID|in_array:['43498', '43496', '43497', '43461']}
         <div id="ban-right">
             <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
