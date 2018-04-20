@@ -2,7 +2,7 @@
 
 {block name='frontend_index_before_page' append}
     <div id="wp">
-        <a href=""></a>
+        <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
     </div>
 {/block}
 

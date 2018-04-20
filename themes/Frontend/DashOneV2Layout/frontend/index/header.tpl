@@ -14,7 +14,7 @@
     <style>
         {if {controllerName|lower} == "index"}{literal}
         @media screen and (min-width: 64em){
-            .#wp{
+            #wp{
                 background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg) no-repeat center top;
                 background-attachment: fixed;
                 width: 100%;
@@ -27,6 +27,15 @@
                 display: block;
                 width: 100%;
                 height: 100%;
+            }
+            .navigation-main{
+                background: transparent !important;
+            }
+            #topbar{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 62.375rem;
+                position: relative;
             }
         }
         {/literal}{/if}
