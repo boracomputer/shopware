@@ -1,9 +1,21 @@
 {extends file='parent:frontend/index/index.tpl'}
 
 {block name='frontend_index_before_page' append}
+
+    {if {controllerName|lower} == "index"}
     <div id="wp">
         <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
     </div>
+    {/if}
+
+    {if {controllerName|lower} == "detail"}
+    <!-- BANNER RIGHT -->
+    {if $sArticle.id|in_array:['43498', '43496', '43497', '43461']}
+    <div id="ban-right">
+        <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
+    </div>
+    {/if}
+    {/if}
 {/block}
 
 {block name='frontend_index_navigation'}
