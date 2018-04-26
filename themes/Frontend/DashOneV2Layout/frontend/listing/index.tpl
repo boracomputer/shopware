@@ -5,7 +5,7 @@
 {/block}
 
 {block name="frontend_listing_index_topseller"}
-    {if !$hasEmotion && {config name=topSellerActive} && !$sCategoryContent.attribute.attribute6}
+    {if !$hasEmotion && {config name=topSellerActive} && !$sCategoryContent.attribute.hidetopseller}
         {action module=widgets controller=listing action=top_seller sCategory=$sCategoryContent.id}
     {/if}
 {/block}
