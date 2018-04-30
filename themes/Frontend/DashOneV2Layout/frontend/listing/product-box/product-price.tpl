@@ -7,8 +7,8 @@
         <span class="price--default is--nowrap{if $sArticle.has_pseudoprice} is--discount{/if}">
             {if $sArticle.priceStartingFrom && !$sArticle.liveshoppingData}{s name='ListingBoxArticleStartsAt'}{/s} {/if}
             {$price = ","|explode:$sArticle.price}
-            <span class="pricelayer shadow">{$price.0}<sup>{$price.1}</sup> &euro;</span>
-            <span class="pricelayer outline">{$price.0}<sup>{$price.1}</sup> &euro;</span>
+            {*<span class="pricelayer shadow">{$price.0}<sup>{$price.1}</sup> &euro;</span>
+            <span class="pricelayer outline">{$price.0}<sup>{$price.1}</sup> &euro;</span>*}
             <span class="pricelayer fill">{$price.0}<sup>{$price.1}</sup> &euro;</span>
         </span>
     {/block}
