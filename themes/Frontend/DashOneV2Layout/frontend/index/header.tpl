@@ -15,7 +15,7 @@
         {if {controllerName|lower} == "index"}{literal}
         @media screen and (min-width: 64em){
             #wp{
-                background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg) no-repeat center top;
+                background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg?t={$smarty.now}) no-repeat center top;
                 background-attachment: fixed;
                 width: 100%;
                 height: 100%;
