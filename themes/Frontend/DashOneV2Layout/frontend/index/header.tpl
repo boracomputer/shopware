@@ -12,7 +12,7 @@
     {/if}
 
     <style>
-        {if {controllerName|lower} == "index"}{literal}
+        {if {controllerName|lower} == "index" && $shopID!=7}{literal}
         @media screen and (min-width: 64em){
             #wp{
                 background: #000 url(/uploads/aktionen/asus_amd_x470/ASUS_x470_wall.jpg?t={$smarty.now}) no-repeat center top;
@@ -45,7 +45,7 @@
             }
         }
         {/literal}{/if}
-        {if {controllerName|lower} == "detail"}{literal}
+        {if {controllerName|lower} == "detail" && $shopID!=7}{literal}
         @media screen and (min-width: 64em){
             #ban-right{
                 width: 160px;
