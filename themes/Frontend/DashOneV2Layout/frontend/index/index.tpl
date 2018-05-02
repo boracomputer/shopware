@@ -2,7 +2,7 @@
 
 {block name='frontend_index_before_page' append}
 
-    {if {controllerName|lower} == "index" && $shopId!=7}
+    {if {controllerName|lower} == "index" && $shopID!=7}
         <div id="wp">
             <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
         </div>
@@ -12,7 +12,7 @@
 
 {block name='frontend_index_content_top' append}
     <!-- BANNER RIGHT -->
-    {if {controllerName|lower} == "detail" && $shopId!=7}
+    {if {controllerName|lower} == "detail" && $shopID!=7}
         {if $sArticle.articleID|in_array:['43498', '43496', '43497', '43461']}
         <div id="ban-right">
             <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
