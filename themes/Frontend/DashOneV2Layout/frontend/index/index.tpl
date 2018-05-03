@@ -2,11 +2,11 @@
 
 {block name='frontend_index_before_page' append}
 
-    {if {controllerName|lower} == "index" && $shopID!=7}
+    {*if {controllerName|lower} == "index" && $shopID!=7}
         <div id="wp">
             <a href="/aktion/index/aktion/asus-adm-x470-cross-series"></a>
         </div>
-    {/if}
+    {/if*}
 
 {/block}
 
