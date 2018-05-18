@@ -32,6 +32,15 @@
             display: inline-block;
             text-align: left;
             padding: 0;
+            float: left;
+            clear: both;
+        }
+        &.product--delivery{
+            span[class^='delivery--text-']{
+                display: block;
+                .unitize-width(215);
+                float: right;
+            }
         }
         input{
         }
