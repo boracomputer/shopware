@@ -12,7 +12,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '1637074749692388');
 fbq('track', 'PageView');
 {/literal}{if {controllerName|lower} == "detail"}
-    fbq('track', 'ViewContent');
+    //fbq('track', 'ViewContent');
 {/if}
 {if {controllerName|lower} == "checkout" && $actionName=="finish"}
     fbq('track', 'Purchase', {literal}{ value: '{/literal}{$sAmountWithTax}{literal}', currency: 'EUR' }{/literal});
@@ -21,15 +21,18 @@ fbq('track', 'PageView');
     fbq('track', 'InitiateCheckout');
 {/if}
 {if {controllerName|lower} == "register" && $actionName=="saveRegister"}
-    fbq('track', 'CompleteRegistration');
+    //fbq('track', 'CompleteRegistration');
 {/if}
 {if {controllerName|lower} == "search"}
-    fbq('track', 'Search');
+    //fbq('track', 'Search');
 {/if}{literal}
 </script>
+
+{/literal}{if {controllerName|lower} == "checkout" && ($actionName=="confirm" || $actionName=="finish")}
 <noscript>
  <img height="1" width="1"
 src="https://www.facebook.com/tr?id=1637074749692388&ev=PageView
 &noscript=1"/>
 </noscript>
-{/literal}{/strip}{/block}
+{/if}
+{/strip}{/block}
